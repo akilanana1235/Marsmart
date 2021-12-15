@@ -1,0 +1,261 @@
+.gamebody{
+    background-color: #F6F6F6;
+}
+.breadCrum{
+
+    width: 100%;
+    background-color: #DADADA;
+    height: 40px;
+    float: left;
+    
+}
+.headLog{
+    width: 100%;
+    height: 200px;
+     /* background-color: aqua;  */
+     background-color: #F6F6F6;
+    float: left;
+}
+
+.gmMainLOGO{
+
+    width: 30%;
+    height: 200px;
+    /* background-color: bisque; */
+    margin-left: 4%;
+    float: left;
+
+}
+
+
+
+.imgGlogo{
+
+    float: left;
+    height: 40%;
+    width: 20%;
+    margin-top: 4%;
+}
+
+.glPName{
+
+    font-weight:bolder;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 35px;
+    transform: translate(-3%,-10%);
+    float: left;
+}
+
+.descGLP{
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    transform: translate(24%,-120%);
+    float: left;
+
+
+}
+
+.instrcutionBtn{
+
+    background-color:#FF2525;
+    height: 35px;
+    width: 34%;
+    float: left;
+    transform: translate(55%,-210%);
+   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.gmMainButton{
+
+
+    width: 60%;
+    height: 200px;
+    /* background-color: bisque; */
+    margin-left: 4%;
+    float: left;
+
+}
+
+.LeaderBoardButton{
+
+    background-color:#FF2525;
+    height: 60px;
+    width: 35%;
+    float: left;
+    margin-top: 80px;
+    margin-left: 16%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.LeaderBoardButton p{
+ 
+    text-align: center;
+    color: white;
+    transform: translate(0%,-37%);
+    font-size: 24px;
+    font-family: Poppins;
+    font-style: normal;
+    line-height: 36px;
+
+}
+
+.TotalScore{
+    background-color:#8FF7A7;
+    height: 60px;
+    width: 35%;
+    float: left;
+    margin-top: 80px;
+    margin-left: 5%;
+}
+
+.TotalScore p{
+    font-family: 'Poppins', sans-serif; 
+    text-align: center;
+    color: black;
+    transform: translate(0%,-37%);
+    font-size: 24px;
+    font-family: Poppins;
+    font-style: normal;
+    line-height: 36px;
+
+}
+
+
+.gameCardGroupMain{
+
+
+    width: 100%;
+    height: 700px;
+    /* background-color: rgb(39, 119, 23);  */
+    background-color: #F6F6F6;
+    float: left;
+}
+
+.gameCardGroup{
+
+
+    width: 85%;
+    height: 500px;    
+    background: #E5EBFF;
+    float: left;
+    margin-left: 7.5%;
+   
+
+}
+
+.quizGameCard{
+
+    width: 30%;
+    height: 420px;
+    background: #ffffff;
+    margin-left: 3%;
+    margin-top: 40px;
+    float: left;
+}
+
+.memoryGameCard{
+
+    width: 30%;
+    height: 420px;
+    background: #ffffff;
+    margin-left: 2%;
+    margin-top: 40px;
+    float: left;
+}
+
+.spinGameCard{
+
+    width: 30%;
+    height: 420px;
+    background: #ffffff;
+    margin-left: 2%;
+    margin-top: 40px;
+    float: left;
+}
+
+.gamelogo{
+
+    width: 100%;
+    height:220px ;
+    
+}
+
+.gameDescription{
+
+    width: 100%;
+    height: 200px;
+   
+}
+
+.gameDescription h1{
+
+    
+
+    font-family: Poppins;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 36px;
+
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55);
+}
+
+.gameDescription p{
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+
+.ui-btn-up-b{background: #15317A !important;
+    border-radius: 2.67px !important;  
+    width:40% ;
+    height: 40px;
+    left: 28%;
+    border: none;
+} 
+
+
+
+.toShop{
+    float: left;
+    width: 22%;
+    height: 70px;
+    margin-left: 70.5%;
+    margin-top: 28px;
+  
+
+background: #15317A;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 2.67px;
+}
+
+
+.toShop p{
+
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 36px;
+
+
+text-align: center;
+
+margin-top: 16px;
+color: #FFFFFF;
+}

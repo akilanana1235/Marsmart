@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Leader Board</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <link rel="stylesheet" href="CSS/LeaderBoard.css">
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div data-role="page">
+
+            <div data-role="header"> <p> Nav </p></div>
+
+            <div role="main" >
+                
+                <div class="boardBody">
+
+                    <div class="breadCrum">
+                        <p>Home > <span style="color: #FF2525;">Game</span> </p>
+                    </div>
+
+                    <div class="boardContainer">
+                        <div class="board">
+
+                            <div class="boardHeader">
+                                <div class="leaderLogo">
+                                    <img src="Images/leaderLogo.png"  alt=""> 
+                                    <p>LEADERBOARD</p>
+                                </div>
+                                <div class="loyaltyMe">
+
+                                    <div style="float: left;width: 100%;height: 40px;">
+                                        <p id="pLoyaltyLabel">My Loyalty points</p>
+                                    </div>
+
+                                    <div style="float: left;width: 100%;height: 67px;">
+                                    
+                                        <img src="Images/GameLogo.png" style="width: 20%;height: 64px; margin-left: 30%;float: left;">
+                                        <p id="loyaltyscore">150</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boardscoreBody">
+
+                                <div class="scoreCard">
+                                    <div class="position">
+                                        <p>1</p>
+                                    </div>
+                                    <div class="playerName">
+                                        <p>Edinson Cavani</p>
+                                    </div>
+                                    <div class="playerLoytaltyScore">
+                                        <div class="scoreHolder">
+                                            <img src="Images/GameLogo.png" alt="">
+                                            <p>150</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="scoreCard2">
+                                    <div class="position">
+                                        <p>2</p>
+                                    </div>
+                                    <div class="playerName">
+                                        <p>Bruno Fernandez</p>
+                                    </div>
+                                    <div class="playerLoytaltyScore">
+                                        <div class="scoreHolder">
+                                            <img src="Images/GameLogo.png" alt="">
+                                            <p>140</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="scoreCard3">
+                                    <div class="position">
+                                        <p>3</p>
+                                    </div>
+                                    <div class="playerName">
+                                        <p>Paul Pogba</p>
+                                    </div>
+                                    <div class="playerLoytaltyScore">
+                                        <div class="scoreHolder">
+                                            <img src="Images/GameLogo.png" alt="">
+                                            <p>120</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="scoreCard4">
+                                    <div class="position">
+                                        <p>4</p>
+                                    </div>
+                                    <div class="playerName">
+                                        <p>Cristiano Ronaldo</p>
+                                    </div>
+                                    <div class="playerLoytaltyScore">
+                                        <div class="scoreHolder">
+                                            <img src="Images/GameLogo.png" alt="">
+                                            <p>120</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="scoreCard5">
+                                    <div class="position">
+                                        <p>5</p>
+                                    </div>
+                                    <div class="playerName">
+                                        <p>Jadon Sanchoo</p>
+                                    </div>
+                                    <div class="playerLoytaltyScore">
+                                        <div class="scoreHolder">
+                                            <img src="Images/GameLogo.png" alt="">
+                                            <p>105</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="pagination">
+                            <div class="page-disabled">
+                              <div class="ic-carat-left"></div>
+                            </div>
+                            <div class="page-active">
+                              <div class="numpoppins-bold-blue-14px">
+                                <span class="poppins-bold-blue-14px">1</span>
+                              </div>
+                            </div>
+                            <div class="page-defaultborder-1px-mercury">
+                              <div class="num-1poppins-bold-charade-14px">
+                                <span class="poppins-bold-charade-14px">2</span>
+                              </div>
+                            </div>
+                            <div class="page-default-1border-1px-mercury">
+                              <div class="num-2poppins-bold-charade-14px">
+                                <span class="poppins-bold-charade-14px">...</span>
+                              </div>
+                            </div>
+                            <div class="page-default-2border-1px-mercury">
+                              <div class="num-3poppins-bold-charade-14px">
+                                <span class="poppins-bold-charade-14px">9</span>
+                              </div>
+                            </div>
+                            <div class="page-default-3border-1px-mercury">
+                              <div class="num-4poppins-bold-charade-14px">
+                                <span class="poppins-bold-charade-14px">10</span>
+                              </div>
+                            </div>
+                            <div class="page-masterborder-1px-mercury">
+                              <div class="ic-carat-right"></div>
+                            </div>
+                          </div>
+
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div style="margin-top: 50px;" data-role="footer"><p>footer</p></div>
+        </div>
+        
+    </body>
+
+
+</html>
