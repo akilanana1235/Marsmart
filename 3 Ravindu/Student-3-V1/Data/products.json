@@ -1,0 +1,25 @@
+[
+    {
+        "id":1,
+        "name":"Nestlé Nesquik Cereal Breakfast",
+        "category":"Grocery",
+		"price":3.55,
+		"ratings":3.8,
+        "size":"375g",
+        "img1":""
+    },
+    {
+        "id":2,
+        "name":"Nutella Ice cream",
+        "category":"Grocery",
+		"price":3.75,
+		"ratings":3.8
+    },
+    {
+        "id":3,
+        "name":"Dettol Handwash",
+        "category":"Grocery",
+		"price":3.50,
+		"ratings":3.8
+    }
+]
