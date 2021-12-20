@@ -105,6 +105,10 @@ color: #3C2727;
 
 }
 
+#loyaltScoreLogo{
+  width: 20%;height: 64px; margin-left: 30%;float: left;
+}
+
 .boardscoreBody{
 width: 100%;
 height: 668.11px;
@@ -400,3 +404,32 @@ color: #3C2727;
     width: 24px;
   }
   @import url("https://fonts.googleapis.com/css?family=Poppins:400,700,500,600|Roboto:400,700");
+
+
+
+  @media only screen and (min-width: 1024px) and (orientation: portrait) {
+
+    .leaderLogo p{
+     font-size: 32px;
+  }
+
+  #pLoyaltyLabel{
+    font-size: 21px;
+      margin-left: 7%;
+
+}
+
+#loyaltyscore{
+
+font-size: 32px;
+
+margin-top: 8px;
+
+
+}
+
+#loyaltScoreLogo{
+width: 20%;height: 60px; margin-left: 23%;float: left;
+}
+
+   }
