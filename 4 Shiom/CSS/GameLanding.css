@@ -155,6 +155,10 @@
     float: left;
 }
 
+#imageQuiz{
+    width: 55%; height: 195px; margin-left: 23%; margin-top: 35px;
+}
+
 .memoryGameCard{
 
     width: 30%;
@@ -165,6 +169,9 @@
     float: left;
 }
 
+#imageMemeory{
+    width: 50%; height: 175px; margin-left: 25%; margin-top: 35px;
+}
 .spinGameCard{
 
     width: 30%;
@@ -175,6 +182,9 @@
     float: left;
 }
 
+#imageSpin{
+    width: 92%; height: 205px; margin-left: 3%; margin-top: 35px;
+}
 .gamelogo{
 
     width: 100%;
@@ -259,3 +269,67 @@ text-align: center;
 margin-top: 16px;
 color: #FFFFFF;
 }
+
+@media only screen and (min-width: 1024px) and (orientation: portrait) { 
+
+
+    .glPName{
+        font-size: 32px;
+        transform: translate(-3%,-10%);
+        float: left;
+    }
+
+    .descGLP{
+        font-size: 15px;
+        transform: translate(22%,-120%);
+        float: left;
+    }
+
+    .instrcutionBtn{
+        height: 35px;
+        width: 36%;
+        float: left;
+        transform: translate(55%,-180%);
+       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    .toShop p{
+        margin-top: 10px;
+    font-size: 20px;
+    }
+
+    .toShop{
+        height: 60px;
+
+    }
+
+    
+.LeaderBoardButton p{
+    transform: translate(0%,-30%);
+    font-size: 22px;
+}
+
+
+.TotalScore p{
+    transform: translate(0%,-30%);
+    font-size: 22px;
+}
+
+.gameDescription p{
+    font-size: 14px;
+}
+
+
+#imageQuiz{
+    width: 55%; height: 155px; margin-left: 23%; margin-top: 35px;
+}
+
+#imageMemeory{
+    width: 50%; height: 145px; margin-left: 25%; margin-top: 35px;
+}
+
+#imageSpin{
+    width: 99%; height: 185px; margin-left: 0%; margin-top: 20px;
+}
+}
+
