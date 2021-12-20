@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quiz Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="CSS/QuizGame.css">
+    
+    <script src="https://use.fontawesome.com/bb16f85abc.js"></script>
+
+    <script src="Scripts/QuizGame.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body onload="NextQuestion(0)">
+
+    <div data-role="page">
+
+        <div data-role="header">
+            <p> Nav </p>
+        </div>
+
+        <div role="main">
+
+            <div class="ui-content">
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-a">
+                            <div class="mgScore">
+                                <p id="qgameScore"></p>
+                              </div>
+                        </div>
+                    </div>
+
+
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-a">
+
+                            <div class="quiz_box">
+
+                                <div class="quiz_type">
+                                    <p id="qType">Technology</p>
+                                </div>
+
+                                <div class="quiz_question">
+                                    <div id="qlogo"><i class="fa fa-question-circle"
+                                            style="font-size: 46px; margin-left: 122%;"></i></div>
+                                    <div id="quiestionHolder">
+                                        <h2 id="question">What was the first product <br> launched by Apple?</h2>
+                                    </div>
+                                </div>
+
+                                <div class="quiz_answers">
+
+                                 <form>
+                                    <fieldset data-role="controlgroup"  data-type="vertical" data-iconpos="none">
+                                         
+                                        <input type="radio" name="option_quiz" id="option_quiz1" value="optionA" onclick="checkForAnswer()" >
+                                        <label id="answer1" for="option_quiz1"> <p class="option_label" id="option1_label"></p> </label>
+
+                                        <input type="radio" name="option_quiz" id="option_quiz2" value="optionB" onclick="checkForAnswer()">
+                                        <label id="answer2" for="option_quiz2"><p class="option_label" id="option2_label"></p></label>
+
+                                        <input type="radio" name="option_quiz" id="option_quiz3" value="optionC" onclick="checkForAnswer()">
+                                        <label id="answer3" for="option_quiz3"><p class="option_label" id="option3_label"></p></label>
+
+                                     </fieldset>
+
+                                 </form>
+                                </div>
+
+                                <div class="quiz_footer">
+                                    <div class="quizNumConatiner">
+                                        <p id="quizNum"></p>
+
+                                    </div>
+
+                                    <div class="changeQuizContainer">
+
+                                        <button id="nextQuiz" class="ui-btn ui-btn-inline" onclick="handleNextQuestion()">Next Quiz</button>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div data-role="footer"></div>
+
+
+    </div>
+
+
+</body>
+
+</html>

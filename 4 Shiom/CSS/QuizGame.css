@@ -1,0 +1,157 @@
+.ui-block-a{
+    width: 30%  !important;
+ 
+}
+
+.ui-block-b{
+    width: 70% !important;
+}
+
+.ui-bar-a{
+    background-color: #F6F6F6 !important;
+    border-style:none !important;
+}
+
+.quiz_box{
+    background: #E5EBFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 92%;
+    height: 670px;
+}
+
+.quiz_type{
+    width: 100%;
+    height: 100px;
+    float: left;
+}
+
+#qType{
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 33px;
+text-align: center;
+color: #000000;
+margin-top: 50px;
+
+}
+.quiz_question{
+    width: 100%;
+    height: 140px;
+    float: left;
+}
+#qlogo{
+    width: 10%;
+    float: left;
+}
+#quiestionHolder{
+    width: 90%;
+    float: left;
+}
+#question{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 52px;
+    opacity: 1;
+    text-align: center;
+    margin-left: 10%;
+}
+
+
+
+.quiz_answers{
+    width: 100%;
+    height: 340px;
+    float: left;
+}
+
+.ui-radio{
+    width: 55% !important;
+    margin-left: 24% !important;
+    margin-top: 40px !important;
+    
+}
+/* ui-corner-all ui-btn-inherit ui-btn-icon-none ui-radio-off ui-first-child */
+.ui-btn{
+  
+    background: #FFFFFF !important;
+    border-radius: 10px !important;
+    height: 55.6px !important;
+  text-align: center !important;
+}
+
+.option_label{
+    margin-top: 5px;
+}
+
+
+.quiz_footer{
+    float: left;
+    width: 100%;
+}
+
+.quizNumConatiner{
+    float: left;
+    width: 30%;
+    height: 90px;
+}
+
+#quizNum{
+    font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 36px;
+text-align: center;
+color: #000000;
+margin-top: 25px;
+}
+
+.changeQuizContainer{
+    float: left;
+    width: 70%;
+    height: 50px;
+    height: 90px;
+
+}
+
+.ui-btn-inline{
+    width: 40% !important;
+    background: rgba(21, 49, 122, 0.7) !important;
+border-radius: 2.67px !important;
+font-family: Poppins !important;
+font-size: 20px !important;
+color: #FFFFFF !important;
+margin-left: 55% !important;
+
+}
+
+.mgScore{
+
+    float: left;
+    width: 72%;
+    height: 90px;
+    background: #8FF7A7;
+    border-radius: 11px;
+    margin-top: 70px;
+
+    }
+    
+.mgScore p{
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    margin-top: 25px;
+
+}
+    
