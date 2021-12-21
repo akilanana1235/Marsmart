@@ -5,24 +5,28 @@
 
     <title>Game Landing Page</title>
 
-    <link rel="stylesheet" href="CSS/GameLanding.css">
+    
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
-    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="CSS/GameLanding.css">
+    <script type="text/javascript" src="Scripts/GameLandingPage.js"></script>
 
+    
 </head>
 
 
 <body>
 
-    <div data-role="page" id="GameLandingPage" data-content-theme="b" data-theme="b">
+    <div data-role="page" id="GameLandingPage">
 
 
         <div data-role="header">
@@ -50,8 +54,11 @@
                         <p class="descGLP">Play games and earn loyalty points <br> to save money</p>
 
                         <div class="instrcutionBtn">
+                           <a style="text-decoration: none;" href="#instructions"  data-rel="popup" > 
                             <p style=" font-family: 'Poppins', sans-serif; font-weight: 100; text-align: center;color: white;transform: translate(0%,-45%);">
-                                Instruction</p>
+                                Instruction
+                            </p>
+                            </a>
                         </div>
 
                     </div>
@@ -67,7 +74,7 @@
 
                         <div class="TotalScore">
                            
-                            <p>My Total Score 0</p>
+                            <p>My Total Score <span id="playerscore"></span></p>
                         </div>
 
                     </div>
@@ -128,10 +135,31 @@
 
         </div>
 
+        <!-- Pop Up Instructions -->
+        <div data-role="popup" id="instructions">
+       
+            <img src="Images/GameLogo.png" class="imgLogo">
+    
+            <div class="rules">
+                <p>1. Each game can be played once every week.</p>
+                <p>2. 10 game points is equal to one loyalty point.</p>
+                <p>3. Only 2 minutes to complete the memory game.</p>
+                <p>4. Only 3 spins are allowed each time in spin the wheel.</p>
+
+            </div>
+
+            <div class="understood">
+                <a style="text-decoration: none;" href="#GameLandingPage"><p>understood</p></a> 
+            </div>
+    
+        </div>
 
 
 
     </div>
+
+   
+    
 
 
 </body>

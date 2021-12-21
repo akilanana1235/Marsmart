@@ -84,7 +84,13 @@ function checkForAnswer() {
     if(!isClicked){
     
     isClicked = true;//to avoid answering multiple times for the same question
-    document.getElementById("nextQuiz").style.setProperty('background-color', '#15317A', 'important');
+    if(indexNumber==4){
+        document.getElementById("nextQuiz").style.setProperty('background-color', 'rgba(21, 49, 122, 0.7)', 'important');
+       
+    }else{
+        document.getElementById("nextQuiz").style.setProperty('background-color', '#15317A', 'important');
+    }
+
     const currentQuestion = shuffledQuestions[indexNumber] //gets current Question 
     const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
     const options = document.getElementsByName("option_quiz"); //gets all elements in dom with name of 'option' (in this the radio inputs)
@@ -127,6 +133,7 @@ function checkForAnswer() {
 function handleNextQuestion() {
 
         if (indexNumber <= 4) {
+
             isClicked = false;
             unCheckRadioButtons();
             resetOptionBackground();
@@ -134,8 +141,10 @@ function handleNextQuestion() {
             NextQuestion(indexNumber)
         }
         else {
+            document.getElementById("continueGame").style.setProperty('background-color', '#15317', 'important'); //not working
             document.getElementById("nextQuiz").style.setProperty('background-color', 'rgba(21, 49, 122, 0.7)', 'important');
-            handleEndGame()//ends game if index number greater than 9 meaning we're already at the 10th question
+            
+            handleEndGame(); //ends game if index number greater than 9 meaning we're already at the 10th question
         }
       
 
@@ -163,6 +172,19 @@ function resetOptionBackground() {
 
 
 function handleEndGame() {
-  
+    var score_game = 20*playerScore;
+    localStorage.setItem("playerscore",score_game);
 
 }
+
+function navigate(){
+    if(indexNumber>4){
+
+        window.location.href = 'GameLanding-Ipad.html';
+      }
+}
+
+
+  
+   
+

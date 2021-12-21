@@ -29,68 +29,99 @@
 
 
 <body>
-    
-    <div data-role="page" >
 
-        <div data-role="header"> <p> Nav </p></div>
+    <div data-role="page">
 
-
-	    <div role="main" style="background-color: #F6F6F6;" class="ui-content">
-
-            <div class="partA">
-
-                <div class="pageLogo">
-                    <img src="Images/logoMG.png" alt="">
-                    <p>Memory Game</p>
-
-                </div>
-
-                <div class="timerContainer">
-                    <div class="timer">
-                        <p>2.00</p>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="partB">
-
-                <div class="buttonSection">
-
-                    <div class="mgScore">
-                      <p>Game Score 0</p>
-                    </div>
-
-                    <div class="continue">
-                     <p>Conitnue Game</p>
-                    </div>
-
-                    <div class="continueShopping">
-                        <p>Conitnue Shopping</p>
-                    </div>
-
-                </div>
-
-                <div class="memoryBoard">
-
-                    <div id="memory_board"></div>
-                    <script>newBoard();</script>
-
-                </div>
-
-            </div>
-
-
-
+        <div data-role="header">
+            <p> Nav </p>
         </div>
 
 
+        <div role="main" style="background-color: #F6F6F6;" class="ui-content">
 
-        <div data-role="footer"><p>footer</p></div>
+            <div class="ui-content">
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-a">
 
-	    
-    </div>
+                            <div class="logoContainer">
+
+                                <div class="iconQuiz">
+                                    <img src="Images/logoMG.png" id="iconMemory" >
+                                </div>
+                                <div class="pageNameQuiz">
+                                    <p id="pageName">Memory Game</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="scoreContainer">
+                                <div class="mgScore">
+                                    <p id="qgameScore"></p>
+                                  </div>
+                            </div>
+
+                            <div class="continueButtonContainer">
+
+                                <div class="continue">
+                                    <p>Conitnue Game</p>
+                                   </div>
+                                   
+                            </div>
+
+                            <div class="continueShoppingContainer">
+                                <div class="continueShopping">
+                                    <p>Conitnue Shopping</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-a">
+
+                            <div class="timerSection">
+
+                                <div class="timerContainer">
+                                    <div class="timer">
+                                        <p>2.00</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="gameBoardSection">
+
+                                <div class="gameBoard">
+
+                                <div class="cardHolder">
+                                    <div id="memory_board"></div>
+                                    <script>newBoard();</script>
+                                </div>
+                                    
+                                  
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="footer" data-role="footer">
+                <p>footer</p>
+            </div>
+
+
+        </div>
 
 </body>
 
