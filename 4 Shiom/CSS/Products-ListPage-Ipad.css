@@ -159,3 +159,221 @@ width: 108% !important;
     float: left;
     visibility: hidden;
 }
+
+
+/* 00 */
+
+.productListDisplay{
+    width: 90%;
+    height: 400px;
+    
+    float: left;
+    margin-left: 5%;
+}
+
+.card{
+    width: 20%;
+    height: 375px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+}
+.cardheader{
+    width: 100%;
+
+}
+.cardHeart{
+    width: 15%;
+    height: 150px;
+    float: left;
+}
+
+.cardHeart i{
+    font-size: 23px;
+    margin-left: 25%;
+    margin-top: 20px;
+}
+.cardImage{
+    float: left;
+    height: 150px;
+     width: 85%;
+}
+
+.card-img-top{
+    width: 100%;
+}
+
+.card-body{
+    width: 100%;
+}
+
+.product_title{
+    width: 100%;
+    float: left;
+}
+
+.card-title{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+align-items: center;
+text-align: center;
+
+color: #000000;
+}
+
+.product_sub_info{
+    width: 100%;
+    float: left;
+ 
+}
+
+.product_type{
+    width: 50%;
+    float: left;
+}
+
+.product_type p{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 18px;
+margin-left: 15%;
+color: #545454;
+}
+
+.product_rating{
+    width: 50%;
+    float: left;
+}
+
+.product_description{
+    width: 100%;
+    float: left;
+}
+
+.card-text{
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 11px;
+line-height: 16px;
+text-align: center;
+color: #000000;
+width: 90%;
+margin-left: 5%;
+
+}
+
+.product_price{
+    width: 100%;
+    float: left;
+}
+
+.product_price p{
+    font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 21px;
+line-height: 31px;
+margin-left: 40%;
+color: rgba(255, 37, 37, 0.99);
+}
+
+.product_footer{
+    width: 100%;
+    float: left;
+    /* background-color: rgb(54, 194, 124);  */
+}
+
+.QuanitityContainer{
+    width: 50%;
+    float: left;
+}
+.addToCartContainer{
+    width: 50%;
+    float: left;
+}
+
+#quantity{
+margin-left: 3%;
+}
+
+#plusButton{
+    width: 30%;
+    background: #FFFFFF;
+border: 0.508571px solid rgba(0, 0, 0, 0.24);
+box-sizing: border-box;
+border-radius: 7px;
+    margin-left: 5%;
+}
+
+#minusButton{
+    width: 30%;
+    margin-left: 2%;
+    background: #FFFFFF;
+border: 0.508571px solid rgba(0, 0, 0, 0.24);
+box-sizing: border-box;
+border-radius: 7px;
+}
+
+
+
+
+#playButtonQuiz {
+    background: #15317A !important;
+    border-radius: 2.67px !important;  
+    width:40% ;
+    height: 30px;
+    border: none;
+    color: white;
+    align-items: center;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 15px;
+} 
+
+.continue{
+    float: left;
+    width:80%;
+    height: 34.45px;
+    background: #15317A !important;
+    border-radius: 2.67px !important; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2.67px;
+    margin-left: 7.5%;
+    margin-top: 5px;
+    }
+    
+.continue p{
+    margin-top: 5px;
+    font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 21px;
+align-items: center;
+text-align: center;
+color: #FFFFFF;
+       
+}
+
+
+
+
+
+.footer{
+    margin-top: 260px;
+}
+
+
+@media only screen and (min-width: 1024px) and (orientation: portrait) { 
+
+    .card{
+        width: 30%;
+    }
+
+}
