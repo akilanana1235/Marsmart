@@ -30,7 +30,7 @@
 
 <body>
 
-    <div data-role="page">
+    <div data-role="page" id="memoryGamePlay">
 
         <div data-role="header">
             <p> Nav </p>
@@ -58,7 +58,7 @@
 
                             <div class="scoreContainer">
                                 <div class="mgScore">
-                                    <p id="qgameScore"></p>
+                                    <p id="qgameScore">Game Score <span id="gScore"></span></p>
                                   </div>
                             </div>
 
@@ -87,7 +87,7 @@
 
                                 <div class="timerContainer">
                                     <div class="timer">
-                                        <p>2.00</p>
+                                        <p id="countDown"></p>
                                     </div>
                                 </div>
 
@@ -122,6 +122,29 @@
 
 
         </div>
+
+
+        <div data-role="popup" id="memoryGameSuccess">
+       
+            <img src="Images/GameLogo.png" class="imgLogo">
+    
+            <div class="rules">
+                <p>1. Each game can be played once every week.</p>
+                <p>2. 10 game points is equal to one loyalty point.</p>
+                <p>3. Only 2 minutes to complete the memory game.</p>
+                <p>4. Only 3 spins are allowed each time in spin the wheel.</p>
+
+            </div>
+
+            <div class="understood">
+                <a style="text-decoration: none;" href="#GameLandingPage"><p>understood</p></a> 
+            </div>
+    
+        </div>
+
+
+
+    </div>
 
 </body>
 

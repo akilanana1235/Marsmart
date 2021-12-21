@@ -2,6 +2,8 @@ var memory_array = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F'];
 var memory_values = [];
 var memory_tile_ids = [];
 var tiles_flipped = 0;
+let time = 10;
+let isGameOver = false;
 
 
 Array.prototype.memory_tile_shuffle = function () {
@@ -21,10 +23,14 @@ function newBoard() {
 		output += '<div id="tile_' + i + '" onclick="memoryFlipTile(this,\'' + memory_array[i] + '\')"></div>';
 	}
 	document.getElementById('memory_board').innerHTML = output;
+	document.getElementById("gScore").innerHTML = 0;
+	setTimer();
 }
 
 
 function memoryFlipTile(tile, val) {
+
+	if(time>=0){
 
 	if (tile.innerHTML == "" && memory_values.length < 2) {
 
@@ -44,14 +50,19 @@ function memoryFlipTile(tile, val) {
 			if (memory_values[0] == memory_values[1]) {
 
 				tiles_flipped += 2;
+				document.getElementById("gScore").innerHTML=tiles_flipped*50;
 				
 				memory_values = [];
 				memory_tile_ids = [];
 				
 				if (tiles_flipped == memory_array.length) {
-					alert("Board cleared... generating new board");
-					document.getElementById('memory_board').innerHTML = "";
-					newBoard();
+
+					isGameOver = true;
+					let mgScore = tiles_flipped*50;
+					localStorage.setItem("memoryGameScore",mgScore);
+				
+					window.location.href = 'MemoryGameSuccess.html';
+					
 				}
 				
 			} else {
@@ -73,6 +84,38 @@ function memoryFlipTile(tile, val) {
 				}
 				setTimeout(flip2Back, 700);
 			}
+		}
+	 }
+
+  }else{
+
+	let mgScore = tiles_flipped*50;
+	localStorage.setItem("memoryGameScore",mgScore);
+	window.location.href = 'MemoryGameSuccess.html';
+	//alert("Times Up!! ")
+  }
+
+}
+
+
+function setTimer(){
+	const countDown = document.getElementById("countDown");
+
+	setInterval(updateCountDown,1000);
+
+	function updateCountDown(){
+		if(time>=0 && !isGameOver ){
+			const minutes = Math.floor(time/60);
+			let seconds = time%60;
+
+			if(seconds == 0 ){
+				let zero = 0;
+				countDown.innerHTML = `${minutes}:${seconds}${zero}`;
+			}else{
+				countDown.innerHTML = `${minutes}:${seconds}`;
+			}
+
+			time--;
 		}
 	}
 }

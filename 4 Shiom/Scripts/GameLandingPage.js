@@ -1,26 +1,71 @@
 
-var isClicked = false;
+var isClickedQuiz = false;
+var isClickedMemory = false;
+var isClickedSpin = false;
 var playerscore = 0;
-
 
 $(document).ready(function() { 
 
-    isClicked = localStorage.getItem("isClickedQuiz");
+    isClickedQuiz = localStorage.getItem("isClickedQuiz");
+    isClickedMemory = localStorage.getItem("isClickedMemory");
+    isClickedSpin = localStorage.getItem("isClickedSpin");
 
+     //getting quiz game score
     if(!localStorage.getItem("playerscore")){
-        playerscore = 0;
+        playerscore += 0;
     }else{
-        playerscore = localStorage.getItem("playerscore");
+      playerscore += parseInt(localStorage.getItem("playerscore"));
+    }
+    
+     //getting Memmory game score
+    if(!localStorage.getItem("memoryGameScore")){
+       
+    }else{
+      playerscore += parseInt(localStorage.getItem("memoryGameScore"));
     }
 
     document.getElementById("playerscore").innerHTML=playerscore;
 
+
+//Changing the button back ground based on user click
+    if(isClickedQuiz){
+      document.getElementById("playButtonQuiz").style.setProperty('background-color', 'rgba(21, 49, 122, 0.7)', 'important');
+    }
+
+   
+    if(isClickedMemory){
+      document.getElementById("playButtonMemory").style.setProperty('background-color', 'rgba(21, 49, 122, 0.7)', 'important');
+    }
+
+    if(isClickedSpin){
+      document.getElementById("playButtonSpin").style.setProperty('background-color', 'rgba(21, 49, 122, 0.7)', 'important');
+    }
+
+
+
+
  $('.playButton').click(() => {
-      if(!isClicked){
+      if(!isClickedQuiz){
         localStorage.setItem("isClickedQuiz",true);
         window.location.href = 'QuizGame.html';
       }
     });
  
+
+    $('.playButtonMemory').click(() => {
+      if(!isClickedMemory){
+        localStorage.setItem("isClickedMemory",true);
+        window.location.href = 'MemoryGame.html';
+      }
+    });
+
+
+    $('.playButtonSpin').click(() => {
+      if(!isClickedSpin){
+        localStorage.setItem("isClickedSpin",true);
+        window.location.href = 'QuizGame.html';
+      }
+    });
+
 
 });

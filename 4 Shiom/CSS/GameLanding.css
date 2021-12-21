@@ -231,14 +231,45 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55);
 
 
 
-.ui-btn-up-b{background: #15317A !important;
+#playButtonQuiz {
+    background: #15317A !important;
     border-radius: 2.67px !important;  
     width:40% ;
-    height: 40px;
+    height: 20px;
     left: 28%;
     border: none;
+    color: white;
+    align-items: center;
+    text-align: center;
+    font-family: Poppins;
 } 
 
+#playButtonMemory {
+    background: #15317A !important;
+    border-radius: 2.67px !important;  
+    width:40% ;
+    height: 20px;
+    left: 28%;
+    border: none;
+    color: white;
+    align-items: center;
+    text-align: center;
+    font-family: Poppins;
+
+} 
+
+#playButtonSpin {
+    background: #15317A !important;
+    border-radius: 2.67px !important;  
+    width:40% ;
+    height: 20px;
+    left: 28%;
+    border: none;
+    color: white;
+    align-items: center;
+    text-align: center;
+    font-family: Poppins;
+} 
 
 
 .toShop{
@@ -385,5 +416,16 @@ color: #FFFFFF;
 #imageSpin{
     width: 99%; height: 185px; margin-left: 0%; margin-top: 20px;
 }
+
+#instructions{
+    width: 600px;
+    margin-left: 5%;
+    margin-top: 0px;
+    height: 550px;
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+
+
 }
 
