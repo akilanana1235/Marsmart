@@ -1,0 +1,161 @@
+.ListPageBody{
+    width: 100%;
+    /* background-color: yellow; */
+    height: 500px;  
+    
+}
+
+
+.breadCrum {
+    width: 100%;
+    background-color: #DADADA;
+    height: 40px;
+    float: left;
+}
+
+.breadCrum p{
+    font-family: Poppins;
+    margin-left: 5%;
+    margin-top: 0.9%;
+    color: rgba(0, 0, 0, 0.72);
+}
+
+
+.pageTopHeader{
+    width: 100%;
+    height: 160px;
+/* 
+    background-color: chocolate; */
+}
+
+.ui-block-a{
+    width: 60%  !important;
+ 
+}
+
+.ui-block-b{
+    width: 40% !important;
+}
+
+.ui-bar-a{
+    background-color: #F6F6F6 !important;
+    border-style:none !important;
+}
+
+.pageHeadingContainer{
+    width: 100%;
+    height: 90px;
+    
+}
+
+.pageHeadingContainer h1{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 20px;  
+    text-align: center; 
+    color: #000000;
+    margin-left: 5%;
+    margin-top: 10px;
+}
+
+.pageHeadingContainer p{
+    font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 20px;
+color: #000000;
+margin-left: 5.2%;
+margin-top: 20px;
+}
+
+.numberOfItems{
+    width: 100%;
+    height: 40px;    
+    float: left;
+}
+
+.numberOfItems p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+    margin-left: 70%;
+    margin-top: 10px;
+}
+
+.paginationContainer{
+    width: 100%;
+    height: 51px;
+    background-color: rgb(90, 90, 107);
+    float: left;
+}
+
+.horizontalLine{
+    width: 100%;
+    height: 10px;
+    float: left;
+}
+
+.lineAcross{
+    width: 90%;
+    height: 2px;
+    border-top: 2px solid black;
+    margin-left: 5%;
+    margin-top: 5px;
+}
+
+.FilterContainer{
+    width: 100%;
+    height: 140px;
+    background-color: coral;
+    float: left;
+}
+
+.productfilters{
+    width: 90%;
+    height: 100px;
+    float: left;
+    margin-left: 5%;
+}
+
+.searchFilterContainer{
+    height: 80px;
+    width: 40%;
+    float: left;
+}
+
+#searchFor{
+    border: none;
+    background: #FFFFFF !important;
+border: 4px solid #000000 !important;
+border-radius: 5px !important;
+height: 45px !important;
+width: 108% !important;
+}
+
+.midFilterContainer{
+    height: 80px;
+    width: 45%;
+    float: left;
+}
+
+.addFilterContainer{
+
+    height: 80px;
+    width: 15%;
+    background-color: rgb(9, 88, 20);
+    float: left;
+}
+
+.extraFilter{
+    height: 60px;
+    width: 15%;
+    background-color: rgb(9, 88, 20);
+    float: left;
+    visibility: hidden;
+}
