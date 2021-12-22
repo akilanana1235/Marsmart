@@ -26,7 +26,7 @@
     <script src="https://use.fontawesome.com/bb16f85abc.js"></script>
     <link rel="stylesheet" href="CSS/Products-ListPage-Ipad.css">
 
-
+    <script type="text/javascript" src="Scripts/ProductsList.js"></script>
     </head>
 
 
@@ -78,7 +78,7 @@
 
              <div class="horizontalLine"><div class="lineAcross"></div></div>
 
-            <div class="FilterContainer">
+            <div class="FilterContainer" id="FilterContainer">
 
                 <div class="productfilters">
 
@@ -89,13 +89,48 @@
 
                   <div class="midFilterContainer">
 
+                    <form>
+                        <fieldset data-role="controlgroup" data-type="horizontal">
+    
+                      
+                         <select id="BrandFilter" name="select-native-11" >
+                               <option value="All" >Brand</option>
+                                <option value="Nestle">Nestle</option>
+                                <option value="Chedder">Chedder</option>
+                                <option value="Amul">Amul</option>
+                        </select>
+                          
+                            <select name="select-native-12" id="SortBy">
+                                <option value="#">One</option>
+                                <option value="#">Two</option>
+                                <option value="#">Three</option>
+                            </select>
+                            
+                            <select name="select-native-13" id="typeFilter">
+                                <option value="#">One</option>
+                                <option value="#">Two</option>
+                                <option value="#">Three</option>
+                            </select>
+                        </fieldset>
+                        </form>
+
                   </div>
 
-                  <div class="addFilterContainer">
-                   
+                  <div  class="addFilterContainer">
+                    <div id="addFilter" class="addFilterButton">
+                        <p>+ Filters</p>
+                       </div>
                   </div>
 
-                  <div class="extraFilter"></div>
+                  <div id="priceFilter" class="extraFilter">
+                  
+                            <select name="select-native-12" id="PriceRange">
+                                <option value="All">Price Range</option>
+                                <option value="#">Two</option>
+                                <option value="#">Three</option>
+                            </select>
+                        
+                  </div>
 
                 </div>
 
@@ -104,70 +139,10 @@
             <div class="horizontalLine"><div class="lineAcross"></div></div>
 
 
-            <div data-filter="true" data-input="#searchFor" class="productListDisplay">
+            <!-- Card -->
+            <div data-filter="true" data-input="#searchFor" class="productListDisplay" id="product_List">
 
-                <div class="card">
-                    <div class="cardheader">
-
-                        <div class="cardHeart">
-                            <i class="fa fa-heart-o" aria-hidden="true"></i>
-                        </div>
-                        <div class="cardImage">
-                            <img class="card-img-top" src="Images/spinLogo.png" alt="Card image cap">
-                        </div>
-
-                    </div>
-                   
-                    <div class="card-body">
-
-                        <div class="product_title">
-                            <h5 class="card-title">Nestlé Nesquik Cereals</h5>
-                        </div>
-
-                        <div class="product_sub_info">
-
-                            <div class="product_type">
-                             <p>Grocery</p>
-                            </div>
-
-                            <div class="product_rating">
-                              <p>4.0</p>
-                            </div>
-
-                        </div>
-
-                        <div class="product_description">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-
-                        <div class="product_price">
-                               <p>$4.00</p>
-                        </div>
-
-                        <div class="product_footer">
-
-                            <div class="QuanitityContainer">
-
-                                <button type="button" id="plusButton" class="btn btn-secondary">+</button>
-                                <span id="quantity">1</span>
-                               <button type="button" id="minusButton" class="btn btn-secondary">-</button>
-                            </div>
-
-                            <div class="addToCartContainer">
-                                <div class="continue">
-                                    <p>Add to cart</p>
-                                   </div>
-                            </div>
-
-                           
-                        </div>
-
-                      
-                     
-                    
-
-                    </div>
-                </div>
+               
 
 
             </div>
