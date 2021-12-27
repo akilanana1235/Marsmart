@@ -60,8 +60,17 @@ function memoryFlipTile(tile, val) {
 					isGameOver = true;
 					let mgScore = tiles_flipped*50;
 					localStorage.setItem("memoryGameScore",mgScore);
+					document.getElementById("continue_Button").style.setProperty('background-color', '#15317A', 'important');
 				
-					window.location.href = 'MemoryGameSuccess.html';
+				
+					document.getElementById("popUpLogo").style.marginLeft ="39%";
+					document.getElementById("popUpHeader").innerHTML ="Congratulations!";
+					document.getElementById("popUpHeader").style.color ="#24BE4F";
+					document.getElementById("popUpHeader").style.marginLeft ="29%";
+					document.getElementById("popupContent").innerHTML = "You have managed to get all matches and earned a score of 100";
+					document.getElementById("popupContent").style.marginLeft = "2%";
+					document.getElementById("memoryGameSuccess").style.visibility="visible";
+				
 					
 				}
 				
@@ -88,10 +97,21 @@ function memoryFlipTile(tile, val) {
 	 }
 
   }else{
+	isGameOver =true;
+
+	document.getElementById("continue_Button").style.setProperty('background-color', '#15317A', 'important');
+	
 
 	let mgScore = tiles_flipped*50;
 	localStorage.setItem("memoryGameScore",mgScore);
-	window.location.href = 'MemoryGameSuccess.html';
+
+	document.getElementById("popUpLogo").style.marginLeft ="37%";
+	document.getElementById("popUpHeader").innerHTML ="Times Up!";
+	document.getElementById("popUpHeader").style.color ="#BE2424";
+	document.getElementById("popUpHeader").style.marginLeft ="32%";
+	document.getElementById("popupContent").innerHTML = "You have managed to get a score of "+tiles_flipped*50;
+	document.getElementById("popupContent").style.marginLeft = "18%";
+	document.getElementById("memoryGameSuccess").style.visibility="visible";
 	//alert("Times Up!! ")
   }
 
@@ -119,3 +139,21 @@ function setTimer(){
 		}
 	}
 }
+
+$(document).ready(function(){
+
+
+
+	$('#continue_Button').click(() => {
+		if(isGameOver){
+
+			window.location.href = 'GameLanding-Ipad.html';
+		}
+		
+	  
+	});
+
+
+	
+
+});

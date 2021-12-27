@@ -244,7 +244,77 @@ div #memory_board > div{
     margin-left: 5%;
 }
 
+.imgLogo{
+    width: 20%;
+    margin-left: 37%;
+    margin-top: 50px;
+}
 
+#memoryGameSuccess{
+    width: 600px;
+    margin-left: 20%;
+    margin-top: 200px;
+    height: 550px;
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+
+#popUpHeader{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+line-height: 45px;
+display: flex;
+align-items: center;
+text-align: center;
+margin-left: 32%;
+margin-top: 40px;
+}
+
+#popupContent{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #000000;
+margin-left: 18%;
+margin-top: 20px;
+
+}
+
+.understood{
+    float: left;
+    width: 40%;
+    height: 70px;
+    margin-left: 30%;
+    margin-top: 24px;
+    background: #15317A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2.67px;
+    margin-top: 50px;
+    }
+    
+    .understood p{
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    margin-top: 16px;
+    color: #FFFFFF;
+    
+    }
+
+.popUpMemoryGame{
+    visibility: hidden;
+}
 
 .footer{
     margin-top: 80px;

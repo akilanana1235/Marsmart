@@ -62,9 +62,9 @@
                                   </div>
                             </div>
 
-                            <div class="continueButtonContainer">
+                            <div class="continueButtonContainer" >
 
-                                <div class="continue">
+                                <div class="continue" id="continue_Button">
                                     <p>Conitnue Game</p>
                                    </div>
                                    
@@ -98,8 +98,10 @@
                                 <div class="gameBoard">
 
                                 <div class="cardHolder">
-                                    <div id="memory_board"></div>
+                                     <a href="#memoryGameSuccess" data-rel="popup" > 
+                                   <div id="memory_board"></div>
                                     <script>newBoard();</script>
+                                     </a>
                                 </div>
                                     
                                   
@@ -124,15 +126,14 @@
         </div>
 
 
-        <div data-role="popup" id="memoryGameSuccess">
+        <div data-role="popup" id="memoryGameSuccess" class="popUpMemoryGame">
        
-            <img src="Images/GameLogo.png" class="imgLogo">
+            <img src="Images/logoMG.png" id="popUpLogo" class="imgLogo">
     
             <div class="rules">
-                <p>1. Each game can be played once every week.</p>
-                <p>2. 10 game points is equal to one loyalty point.</p>
-                <p>3. Only 2 minutes to complete the memory game.</p>
-                <p>4. Only 3 spins are allowed each time in spin the wheel.</p>
+               <h2 id="popUpHeader"></h2>
+
+               <p id="popupContent"></p>
 
             </div>
 

@@ -86,6 +86,7 @@ function checkForAnswer() {
     isClicked = true;//to avoid answering multiple times for the same question
     if(indexNumber==4){
         document.getElementById("nextQuiz").style.setProperty('background-color', 'rgba(21, 49, 122, 0.7)', 'important');
+        document.getElementById("continueGame").style.setProperty('background-color', '#15317A', 'important');
        
     }else{
         document.getElementById("nextQuiz").style.setProperty('background-color', '#15317A', 'important');
