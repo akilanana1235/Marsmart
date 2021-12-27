@@ -19,9 +19,15 @@ $(document).ready(function() {
     
      //getting Memmory game score
     if(!localStorage.getItem("memoryGameScore")){
-       
+      playerscore += 0;
     }else{
       playerscore += parseInt(localStorage.getItem("memoryGameScore"));
+    }
+
+    if(!localStorage.getItem("spinGameScore")){
+      playerscore += 0;
+    }else{
+      playerscore += parseInt(localStorage.getItem("spinGameScore"));
     }
 
     document.getElementById("playerscore").innerHTML=playerscore;
@@ -63,9 +69,15 @@ $(document).ready(function() {
     $('.playButtonSpin').click(() => {
       if(!isClickedSpin){
         localStorage.setItem("isClickedSpin",true);
-        window.location.href = 'QuizGame.html';
-      }
+        window.location.href = 'SpinWheel.html';
+      } 
     });
 
+    $('.LeaderBoardButton').click(() => {
+        window.location.href = 'LeaderBoard.html';
+    
+    });
+
+    
 
 });

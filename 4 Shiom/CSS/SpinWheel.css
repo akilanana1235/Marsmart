@@ -1,0 +1,309 @@
+.ui-block-a{
+    width: 30%  !important;
+ 
+}
+
+.ui-block-b{
+    width: 70% !important;
+}
+
+.ui-bar-a{
+    background-color: #F6F6F6 !important;
+    border-style:none !important;
+}
+
+.spinbox{
+   
+    width: 92%;
+    height: 670px;
+}
+
+.ui-btn-inline{
+    width: 40% !important;
+    background: rgba(21, 49, 122, 0.7) !important;
+border-radius: 2.67px !important;
+font-family: Poppins !important;
+font-size: 20px !important;
+color: #FFFFFF !important;
+margin-left: 55% !important;
+
+}
+
+.logoContainer{
+    width: 100%;
+    height: 100px;
+    float: left;
+
+    
+}
+
+.iconSpin{
+    width: 15%;
+    height: 100px;
+    float: left;
+
+}
+
+#iconSpinWheel{
+    width: 100%;
+}
+
+.pageNameSpin{
+    width: 85%;
+    height: 100px;
+    float: left;
+}
+
+#pageName{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px; 
+    margin-top: 15px;
+    
+    color: #000000;
+}
+
+.scoreContainer{
+    width: 100%;
+    height: 100px;
+    float: left;
+}
+
+.mgScore{
+
+    float: left;
+    width: 72%;
+    height: 90px;
+    background: #8FF7A7;
+    border-radius: 11px;
+    margin-left: 7%;
+
+    }
+    
+.mgScore p{
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    margin-top: 25px;
+
+}
+    
+
+.continueButtonContainer{
+    width: 100%;
+    height: 354px;
+    float: left;
+}
+
+.continue{
+    float: left;
+    width: 72%;
+    height: 51.45px;
+    left: 52px;
+    top: 385px;
+    background: #15317A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2.67px;
+    margin-top: 20px;
+    margin-left: 7.5%;
+    }
+    
+    .continue p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 36px;
+    margin-top: 7px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+       
+        }
+
+
+.continueShoppingContainer{
+
+    width: 100%;
+    height: 120px;
+    float: left;
+}
+
+.continueShopping{
+    float: left;
+    width: 89%;
+    height: 58px;
+    background: #15317A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2.67px;
+    margin-top: 54px;
+    margin-left: 7.5%;
+    }
+    
+    .continueShopping p{
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 10px;
+    
+        }
+/* Wheel Content */
+
+
+#wheelOfFortune {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin-left: 15%;
+  }
+  
+  #wheel {
+    display: block;
+    width: 100%;
+  }
+  
+  #spin {
+    font: 1.5em/0 sans-serif;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 30%;
+    margin: -15%;
+    background: #fff;
+    color: #fff;
+    box-shadow: 0 0 0 8px currentColor, 0 0px 15px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    transition: 0.8s;
+  }
+  
+  #spin::after {
+    content: "";
+    position: absolute;
+    top: -17px;
+    border: 10px solid transparent;
+    border-bottom-color: currentColor;
+    border-top: none;
+  }
+
+  /* -------------Pop Up ------ */
+
+  .popupClass{
+    visibility:hidden;
+  }
+
+.imgLogo{
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 50px;
+}  
+
+#congratsPopUp{
+    width: 600px;
+    margin-left: 20%;
+    height: 500px;
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+.rules{
+    margin-left: 10%;
+    
+}
+
+.rules h2{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+ margin-top: 40px;
+    margin-left: 20%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.rules p{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+display: flex;
+align-items: center;
+text-align: center;
+margin-top: 40px;
+color: #000000; 
+}
+
+.spinAgain{
+float: left;
+width: 40%;
+height: 70px;
+margin-left: 30%;
+margin-top: 24px;
+background: #15317A;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 2.67px;
+margin-top: 40px;
+}
+
+.spinAgain p{
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 36px;
+text-align: center;
+margin-top: 16px;
+color: #FFFFFF;
+
+}
+
+
+@media only screen and (min-width: 1024px) and (orientation: portrait) { 
+
+    .mgScore p{
+        font-size: 20px;
+    }
+
+    .continueShopping p{
+        font-size: 18px;  
+    }
+
+    .continue p{
+        font-size: 18px;
+
+            }
+
+ #question{
+                font-size: 40px;
+                margin-left: 10%;
+            }
+
+  #logoQuestionHead{
+                font-size: 38px;
+            }
+
+  #pageName{
+              margin-left: 5%;
+            }
+ }
