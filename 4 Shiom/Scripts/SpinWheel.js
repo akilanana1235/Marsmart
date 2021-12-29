@@ -4,9 +4,10 @@ $(document).ready(function(){
 	
     document.getElementById("spinGameScore").innerHTML="Game Score 0";
     let clicked = false;
+    let clickedCount = 0;
 	/*WHEEL SPIN FUNCTION*/
 	const sectors = [
-        {color:"#3CB371", label:"90"},
+        {color:"#3CB371", label:"90"}, 
         {color:"#237DE0", label:"50"},
         {color:"#D95970", label:"-10"},
         {color:"#C3B727", label:"0"},
@@ -53,9 +54,15 @@ $(document).ready(function(){
         ctx.restore();
       };
       
-      function rotate() {
 
-        document.getElementById("congratsPopUp").style.visibility="hidden";
+ function rotate() {
+ 
+          document.getElementById("congratsPopUp").style.visibility="hidden";
+  
+
+    if(clickedCount<3){
+     
+          //document.getElementById("congratsPopUp").style.visibility="hidden";
 
 
         const sector = sectors[getIndex()];
@@ -69,16 +76,20 @@ $(document).ready(function(){
 
                 document.getElementById("popUpHeader").innerHTML="Congradulations!";
                 document.getElementById("popUpContent").innerHTML="You have won "+sector.label+" Points. Spin again to test you Luck!!";
+                document.getElementById("buttonText").innerHTML="Spin Again";
                 document.getElementById("popUpHeader").style.marginLeft="20%";
                 document.getElementById("popUpHeader").style.color="#2DCF51";
                 document.getElementById("congratsPopUp").style.visibility="visible";
+                clickedCount++;
 
             }else{
                 document.getElementById("popUpHeader").innerHTML="Oops!";
                 document.getElementById("popUpContent").innerHTML="You have just lost  "+sector.label+" Points. Spin again to test you Luck!!";
+                document.getElementById("buttonText").innerHTML="Spin Again";
                 document.getElementById("popUpHeader").style.color="#E90808";
                 document.getElementById("popUpHeader").style.marginLeft="35%";
                 document.getElementById("congratsPopUp").style.visibility="visible";
+                clickedCount++; 
             }
 
             
@@ -90,6 +101,19 @@ $(document).ready(function(){
             localStorage.setItem("spinGameScore",sector.label);
         }
         clicked=true;
+      
+
+        }else{
+
+          document.getElementById("popUpHeader").innerHTML="Oops!";
+          document.getElementById("popUpContent").innerHTML="Your 3 chances of spinning is over come again next week!";
+          document.getElementById("buttonText").innerHTML="Understood";
+          document.getElementById("popUpHeader").style.color="#E90808";
+          document.getElementById("popUpHeader").style.marginLeft="35%";
+          document.getElementById("congratsPopUp").style.visibility="visible";
+
+        }
+        
       }
       
       function frame() {
