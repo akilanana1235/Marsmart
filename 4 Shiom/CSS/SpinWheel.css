@@ -87,7 +87,7 @@ margin-left: 55% !important;
     font-family: Poppins;
     font-style: normal;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 36px;
     align-items: center;
     text-align: center;
@@ -223,6 +223,7 @@ margin-left: 55% !important;
     height: 500px;
     background: #FFFFFF;
     border-radius: 15px;
+    margin-top: -200px;
 }
 .rules{
     margin-left: 10%;
@@ -279,12 +280,23 @@ color: #FFFFFF;
 }
 
 
-@media only screen and (min-width: 1024px) and (orientation: portrait) { 
+@media only screen and (min-width: 834px) and (orientation: portrait) { 
 
+    .ui-block-a{
+        width: 37%  !important;
+     
+    }
+    
+    .ui-block-b{
+        width: 63% !important;
+    }
     .mgScore p{
         font-size: 20px;
     }
 
+    .continueShopping{
+        margin-top: -40px;
+    }
     .continueShopping p{
         font-size: 18px;  
     }
@@ -306,4 +318,24 @@ color: #FFFFFF;
   #pageName{
               margin-left: 5%;
             }
+
+   #wheelOfFortune {
+                display: inline-block;
+                position: relative;
+                overflow: hidden;
+                width:100%;
+                margin-left:5%;
+                margin-top: 100px;
+    }
+
+    #congratsPopUp{
+        width: 550px;
+        margin-left: 20%;
+        height: 500px;
+        background: #FFFFFF;
+        border-radius: 15px;
+        margin-top: -190px;
+    }
+
+
  }
