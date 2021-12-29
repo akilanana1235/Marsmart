@@ -51,7 +51,7 @@
 
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
-    transform: translate(24%,-120%);
+    transform: translate(22%,-120%);
     float: left;
 
 
@@ -63,7 +63,7 @@
     height: 35px;
     width: 34%;
     float: left;
-    transform: translate(55%,-190%);
+    transform: translate(58%,-190%);
    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -201,9 +201,7 @@
 
 .gameDescription h1{
 
-    
-
-    font-family: Poppins;
+font-family: Poppins;
 font-style: normal;
 font-weight: 700;
 font-size: 24px;
@@ -308,8 +306,8 @@ color: #FFFFFF;
 
 #instructions{
     width: 600px;
-    margin-left: 60%;
-    margin-top: 200px;
+    margin-left: 50%;
+    margin-top: 100px;
     height: 550px;
     background: #FFFFFF;
     border-radius: 15px;
@@ -355,58 +353,69 @@ color: #FFFFFF;
 
 }
 
-@media only screen and (min-width: 1024px) and (orientation: portrait) { 
+@media only screen and (min-width: 834px) and (orientation: portrait) { 
 
+    .imgGlogo{
+
+        float: left;
+        height: 40%;
+        width: 25%;
+        margin-top: 4%;
+    }
 
     .glPName{
-        font-size: 32px;
-        transform: translate(-3%,-10%);
+        font-size: 30px;
+        transform: translate(25%,-220%);
         float: left;
     }
 
     .descGLP{
-        font-size: 15px;
-        transform: translate(22%,-120%);
+        font-size: 13px;
+        transform: translate(25%,-350%);
         float: left;
     }
 
     .instrcutionBtn{
         height: 35px;
-        width: 36%;
+        width: 42%;
         float: left;
-        transform: translate(55%,-150%);
+        transform: translate(55%,-350%);
        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
 
-    .toShop p{
-        margin-top: 10px;
-    font-size: 20px;
-    }
+ 
 
-    .toShop{
-        height: 60px;
-
-    }
-
+.LeaderBoardButton{
+    height: 50px;
+}
     
 .LeaderBoardButton p{
-    transform: translate(0%,-30%);
-    font-size: 22px;
+    transform: translate(0%,-40%);
+    font-size: 20px;
+
 }
 
-
+.TotalScore{
+    height: 50px;
+    width: 37%;
+}
 .TotalScore p{
-    transform: translate(0%,-30%);
-    font-size: 22px;
+    transform: translate(0%,-40%);
+    font-size: 18px;
 }
+
+.gameCardGroup{
+    width: 87%;
+}
+
 
 .gameDescription p{
-    font-size: 14px;
+    font-size: 12px;
 }
 
 
 #imageQuiz{
-    width: 55%; height: 155px; margin-left: 23%; margin-top: 35px;
+    width: 60%; height: 155px; margin-left: 21%; margin-top: 35px;
 }
 
 #imageMemeory{
@@ -417,14 +426,50 @@ color: #FFFFFF;
     width: 99%; height: 185px; margin-left: 0%; margin-top: 20px;
 }
 
+#playButtonQuiz {
+ 
+    left: 23%;
+
+} 
+
+#playButtonMemory {
+   
+    left: 23%;
+ 
+
+} 
+
+#playButtonSpin {
+
+    left: 23%;
+
+} 
+
+.toShop p{
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.toShop{
+    height: 55px;
+    width:25% ;
+    margin-left: 69.5%;
+
+}
+
+
 #instructions{
     width: 600px;
-    margin-left: 5%;
-    margin-top: 0px;
+    margin-left: 20%;
+    margin-top: 250px;
     height: 550px;
     background: #FFFFFF;
     border-radius: 15px;
 }
+
+
+
+
 
 
 }

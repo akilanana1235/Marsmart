@@ -145,7 +145,7 @@ function handleNextQuestion() {
             document.getElementById("continueGame").style.setProperty('background-color', '#15317', 'important'); //not working
             document.getElementById("nextQuiz").style.setProperty('background-color', 'rgba(21, 49, 122, 0.7)', 'important');
             
-            handleEndGame(); //ends game if index number greater than 9 meaning we're already at the 10th question
+            //handleEndGame(); //ends game if index number greater than 9 meaning we're already at the 10th question
         }
       
 
@@ -180,7 +180,7 @@ function handleEndGame() {
 
 function navigate(){
     if(indexNumber>4){
-
+        handleEndGame();
         window.location.href = 'GameLanding-Ipad.html';
       }
 }
