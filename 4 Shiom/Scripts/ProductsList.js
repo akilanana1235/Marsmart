@@ -7,7 +7,7 @@ var Products =
     "category": "Grocery",
     "description": "Neque porro quisquam est qui dolore ipsum quia dolor sit amet.",
     "price": 4.50,
-    "rating": 4,
+    "rating": 4.10,
     "img_url": "Images/nesquick.png",
     "beforeDiscount": "",
     "discount_tag":"",
@@ -16,7 +16,7 @@ var Products =
   {
     "product_id": "2",
     "title": "Vanilla Almond Milkins",
-    "category": "Grocery",
+    "category": "Dairy",
     "description": "Neque porro quisquam est qui dolore ipsum quia dolor sit amet.",
     "price": 2.40,
     "rating": 4.3,
@@ -42,7 +42,7 @@ var Products =
     "title": "Lurpak Unsalted Butter",
     "category": "Grocery",
     "description": "Neque porro quisquam est qui dolore ipsum quia dolor sit amet.",
-    "price": 8.50,
+    "price": 58.50,
     "rating": 4.5,
     "img_url": "Images/luprak.png",
     "beforeDiscount": "",
@@ -169,11 +169,11 @@ var Products =
                             <div class="product_sub_info">
     
                                 <div class="product_type">
-                                <p id="procustRating"> <span>&#9733;</span> ${Products[i].rating}</p>
+                                <p id="product_cat">${Products[i].category}</p>
                                 </div>
     
                                 <div class="product_rating">
-                                  <p id="procustRating">${Products[i].rating}</p>
+                                <p id="procustRating"> <span>&#9733;</span> ${Products[i].rating}</p>
                                 </div>
     
                             </div>
@@ -506,7 +506,7 @@ var Products =
                                 </div>
     
                                 <div class="product_rating">
-                                  <p id="procustRating">${Products[i].rating}</p>
+                                <p id="procustRating"> <span>&#9733;</span> ${Products[i].rating}</p>
                                 </div>
     
                             </div>
@@ -549,6 +549,164 @@ var Products =
         container.innerHTML=outputFilter;  
 
     });
+
+    $('#typeFilter').on('change', function () {
+
+        const container = document.getElementById('product_List');
+        container.innerHTML='';
+
+        var outputFilter = '';
+        var $this = $(this),
+        filterVal   = $this.val();
+      
+        for (var i = 0; i < Products.length; i++) {
+
+            if(filterVal==Products[i].category){
+
+                outputFilter += `
+        <div class="card">
+                    <div class="cardheader">
+
+                        <div class="cardHeart">
+                            <div class="addToWishL">
+                                <i id="wishIcon" class="fa fa-heart-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="discounted">
+                               <img  id="discountTag" src="" alt="">
+                            </div>
+                        </div>
+                        <div class="cardImage">
+                            <img id="product-image" class="card-img-top" src="${Products[i].img_url}" alt="Card image cap">
+                        </div>
+
+                    </div>
+                   
+                    <div class="card-body">
+
+                        <div class="product_title">
+                            <h5 id="productTitle" class="card-title">${Products[i].title}</h5>
+                        </div>
+
+                        <div class="product_sub_info">
+
+                            <div class="product_type">
+                             <p id="product_cat">${Products[i].category}</p>
+                            </div>
+
+                            <div class="product_rating">
+                            <p id="procustRating"> <span>&#9733;</span> ${Products[i].rating}</p>
+                            </div>
+
+                        </div>
+
+                        <div class="product_description">
+                            <p id="productDescription" class="card-text">${Products[i].description}</p>
+                        </div>
+
+                        <div class="product_price">
+                               
+                               <p id="productPrice"> <span id="beforeDiscounted">${Products[i].beforeDiscount}</span> <span id="price_product"> ${'$'+Products[i].price}</span></p>
+                        </div>
+
+                        <div class="product_footer">
+
+                            <div class="QuanitityContainer">
+
+                                <button type="button" id="plusButton" class="btn btn-secondary">+</button>
+                                <span id="quantity">1</span>
+                               <button type="button" id="minusButton" class="btn btn-secondary">-</button>
+                            </div>
+
+                            <div class="addToCartContainer">
+                                <div class="continue">
+                                    <p>Add to cart</p>
+                                   </div>
+                            </div>  
+                        </div>                    
+
+                    </div>
+                </div>
+      `;
+            }
+
+
+          if(filterVal=="All"){
+              
+            outputFilter += `
+            <div class="card">
+                        <div class="cardheader">
+    
+                            <div class="cardHeart">
+                                <div class="addToWishL">
+                                <span id="wishIcon">&#9825;</i>
+                                </div>
+                                <div class="discounted">
+                                   <img  id="discountTag" src="" alt="">
+                                </div>
+                            </div>
+                            <div class="cardImage">
+                                <img id="product-image" class="card-img-top" src="${Products[i].img_url}" alt="Card image cap">
+                            </div>
+    
+                        </div>
+                       
+                        <div class="card-body">
+    
+                            <div class="product_title">
+                                <h5 id="productTitle" class="card-title">${Products[i].title}</h5>
+                            </div>
+    
+                            <div class="product_sub_info">
+    
+                                <div class="product_type">
+                                <p id="product_cat">${Products[i].category}</p>
+                                </div>
+    
+                                <div class="product_rating">
+                                <p id="procustRating"> <span>&#9733;</span> ${Products[i].rating}</p>
+                                </div>
+    
+                            </div>
+    
+                            <div class="product_description">
+                                <p id="productDescription" class="card-text">${Products[i].description}</p>
+                            </div>
+    
+                            <div class="product_price">
+                                   
+                                   <p id="productPrice"> <span id="beforeDiscounted">${Products[i].beforeDiscount}</span> <span id="price_product"> ${'$'+Products[i].price}</span></p>
+                            </div>
+    
+                            <div class="product_footer">
+    
+                                <div class="QuanitityContainer">
+    
+                                    <button type="button" id="plusButton" class="btn btn-secondary">+</button>
+                                    <span id="quantity">1</span>
+                                   <button type="button" id="minusButton" class="btn btn-secondary">-</button>
+                                </div>
+    
+                                <div class="addToCartContainer">
+                                    <div class="continue">
+                                        <p>Add to cart</p>
+                                       </div>
+                                </div>  
+                            </div>                    
+    
+                        </div>
+                    </div>
+          `;
+
+
+          }  
+
+        }
+
+        container.innerHTML=outputFilter;  
+
+    });
+
+
     
     $("#addFilter").on('click',function(){
 
@@ -566,6 +724,234 @@ var Products =
         
 
     });
+
+
+    $('#PriceRange').on('change', function () {
+
+        const container = document.getElementById('product_List');
+        container.innerHTML='';
+
+        var outputFilter = '';
+        var $this = $(this),
+        filterVal   = $this.val();
+      
+        for (var i = 0; i < Products.length; i++) {
+
+            if(filterVal=="45"){
+
+                if(Products[i].price<=45){
+                outputFilter += `
+        <div class="card">
+                    <div class="cardheader">
+
+                        <div class="cardHeart">
+                            <div class="addToWishL">
+                                <i id="wishIcon" class="fa fa-heart-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="discounted">
+                               <img  id="discountTag" src="" alt="">
+                            </div>
+                        </div>
+                        <div class="cardImage">
+                            <img id="product-image" class="card-img-top" src="${Products[i].img_url}" alt="Card image cap">
+                        </div>
+
+                    </div>
+                   
+                    <div class="card-body">
+
+                        <div class="product_title">
+                            <h5 id="productTitle" class="card-title">${Products[i].title}</h5>
+                        </div>
+
+                        <div class="product_sub_info">
+
+                            <div class="product_type">
+                             <p id="product_cat">${Products[i].category}</p>
+                            </div>
+
+                            <div class="product_rating">
+                            <p id="procustRating"> <span>&#9733;</span> ${Products[i].rating}</p>
+                            </div>
+
+                        </div>
+
+                        <div class="product_description">
+                            <p id="productDescription" class="card-text">${Products[i].description}</p>
+                        </div>
+
+                        <div class="product_price">
+                               
+                               <p id="productPrice"> <span id="beforeDiscounted">${Products[i].beforeDiscount}</span> <span id="price_product"> ${'$'+Products[i].price}</span></p>
+                        </div>
+
+                        <div class="product_footer">
+
+                            <div class="QuanitityContainer">
+
+                                <button type="button" id="plusButton" class="btn btn-secondary">+</button>
+                                <span id="quantity">1</span>
+                               <button type="button" id="minusButton" class="btn btn-secondary">-</button>
+                            </div>
+
+                            <div class="addToCartContainer">
+                                <div class="continue">
+                                    <p>Add to cart</p>
+                                   </div>
+                            </div>  
+                        </div>                    
+
+                    </div>
+                </div>
+      `;
+            }
+        }else if(filterVal=="100"){
+            if(Products[i].price>45 && Products[i].price<=100){
+                outputFilter += `
+        <div class="card">
+                    <div class="cardheader">
+
+                        <div class="cardHeart">
+                            <div class="addToWishL">
+                                <i id="wishIcon" class="fa fa-heart-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="discounted">
+                               <img  id="discountTag" src="" alt="">
+                            </div>
+                        </div>
+                        <div class="cardImage">
+                            <img id="product-image" class="card-img-top" src="${Products[i].img_url}" alt="Card image cap">
+                        </div>
+
+                    </div>
+                   
+                    <div class="card-body">
+
+                        <div class="product_title">
+                            <h5 id="productTitle" class="card-title">${Products[i].title}</h5>
+                        </div>
+
+                        <div class="product_sub_info">
+
+                            <div class="product_type">
+                             <p id="product_cat">${Products[i].category}</p>
+                            </div>
+
+                            <div class="product_rating">
+                            <p id="procustRating"> <span>&#9733;</span> ${Products[i].rating}</p>
+                            </div>
+
+                        </div>
+
+                        <div class="product_description">
+                            <p id="productDescription" class="card-text">${Products[i].description}</p>
+                        </div>
+
+                        <div class="product_price">
+                               
+                               <p id="productPrice"> <span id="beforeDiscounted">${Products[i].beforeDiscount}</span> <span id="price_product"> ${'$'+Products[i].price}</span></p>
+                        </div>
+
+                        <div class="product_footer">
+
+                            <div class="QuanitityContainer">
+
+                                <button type="button" id="plusButton" class="btn btn-secondary">+</button>
+                                <span id="quantity">1</span>
+                               <button type="button" id="minusButton" class="btn btn-secondary">-</button>
+                            </div>
+
+                            <div class="addToCartContainer">
+                                <div class="continue">
+                                    <p>Add to cart</p>
+                                   </div>
+                            </div>  
+                        </div>                    
+
+                    </div>
+                </div>
+      `;
+            }
+        }
+
+
+          if(filterVal=="All"){
+              
+            outputFilter += `
+            <div class="card">
+                        <div class="cardheader">
+    
+                            <div class="cardHeart">
+                                <div class="addToWishL">
+                                <span id="wishIcon">&#9825;</i>
+                                </div>
+                                <div class="discounted">
+                                   <img  id="discountTag" src="" alt="">
+                                </div>
+                            </div>
+                            <div class="cardImage">
+                                <img id="product-image" class="card-img-top" src="${Products[i].img_url}" alt="Card image cap">
+                            </div>
+    
+                        </div>
+                       
+                        <div class="card-body">
+    
+                            <div class="product_title">
+                                <h5 id="productTitle" class="card-title">${Products[i].title}</h5>
+                            </div>
+    
+                            <div class="product_sub_info">
+    
+                                <div class="product_type">
+                                <p id="product_cat">${Products[i].category}</p>
+                                </div>
+    
+                                <div class="product_rating">
+                                <p id="procustRating"> <span>&#9733;</span> ${Products[i].rating}</p>
+                                </div>
+    
+                            </div>
+    
+                            <div class="product_description">
+                                <p id="productDescription" class="card-text">${Products[i].description}</p>
+                            </div>
+    
+                            <div class="product_price">
+                                   
+                                   <p id="productPrice"> <span id="beforeDiscounted">${Products[i].beforeDiscount}</span> <span id="price_product"> ${'$'+Products[i].price}</span></p>
+                            </div>
+    
+                            <div class="product_footer">
+    
+                                <div class="QuanitityContainer">
+    
+                                    <button type="button" id="plusButton" class="btn btn-secondary">+</button>
+                                    <span id="quantity">1</span>
+                                   <button type="button" id="minusButton" class="btn btn-secondary">-</button>
+                                </div>
+    
+                                <div class="addToCartContainer">
+                                    <div class="continue">
+                                        <p>Add to cart</p>
+                                       </div>
+                                </div>  
+                            </div>                    
+    
+                        </div>
+                    </div>
+          `;
+
+
+          }  
+
+        }
+
+        container.innerHTML=outputFilter;  
+
+    });
+
+
 
     $(".addToWishL").on('click',function(){
         
@@ -590,6 +976,11 @@ var Products =
         
     });
 
+    $('.earnLoyalty').click(() => {
+
+          window.location.href = 'GameLanding-Ipad.html';
+        
+      });
 
   }); //End of Document ready func
 
@@ -660,9 +1051,10 @@ var Products =
                             </div>
 
                             <div class="addToCartContainer">
+                            <a style="text-decoration: none;" href="#addToBasketPopUp"  data-rel="popup" >
                                 <div class="continue">
-                                    <p>Add to cart</p>
-                                   </div>
+                                   <p>Add to cart</p>
+                                   </div></a>
                             </div>  
                         </div>                    
 

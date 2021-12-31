@@ -34,11 +34,11 @@
         
         <div data-role="page" id="Products-page">
 
-            <div data-role="header">
+            <div class="navBar" data-role="header">
                 <div>Nav</div>
             </div>
 
-            <div data-role="main">
+            <div class="pageContent" data-role="main">
 
               <div class="ListPageBody">
 
@@ -109,9 +109,10 @@
                             </select>
                             
                             <select name="select-native-13" id="typeFilter">
-                                <option value="#">One</option>
-                                <option value="#">Two</option>
-                                <option value="#">Three</option>
+                                <option value="All">Type</option>
+                                <option value="Grocery">Grocery</option>
+                                <option value="Dairy">Dairy</option>
+                                <option value="Bakery">Bakery</option>
                             </select> 
                         </fieldset>
                         </form>
@@ -128,8 +129,8 @@
                   
                             <select name="select-native-12" id="PriceRange">
                                 <option value="All">Price Range</option>
-                                <option value="#">Two</option>
-                                <option value="#">Three</option>
+                                <option value="45">$0-$45</option>
+                                <option value="100">$46-$100</option>
                             </select>
                         
                   </div>
@@ -152,15 +153,37 @@
 
 <!-- Main ending  -->
             </div>  
-
-
-            <div class="footer" data-role="footer">
-                <p>footer</p>
-            </div>
-
         </div>
 
-    </body>
+        <div class="footer" data-role="footer">
+            <p>footer</p>
+        </div>
+
+        <div data-role="popup" id="addToBasketPopUp">
+       
+           
+            <i id="sucessIcon" class="fa fa-check-circle" aria-hidden="true"></i>
+    
+            <div class="popUpDescription">
+                     <p>Successfully Added to Cart</p>
+            </div>
+
+            <div class="popUpFooter">
+
+                <div id="loyaltyNavigate" class="earnLoyalty">
+                    <a style="text-decoration: none;" ><p>Earn Loyalty</p></a> 
+                </div>
+
+                <div class="continueShopping">
+                    <a style="text-decoration: none;" href="#Products-page"><p>Continue Shopping</p></a> 
+                </div>
+            </div>
+            
+    
+        </div>
+
+    </div>
+</body>
 
 
 
