@@ -72,13 +72,13 @@ color: #000000;
 }
 
 .loyaltyMe{
-    width: 25%;
+    width: 31%;
 height: 107px;
 float: left;
 background: #8FF7A7;
 border-radius: 15px;
-margin-top: 31px;
-margin-left: 37%;
+margin-top: 25px;
+margin-left: 30%;
 }
 
 #pLoyaltyLabel{
@@ -407,7 +407,13 @@ color: #3C2727;
 
 
 
-  @media only screen and (min-width: 1024px) and (orientation: portrait) {
+  @media only screen and (min-width: 834px) and (orientation: portrait) {
+
+    .leaderLogo{
+      width: 40%;          
+      }
+      
+
 
     .leaderLogo p{
      font-size: 32px;
@@ -417,6 +423,10 @@ color: #3C2727;
     font-size: 21px;
       margin-left: 7%;
 
+}
+
+.loyaltyMe{
+  margin-left: 25%;
 }
 
 #loyaltyscore{
@@ -431,5 +441,57 @@ margin-top: 8px;
 #loyaltScoreLogo{
 width: 20%;height: 60px; margin-left: 23%;float: left;
 }
+
+
+.scoreCard{
+  width: 85%;
+  margin-left: 8%;
+  }
+
+.scoreCard2{
+  width: 85%;
+  margin-left: 8%;
+}
+
+.scoreCard3{
+  width: 85%;
+  margin-left: 8%;
+}
+
+.scoreCard4{
+  width: 85%;
+  margin-left: 8%;
+}
+
+.scoreCard5{
+  width: 85%;
+  margin-left: 8%;
+}
+
+.scoreHolder img{
+
+  width: 60%;
+  height: 75px;
+  float: left;
+  margin-left: 2%;
+}
+.scoreHolder p{
+
+font-size: 22px;
+
+}
+
+.scoreHolder{
+
+  width: 90%;
+height: 70px;
+left: 834px;
+top: 401px;
+margin-top: 14px;
+background: #F5F78F;
+border-radius: 10px;
+
+}
+
 
    }
