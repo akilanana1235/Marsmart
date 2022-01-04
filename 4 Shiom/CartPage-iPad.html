@@ -1,0 +1,128 @@
+<DOCTYPE html>
+<html>
+
+<head>
+    <title>CartPage-Ipad</title>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        
+    
+
+        <link rel="stylesheet" href="CSS/CartPage-Ipad.css">
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      
+
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
+
+      <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+        <script type="text/javascript" src="Scripts/Cart-Ipad.js"></script>
+        
+    <script type="text/javascript" src="Scripts/Products.js"></script>
+
+</head>
+
+<body>
+
+    <div data-role="page" id="cartpage">
+
+        <div data-role="header">
+            <p>Nav</p>
+        </div>
+
+        <div  data-role="main">
+
+             <div class="breadCrum">
+                <p>Home > <span style="color: #FF2525;">Game</span> </p>
+            </div>
+
+            <div class="cartBody">
+
+                <div class="pageName"><p>SHOPPING CART</p> </div>
+ 
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <input type="checkbox" name="checkboxSelectAll" class="customCehckBox" id="checkboxSelectAll" data-mini="true" />
+                            <span id="selectAlltxt">Select All</span>
+                        </div>
+
+                        <div class="ui-block-b">
+                            <img id="deleteicon" src="Images/delete.png">
+                            <span id="deletetxt"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="productcardContainer">
+
+                        
+
+
+                        
+                    </div>
+
+
+
+                        <hr class="hr1">
+
+                       <div class="ui-grid-b paymentSummary">
+                      
+
+                        <div class="subtotalHolder"><p>Subtotal
+                            <span class="subtotalprice"> Rs. 0 </span></p> 
+                        </div>
+
+                        <div class="discountedAmount"><p>Discount Amount
+                            <span class="discountedPrice"> Rs. 0 </span></p>
+                        </div>
+
+                        <div class="discountTotal"> <P> Discounted Total
+                            <span class="priceAfterDiscount"> Rs. 0 </span></P>
+                        </div>
+
+                        <div class="redeemLoyalty">
+                            <a style="text-decoration: none;"><p>Redeem Loyalty</p></a> 
+                        </div>
+
+                        <div class="NetTotal"><p> Net Total
+                            <span class="finalPrice"> Rs. 0 </span></p>
+                        </div>
+                   
+                    </div>
+                    
+
+                    <div style="text-align: center; margin-top: 28px;">
+
+                        <div class="continueShopping">
+                            <a style="text-decoration: none;"><p>Continue Shopping</p></a> 
+                        </div>
+                        <div class="checkOut">
+                            <a style="text-decoration: none;"><p>Checkout</p></a> 
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+
+</html>
