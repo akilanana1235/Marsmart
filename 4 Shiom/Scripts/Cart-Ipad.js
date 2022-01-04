@@ -16,7 +16,7 @@ $(document).ready(function() {
                 const CartHTML = `
                 <div class="ui-grid-c cardBody">
                              <div class="ui-block-a containerOne">
-                                    <input type="checkbox" name="checkboxSelectAll" class="customCehckBox" id="checkboxSelectAllProduct" data-mini="true" />    
+                                    <input type="checkbox" name="checkboxSelectAll" class="productCheckBox" id="checkboxSelectAllProduct" data-mini="true" />    
                             </div>
                              <div class="ui-block-b containerTwo">
                                     <img id="productImage" src="${Products[i].img_url}">
@@ -52,7 +52,7 @@ $(document).ready(function() {
 
                                     </div>
                                     <div class="product_price">
-                                        <p id="productPrice"> <span id="beforeDiscounted">${Products[i].beforeDiscount}</span> <span id="price_product">${'$'+Products[i].price}</span></p>
+                                        <p id="productPrice"> <span id="beforeDiscounted">${Products[i].beforeDiscount}</span> <span id="price_product" class="price">${'$'+Products[i].price}</span></p>
                                  </div>
                                  <div class="product_rating">
                                     <p id="procustRating"> <span>&#9733;</span> ${Products[i].rating}</p>
@@ -76,25 +76,33 @@ $(document).ready(function() {
         location.reload();
     });
 
+
+
     var checkedItemsList = [];
     var checkedNameList=[];
 
-    $(".product-check").change(function() {
+
+
+
+    $(".productCheckBox").change(function() {
 
         if (this.checked) {
-            var itemprice = parseInt(($('.price').eq($('.product-check').index(this)).text()).split(".").pop());
-            var itemName=$('.producttitle').eq($('.product-check').index(this)).text()
+            var itemprice = parseFloat(($('.price').eq($('.productCheckBox').index(this)).text().split("$")[1]));
+
+
+            var itemName=$('.card-title').eq($('.productCheckBox').index(this)).text()
             subtotal += itemprice;
             checkedItemsList.push(itemprice);
             checkedNameList.push(itemName)
             NetTotal = subtotal;
-            document.getElementsByClassName('subprice')[0].innerText = 'Rs.' + subtotal;
-            document.getElementsByClassName('subprice3')[0].innerHTML = 'Rs. ' + NetTotal;
+            document.getElementById('subtotalprice').innerText = 'Rs.' + subtotal;
+            document.getElementById('priceAfterDiscount').innerText = 'Rs.' + subtotal;
+            document.getElementsByClassName('finalPrice')[0].innerHTML = 'Rs. ' + NetTotal;
         }
 
         if (!this.checked) {
-            var itemprice = parseInt(($('.price').eq($('.product-check').index(this)).text()).split(".").pop());
-            var itemName=$('.producttitle').eq($('.product-check').index(this)).text()
+            var itemprice = parseFloat(($('.price').eq($('.productCheckBox').index(this)).text().split("$")[1]));
+            var itemName=$('.card-title').eq($('.productCheckBox').index(this)).text()
             subtotal -= itemprice;
             NetTotal = subtotal;
 
@@ -108,32 +116,60 @@ $(document).ready(function() {
                 }
             }
             
-            document.getElementsByClassName('subprice')[0].innerHTML = 'Rs. ' + subtotal;
-            document.getElementsByClassName('subprice3')[0].innerHTML = 'Rs. ' + NetTotal;
+            document.getElementById('subtotalprice').innerText = 'Rs.' + subtotal;
+            document.getElementById('priceAfterDiscount').innerText = 'Rs.' + subtotal;
+            document.getElementsByClassName('finalPrice')[0].innerHTML = 'Rs. ' + NetTotal;
         }
+
+
+        if(checkedItemsList.length>0){
+            document.getElementById("loyaltyButton").style.setProperty('background-color', '#15317A', 'important');
+        }else{
+            document.getElementById("loyaltyButton").style.setProperty('background-color', 'rgba(21, 49, 122, 0.7)', 'important');
+        }
+    
     });
 
-    document.getElementById("BuyNow1").addEventListener("click", function() {
-        localStorage.setItem("PriceList", checkedItemsList);
-        localStorage.setItem("NameList", checkedNameList);
-        localStorage.setItem("NetTotal", NetTotal);
-        localStorage.setItem("Subtotal", subtotal);
+    
+   $(".checkOut").on('click',function(){
 
-        var path = window.location.pathname;
-        var page = path.split("/").pop();
+    if(checkedItemsList.length==0){
+        document.getElementById("popUpHeader").innerHTML="Oops!";
+        document.getElementById("popupContent").innerHTML="Please select the item/s to buy in the cart";
+        document.getElementById("buttonTextcheckout").innerHTML="Select Item/s";
+        document.getElementById("checkoutPopUpButton").style.marginLeft="-18%";
+        document.getElementById("checkoutPopUpCancelButton").style.visibility="hidden";
+
+        document.getElementById("checkOutPopUpicon").style.fontSize="120px";
+        document.getElementById("checkOutPopUpicon").style.marginTop="60px";
+        document.getElementById("checkOutPopUpicon").style.visibility="visible";
+
+        document.getElementById("checkOutPopUpiconCaution").style.fontSize="0px";
+        document.getElementById("checkOutPopUpiconCaution").style.marginTop="0px";
+        document.getElementById("checkOutPopUpiconCaution").style.visibility="hidden";
+
+
+    }else{
+
+        document.getElementById("checkOutPopUpicon").style.fontSize="0px";
+        document.getElementById("checkOutPopUpicon").style.marginTop="0px";
+        document.getElementById("checkOutPopUpicon").style.visibility="hidden";
+
+        document.getElementById("checkOutPopUpiconCaution").style.visibility="visible";
+        document.getElementById("checkOutPopUpiconCaution").style.fontSize="120px";
+        document.getElementById("checkOutPopUpiconCaution").style.marginTop="60px";
+
         
 
-        if (page === "Cart-ipad.html") {
-            
-            window.location.href = 'Checkout-iPad.html';    
-        }
-        if (page === "Cart-iPhone.html") {
-           
-            window.location.href = 'Checkout-iPhone.html';
-        }
 
-
+        document.getElementById("popUpHeader").innerHTML="Are you sure you want to proceed to checkout?";
+        document.getElementById("popupContent").innerHTML="";
+        document.getElementById("buttonTextcheckout").innerHTML="Proceed";
+        document.getElementById("checkoutPopUpButton").style.marginLeft="5%";
+        document.getElementById("checkoutPopUpCancelButton").style.visibility="visible";
         
-    });
+    }
+
+   });
 
 });

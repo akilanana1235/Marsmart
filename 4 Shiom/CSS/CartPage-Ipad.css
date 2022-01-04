@@ -291,7 +291,7 @@ color: #FFFFFF;
             margin-top: 121px;
             padding-right: 61px;
             border: 2px solid #34AD48 !important;
-            margin-left: 10%;
+            margin-left: 50%;
         }
         
         #productImage{
@@ -448,3 +448,112 @@ line-height: 21px;
 
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.34);
 }
+
+
+/* -------------------------Pop ups ------------------- */
+
+
+#CheckOutPopUp{
+    width: 600px;
+    margin-left: -24%;
+    margin-top: 0px;
+    height: 550px;
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+
+#checkOutPopUpicon{
+    font-size: 120px;
+    color: #D62828;
+    margin-left: 40%;
+    margin-top: 60px;
+}
+
+#checkOutPopUpiconCaution{
+    /* font-size: 120px; */
+    color: #FDC82C;
+    margin-left: 40%;
+    /* margin-top: 60px; */
+    visibility: hidden;
+}
+
+
+#popUpHeader{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+line-height: 45px;
+align-items: center;
+text-align: center;
+margin-top: 40px;
+}
+
+#popupContent{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #000000;
+margin-left: 18%;
+margin-top: 20px;
+
+}
+
+.understood{
+    float: left;
+    width: 40%;
+    height: 70px;
+    margin-left: -18%;
+    margin-top: 24px;
+    background: #15317A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2.67px;
+    margin-top: 50px;
+    }
+    
+    .understood p{
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    margin-top: 16px;
+    color: #FFFFFF;
+    
+    }
+
+    .checkoutPopUpCancelButton{
+        float: left;
+    width: 40%;
+    height: 70px;
+    margin-left: 8%;
+    margin-top: 24px;
+    background: #FF2525;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2.67px;
+    margin-top: 50px;
+    visibility: hidden;
+    }
+
+    .checkoutPopUpCancelButton p{
+           
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    margin-top: 16px;
+    color: #FFFFFF;
+    }
+
+    .popUpFooter{
+        width: 100%;
+    }

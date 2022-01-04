@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
         
-    
+        <script src="https://use.fontawesome.com/bb16f85abc.js"></script>
 
         <link rel="stylesheet" href="CSS/CartPage-Ipad.css">
         
@@ -86,23 +86,23 @@
                       
 
                         <div class="subtotalHolder"><p>Subtotal
-                            <span class="subtotalprice"> Rs. 0 </span></p> 
+                            <span class="subtotalprice" id="subtotalprice"> Rs. 0 </span></p> 
                         </div>
 
                         <div class="discountedAmount"><p>Discount Amount
-                            <span class="discountedPrice"> Rs. 0 </span></p>
+                            <span class="discountedPrice" id="discountedPrice"> Rs. 0 </span></p>
                         </div>
 
                         <div class="discountTotal"> <P> Discounted Total
-                            <span class="priceAfterDiscount"> Rs. 0 </span></P>
+                            <span class="priceAfterDiscount" id="priceAfterDiscount"> Rs. 0 </span></P>
                         </div>
 
-                        <div class="redeemLoyalty">
+                        <div class="redeemLoyalty" id="loyaltyButton">
                             <a style="text-decoration: none;"><p>Redeem Loyalty</p></a> 
                         </div>
 
                         <div class="NetTotal"><p> Net Total
-                            <span class="finalPrice"> Rs. 0 </span></p>
+                            <span class="finalPrice" id="finalPrice"> Rs. 0 </span></p>
                         </div>
                    
                     </div>
@@ -113,14 +113,45 @@
                         <div class="continueShopping">
                             <a style="text-decoration: none;"><p>Continue Shopping</p></a> 
                         </div>
-                        <div class="checkOut">
-                            <a style="text-decoration: none;"><p>Checkout</p></a> 
+                        <div class="checkOut" >
+                            <a style="text-decoration: none;" href="#CheckOutPopUp" data-rel="popup" > <p>Checkout</p></a> 
                         </div>
                     </div>
 
             </div>
         </div>
-    </div>
+
+        <div style="margin-top: 200px;" data-role="footer"><p>footer</p></div>
+
+
+        <div data-role="popup" id="CheckOutPopUp" class="popUpCheckOut">
+       
+            <i id="checkOutPopUpicon" class="fa fa-times-circle-o" aria-hidden="true"></i>
+            <i id="checkOutPopUpiconCaution" class="fa fa-exclamation-triangle"></i>
+            <div class="rules">
+               <h2 id="popUpHeader"></h2>
+
+               <p id="popupContent"></p>
+
+            </div>
+
+            <div class="popUpFooter">
+                <div class="checkoutPopUpCancelButton" id="checkoutPopUpCancelButton">
+                    <a style="text-decoration: none;" ><p>Cancel</p></a> 
+                </div>
+    
+                <div class="understood" id="checkoutPopUpButton">
+                    <a style="text-decoration: none;" ><p id="buttonTextcheckout">understood</p></a> 
+                </div>
+        
+            </div>
+           
+        </div>
+
+
+
+        </div>
+    
     
 
 </body>
