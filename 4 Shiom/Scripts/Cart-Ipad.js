@@ -39,7 +39,7 @@ $(document).ready(function() {
 
                                         <div class="product_footer">
                                             <div class="QuanitityContainer">
-                                                <button type="button" id="plusButton" class="btn btn-secondary">+</button>
+                                                <button type="button" id="plusButton" class="btn btn-secondary">${'+'}</button>
                                                 <span id="quantity">1</span>
                                                <button type="button" id="minusButton" class="btn btn-secondary">-</button>
                                             </div>
@@ -61,6 +61,7 @@ $(document).ready(function() {
                         </div>
                 `;
                  document.getElementsByClassName('productcardContainer')[0].innerHTML += CartHTML;
+                 $("#minusButton").unbind('hover');
                 break;
             }
         }

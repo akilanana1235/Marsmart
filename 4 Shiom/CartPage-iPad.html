@@ -55,7 +55,9 @@
 
             <div class="cartBody">
 
-                <div class="pageName"><p>SHOPPING CART</p> </div>
+                <div class="pageName"><p>Shopping Cart</p> 
+
+                </div>
  
                     <div class="ui-grid-a">
                         <div class="ui-block-a">
@@ -64,7 +66,7 @@
                         </div>
 
                         <div class="ui-block-b">
-                            <img id="deleteicon" src="Images/delete.png">
+                            <a style="text-decoration: none;" href="#DeletePopUp" data-rel="popup" > <img id="deleteicon" src="Images/delete.png"></a>
                             <span id="deletetxt"></span>
                         </div>
 
@@ -98,7 +100,7 @@
                         </div>
 
                         <div class="redeemLoyalty" id="loyaltyButton">
-                            <a style="text-decoration: none;"><p>Redeem Loyalty</p></a> 
+                            <a style="text-decoration: none;" href="#RedeemLoyaltyPopUp" data-rel="popup"><p>Redeem Loyalty</p></a> 
                         </div>
 
                         <div class="NetTotal"><p> Net Total
@@ -148,6 +150,77 @@
            
         </div>
 
+        <div data-role="popup" id="DeletePopUp" class="popUpDelete">
+       
+      
+            <i id="deleteCaution" class="fa fa-exclamation-triangle"></i>
+            <div class="rules">
+               <h2 id="popUpHeader">Are you sure?</h2>
+
+               <p id="popupContent">Item will be removed permantly from cart</p>
+
+            </div>
+
+            <div class="popUpFooter">
+                <div class="DeletePopUpCancelButton" id="DeletePopUpCancelButton">
+                    <a style="text-decoration: none;" ><p>No,Cancel</p></a> 
+                </div>
+    
+                <div class="DeletePopUpButton" id="DeletePopUpButton">
+                    <a style="text-decoration: none;" ><p id="buttonTextDelete">Yes, Remove it</p></a> 
+                </div>
+        
+            </div>
+           
+        </div>
+
+
+        <div data-role="popup" id="RedeemLoyaltyPopUp" class="RedeemLoyaltyPopUp">
+       
+      
+            <div class="loyaltyPopUpHeader">
+
+                <div class="loyaltyIconPop">
+                    <img src="Images/gold.png" class="loyaltyIconPopUp" alt="">
+                </div>
+                <div class="loyaltyHeadText">
+                    <p>Redeem Loyalty points</p>
+                </div>
+            </div>
+
+            <div class="loyaltyContent">
+              
+                <p>How Much Loyalty Points Would You Like to Redeem?</p>
+
+            </div>
+
+            <div class="loyaltyBoxesContainer">
+
+                <div class="loyaltyBoxe1">
+                    <div class="loyaltyBoxImg"><img src="Images/GameLogo.png" alt=""></div>
+                    <div class="loyaltyPointVal"><p>5</p></div>
+                </div>
+
+                <div class="loyaltyBoxe2">
+                    <div class="loyaltyBoxImg"><img src="Images/GameLogo.png" alt=""></div>
+                    <div class="loyaltyPointVal"><p>5</p></div>
+                </div>
+
+                <div class="loyaltyBoxe3">
+                    <div class="loyaltyBoxImg"><img src="Images/GameLogo.png" alt=""></div>
+                    <div class="loyaltyPointVal"><p>5</p></div>
+                </div>
+
+            </div>
+
+            <div class="loyaltypopUpFooter">
+
+                <div class="loyaltyNotInterested" id="loyaltyNotInterested">
+                    <a style="text-decoration: none;" ><p>Not Interested</p></a> 
+                </div>        
+            </div>
+           
+        </div>
 
 
         </div>

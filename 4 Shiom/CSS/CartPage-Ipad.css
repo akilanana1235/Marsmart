@@ -17,6 +17,7 @@
  margin-left: 2.5%;
 }
 
+
 .pageName p {
     font-family: Poppins;
 font-style: normal;
@@ -235,6 +236,10 @@ color: #FFFFFF;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+.productcardContainer{
+    margin-top: 70px;
+}
+
 
 
         /*  --------------------Card ------------------------------*/
@@ -394,6 +399,11 @@ box-sizing: border-box;
 border-radius: 7px;
     margin-left: 12%;
     height: 50px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    display: inline;
 }
 
 #minusButton{
@@ -404,6 +414,11 @@ border: 0.508571px solid rgba(0, 0, 0, 0.24);
 box-sizing: border-box;
 border-radius: 7px;
 height: 50px;
+font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    display: inline;
 }
 
 
@@ -557,3 +572,221 @@ margin-top: 20px;
     .popUpFooter{
         width: 100%;
     }
+
+
+
+    #DeletePopUp{
+        width: 600px;
+        margin-left: -24%;
+        margin-top: 100px;
+        height: 550px;
+        background: #FFFFFF;
+        border-radius: 15px;
+    }
+
+    #deleteCaution{
+         font-size: 120px;
+    color: #FDC82C;
+    margin-left: 40%;
+    margin-top: 60px;
+    }
+
+    #DeletePopUpCancelButton{
+        float: left;
+        width: 40%;
+        height: 70px;
+        margin-left: 8%;
+        margin-top: 24px;
+        background: #FF2525;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 2.67px;
+        margin-top: 50px;
+    }
+
+    #DeletePopUpCancelButton p{
+        font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    margin-top: 16px;
+    color: #FFFFFF;
+    }
+
+    #DeletePopUpButton{
+        float: left;
+        width: 40%;
+        height: 70px;
+        margin-left: 5%;
+        margin-top: 24px;
+        background: #15317A;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 2.67px;
+        margin-top: 50px;
+    }
+
+    #DeletePopUpButton p{
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+        margin-top: 16px;
+        color: #FFFFFF;
+    }
+
+
+    #RedeemLoyaltyPopUp{
+        width: 600px;
+        margin-left: -44%;
+        margin-top: 50px;
+        height: 550px;
+        background: #FFFFFF;
+        border-radius: 15px;
+    }
+
+    .loyaltyPopUpHeader{
+        width: 100%;
+        float: left;
+        margin-top: 50px;
+    }
+    .loyaltyIconPop{
+        width:40%;
+        float: left;
+
+    }
+
+    .loyaltyIconPopUp{
+        width: 40%;
+        height: 80px;
+        margin-left: 40%;
+        margin-top: 50px;
+    }
+
+    .loyaltyHeadText{
+        width: 60%;
+        float: left;
+
+        height: 129px;
+
+    }
+
+    .loyaltyHeadText p{
+        font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 36px;
+margin-top: 70px;
+color: #000000;
+margin-left: -10%;
+    }
+
+    .loyaltyContent{
+        width: 100%;
+        float: left;
+    }
+
+    .loyaltyContent p{
+        font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+align-items: center;
+text-align: center;
+margin-top: 50px;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+color: #000000;
+
+    }
+
+ .loyaltyBoxesContainer{
+    width: 100%;
+    float: left;
+    margin-top: 40px;
+ }   
+
+ .loyaltyBoxe1{
+    background: #8FF7A7;
+    border-radius: 15px;
+    height: 60px;
+    width: 20%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));   
+    float: left;
+    margin-left: 14%;
+ }
+
+ .loyaltyBoxImg{
+     width: 50%;
+     float: left;
+ }
+ .loyaltyBoxImg img{
+     width: 100%;
+     margin-left: 18%;
+ }
+ .loyaltyPointVal{
+    width: 50%;
+    float: left;
+ }
+
+ .loyaltyPointVal p {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+    margin-top: 10px;
+    color: #3C2727;
+ }
+
+ .loyaltyBoxe2{
+    background: #F5F78F;
+border-radius: 15px;
+    height: 60px;
+    width: 20%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    float: left;
+    margin-left: 6%;
+ }
+
+ .loyaltyBoxe3{
+    background: #8F99F7;
+    border-radius: 15px;
+    height: 60px;
+    width: 20%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    float: left;
+    margin-left: 6%;
+ }
+
+
+ .loyaltypopUpFooter{
+     width: 100%;
+     float: left;
+ }
+
+ .loyaltyNotInterested{
+    width: 29%;
+height: 34px;
+border: 1px solid rgba(120, 150, 255, 0.94);
+box-sizing: border-box;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 7px;
+margin-left: 34%;
+margin-top: 60px;
+ }
+
+ .loyaltyNotInterested p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    align-items: center;
+    text-align: center;
+    margin-top: 2px;
+    color: #15317A;
+ }
