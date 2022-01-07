@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marsmart - Nesquick Cereal</title>
     <!--JQuery Mobile Theme-->
     <link rel="stylesheet" href="assets/themes/cw-theme.css" />
@@ -35,83 +35,73 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--External Style & script-->
     <link rel="stylesheet" href="Style.css" />
+    <link rel="stylesheet" href="POI-IPad-Port.css" />
     <script src="script.js"></script>
-    <!--Internal Style-->
-    <style>
-        #logo {
-        font-size: 1.5em;
-        font-weight: bold;
-        padding-top: 1em;
-        }
-        #nav-content {
-            display: flex;
-            flex-direction: row;
-        }
-        #nav-content .fa {
-            font-size: x-large;
-            padding: 1em;
-        }
-        #product-hero{
-            display: flex;
-            flex-direction: column;
-            padding: .8em;
-        }
-        #product-content{
-            display: flex;
-            flex-direction: row;
-            padding: 0.8em 0.2em;
-        }
-        #product-img-gallery{
-            flex:1;
-        }
-        #product-info{
-            flex:1;
-        }
-        #product-name{
-            font-weight: bolder;
-            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            padding: 0.4em 0 0.4em 0;
-        }
-        #product-price{
-            color: rgb(252, 11, 11);
-            font-weight: bold;
-        }
-        #addToCart-area{
-            background: rgba(196, 196, 196, 0.42);
-        }
-    </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div data-role="page" data-theme="c">
-        <section data-role="header" data-position="fixed">
-            <div id="nav-content">
-                <i class="fa fa-align-justify" aria-hidden="true" style="flex: 1"></i>
-                <h1 id="logo" style="flex: 3">marsmart</h1>
-                <!--searchbar-->
-                <form style="flex: 3; padding: 0.5em;">
-                    <input type="search" name="search-1" id="search-1" value="" />
-                </form>
-                <div style="flex: 2">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    <i class="fa fa-user-circle" aria-hidden="true"></i>
-                </div>
-            </div>
-        </section>
+      <section data-role="header" data-position="fixed">
+        <div id="nav-content">
+          <i class="fa fa-align-justify" aria-hidden="true" style="flex: 1"></i>
+          <h1 id="logo" style="flex: 3">marsmart</h1>
+          <!--searchbar-->
+          <form style="flex: 3; padding: 0.5em">
+            <input type="search" name="search-1" id="search-1" value="" />
+          </form>
+          <div style="flex: 2">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+          </div>
+        </div>
+      </section>
 
-        <section role="main" class="ui-content">
-            <div class="card" id="product-hero">
-                <div></div>
-                <div id="product-content">
-                    <article id="product-img-gallery">
-                        <img src="assets/images/nesquick.PNG" style="width:22em" alt="">
-                    </article>
-                    <article id="product-info"></article>
+      <section role="main" class="ui-content">
+
+        <div class="card" id="product-hero">
+          <div id="product-content">
+            <article id="product-img-gallery">
+              <div id="gallery-main">
+                <img
+                  src="assets/images/nesquick.PNG"
+                  style="width: 22em"
+                  alt=""
+                />
+              </div>
+              <div id="gallery-subs">
+                <div>
+                  <img
+                    src="assets/images/nesquick-side.PNG"
+                    style="width: 1.5em; margin-right: 4em;"
+                    alt=""
+                  />
                 </div>
-                <div id="addToCart-area">add to cart here</div>
-            </div>
-        </section>
+                <div>
+                  <img
+                    src="assets/images/nesquick-back.PNG"
+                    style="width: 5em"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </article>
+            <article id="product-info"><!--showing product's json data--></article>
+            
+          </div>
+
+          <div id="addToCart-area">
+            <div id="change-qty-ctrl">
+              <button class="ui-btn ui-btn-a ui-btn-inline"><span><i class="fa fa-plus" aria-hidden="true"></i></span></button>
+              <span id="addToCart-qty">0</span>
+              <button class="ui-btn ui-btn-a ui-btn-inline" style="margin: 0%;"><span><i class="fa fa-plus" aria-hidden="true"></i></span></button>
+            </div>  
+            <button class="ui-btn ui-btn-d ui-btn-inline" id="addToCart-click">Add to Cart</button> 
+          </div>
+        </div>
+
+        
+
+      </section>
     </div>
-          
-</body>
+  </body>
 </html>
