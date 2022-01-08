@@ -20,7 +20,47 @@
     <link rel="stylesheet" href="CSS/GameLanding.css">
     <script type="text/javascript" src="Scripts/GameLandingPage.js"></script>
 
+    <link
+      rel="stylesheet"
+      href="CSS/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
     
+<style>
+    #logo {
+      
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 14px;
+        backdrop-filter: blur(4px);
+        /* background: linear-gradient(135deg, rgba(255, 37, 37, 0.99) 0%, #0D25B9 100%); */
+      
+        }
+        #nav-content {
+            display: flex;
+            flex-direction: row;
+        }
+        #nav-content .fa {
+            font-size: x-large;
+            padding: 1em;
+        }
+
+        form{
+            margin-left: 22%;
+            flex: 5; padding: 0.5em;
+        }
+
+        @media only screen and (min-width: 834px) and (orientation: portrait) {
+
+            form{
+            margin-left: 12%;
+            flex:4;
+        }
+         }
+
+</style>
+
 </head>
 
 
@@ -29,9 +69,20 @@
     <div data-role="page" id="GameLandingPage">
 
 
-        <div data-role="header">
-            <p> Nav </p>
-        </div>
+        <section data-role="header" data-position="fixed" style="background-color: white !important;">
+            <div id="nav-content">
+                <i class="fa fa-align-justify" aria-hidden="true" ></i>
+                <h1 id="logo" >marsmart</h1>
+                <!--searchbar-->
+                <form >
+                    <input type="search" name="search-1" id="search-1" value="" />
+                </form>
+                <div style="flex: 2">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                </div>
+            </div>
+        </section>
 
 
         <div data-role="main">

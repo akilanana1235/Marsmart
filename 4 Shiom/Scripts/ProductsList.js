@@ -953,25 +953,21 @@ var Products =
 
 
 
-    $(".addToWishL").on('click',function(){
+    $(".addToWishL").children().on('click',function(){
         
-        console.log($(this).attr('wishIcon'))
+        console.log($(this).attr('class'));
+        console.log($(this).attr('id'));
 
-        if($(this).text() == '♡'){
 
-            $(this).html("&#10084;")
-            $(this).css("color", "red");
-            $(this).css("font-size", "30px");
-            $(this).css("margin-left", "5%");
-        }else {
-
-            $(this).css("color", "black");
-            $(this).html("&#9825;")
-            $(this).css("font-size", "35px");
-            $(this).css("margin-left", "5%");
+        if($(this).attr('class')=='fa fa-heart-o'){
+            $(this).removeClass('fa fa-heart-o');
+            $(this).addClass('fa fa-heart');
+            $(this).css("color",'red');
+        }else{
+            $(this).removeClass('fa fa-heart');
+            $(this).addClass('fa fa-heart-o');
+            $(this).css("color",'black');
         }
-       
-        
 
         
     });
@@ -1002,7 +998,8 @@ var Products =
 
                         <div class="cardHeart">
                             <div class="addToWishL">
-                            <span id="wishIcon"  >&#9825;</i>
+                              <i id="${Products[i].product_id}" class="fa fa-heart-o"></i>
+                          
                             </div>
                             <div class="discounted">
                                <img  id="discountTag" src="" alt="">
