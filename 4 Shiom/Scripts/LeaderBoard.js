@@ -21,7 +21,7 @@ $(document).ready(function(){
       playerscore += parseInt(localStorage.getItem("spinGameScore"));
     }
 
-    document.getElementById("loyaltyscore").innerHTML=playerscore;
+    document.getElementById("loyaltyscore").innerHTML=Math.round(playerscore/10);
 
 
 });
