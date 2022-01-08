@@ -1,0 +1,132 @@
+.ui-header {
+    padding: 11px 15px;
+    background-color: white !important;
+    border: none !important;
+}
+
+#hamburger {
+    width: 26px;
+    margin-top: 8px;
+    margin-left: 5px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 20;
+    top: 55px;
+    left: 0;
+    border-right: 1px solid #F1F1F1;
+    background-color: white;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    width: 270px;
+    font-size: 16px !important;
+    font-family: "Century Gothic";
+    color: #4B4B4B;
+    font-weight: 100;
+    border-left: none;
+    border-color: #f1f1f1 !important;
+    border-bottom: 1px solid #f1f1f1 !important;
+    text-align: left;
+    background-color: white !important;
+    padding: 8px 8px 8px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.item-list {
+    top: -30px;
+}
+
+.item-heading {
+    font-weight: 700 !important;
+    top: -30px;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    font-size: 36px !important;
+    /* margin-left: 50px; */
+    background-color: white;
+    border: none;
+    right: 5px;
+    text-align: right;
+    top: -25px;
+}
+
+#logo {
+    margin-left: -39px;
+    width: 162px;
+    text-align: center;
+}
+
+.header-right-wrapper {
+    text-align: right;
+}
+
+#cart {
+    width: 25px;
+    margin-right: 20px;
+    margin-top: 2px;
+}
+
+#profile-image {
+    width: 25px;
+    margin-top: 2px;
+}
+
+.breadcrumb-wrapper {
+    background-color: #DADADA;
+    margin: -1em;
+    padding: 10px 10px 10px 50px;
+}
+
+.breadcrumb-text {
+    color: #4B4B4B;
+    font-family: "Century Gothic";
+}
+
+.ui-footer {
+    padding: 15px 40px;
+    background-color: #D62828 !important;
+    border: none;
+}
+
+.spreemart-title {
+    font-family: "Century Gothic";
+    color: white;
+    font-size: 14px;
+    text-shadow: none !important;
+}
+
+.spreemart-copyright {
+    font-family: "Century Gothic";
+    font-style: italic;
+    font-weight: 100;
+    color: white;
+    font-size: 12px;
+    text-shadow: none !important;
+}
+
+.social-media-wrapper {
+    text-align: right;
+    margin-top: 7px;
+}
+
+#social-media {
+    width: 15px;
+    margin-left: 4px;
+}

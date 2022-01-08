@@ -1,0 +1,62 @@
+#Verification-Email{
+    background-color: #ffffff;
+}
+
+#logo{
+    width: 345px;
+    padding: 20px 10px 20px 10px;
+}
+
+.top-banner{
+    background-color: #D62828;
+    padding: 20px;
+    font-family: "Century Gothic";
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-shadow: none;
+}
+
+.email-content{
+    font-family: "Century Gothic";
+    padding: 20px;
+    color: #A1A1A1;
+    font-size: 14px;
+    /* letter-spacing: 1px; */
+}
+
+
+
+
+
+.ui-footer{
+    padding: 15px 40px;
+    background-color: #D62828 !important;
+    border: none;
+}
+
+.spreemart-title{
+    font-family: "Century Gothic";
+    color: white;
+    font-size: 14px;
+    text-shadow: none !important;
+}
+
+.spreemart-copyright{
+    font-family: "Century Gothic";
+    font-style: italic;
+    font-weight: 100;
+    color: white;
+    font-size: 12px;
+    text-shadow: none !important;
+}
+
+.social-media-wrapper{
+    text-align: right;
+    margin-top: 7px;
+}
+
+#social-media{
+    width: 15px;
+    margin-left: 4px;
+} 

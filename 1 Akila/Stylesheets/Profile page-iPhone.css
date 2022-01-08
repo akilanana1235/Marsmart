@@ -1,0 +1,641 @@
+.row{
+    width: 102.5%;
+}
+#profile-image{
+    width: 35px;
+    margin-top: 2px;
+}
+
+#Profile{
+    background-color: #f1f1f1;
+}
+
+.breadcrumb-wrapper{
+    background-color: #DADADA;
+    margin: -1em;
+    padding: 10px 10px 10px 50px;
+}
+
+.breadcrumb-text{
+    color: #4B4B4B;
+    font-family: "Century Gothic";
+}
+
+.profile-grid{
+    margin: 20px 0 0 0;
+    padding: 20px 0;
+}
+
+.image-block{
+    text-align: center;
+}
+
+#profile-img{
+    width: 90px;
+}
+
+.profile-name{
+    font-family: "Century Gothic";
+    color: #D62828;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 17px;
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+#tabs{
+    padding-bottom: 20px;
+    margin-left: -29px;
+    width: 376px;
+}
+
+.tab{
+    background-color: white !important;
+    border-color: #D62828 !important;
+    color: #D62828 !important;
+    text-shadow: none !important;
+    text-align: center !important;
+    font-family: "Century Gothic";
+    letter-spacing: 1px;
+    font-size: 12px !important;
+    height: 27.89PX!important;
+    width: 125.6px!important;
+    padding: 5px 3px 3px 0px!important;
+}
+
+.tab:hover, .tab:focus, .tab:active {
+    background-color: #D62828 !important;
+    color: white !important;
+}
+
+/* .tab:hover:not(.active) {
+    background-color: #D62828 !important;
+    color: white !important;
+} */
+
+
+#c1,#c2,#c3{
+    display: none;
+}
+
+.ui-body-d {
+    background-color: white;
+    /* border-right: 1px solid #D62828;
+    border-left: 1px solid #D62828;
+    border-bottom: 1px solid #D62828; */
+}
+
+#path-icon-1{
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 20px;
+    height: 570px;
+}
+
+#path-icon-2{
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 20px;
+    height: 200px;
+}
+
+.personal-information-wrapper{
+    margin-left: -10px;
+    margin-top: 20px;
+}
+
+.payment-information-wrapper{
+    /* margin-left: 40px; */
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.section-header{
+    font-family: "Century Gothic";
+    color: #D62828;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px 10px;
+    letter-spacing: 3px;
+}
+
+.edit-wrapper{
+   /* margin-left: 250px; */
+}
+
+#edit-icon{
+    margin-left: 4px;
+    width: 16px;
+    margin-top: -2px;
+}
+
+.edit-text{
+    font-family: "Century Gothic";
+    color: #D62828;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-left: 1px;
+    text-decoration: underline;
+}
+
+.info-title{
+    font-family: "Century Gothic";
+    color: #000000;
+    opacity: 50%;
+    margin: 15px 0 5px 10px;
+    font-size: 14px;
+}
+
+.info-filled{
+    font-family: "Century Gothic";
+    color: #000000;
+    margin: 5px 0 5px 10px;
+    font-size: 13px;
+}
+
+.google-maps-area{
+    margin: 10px;
+}
+
+#maps{
+    width: 610px;
+}
+
+#card-type{
+    width: 50px;
+}
+
+.loyalty-tier-wrapper{
+    /* margin: 20px 40px; */
+}
+
+.loyalty-grid{
+    margin: 15px 0 45px 0;
+}
+
+#loyalty-profile-img{
+    width: 75px;
+}
+
+#tier-line{
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 74px;
+    width: 18.5%;
+}
+
+#tier-line-2{
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 199px;
+    width: 22.5%;
+}
+
+#bronze-tier-image{
+    position: absolute;
+    margin-top: 40px;
+    margin-left: -20px;
+}
+
+.tier-name{
+    font-family: "Century Gothic";
+    color: #969696;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.tier-name-silver{
+    font-family: "Century Gothic";
+    color: #969696;
+    font-size: 16px;
+}
+
+.tier-name-gold{
+    font-family: "Century Gothic";
+    color: #969696;
+    font-size: 16px;
+    margin-left: 135px;
+    text-align: center;
+}
+
+.silver-tier{
+    text-align: center;
+}
+
+.gold-tier{
+    text-align: right;
+}
+
+#tier-image{
+    margin: 6px 0;
+}
+
+.order-history{
+    background-color: #F1F1F1;
+    margin: -0.95em;
+    padding: 20px 0;
+}
+
+.order-history-wrapper{  margin: 5px 13px 0 15px;
+}
+
+.history-card{
+    margin: 15px 10px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    PADDING: 10px 0px 13px 10px;
+}
+
+.left-wrapper{
+    width: 20% !important;
+}
+
+.right-wrapper{
+    width: 80% !important;
+    text-align: left;
+    margin-left: 0px;
+    margin-top: 13px;
+}
+
+#nutella{
+    width: 88.1px;
+    height: 90.09px;
+    margin-left: -20px;
+}
+
+.product-title{
+    font-family: "Century Gothic";
+    color: #f77f00;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.price{
+    font-family: "Century Gothic";
+    color: #070707;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.order-details{
+    font-family: "Century Gothic";
+    color: #A8A8A8;
+    font-size: 10px;
+}
+
+.pagination-wrapper{
+    text-align: center;
+}
+
+.pagination {
+    display: inline-block;
+  }
+
+#pagination-number {
+    font-family: "Century Gothic";
+    color:black;
+    float: left;
+    padding: 8px 13px;
+    font-size: 12px;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+/*
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+} */
+
+.pagination a:hover:not(.active) {
+    text-align: center;
+    background-color: #D62828;
+    border-radius: 50%;
+    width: 32px;
+    color: white !important;
+    padding: 10px;
+}
+
+#next-icon{
+    width: 23px;
+}
+
+.leaderboard-top-grid{
+    margin: 15px 0 45px 0;
+}
+
+#loyalty-profile-img-big{
+    width: 100px;
+}
+
+#leaderboard-image-number{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: -55px;
+}
+
+#leaderboard-image-number-1{
+    position: absolute;
+    margin-top: 70px;
+    margin-left: -65px;
+}
+
+.leaderboard-rank-2{
+    margin-top: -8px;
+}
+
+.leaderboard-rank-1{
+    text-align: center;
+}
+
+.leaderboard-rank-3{
+    margin-top: 15px;
+    text-align: right;
+}
+
+.leaderboard-row{
+    margin: 15px -5px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    PADDING: 10px 0px 5px 10px;
+}
+
+.leader-left-wrapper{
+    width: 30% !important;
+    text-align: left;
+}
+
+.leader-middle-wrapper{
+    width: 50% !important;
+}
+
+.leader-right-wrapper{
+    width: 20% !important;
+}
+
+#leader-profile-img{
+    margin-left: 20px;
+    width: 55px;
+}
+
+.leader-name{
+    font-family: "Century Gothic";
+    color: #D62828;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: left;
+    margin-left: 18px;
+    padding: 17px 0;
+}
+
+.leader-title{
+    font-family: "Century Gothic";
+    color: #A8A8A8;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.ui-footer{
+    padding: 15px 40px;
+    background-color: #D62828 !important;
+}
+
+.spreemart-title{
+    font-family: "Century Gothic";
+    color: white;
+    font-size: 14px;
+    text-shadow: none !important;
+}
+
+.spreemart-copyright{
+    font-family: "Century Gothic";
+    font-style: italic;
+    font-weight: 100;
+    color: white;
+    font-size: 14px;
+    text-shadow: none !important;
+}
+
+.social-media-wrapper{
+    text-align: right;
+    margin-top: 10px;
+}
+
+#social-media{
+    width: 20px;
+    margin-right: 10px;
+}
+.open>.dropdown-menu-profile {
+    display: block;
+    position: fixed;
+}
+
+.dropdown-menu-profile {
+    display: none;
+    right: 40px;
+    width: 150px;
+    height: 137px;
+    z-index: 1000000000000000000000;
+    background: white;
+    margin-top: 10px;
+}
+
+.dropdown-item {
+    border-bottom: 1px solid gray;
+    border-width: 0;
+    padding: 8px 18px;
+    background-color: white !important;
+    width: 150px;
+    font-family: "Century Gothic";
+    font-weight: 100 !important;
+    color: #4B4B4B !important;
+    font-size: 16px !important;
+    text-align: left;
+}
+
+.my-drop {
+    background-color: white !important;
+    border-width: 0;
+    padding: 0 0em;
+    margin: 0em 0;
+    -webkit-box-shadow: none !important;
+}
+
+.leaderboard-top-grid {
+    margin: 15px 0 60px 0;
+}
+
+#loyalty-profile-img-big {
+    width: 85px;
+}
+
+#leaderboard-image-number {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: -55px;
+}
+
+#coin-wrapper {
+    position: absolute;
+    background-color: #A1A1A1;
+    border-radius: 50px;
+    height: 50px;
+    width: 90px;
+    margin-top: -35px;
+    padding: 8px 5px;
+    margin-left: 69px;
+}
+
+#coin-wrapper-2 {
+    position: absolute;
+    background-color: #A1A1A1;
+    border-radius: 50px;
+    height: 50px;
+    width: 90px;
+    margin-top: 0px;
+    padding: 12px 10px;
+    margin-left: -19px;
+}
+
+#coin-img{
+    width: 30px;
+    margin: -1px 1px;
+}
+
+.leaderboard-profile-name{
+    font-family: "Century Gothic";
+    color: #A1A1A1;
+    font-weight: bold;
+    font-size: 28px;
+    text-align: left;
+    padding: 10px 0;
+}
+
+.leaderboard-rank-1 {
+    width: 40% !important;
+    margin-left: -25px;
+}
+
+.leaderboard-rank-2 {
+    width: 52% !important;
+    margin-left: 33px;
+}
+
+
+#badge-img{
+    width: 43px;
+    margin-right: 10px;
+}
+
+.leaderboard-row {
+    margin: 15px 10px 15px 25px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    PADDING: 10px 0px 5px 10px;
+}
+
+.leaderboard-row-2 {
+    margin: 15px 10px 15px 25px;
+    border-radius: 10px;
+    background-color: #D62828;
+    text-align: center;
+    PADDING: 10px 0px 5px 10px;
+}
+
+.row-no{
+    font-family: "Century Gothic";
+    color: #D62828;
+    font-weight: bold;
+    font-size: 36px;
+    PADDING: 30px 0px 0px 10px;
+    margin-left: -15px;
+}
+
+.leader-left-wrapper {
+    width: 22% !important;
+    text-align: left;
+}
+
+.leader-middle-wrapper {
+    width: 50% !important;
+}
+
+.leader-right-wrapper {
+    width: 20% !important;
+}
+
+#leader-profile-img {
+    margin-left: 8px;
+    width: 55px;
+}
+
+.leader-name {
+    font-family: "Century Gothic";
+    color: #D62828;
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: none;
+    text-align: left;
+    padding: 17px 0;
+}
+
+.leader-name-2 {
+    font-family: "Century Gothic";
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: none;
+    text-align: left;
+    padding: 17px 0;
+    margin-left: 18px;
+    text-shadow: none;
+}
+
+.leader-score {
+    font-family: "Century Gothic";
+    color: white;
+    /* font-weight: bold; */
+    font-size: 18px;
+    text-align: left;
+    padding: 17px 0;
+}
+
+.leader-title {
+    font-family: "Century Gothic";
+    color: #A8A8A8;
+    font-size: 18px;
+    margin-left: 50px;
+}
+
+.points-title {
+    font-family: "Century Gothic";
+    color: #A8A8A8;
+    font-size: 18px;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+    #tabs {
+        padding-bottom: 20px;
+        margin-left: 91px;
+        width: 518px;
+    }
+
+    .tab {
+        background-color: white !important;
+        border-color: #D62828 !important;
+        color: #D62828 !important;
+        text-shadow: none !important;
+        text-align: center !important;
+        font-family: "Century Gothic";
+        letter-spacing: 1px;
+        font-size: 12px !important;
+        height: 27.89PX!important;
+        width: 172.6px!important;
+        padding: 5px 3px 3px 0px!important;
+    }
+}
