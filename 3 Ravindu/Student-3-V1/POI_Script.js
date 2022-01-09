@@ -1,3 +1,5 @@
+import { calculateRating,displayStars,displayBars} from "./Rating_Script.js";
+
 //fetching and display product data
 function loadAndDisplayProductData() {
   fetch("Data/products.json")
@@ -54,7 +56,7 @@ function loadAndDisplayProductData() {
                 let i=0;
                 let unratedStars="";
                 while(i<5-Math.round(product.ratings)){
-                  unratedStars+="<i class='fa fa-star' aria-hidden='true'></i>";
+                  unratedStars+="<i class='fa fa-star unchecked' aria-hidden='true'></i>";
                   i++;
                 }
                 return unratedStars;
@@ -76,6 +78,35 @@ function loadAndDisplayProductData() {
     .catch((err) => console.log(err));
 }
 
+function loadAndDispalyProductRatings(){
+  fetch("Data/ratings.json")
+    .then((res) => res.json())
+    .then((data) => {
+      let outputRatingStars="";
+      let outputRatingBars="";
+
+      data.forEach((r)=>{
+        if(r.productId==1){
+          outputRatingStars+=`
+          <p id="ratingOutOfFive">${calculateRating()}<span> out of</span> 5</p>
+          <p id="starsOutOfFive">${displayStars()}<span>${r.total} Reviews</span></p>
+          `
+          outputRatingBars+=`
+          ${displayBars(5,r.five_stars,r.total)}
+          ${displayBars(4,r.four_stars,r.total)}
+          ${displayBars(3,r.three_stars,r.total)}
+          ${displayBars(2,r.two_stars,r.total)}
+          ${displayBars(1,r.one_stars,r.total)}
+          `
+        }
+      })
+      document.getElementById("rating-numeric").innerHTML=outputRatingStars;
+      document.getElementById("rating-bars").innerHTML=outputRatingBars;
+    })
+    .catch((err) => console.log(err));
+}
+
 $(document).ready(function () {
   loadAndDisplayProductData();
+  loadAndDispalyProductRatings();
 });

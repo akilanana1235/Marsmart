@@ -66,3 +66,31 @@
     padding-top:1em;
     padding-bottom: 1em;
 }
+
+#ratings-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+}
+#rating-numeric{
+    flex:1;
+}
+#ratingOutOfFive{
+    font-weight: 900;
+    font-size: 5em;
+    margin-bottom: 0.2em;
+}
+#ratingOutOfFive>span{
+    font-size: 0.5em;
+}
+#rating-bars{
+    flex:1;
+}
+#starsOutOfFive{
+  font-weight: 900;
+  font-size: 1.5em;
+  margin-bottom: 0.2em;
+}
+#starsOutOfFive>span{
+  margin-left: 0.5em;
+}

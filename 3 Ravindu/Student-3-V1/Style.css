@@ -5,9 +5,7 @@ body {
 }
 
 #logo {
-  font-size: 1.5em;
-  font-weight: bold;
-  padding-top: 1em;
+  padding-top: 0.8em;
 }
 #nav-content {
   display: flex;
@@ -22,4 +20,40 @@ body {
 }
 .checked {
   color: orange;
+}
+.unchecked{
+    color:grey;
+}
+.content-section-title{
+    color: #15317A;
+    font-weight: bolder;
+}
+.progress{
+  height: 1em;
+  border-radius: 8em;
+  background: #E9E9E9;
+  flex:4;
+  margin-top: 0.5em;
+}
+.progress-bar{
+  background-color: rgb(85, 85, 85);
+}
+.rating-bar{
+  display: flex;
+  flex-direction: row;
+  gap: 1.2em;
+  font-weight: 700;
+  margin-bottom: .8em;
+}
+.footer-content{
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  margin: 2em;
+}
+.full-white-bg{
+  width: 100%;
+  margin: 0;
+  padding: 2em 1.2em;
+  background-color: white;
 }

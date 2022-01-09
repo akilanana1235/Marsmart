@@ -1,0 +1,252 @@
+
+#tabs{
+    padding-bottom: 20px;
+    width: 352px;
+    margin-left: -19px;
+}
+
+.tab{
+    background-color: white !important;
+    border-color: #D62828 !important;
+    color: #D62828 !important;
+    text-shadow: none !important;
+    text-align: center !important;
+    font-family: "Century Gothic";
+    letter-spacing: 2px;
+    font-size: 12px !important;
+}
+
+.tab:hover, .tab:focus, .tab:active {
+    background-color: #D62828 !important;
+    color: white !important;
+}
+
+.ui-body-d {
+    background-color: #f1f1f1;
+    border-right: 1px solid #D62828;
+    border-left: 1px solid #D62828;
+    border-bottom: 1px solid #D62828;
+}
+
+.Guide{
+  font-family: "Century Gothic";
+  color: #f77f00;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+#field-lbl{
+  font-family: "Century Gothic";
+  color: #000000;
+  outline-color: #707070;
+  font-weight: regular;
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+
+.what{
+  font-family: "Century Gothic";
+  outline-color: #707070;
+  color: #000000;
+  font-weight: regular;
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+#textarea-1{
+  height: 139px;
+}
+.ui-footer{
+    padding: 15px 40px;
+    background-color: #D62828 !important;
+}
+
+.spreemart-title{
+    font-family: "Century Gothic";
+    color: white;
+    font-size: 14px;
+    text-shadow: none !important;
+}
+
+.spreemart-copyright{
+    font-family: "Century Gothic";
+    font-style: italic;
+    font-weight: 100;
+    color: white;
+    font-size: 12px;
+    text-shadow: none !important;
+}
+
+.social-media-wrapper{
+    text-align: right;
+    margin-top: 7px;
+}
+
+#social-media{
+    width: 15px;
+    margin-left: 4px;
+}
+#text-box{
+      height: 132px;
+}
+
+.ui-input-text{
+    border-width: 0 !important;
+    border-style: none;
+    margin: 0.58em 0;
+}
+
+.ui-input-text input{
+    text-align: right !important;
+}
+
+#text-line{
+    background-color: white;
+    border: none !important;
+    box-shadow: none !important;
+    outline: 0;
+    border-radius: unset;
+    /* height: 60px; */
+    /* width: 200%; */
+    text-align: left;
+    /* padding: 0 40px; */
+    font-size: 16px;
+    font-family: "Century Gothic";
+    position: relative;
+}
+
+.download{
+  text-align: center;
+  font-size: 14px;
+  font-family:"Century Gothic";
+}
+
+.grey-area{
+  background-color: #F1F1F1;
+  width: 318px;
+  height: 507px;
+  padding: 20px;
+}
+#collapse{
+  background-color: white;
+  color: white;
+}
+
+.ui-collapsible-heading.ui-collapsible-heading-collapsed{
+  margin-left: 1px;
+
+}
+.ui-collapsible-inset .ui-collapsible-heading .ui-btn {
+    border: none;
+    background-color: white;
+    height: 44px;
+    font-family: "Century Gothic";
+    font-size: 11.5px;
+    color: #000000;
+    opacity: 50%;
+    outline-color: #707070;
+    font-weight: normal;
+}
+
+.ui-collapsible-inset.ui-collapsible-themed-content .ui-collapsible-content {
+  height: 47px;
+  border: none;
+  background-color: white;
+  font-family: "Century Gothic";
+  font-size: 12px;
+  color: #000000;
+  outline-color: #707070;
+}
+.ui-btn-icon-left:after {
+      margin-left: 235px;
+
+}
+
+.ui-icon-plus:after{
+      background-image: "Icons/collapse-plus.png";
+}
+
+
+.button-wrapper{
+  text-align: right;
+}
+
+#place-submit {
+  width: 125px;
+  background-color: #F77F00;
+  display: inline-block;
+  border-radius: 50px;
+  font-family: "Century Gothic";
+  color: white;
+  font-size: 13px;
+  padding: 1em 1em;
+  border: none !important;
+  text-shadow: none !important;
+  font-weight: bold;
+}
+
+.open>.dropdown-menu-profile {
+    display: block;
+    position: fixed;
+}
+
+.dropdown-menu-profile {
+    display: none;
+    right: 40px;
+    width: 150px;
+    height: 137px;
+    z-index: 1000000000000000000000;
+    background: white;
+    margin-top: 10px;
+}
+
+.dropdown-item {
+    border-bottom: 1px solid gray;
+    border-width: 0;
+    padding: 8px 18px;
+    background-color: white !important;
+    width: 150px;
+    font-family: "Century Gothic";
+    font-weight: 100 !important;
+    color: #4B4B4B !important;
+    font-size: 16px !important;
+    text-align: left;
+}
+
+.my-drop {
+    background-color: white !important;
+    border-width: 0;
+    padding: 0 0em;
+    margin: 0em 0;
+    -webkit-box-shadow: none !important;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+  #tabs {
+    padding-bottom: 20px;
+    width: 471px;
+    margin-left: 112px;
+}
+
+.tab {
+  background-color: white !important;
+  border-color: #D62828 !important;
+  color: #D62828 !important;
+  text-shadow: none !important;
+  text-align: center !important;
+  font-family: "Century Gothic";
+  letter-spacing: 2px;
+  font-size: 12px !important;
+}
+
+.grey-area {
+  background-color: #F1F1F1;
+  width: 318px;
+  height: 507px;
+  padding: 20px;
+  margin-left: 55px;
+}
+
+}

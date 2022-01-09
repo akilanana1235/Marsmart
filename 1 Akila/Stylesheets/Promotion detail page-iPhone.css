@@ -1,0 +1,543 @@
+.row {
+    width: 103%;
+}
+
+.ui-header{
+    padding: 15px 40px;
+    background-color: white !important;
+    border: none !important;
+}
+
+#hamburger{
+    width: 35px;
+    margin-top: 8px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 68px;
+    left: 0;
+    border-right: 1px solid #F1F1F1;
+    background-color: white;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    width: 270px;
+    font-size: 16px !important;
+    font-family: "Century Gothic";
+    color: #4B4B4B;
+    font-weight: 100;
+    border-left: none;
+    border-color: #f1f1f1 !important;
+    border-bottom: 1px solid #f1f1f1 !important;
+    text-align: left;
+    background-color: white !important;
+    padding: 8px 8px 8px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.item-list{
+    top: -30px;
+}
+
+.item-heading{
+    font-weight: 700 !important;
+    top: -30px;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    font-size: 36px !important;
+    /* margin-left: 50px; */
+    background-color: white;
+    border: none;
+    right: 5px;
+    text-align: right;
+    top: -25px;
+}
+
+#logo{
+    width: 180px;
+}
+
+.header-right-wrapper{
+    text-align: right;
+}
+
+#cart{
+    width: 35px;
+    margin-right: 20px;
+    margin-top: 2px;
+}
+
+#profile-image{
+    width: 35px;
+    margin-top: 2px;
+}
+
+#Promotion-detail{
+    background-color: #f1f1f1;
+}
+
+.promotion-detail-grid{
+    /*margin: 10px 10px;*/
+    border-radius: 10px;
+    background-color: white;
+    width: 337px;
+    margin-right: 29px;
+    margin-left: -25px;
+}
+
+.card{
+      width: 140px;
+      margin: 11px -21px;
+      border-radius: 10px;
+      background-color: white;
+      text-align: center;
+      margin-right: 71px;
+}
+
+.heart-wrapper{
+  text-align: left;
+  padding: 2px 0 0 10px;
+}
+
+#heart{
+    width: 15px;
+}
+
+.card-content{
+    padding: 5px 20px 5px 20px;
+}
+
+.promotion-image-block{
+    margin: 10px 20px;
+    width: 27% !important;
+}
+
+#promotion-image{
+    width: 100px;
+}
+
+.promotion-description-block{
+    margin: 20px 10px;
+    width: 55% !important;
+}
+
+.promotion-title{
+  font-family: "Century Gothic";
+  color: #f77f00;
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: -2px;
+  margin-bottom: 2px;
+}
+
+.promotion-category{
+    font-family: "Century Gothic";
+    color: #000000;
+    font-size: 12px;
+}
+
+.rating{
+    margin: 5px 0;
+}
+
+.average-rating{
+    font-family: "Century Gothic";
+    font-weight: bold;
+    font-size: 12px;
+    color:  #A1A1A1;
+    margin: 5px;
+}
+
+#rating-star{
+    width: 15px;
+}
+
+#minus{
+    height: 32.3px;
+    padding: 0.3em 0em;
+    border: 1px solid #CCCCCC;
+    border-radius: 0;
+    background-color: white;
+    margin-right: -2px;
+}
+
+#plus{
+    height: 32.3px;
+    padding: 0.3em 0em;
+    border: 1px solid #CCCCCC;
+    border-radius: 0;
+    background-color: white;
+    margin-left: -2px;
+}
+
+.ui-input-text{
+    border-width: 0 !important;
+    border-style: none;
+    margin: 0.57em 0;
+}
+
+.ui-input-text input{
+    text-align: center !important;
+}
+
+#quantity{
+    border: 1px solid #CCCCCC;
+    border-radius: 0;
+    background-color: white;
+}
+
+.quantity{
+    /*margin-left: 15px;*/
+
+    width: 100px;
+    /* text-align: left; */
+    /* display: inline; */
+    /* margin: auto;*/
+
+}
+
+.promo-add-to-cart{
+    text-align: center;
+}
+
+#promo-add-to-cart{
+background-color: #34AD48;
+display: inline-block;
+border-radius: 50px;
+margin-top: -52px;
+width: 86px;
+font-family: "Century Gothic";
+color: white;
+font-size: 10px;
+height: 33px;
+padding: -1em -60em;
+border: none !important;
+text-shadow: none !important;
+font-weight: bold;
+margin-left: 126px;
+margin-bottom: -3px;
+}
+
+
+.other-promo-add-to-cart{
+    text-align: center;
+}
+
+#other-promo-add-to-cart{
+  background-color: #34AD48;
+  display:inline-block;
+  border-radius: 50px;
+  margin-top: 2px;
+  width: 100px;
+  font-family: "Century Gothic";
+  color: white;
+  font-size: 11px;
+  height: 35px;
+  padding: 1em 1em;
+  border: none !important;
+  text-shadow: none !important;
+  font-weight: bold;
+    /*margin-left: 40px;*/
+}
+
+#buy-now{
+  background-color: #F77F00;
+    display: inline-block;
+    border-radius: 50px;
+    margin-top: -47px;
+    width: 86px;
+    font-family: "Century Gothic";
+    color: white;
+    font-size: 10px;
+    height: 33px;
+    padding: -1em 0em;
+    /* border: none !important; */
+    text-shadow: none !important;
+    font-weight: bold;
+    margin-left: 220px;
+    margin-bottom: 15px;
+}
+
+.promotion-terms{
+    font-family: "Century Gothic";
+    font-size: 12px;
+    text-align: center;
+    color: #D62828;
+    padding: 10px 10px 10px 10px;
+    font-weight:bold;
+    font-weight: italic;
+}
+
+.promotion-validation{
+    font-family: "Century Gothic";
+    font-size: 12px;
+    text-align: center;
+    color: #A1A1A1;
+
+}
+
+.promotion-detail-rate-grid{
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 30px 30px 0 30px;
+    background-color: white;
+    width: 337px;
+    margin-left: -24px;
+}
+
+
+.new-rating-text{
+    font-family: "Century Gothic";
+    font-size: 12px;
+    text-align: center;
+    color: #A1A1A1;
+}
+
+#new-rating-star{
+  width: 15px;
+}
+
+.new-rating{
+text-align: center;
+width: -17px;
+margin-right: 136px;
+margin-top: 12px;
+}
+
+.submit-btn-wrapper{
+    text-align: center;
+}
+
+#submit-btn{
+background-color: #F77F00;
+display: inline-block;
+border-radius: 50px;
+margin-top: -27px;
+width: 67px;
+font-family: "Century Gothic";
+color: white;
+font-size: 10px;
+height: 29px;
+padding: -1em 0em;
+border: none !important;
+text-shadow: none !important;
+font-weight: bold;
+margin-bottom: 9px;
+margin-left: 140px;
+}
+
+.section-header{
+    font-family: "Century Gothic";
+    color: #D62828;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px 10px;
+    letter-spacing: 3px;
+}
+
+.see-more{
+    margin: 15px 10px;
+    font-family: "Century Gothic";
+    color: #D62828;
+    font-size: 12px;
+    text-decoration: underline;
+    text-align: right;
+}
+
+#product-image{
+    width: 100px;
+    margin-left: -5px;
+}
+
+.product-title{
+    font-family: "Century Gothic";
+    color: #f77f00;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+.promo-price{
+margin-left: 132px;
+font-family: "Century Gothic";
+color: #D62828;
+font-weight: bold;
+font-size: 12px;
+
+}
+.other-promo-price{
+  font-family: "Century Gothic";
+  color: #070707;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.old-price{
+    font-family: "Century Gothic";
+    color: #A1A1A1;
+    /* font-weight: bold; */
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.discount-wrapper{
+position: absolute;
+margin-left: 100px;
+margin-top: -24px;
+/* position: absolute; */
+/* margin-left: 185px; */
+/* top: -10px; */
+/* text-align: end; */
+}
+
+.discount-rating{
+    display: none;
+}
+
+.discount-quantity{
+    width: 120px;
+    /* text-align: center; */
+    /* display: inline; */
+    margin: auto;
+}
+
+.ui-footer{
+    padding: 15px 40px;
+    background-color: #D62828 !important;
+}
+
+.spreemart-title{
+    font-family: "Century Gothic";
+    color: white;
+    font-size: 14px;
+    text-shadow: none !important;
+}
+
+.spreemart-copyright{
+    font-family: "Century Gothic";
+    font-style: italic;
+    font-weight: 100;
+    color: white;
+    font-size: 14px;
+    text-shadow: none !important;
+}
+
+.social-media-wrapper{
+    text-align: right;
+    margin-top: 10px;
+}
+
+#social-media{
+    width: 20px;
+    margin-right: 10px;
+}
+.ui-grid-a>.ui-block-a, .ui-grid-a>.ui-block-b {
+    width: 50%;
+    height: 57px;
+}
+
+#sharebutton{
+  margin-left: 176px;
+  margin-top: 12px;
+}
+.open>.dropdown-menu-profile {
+    display: block;
+    position: fixed;
+}
+
+.dropdown-menu-profile {
+    display: none;
+    right: 40px;
+    width: 150px;
+    height: 137px;
+    z-index: 1000000000000000000000;
+    background: white;
+    margin-top: 10px;
+}
+
+.dropdown-item {
+    border-bottom: 1px solid gray;
+    border-width: 0;
+    padding: 8px 18px;
+    background-color: white !important;
+    width: 150px;
+    font-family: "Century Gothic";
+    font-weight: 100 !important;
+    color: #4B4B4B !important;
+    font-size: 16px !important;
+    text-align: left;
+}
+
+.my-drop {
+    background-color: white !important;
+    border-width: 0;
+    padding: 0 0em;
+    margin: 0em 0;
+    -webkit-box-shadow: none !important;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+    #share-2 {
+        width: 17px;
+        margin-left: 208px;
+        margin-top: -42px;
+    }
+
+    .card {
+        width: 247px !important;
+        margin: 10px 32px !important;
+        border-radius: 10px;
+        background-color: white;
+        text-align: center;
+    }   
+
+.promotion-detail-grid {
+    /* margin: 10px 10px; */
+    border-radius: 10px;
+    background-color: white;
+    width: 405px;
+    margin-right: 29px;
+    margin-left: 122px;
+}
+
+    .product-detail-grid {
+        margin: 10px 137px;
+        border-radius: 10px;
+        background-color: white;
+        width: 443px;
+    }
+
+    .discount-wrapper {
+        position: absolute;
+        margin-left: 209px;
+        margin-top: -24px;
+    }
+    
+    .promotion-detail-rate-grid {
+        margin-top: 20px;
+        border-radius: 10px;
+        padding: 30px 30px 0 30px;
+        background-color: white;
+        width: 337px;
+        margin-left: 147px;
+    }
+}   
+
