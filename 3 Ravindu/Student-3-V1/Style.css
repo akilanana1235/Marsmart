@@ -5,8 +5,6 @@ body {
 }
 
 #logo {
-  font-size: 1.5em;
-  font-weight: bold;
   padding-top: 1em;
 }
 #nav-content {
@@ -26,7 +24,7 @@ body {
 .unchecked{
     color:grey;
 }
-.content-section-titile{
+.content-section-title{
     color: #15317A;
     font-weight: bolder;
 }
@@ -46,4 +44,10 @@ body {
   gap: 1.2em;
   font-weight: 700;
   margin-bottom: .8em;
+}
+.footer-content{
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  margin: 2em;
 }
