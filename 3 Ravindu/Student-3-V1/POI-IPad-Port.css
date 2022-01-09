@@ -66,12 +66,7 @@
     padding-top:1em;
     padding-bottom: 1em;
 }
-#product-related-content{
-    width: 100%;
-    margin: 0;
-    padding: 2em 1.2em;
-    background-color: white;
-}
+
 #ratings-container{
     display: flex;
     flex-direction: row;
