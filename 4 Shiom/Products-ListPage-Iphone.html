@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Products List Page Ipad</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <script src="https://use.fontawesome.com/6656a6127d.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <script src="https://use.fontawesome.com/bb16f85abc.js"></script>
+    <link rel="stylesheet" href="CSS/Products-ListPage-Iphone.css">
+
+    <script type="text/javascript" src="Scripts/ProductsList.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="CSS/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+
+    </head>
+
+
+    <body>
+        
+        <div data-role="page" id="Products-page">
+
+            <div class="navBar" data-role="header">
+                <div>Nav</div>
+            </div>
+
+            <div class="pageContent" data-role="main">
+
+              <div class="ListPageBody">
+
+                <div class="breadCrum">
+                    <p >Home > <span style="color: #FF2525;">Game</span> </p>
+                </div>
+
+
+                <div class="pageTopHeader">
+                    <div class="ui-content">
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <div class="ui-bar ui-bar-a">
+                                    <div class="pageHeadingContainer">
+                                        <h1>Dairy Products</h1>
+                                        <p>Buy Items and earn loyalty points and save money in next purchase</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="ui-bar ui-bar-a">
+
+                                    <div class="numberOfItems">
+
+                                        <p>100 results</p>
+                                    </div>
+
+                                    <div class="paginationContainer">
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>                  
+                    </div> 
+              </div>
+
+             <div class="horizontalLine"><div class="lineAcross"></div></div>
+
+            <div class="FilterContainer" id="FilterContainer">
+
+                <div class="productfilters">
+
+                  <div class="searchFilterContainer">
+
+                    <input type="text" name="search" id="searchFor" value="" data-type="search" placeholder="Filter Item by name" />
+                  </div>
+
+              
+
+                  <div  class="addFilterContainer">
+                    <div id="addFilter" class="addFilterButton">
+                        <p>+ Filters</p>
+                       </div>
+                  </div>
+
+                  <div id="priceFilter" class="extraFilter">
+                  
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+
+                        <select id="BrandFilter" name="select-native-10" class="Test">
+                            <option value="All" >Brand</option>
+                             <option value="Nestle">Nestle</option>
+                             <option value="Chedder">Chedder</option>
+                             <option value="Amul">Amul</option>
+                     </select>
+
+                           
+
+                            <select name="select-native-12" id="SortBy">
+                                <option value="All">Sort by</option>
+                                <option value="best">Best Seller</option>
+                                <option value="popularity">Popularity</option>
+                                <option value="alphabetical">A-Z</option>
+                                <option value="discount">Discounted Items</option>
+                            </select>
+                            
+                            <select name="select-native-13" id="typeFilter">
+                                <option value="All">Type</option>
+                                <option value="Grocery">Grocery</option>
+                                <option value="Dairy">Dairy</option>
+                                <option value="Bakery">Bakery</option>
+                            </select> 
+
+                            <select name="select-native-11" id="PriceRange" >
+                                <option value="All">Price Range</option>
+                                <option value="45">$0-$45</option>
+                                <option value="100">$46-$100</option>
+                            </select>
+                            
+                        </fieldset>
+                  </div>
+
+                </div>
+
+            </div>
+
+            <div class="horizontalLine"><div class="lineAcross"></div></div>
+
+
+            <!-- Card -->
+            <div data-filter="true" data-input="#searchFor" class="productListDisplay" id="product_List">
+
+               
+
+
+            </div>
+
+
+<!-- Main ending  -->
+            </div>  
+        </div>
+
+        <div class="footer" data-role="footer">
+            <p>footer</p>
+        </div>
+
+        <div data-role="popup" id="addToBasketPopUp">
+       
+           
+            <i id="sucessIcon" class="fa fa-check-circle" aria-hidden="true"></i>
+    
+            <div class="popUpDescription">
+                     <p>Successfully Added to Cart</p>
+            </div>
+
+            <div class="popUpFooter">
+
+                <div id="loyaltyNavigate" class="earnLoyalty">
+                    <a style="text-decoration: none;" ><p>Earn Loyalty</p></a> 
+                </div>
+
+                <div class="continueShopping">
+                    <a style="text-decoration: none;" href="#Products-page"><p>Continue Shopping</p></a> 
+                </div>
+            </div>
+            
+    
+        </div>
+
+    </div>
+</body>
+
+
+
+</html>
