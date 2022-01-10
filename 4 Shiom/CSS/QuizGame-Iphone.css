@@ -1,0 +1,284 @@
+.ui-block-a{
+    width: 50%  !important;
+ 
+}
+
+.ui-block-b{
+    width: 50% !important;
+}
+
+.ui-bar-a{
+    background-color: #F6F6F6 !important;
+    border-style:none !important;
+}
+
+.QuizBodyDiv{
+    width: 100%;
+}
+
+.logoContainer{
+    width: 100%;
+    height: 100px;
+    float: left;
+}
+
+
+.iconQuiz{
+    width: 15%;
+    height: 100px;
+    float: left;
+}
+
+#iconQuestion{
+    font-size: 21px; 
+    margin-left: 10%; 
+}
+
+.pageNameQuiz{
+    width: 85%;
+    height: 100px;
+    float: left;
+}
+
+#pageName{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 42px;
+color: #000000;
+}
+
+.scoreContainer{
+    width: 100%;
+    height: 100px;
+    float: left;
+}
+
+.mgScore{
+
+    float: left;
+    width: 72%;
+    height: 50px;
+    background: #8FF7A7;
+    border-radius: 11px;
+    margin-left: 20%;
+
+    }
+    
+.mgScore p{
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 6px;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    margin-top: 22px;
+
+}
+
+.quiz_box{
+    background: #E5EBFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 92%;
+    height: 420px;
+    margin-left: 4%;
+}
+
+.quiz_type{
+    width: 100%;
+    height: 70px;
+    float: left;
+    /* background-color: #8FF7A7; */
+}
+
+#qType{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 33px;
+    text-align: center;
+    color: #000000;
+    margin-top: 10px;
+    
+    }
+
+.quiz_question{
+        width: 100%;
+        height: 80px;
+        float: left;
+    }   
+
+    #qlogo{
+        width: 10%;
+        float: left;
+    }
+    
+    #logoQuestionHead{
+        font-size: 23px; margin-left: 40%;
+    }   
+
+    #quiestionHolder{
+        width: 90%;
+        float: left;
+    }
+    #question{
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 22px;
+        opacity: 1;
+        text-align: center;
+        margin-left: 0%;
+    }
+    
+
+
+    .quiz_answers{
+        width: 100%;
+        height: 200px;
+        float: left;
+    }    
+
+    .ui-radio{
+        width: 67% !important;
+        margin-left: 18% !important;
+        margin-top: 10px !important;
+        
+    }   
+
+    .ui-btn{
+  
+        background: #FFFFFF !important;
+        border-radius: 10px !important;
+        height: 45.6px !important;
+      text-align: center !important;
+    }
+
+    
+.quiz_footer{
+    float: left;
+    width: 100%;
+}
+
+.quizNumConatiner{
+    float: left;
+    width: 30%;
+    height: 90px;
+}
+
+#quizNum{
+    font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 17px;
+line-height: 16px;
+text-align: center;
+color: #000000;
+margin-top: 25px;
+
+}
+    
+
+.changeQuizContainer{
+    float: left;
+    width: 70%;
+    height: 50px;
+
+
+}
+
+.ui-btn-inline{
+    width: 50% !important;
+    background: rgba(21, 49, 122, 0.7) !important;
+border-radius: 2.67px !important;
+font-family: Poppins !important;
+font-size: 14px !important;
+color: #FFFFFF !important;
+margin-left: 40% !important;
+height: 40px !important;
+
+}
+
+
+.continueButtonContainer{
+    width: 120%;
+    height: 54px;
+    float: left;
+    /* background-color: #8FF7A7; */
+}
+
+.continue{
+    float: left;
+    width: 80%;
+    height: 51.45px;
+    background: rgba(21, 49, 122, 0.7);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2.67px;
+    margin-top: 20px;
+    margin-left: 0%;
+    }
+    
+    .continue p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 26px;
+    margin-top: 7px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+       
+        }
+
+
+.continueShoppingContainer{
+
+    width: 100%;
+    height: 72px;
+    float: left;
+ 
+}
+
+
+.continueShopping{
+    
+    width:90%;
+    height: 42px;
+    background: #15317A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2.67px;
+    margin-top: 19px;
+    margin-left: 20%;
+    }
+    
+    .continueShopping p{
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 10px;
+    
+        }
+
+.ui-block-c{
+            width: 45%  !important;
+         
+}
+        
+.ui-block-d{
+            width: 55% !important;
+            
+}
+              
