@@ -1,0 +1,325 @@
+.ui-block-a{
+    width: 51%  !important;
+ 
+}
+
+.ui-block-b{
+    width: 49% !important;
+}
+
+.ui-bar-a{
+    background-color: #F6F6F6 !important;
+    /* background-color: #F6F6F6 !important; */
+    border-style:none !important;
+    height: 80px !important;
+}
+
+.logoContainer{
+    width: 100%;
+    height: 100px;
+    float: left;
+}
+
+.iconQuiz{
+    width: 15%;
+    height: 100px;
+    float: left;
+}
+
+#iconMemory{
+    width: 80%;
+     margin-left: 0%; 
+ }
+
+ .pageNameQuiz{
+    width: 85%;
+    height: 100px;
+    float: left;
+}
+
+#pageName{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 22px;
+color: #000000;
+}
+
+
+
+
+.scoreContainer{
+    width: 100%;
+    height: 100px;
+    float: left;
+}
+
+.mgScore{
+
+    float: left;
+    width: 100%;
+    height: 50px;
+    background: #8FF7A7;
+    border-radius: 11px;
+    margin-left: 10%;
+
+    }
+    
+.mgScore p{
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 6px;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    margin-top: 22px;
+
+}
+
+
+
+.MGboardBody{
+    width: 100%;
+}
+
+.timerBody{
+    width: 100%;
+    height: 50px;
+    /* background-color: cadetblue; */
+    float: left;
+
+}
+
+.timer{
+
+    width: 25%;
+    height: 40px;
+    margin-left: 35.5%;
+    background: #FF2525;
+    margin-top: 5px;
+
+    }
+    
+    .timer p{
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 41px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 2%;
+    margin-top: 1px;
+    }
+    
+    .gameBoardSection{
+
+        width: 100%;
+        height: 440px;
+        /* background-color: aquamarine; */
+        float: left;
+    }
+
+    .gameBoard{
+        width: 100%;
+        height: 407px;
+        background-color: #E5EBFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        margin-top: 15px;
+    }
+
+    .cardHolder{
+        float: left;
+        margin-top: 10px;
+    }
+    
+    #memory_board{
+            
+        margin-top: 8px;
+        margin-left: 2.5%;
+    }
+
+    div #memory_board > div{
+        background: url(../Images/quizCardBg.png) no-repeat;
+        
+        width: 27%;
+        height: 73.65px;
+        float:left;
+        margin:10px;
+        padding:10px;
+        font-size:44px;
+        cursor:pointer;
+        text-align:center;
+     
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 1;
+        top: 0px;
+        left: 0px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        overflow: hidden;
+        margin-left: 2.5%;
+    }
+
+    
+.continueButtonContainer{
+    width: 120%;
+    height: 54px;
+    float: left;
+    /* background-color: #8FF7A7; */
+}
+
+.continue{
+    float: left;
+    width: 80%;
+    height: 41.45px;
+    background: rgba(21, 49, 122, 0.7);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2.67px;
+    margin-top: 20px;
+    margin-left: 0%;
+    }
+    
+    .continue p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 26px;
+    margin-top: 7px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+       
+        }
+
+
+.continueShoppingContainer{
+
+    width: 100%;
+    height: 72px;
+    float: left;
+ 
+}
+
+
+.continueShopping{
+    
+    width:90%;
+    height: 42px;
+    background: #15317A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2.67px;
+    margin-top: 19px;
+    margin-left: 20%;
+    }
+    
+    .continueShopping p{
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 10px;
+    
+        }
+
+.ui-block-c{
+            width: 45%  !important;
+         
+}
+        
+.ui-block-d{
+            width: 55% !important;
+            
+}
+
+
+.imgLogo{
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 50px;
+}
+
+#memoryGameSuccess{
+    width: 344px;
+    margin-left: 3%;
+    margin-top: 190px;
+    height: 300px;
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+
+#popUpHeader{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 45px;
+display: flex;
+align-items: center;
+text-align: center;
+margin-left: 2%;
+margin-top: 10px;
+}
+
+
+#popupContent{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 27px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #000000;
+margin-left: 18%;
+margin-top: 10px;
+
+}
+
+.understood{
+    float: left;
+    width: 40%;
+    height: 40px;
+    margin-left: 30%;
+    margin-top: 24px;
+    background: #15317A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2.67px;
+    margin-top: 0px;
+    }
+    
+    .understood p{
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 6px;
+    text-align: center;
+    margin-top: 16px;
+    color: #FFFFFF;
+    
+    }
+
+.popUpMemoryGame{
+    visibility: hidden;
+}

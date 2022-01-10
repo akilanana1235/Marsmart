@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Memory Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="CSS/MemoryGame-Iphone.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="Scripts/MemoryGame.js"></script>
+
+
+</head>
+
+
+<body>
+
+    <div data-role="page" id="memoryGamePlay">
+
+        <div data-role="header">
+            <p> Nav </p>
+        </div>
+
+
+        <div role="main" style="background-color: #F6F6F6;" class="ui-content">
+
+            <div class="ui-content">
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-a">
+
+                            <div class="logoContainer">
+
+                                <div class="iconQuiz">
+                                    <img src="Images/logoMG.png" id="iconMemory" >
+                                </div>
+                                <div class="pageNameQuiz">
+                                    <p id="pageName">Memory Game</p>
+
+                                </div>
+
+                            </div>
+
+                    
+
+                        </div>
+                    </div>
+
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-a">
+
+                            <div class="timerSection">
+
+                                <div class="scoreContainer">
+                                    <div class="mgScore">
+                                        <p id="qgameScore">Game Score <span id="gScore"></span></p>
+                                      </div>
+                                </div>
+
+                               
+
+                            </div>
+
+                            
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="MGboardBody">
+
+                    <div class="timerBody">
+
+
+                        <div class="timerContainer">
+                            <div class="timer">
+                                <p id="countDown"></p>
+                            </div>
+                        </div>
+
+                    </div>
+                   
+
+                    <div class="gameBoardSection">
+
+                        <div class="gameBoard">
+
+                        <div class="cardHolder">
+                             <a href="#memoryGameSuccess" data-rel="popup" > 
+                           <div id="memory_board"></div>
+                            <script>newBoard();</script>
+                             </a>
+                        </div>
+                            
+                          
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                
+                <div class="ui-grid-a" style="float: left; width: 100% !important">
+                    <div class="ui-block-c">
+                        <div class="ui-bar ui-bar-a">
+                          
+                            <div class="continueButtonContainer">
+
+                                <div id="continue_Button" class="continue" onclick="navigate()">
+                                    <p>Conitnue Game</p>
+                                   </div>
+                                   
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+                    <div class="ui-block-d">
+                        <div class="ui-bar ui-bar-a" >
+
+                            <div class="continueShoppingContainer">
+                                <div class="continueShopping">
+                                    <p>Conitnue Shopping</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="footer" data-role="footer">
+                <p>footer</p>
+            </div>
+
+
+        </div>
+
+
+        <div data-role="popup" id="memoryGameSuccess" class="popUpMemoryGame">
+       
+            <img src="Images/logoMG.png" id="popUpLogo" class="imgLogo">
+    
+            <div class="rules">
+               <h2 id="popUpHeader"></h2>
+
+               <p id="popupContent"></p>
+
+            </div>
+
+            <div class="understood">
+                <a style="text-decoration: none;" href="#GameLandingPage"><p>understood</p></a> 
+            </div>
+    
+        </div>
+
+
+
+    </div>
+
+</body>
+
+
+</html>
