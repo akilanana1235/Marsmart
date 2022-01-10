@@ -1,0 +1,287 @@
+.ui-block-a{
+    width: 51%  !important;
+ 
+}
+
+.ui-block-b{
+    width: 49% !important;
+}
+
+.ui-bar-a{
+    background-color: #F6F6F6 !important;
+    /* background-color: #F6F6F6 !important; */
+    border-style:none !important;
+    height: 80px !important;
+}
+
+.logoContainer{
+    width: 100%;
+    height: 100px;
+    float: left;
+}
+
+.iconSpin{
+    width: 15%;
+    height: 100px;
+    float: left;
+}
+
+#iconSpinWheel{
+    width: 80%;
+     margin-left: 0%; 
+ }
+
+ .pageNameQuiz{
+    width: 85%;
+    height: 100px;
+    float: left;
+}
+
+#pageName{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 22px;
+color: #000000;
+}
+
+
+
+
+.scoreContainer{
+    width: 100%;
+    height: 100px;
+    float: left;
+}
+
+.mgScore{
+
+    float: left;
+    width: 100%;
+    height: 50px;
+    background: #8FF7A7;
+    border-radius: 11px;
+    margin-left: 10%;
+
+    }
+    
+.mgScore p{
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 6px;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    margin-top: 22px;
+
+}
+
+
+#wheelOfFortune {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-left: 0%;
+  }
+  
+  #wheel {
+    display: block;
+    width: 100%;
+  }
+  
+  #spin {
+    font: 1.5em/0 sans-serif;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 30%;
+    margin: -15%;
+    background: #fff;
+    color: #fff;
+    box-shadow: 0 0 0 8px currentColor, 0 0px 15px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    transition: 0.8s;
+  }
+  
+  #spin::after {
+    content: "";
+    position: absolute;
+    top: -17px;
+    border: 10px solid transparent;
+    border-bottom-color: currentColor;
+    border-top: none;
+  }
+
+
+
+
+
+
+  .continueButtonContainer{
+    width: 120%;
+    height: 54px;
+    float: left;
+    /* background-color: #8FF7A7; */
+}
+
+.continue{
+    float: left;
+    width: 80%;
+    height: 41.45px;
+    background: rgba(21, 49, 122, 0.7);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2.67px;
+    margin-top: 20px;
+    margin-left: 0%;
+    }
+    
+    .continue p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 26px;
+    margin-top: 7px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+       
+        }
+
+
+.continueShoppingContainer{
+
+    width: 100%;
+    height: 72px;
+    float: left;
+ 
+}
+
+
+.continueShopping{
+    
+    width:90%;
+    height: 42px;
+    background: #15317A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2.67px;
+    margin-top: 19px;
+    margin-left: 20%;
+    }
+    
+    .continueShopping p{
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 10px;
+    
+        }
+
+.ui-block-c{
+            width: 45%  !important;
+         
+}
+        
+.ui-block-d{
+            width: 55% !important;
+            
+}
+
+
+
+.popupClass{
+    visibility:hidden;
+  }
+
+.imgLogo{
+    width: 20%;
+    margin-left: 42%;
+    margin-top: 20px;
+}  
+
+#congratsPopUp{
+    width: 344px;
+    margin-left: 3%;
+    margin-top: -200px;
+    height: 300px;
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+.rules{
+    margin-left: 9%;
+    
+}
+
+.rules h2{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 45px;
+ margin-top: 10px;
+    margin-left: 10%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.rules p{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 27px;
+display: flex;
+align-items: center;
+text-align: center;
+margin-top: 10px;
+color: #000000; 
+}
+
+.spinAgain{
+float: left;
+width: 40%;
+height: 40px;
+margin-left: 32%;
+margin-top: 24px;
+background: #15317A;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 2.67px;
+margin-top: 0px;
+}
+
+.spinAgain p{
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 6px;
+text-align: center;
+margin-top: 16px;
+color: #FFFFFF;
+
+}
+
+.spinbox{
+    margin-top: 50px;
+}
+
+.spinWheelBody{
+    width: 100%;
+    height: 400px;
+}
