@@ -3,10 +3,10 @@ var Products =
   [
     {
       "product_id": "1",
-      "title": "LAYS SALTED",
+      "title": "Nestlé Nesquik Cereals",
       "category": "Grocery",
       "description": "Original salted flavour",
-      "price": 180.00,
+      "price": 3.50,
       "rating": 4,
       "img_url": "Images/lays.png",
       "quantity": 1,

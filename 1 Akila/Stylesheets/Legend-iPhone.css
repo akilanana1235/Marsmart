@@ -131,11 +131,11 @@ Product price font-size: 14px */
 }
 
 .spreemart-copyright{
-    font-family: "Century Gothic";
-    font-style: italic;
-    font-weight: 100;
+    font-family: 'Poppins', sans-serif;
+    
+    font-weight: 400;
     color: white;
-    font-size: 12px;
+    font-size: 8px;
     text-shadow: none !important;
 }
 

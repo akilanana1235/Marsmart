@@ -1,5 +1,5 @@
 .row {
-    width: 102.5%;
+    
 }
 /* #slider-image-1{
     margin: -1em;
@@ -55,17 +55,17 @@
 }
 
 #search{
-    border: none;
-    border-color: white !important;
-    border-radius: 50px;
+    border: solid 2px;
+    
+    border-radius: 8px;
     background-color: white;
-    height: 46px;
+    height: 34px;
     width: 320px;
     text-align: left;
     padding: 0 40px;
     margin-left: -22px;
     font-size: 16px;
-    font-family: "Century Gothic";
+    font-family: 'Poppins', sans-serif;
     /* position: relative; */
 }
 
@@ -82,7 +82,7 @@
 }
 
 .section-header{
-    padding-bottom: 18px;
+    padding-bottom: 5px;
     font-family: 'Poppins', sans-serif;
     color: #15317A;
     font-weight: bold;
@@ -90,7 +90,7 @@
     margin-top: 10px;
     margin-bottom: -10px;
     margin-left: 0px;
-    letter-spacing: 3px;
+    
 }
 
 
@@ -98,13 +98,33 @@
     background-color: #f1f1f1;
 }
 .card{
-    width: 140px;
-    margin: 10px 10px;
-    border-radius: 10px;
+    padding: 0px 2px 0px 2px;
+    width: 160px;
+    margin: 10px 4px ;
+    border-radius: 7px ;
     background-color: white;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
 }
 
+.product-category-landing{
+    font-size: 9px;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-rating-landing{
+    font-size: 9px;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+.product-description-landing{
+    font-size: 9px;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
 .heart-wrapper{
     text-align: left;
     padding: 2px 0 0 10px;
@@ -115,7 +135,7 @@
 }
 
 .card-content{
-    padding: 5px 20px 5px 20px;
+    padding: 5px 0px 5px 0px;
 }
 
 #product-image{
@@ -124,19 +144,19 @@
 }
 
 .product-title{
-    font-family: "Century Gothic";
-    color: #f77f00;
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
     font-weight: bold;
     font-size: 12px;
-    margin-top: 4px;
+    margin-top: 0px;
     margin-bottom: 2px;
     max-height: 15px;
     overflow-y: hidden;
 }
 
 .price{
-    font-family: "Century Gothic";
-    color: #070707;
+    font-family: 'Poppins', sans-serif;
+    color: #FF2525;
     font-weight: bold;
     font-size: 14px;
 }
@@ -151,20 +171,25 @@
 }
 
 #minus{
-    height: 32.2px;
-    padding: 0.3em 0em;
+    width: 20px;
+    padding: 0px;
     border: 1px solid #CCCCCC;
-    border-radius: 0;
     background-color: white;
-    margin-right: -2px;
+    background: #FFFFFF;
+    border: 0.508571px solid rgba(0, 0, 0, 0.24);
+    box-sizing: border-box;
+    border-radius: 7px;
 }
 
 #plus{
-    height: 32.2px;
-    padding: 0.3em 0em;
+    width: 20px;
+    padding: 0px;
     border: 1px solid #CCCCCC;
-    border-radius: 0;
     background-color: white;
+    background: #FFFFFF;
+    border: 0.508571px solid rgba(0, 0, 0, 0.24);
+    box-sizing: border-box;
+    border-radius: 7px;
     margin-left: -2px;
 }
 
@@ -182,13 +207,16 @@
     border: 1px solid #CCCCCC;
     border-radius: 0;
     background-color: white;
+    text-align: center !important;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    padding: 0px !important;
+    min-height: 0em;
+    border: none;
 }
 
 .quantity{
-    width: 100px;
-    /* text-align: center; */
-    /* display: inline; */
-    margin: auto;
+   
 }
 
 .add-to-cart{
@@ -196,19 +224,22 @@
 }
 
 #add-to-cart{
-    background-color: #34AD48;
+    background: #15317A;
     display:inline-block;
-    border-radius: 50px;
-    margin-top: 2px;
-    width: 100px;
-    font-family: "Century Gothic";
+    width:68.3px;
+    font-family: Poppins;
     color: white;
-    font-size: 11px;
-    height: 35px;
+    font-size: 7px;
+    height: 22.05px;
     padding: 1em 1em;
     border: none !important;
     text-shadow: none !important;
     font-weight: bold;
+    font-style: normal;
+    font-weight: bold;
+    box-shadow: 0px 2.13814px 2.13814px rgba(0, 0, 0, 0.25);
+    border-radius: 2.67267px;
+
 }
 
 .special-promotion-text{
@@ -248,10 +279,10 @@
 }
 
 .old-price{
-    font-family: "Century Gothic";
-    color: #A1A1A1;
-    /* font-weight: bold; */
-    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
     text-decoration: line-through;
 }
 
@@ -277,9 +308,9 @@
 }
 
 .spreemart-title{
-    font-family: "Century Gothic";
+    font-family: 'Poppins', sans-serif;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     text-shadow: none !important;
 }
 
@@ -336,11 +367,11 @@
 }
 
 .spreemart-copyright{
-    font-family: "Century Gothic";
-    font-style: italic;
-    font-weight: 100;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal !important;
+    font-weight: 400;
     color: white;
-    font-size: 14px;
+    font-size: 8px;
     text-shadow: none !important;
 }
 
