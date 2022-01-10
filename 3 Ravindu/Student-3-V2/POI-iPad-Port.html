@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marsmart-About Us</title>
+    <title>Marsmart - Nesquick Cereal</title>
     <!--JQuery Mobile Theme-->
     <link rel="stylesheet" href="assets/themes/cw-theme.css" />
     <link rel="stylesheet" href="assets/themes/jquery.mobile.icons.min.css" />
@@ -35,8 +35,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--External Style & script-->
     <link rel="stylesheet" href="Style.css" />
-    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="POI-IPad-Port.css" />
+    <script type="module" src="POI_Script.js"></script>
   </head>
+
   <body>
     <div data-role="page" data-theme="c">
       <section data-role="header" data-position="fixed">
@@ -59,49 +61,61 @@
           </div>
         </div>
       </section>
-      <section role="main" class="ui-content">
-        <h1 id="title">About us</h1>
-        <iframe
-          width="100%"
-          height="415"
-          src="https://www.youtube.com/embed/tgbNymZ7vqY"
-        >
-        </iframe>
-        <p id="about-description">
-          Marsmart has offered the best in fresh food since 2002—we can proudly
-          say that we pioneered online grocery shopping. Get the best in-season
-          picks, local goods, chef-prepared meals, and your favorite brands
-          delivered to your home or office. From our state-of-the art facility
-          in the Bronx, we provide grocery delivery to the greater New York
-          City, Philadelphia, and Washington, DC metropolitan areas, with
-          seasonal service to eastern Long Island and the Jersey Shore.
-        </p>
-      </section>
-      <section class="full-white-bg">
-        <h2 class="content-section-title">Our Mission</h2>
-        <section id="about-mission">
-            <img src="assets/images/headshot1.png" alt="">
-            <div id="mission-statement">
-                <h3>Andrew Jacobs</h3>
-                <h5>Founder & CEO</h5>
-                <p>“Our mission is to send best products to customers doorstep”</p>
-            </div>
-          </section>
-      </section>
-      <section>
-        <div id="locations-headline">
-          <img src="assets/images/location-vector.png" alt="" class="vector-section-title">
-          <h2 class="content-section-title">5 outlets all over USA</h2>
-        </div>
-        <div>
-          <img src="assets/images/usa-map-loc1.png" usemap="#image-map">
 
-          <map name="image-map">
-              <area  alt="cal" title="cal" coords="47,140,40" shape="circle" onclick="handleClick()">
-          </map>
+      <section role="main" class="ui-content">
+
+        <div class="card" id="product-hero">
+          <div id="product-content">
+            <article id="product-img-gallery">
+              <div id="gallery-main">
+                <img
+                  src="assets/images/nesquick.PNG"
+                  style="width: 22em"
+                  alt=""
+                />
+              </div>
+              <div id="gallery-subs">
+                <div>
+                  <img
+                    src="assets/images/nesquick-side.PNG"
+                    style="width: 1.5em; margin-right: 4em;"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <img
+                    src="assets/images/nesquick-back.PNG"
+                    style="width: 5em"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </article>
+            <article id="product-info"><!--showing product's json data--></article>
+            
+          </div>
+
+          <div id="addToCart-area">
+            <div id="change-qty-ctrl">
+              <button class="ui-btn ui-btn-a ui-btn-inline"><span><i class="fa fa-plus" aria-hidden="true"></i></span></button>
+              <span id="addToCart-qty">0</span>
+              <button class="ui-btn ui-btn-a ui-btn-inline" style="margin: 0%;"><span><i class="fa fa-plus" aria-hidden="true"></i></span></button>
+            </div>  
+            <button class="ui-btn ui-btn-d ui-btn-inline" id="addToCart-click">Add to Cart</button> 
+          </div>
         </div>
+
       </section>
-      <!-- footer -->
+
+      <section class="full-white-bg">
+        <h2 class="content-section-title">Customer Reviews and Ratings</h2>
+        <article id="ratings-container">
+          <div id="rating-numeric"></div>
+          <div id="rating-bars">
+          </div>
+        </article>
+      </section>
+
       <section data-role="footer" data-theme="b">
         <div class="footer-content">
           <div style="flex:1;">
@@ -115,7 +129,7 @@
               <i class="fa fa-instagram" aria-hidden="true"></i>
             </h1>
             <h2>
-              <b >marsmart</b>
+              <b>marsmart</b>
               <span style="font-size: smaller;"><i class="fa fa-copyright" aria-hidden="true"></i>
                 all rights reserved</span>
             </h2>
@@ -123,11 +137,10 @@
         </div>
       </section>
     </div>
-
     <script>
-      function handleClick(){
-        alert("clicked calfornia");
-      }
+      $(document).ready(function () {
+        localStorage.setItem("poi-id", 1);
+      });
     </script>
   </body>
 </html>

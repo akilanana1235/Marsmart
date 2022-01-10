@@ -83,12 +83,13 @@
 
 .section-header{
     padding-bottom: 18px;
-    font-family: "Century Gothic";
-    color: #D62828;
+    font-family: 'Poppins', sans-serif;
+    color: #15317A;
     font-weight: bold;
     font-size: 16px;
-    margin: 10px 10px;
-    margin-left: -9px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    margin-left: 0px;
     letter-spacing: 3px;
 }
 
