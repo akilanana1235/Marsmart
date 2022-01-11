@@ -173,17 +173,15 @@
 }
 
 #BuyNow1{
-      background-color: #34AD48;
+      background-color: #15317A;
       display: inline-block;
-      border-radius: 50px;
+      border-radius: 2.67px;
       width: 96px;
-      font-family: "Century Gothic";
       color: white;
       font-size: 12px;
-      padding: 1em 1em;
       border: none !important;
       text-shadow: none !important;
-      font-weight: bold;
+      font-weight: 400;
       margin-left: 9px;
 }
 
@@ -303,7 +301,7 @@
   font-size: 18px;
   text-align: center;
   text-shadow: none;
-  text-transform: uppercase;
+
   font-weight: bold;
 }
 
@@ -325,18 +323,16 @@
 }
 
 #submit-mail2 {
-  background-color: #F77F00;
+  background-color: #FF2525;
   display: inline-block;
-  border-radius: 50px;
+  border-radius: 2.6px;
   position: relative;
-  font-family: "Century Gothic";
   color: white;
   width: 96px;
-  font-size: 13px;
-  padding: 1em 1em;
+  font-size: 12px;
   border: none !important;
   text-shadow: none !important;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 #add-to-cart2{

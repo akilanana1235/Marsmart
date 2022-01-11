@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="Icons/flavicon.png" />
-    <title>Cart | Marsmart </title>
+    <title>Cart | Marsmart</title>
 
     <!-- jQuery mobile cdn -->
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
@@ -14,8 +14,8 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="Stylesheets/Cart-iPhone-css.css">
-    <link rel="stylesheet" type="text/css" href="Stylesheets/main-iPhone.css">
+    <link rel="stylesheet" type="text/css" href="Stylesheets/Cart-iPhone-css.css" />
+    <link rel="stylesheet" type="text/css" href="Stylesheets/main-iPhone.css" />
 
     <!-- scripts -->
     <script type="text/javascript" src="Scripts/Menu.js"></script>
@@ -33,9 +33,8 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
     <!-- 3.4 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
 
     <!-- jQuery library -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"
@@ -43,16 +42,13 @@
 
     <style>
         html * {
-            font-family: 'Poppins', sans-serif !important;
+            font-family: "Poppins", sans-serif !important;
         }
     </style>
-
 </head>
 
 <body>
-
     <div data-role="page" id="Landing-page">
-
         <!-- header start -->
         <div data-role="header">
             <div data-role="navbar">
@@ -67,24 +63,25 @@
                             <a id="item-promotion">Promotions</a>
                             <a id="item-support">Support</a>
                         </div>
-                        <span onclick="openNav()"><img id="hamburger" src="Icons/menu-button.png"></span>
+                        <span onclick="openNav()"><img id="hamburger" src="Icons/menu-button.png" /></span>
                     </div>
                     <div class="ui-block-b" onclick="window.location.href='Landing page-iPhone.html'">
-                        <img id="logo" src="Images/CWLOGO full.png">
+                        <img id="logo" src="Images/CWLOGO full.png" />
                     </div>
                     <div class="ui-block-c">
                         <div class="header-right-wrapper">
-                            <img id="cart" src="Icons/shopping-cart.png">
+                            <img id="cart" src="Icons/shopping-cart.png" />
                             <!-- <img id="profile-image" src="Icons/profile-image.png"> -->
                             <span class="dropdown">
                                 <a class="my-drop dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img id="profile-image" src="Icons/profile-image.png">
+                                    <img id="profile-image" src="Icons/profile-image.png" />
                                 </a>
 
                                 <div class="dropdown-menu-profile" aria-labelledby="dropdownMenuLink">
                                     <a class="dropdown-item" id="dropdown-profile">My Profile</a>
-                                    <a class="dropdown-item" id="dropdown-fav">My Favourites</a>
+                                    <a class="dropdown-item" id="dropdown-fav"
+                                        onclick="window.location.href='Favourites.html'">My Favourites</a>
                                     <a class="dropdown-item" id="dropdown-logout">Logout</a>
                                 </div>
                             </span>
@@ -97,17 +94,15 @@
 
         <!-- content -->
         <div data-role="content">
-
             <div class="breadcrumb-wrapper">
                 <div class="breadcrumb-text">
                     <!-- <a href="Landing page-iPhone.html" style="color: #A1A1A1;">Home</a> -->
 
-                    <span onclick="window.location.href='Landing page-iPhone.html'" style="color: #A1A1A1;">Home
-                        ></span>
-                    <span style="color:#FF2525;">Cart</span>
+                    <span onclick="window.location.href='Landing page-iPhone.html'" style="color: #a1a1a1">Home ></span>
+                    <span style="color: #ff2525">Cart</span>
                 </div>
             </div>
-            <br>
+            <br />
             <div class="header">Shopping Cart</div>
 
             <div class="ui-grid-a icons">
@@ -117,10 +112,9 @@
                 </div>
 
                 <div class="ui-block-b">
-                    <img id="delete-icon" src="Icons/delete.png">
+                    <img id="delete-icon" src="Icons/delete.png" />
                     <span id="delete-txt">(0) Items</span>
                 </div>
-
             </div>
 
             <div class="card-area">
@@ -146,80 +140,103 @@
               </div> -->
             </div>
 
-            <hr class="hr1">
-            <div class="ui-grid-b card" style="filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));">
-                <div class="subtot">Subtotal
+            <hr class="hr1" />
+            <div class="ui-grid-b card" style="filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161))">
+                <div class="subtot">
+                    Subtotal
                     <span class="subprice">Rs. 0 </span>
                 </div>
-                <div class="subtot1">Discount Amount
+                <div class="subtot1">
+                    Discount Amount
                     <span class="subprice1"> Rs. 0 </span>
                 </div>
-                <div class="subtot2">Discounted Total
+                <div class="subtot2">
+                    Discounted Total
                     <span class="subprice2">Rs. 0</span>
                 </div>
-                <div style="float: right; margin-right: 10px;">
-
+                <div style="float: right; margin-right: 10px">
                     <a href="#checkoutPopup" data-role="button" data-rel="" id="add-to-cart2"
-                        style="font-size: 10px; width: 105px; padding-top: 5px;">Redeem Loyalty</a>
+                        style="font-size: 10px; width: 105px; padding-top: 5px">Redeem Loyalty</a>
                 </div>
 
-                <div class="subtot3">Net Total
+                <div class="subtot3">
+                    Net Total
                     <span class="subprice3"> Rs. 0 </span>
                 </div>
             </div>
         </div>
         <!-- content END -->
 
-
+        <!-- checkout button start -->
         <div>
             <a href="#temporary" data-role="button" id="add-to-cart1">Continue Shopping</a>
             <a href="#checkoutPopup" data-role="button" data-rel="popup" id="add-to-cart2">Checkout</a>
         </div>
+        <!-- checkout button end -->
 
-
+        <!-- Popup start -->
+        <div data-role="popup" id="checkoutPopup">
+            <div class="share-header" style="padding: 20px 20px 0px 20px">
+                <div class="share-title">
+                    Are you sure you want to proceed to checkout?
+                </div>
+            </div>
+            <hr style="
+            border-top: 2px solid #eee;
+            margin-top: 0px;
+            margin-bottom: 0px;
+          " />
+            <div class="share-content text-center">
+                <div class="ui-grid-a">
+                    <div class="text-center">
+                        <a href="#temporary" data-role="button" id="BuyNow1" style="margin-left: -4px">Yes</a>
+                        <a href="#temporary" data-role="button" id="submit-mail2">No</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Popup end -->
 
         <!-- footer start -->
-        <div data-role="footer"
-            style="margin-top:10px; background-color: #383838 !important; padding:10px 10px 15px 15px !important;">
+        <div data-role="footer" style="
+          margin-top: 10px;
+          background-color: #383838 !important;
+          padding: 10px 10px 15px 15px !important;">
             <div data-role="navbar" style="">
                 <div class="ui-grid-a">
                     <div class="ui-block-a">
                         <div class="spreemart-title">Get In Touch</div>
-                        <div class="spreemart-copyright"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 14 14">
+                        <div class="spreemart-copyright">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-telephone-fill" viewBox="0 0 14 14">
                                 <path fill-rule="evenodd"
                                     d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                            </svg> +94 11 1234567</div>
-                        <div class="spreemart-copyright"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 14 14">
+                            </svg>
+                            +94 11 1234567
+                        </div>
+                        <div class="spreemart-copyright">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-envelope-fill" viewBox="0 0 14 14">
                                 <path
                                     d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
-                            </svg> info@masmart.com</div>
+                            </svg>
+                            info@masmart.com
+                        </div>
                     </div>
                     <div class="ui-block-b">
-                        <div class="social-media-wrapper" style="margin-right: 0px;">
-                            <img id="social-media" src="Icons/facebook.png">
-                            <img id="social-media" src="Icons/instagram.png">
-
+                        <div class="social-media-wrapper" style="margin-right: 0px">
+                            <img id="social-media" src="Icons/facebook.png" />
+                            <img id="social-media" src="Icons/instagram.png" />
                         </div>
-                        <div class="spreemart-copyright" style="text-align: right; margin-top: 16px;">Marsmart © All
-                            rights reserved
+                        <div class="spreemart-copyright" style="text-align: right; margin-top: 16px">
+                            Marsmart © All rights reserved
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- footer end -->
-
-
-
-
-
     </div>
-
-
-
-
 </body>
 
 </html>
