@@ -311,4 +311,9 @@ color: #000000;
   #pageName{
               margin-left: 5%;
             }
+
+   .mainBodyQuizGame{
+       margin-top: 50px;
+       height: 900px;
+   }         
  }

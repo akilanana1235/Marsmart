@@ -28,7 +28,7 @@
     width: 270px;
     font-size: 16px !important;
     font-family: "Century Gothic";
-    color: #4B4B4B;
+    color: #4B4B4B !important;
     font-weight: 100;
     border-left: none;
     border-color: #f1f1f1 !important;
@@ -78,15 +78,15 @@
     padding: 1em;
 }
 
-form{
-    margin-left: 22%;
+.navSearch{
+    margin-left: 20%;
     flex: 5; padding: 0.5em;
 }
 
 @media only screen and (min-width: 834px) and (orientation: portrait) {
 
-    form{
-    margin-left: 12%;
+    .navSearch{
+    margin-left: 10%;
     flex:4;
 }
  }
