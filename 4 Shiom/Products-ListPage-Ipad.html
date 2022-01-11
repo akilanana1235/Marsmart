@@ -5,10 +5,23 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+       
+       
+        <link rel="stylesheet" type="text/css"  href="CSS/NavBar-Ipad.css">
+        <link rel="stylesheet" type="text/css"  href="CSS/Footer-Ipad.css">
+        <script src="https://use.fontawesome.com/bb16f85abc.js"></script>
+        
+
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
+
+    <link rel="stylesheet" href="CSS/Products-ListPage-Ipad.css">
+    <script type="text/javascript" src="Scripts/Menu.js"></script>
+
+
+        
     <script src="https://use.fontawesome.com/6656a6127d.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -23,10 +36,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 
-    <script src="https://use.fontawesome.com/bb16f85abc.js"></script>
-    <link rel="stylesheet" href="CSS/Products-ListPage-Ipad.css">
+    <!-- <script src="https://use.fontawesome.com/bb16f85abc.js"></script> -->
+    
+   
 
     <script type="text/javascript" src="Scripts/ProductsList.js"></script>
+    <script type="text/javascript" src="Scripts/Products.js"></script>
 
     <link
       rel="stylesheet"
@@ -40,16 +55,45 @@
         
         <div data-role="page" id="Products-page">
 
-            <div class="navBar" data-role="header">
-                <div>Nav</div>
-            </div>
+            <section data-role="header" data-position="fixed"  >
+                <div id="nav-content">
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a disabled="disabled" class="item-heading">Categories</a>
+                        <a id="item-list1">&nbsp; &nbsp; &nbsp; Bread & Bakery</a>
+                        <a id="item-list2">&nbsp; &nbsp; &nbsp; Canned goods & soups</a>
+                        <a id="item-list3">&nbsp; &nbsp; &nbsp; Dabiry</a>
+                        <a id="item-promotion">Promotions</a>
+                        <a id="item-support">Support</a>
+                      </div>
+                    <span onclick="openNav()"><i class="fa fa-align-justify" aria-hidden="true" ></i></span>
+                  <div id="logo" style="flex: 3">
+                    <img
+                      src="Images/logo-transparent.png"
+                      style="width: 16em;margin-top: 10px;"
+                      alt=""
+                    />
+                  </div>
+                  <!--searchbar-->
+                  <form style="flex: 3; padding: 0.5em" class="navSearch">
+                    <input type="search" name="search-1" id="search-1" value="" />
+                  </form>
+                  <div style="flex: 2">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </section>
+
+
+
 
             <div class="pageContent" data-role="main">
 
               <div class="ListPageBody">
 
                 <div class="breadCrum">
-                    <p >Home > <span style="color: #FF2525;">Game</span> </p>
+                    <p >Home > <span style="color: #FF2525;">Products List</span> </p>
                 </div>
 
 
@@ -69,11 +113,43 @@
 
                                     <div class="numberOfItems">
 
-                                        <p>100 results</p>
+                                        <p id="numItemsList">100 results</p>
                                     </div>
 
                                     <div class="paginationContainer">
-
+                                        <div class="pagination">
+                                            <div class="page-disabled">
+                                              <div class="ic-carat-left"><i class="fa fa-angle-left"></i></div>
+                                            </div>
+                                            <div class="page-active">
+                                              <div class="numpoppins-bold-blue-14px">
+                                                <span class="poppins-bold-blue-14px">1</span>
+                                              </div>
+                                            </div>
+                                            <div class="page-non-active">
+                                              <div class="num-1poppins-bold-charade-14px">
+                                                <span class="poppins-bold-charade-14px">2</span>
+                                              </div>
+                                            </div>
+                                            <div class="page-non-active">
+                                              <div class="num-2poppins-bold-charade-14px">
+                                                <span class="poppins-bold-charade-14px">...</span>
+                                              </div>
+                                            </div>
+                                            <div class="page-non-active">
+                                              <div class="num-3poppins-bold-charade-14px">
+                                                <span class="poppins-bold-charade-14px">9</span>
+                                              </div>
+                                            </div>
+                                            <div class="page-non-active">
+                                              <div class="num-4poppins-bold-charade-14px">
+                                                <span class="poppins-bold-charade-14px">10</span>
+                                              </div>
+                                            </div>
+                                            <div class="page-disabled-end">
+                                              <div class="ic-carat-right"><i class="fa fa-angle-right"></i></div>
+                                            </div>
+                                          </div>
                                     </div>
 
                                 </div>
@@ -151,19 +227,70 @@
             <!-- Card -->
             <div data-filter="true" data-input="#searchFor" class="productListDisplay" id="product_List">
 
-               
-
-
             </div>
-
-
 <!-- Main ending  -->
-            </div>  
+            </div> 
+            
+            <div class="paginationContainer2">
+                <div class="pagination2">
+                    <div class="page-disabled">
+                      <div class="ic-carat-left"><i class="fa fa-angle-left"></i></div>
+                    </div>
+                    <div class="page-active">
+                      <div class="numpoppins-bold-blue-14px">
+                        <span class="poppins-bold-blue-14px">1</span>
+                      </div>
+                    </div>
+                    <div class="page-non-active">
+                      <div class="num-1poppins-bold-charade-14px">
+                        <span class="poppins-bold-charade-14px">2</span>
+                      </div>
+                    </div>
+                    <div class="page-non-active">
+                      <div class="num-2poppins-bold-charade-14px">
+                        <span class="poppins-bold-charade-14px">...</span>
+                      </div>
+                    </div>
+                    <div class="page-non-active">
+                      <div class="num-3poppins-bold-charade-14px">
+                        <span class="poppins-bold-charade-14px">9</span>
+                      </div>
+                    </div>
+                    <div class="page-non-active">
+                      <div class="num-4poppins-bold-charade-14px">
+                        <span class="poppins-bold-charade-14px">10</span>
+                      </div>
+                    </div>
+                    <div class="page-disabled-end">
+                      <div class="ic-carat-right"><i class="fa fa-angle-right"></i></div>
+                    </div>
+                  </div>
+                    </div>
+
         </div>
 
-        <div class="footer" data-role="footer">
-            <p>footer</p>
-        </div>
+
+        <section data-role="footer" data-theme="b"  style="float: left; width: 100%; margin-top: 40px;  background-color: #383838;" >
+            <div class="footer-content">
+              <div style="flex:1;" class="contact-info-new">
+                <h2><b>Get in touch</b></h2>
+                <p><i class="fa fa-phone" aria-hidden="true"></i> 1-800-367-2884</p>
+                <span><i class="fa fa-envelope" aria-hidden="true"></i> info@marsmart.com</span>
+              </div>
+              <div style="flex:2; text-align: right;" class="social-media-new">
+                <h1>
+                  <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </h1>
+                <h2>
+                  <b>marsmart</b>
+                  <span style="font-size: smaller;"><i class="fa fa-copyright" aria-hidden="true"></i>
+                    all rights reserved</span>
+                </h2>
+              </div>
+            </div>
+          </section>
+
 
         <div data-role="popup" id="addToBasketPopUp">
        
