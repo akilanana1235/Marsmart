@@ -5,7 +5,7 @@
 
     <title>Game Landing Page</title>
 
-    
+    <script type="text/javascript" src="Scripts/Menu.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
@@ -24,42 +24,9 @@
       rel="stylesheet"
       href="CSS/font-awesome-4.7.0/css/font-awesome.min.css"
     />
-    
-<style>
-    #logo {
-      
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 36px;
-        line-height: 14px;
-        backdrop-filter: blur(4px);
-        /* background: linear-gradient(135deg, rgba(255, 37, 37, 0.99) 0%, #0D25B9 100%); */
-      
-        }
-        #nav-content {
-            display: flex;
-            flex-direction: row;
-        }
-        #nav-content .fa {
-            font-size: x-large;
-            padding: 1em;
-        }
+    <link rel="stylesheet" type="text/css"  href="CSS/NavBar.css">
+    <link rel="stylesheet" type="text/css"  href="CSS/Footer.css">
 
-        form{
-            margin-left: 22%;
-            flex: 5; padding: 0.5em;
-        }
-
-        @media only screen and (min-width: 834px) and (orientation: portrait) {
-
-            form{
-            margin-left: 12%;
-            flex:4;
-        }
-         }
-
-</style>
 
 </head>
 
@@ -68,21 +35,35 @@
 
     <div data-role="page" id="GameLandingPage">
 
-
-        <section data-role="header" data-position="fixed" style="background-color: white !important;">
+        <section data-role="header" data-position="fixed">
             <div id="nav-content">
-                <i class="fa fa-align-justify" aria-hidden="true" ></i>
-                <h1 id="logo" >marsmart</h1>
-                <!--searchbar-->
-                <form >
-                    <input type="search" name="search-1" id="search-1" value="" />
-                </form>
-                <div style="flex: 2">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    <i class="fa fa-user-circle" aria-hidden="true"></i>
-                </div>
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a disabled="disabled" class="item-heading">Categories</a>
+                    <a id="item-list1">&nbsp; &nbsp; &nbsp; Bread & Bakery</a>
+                    <a id="item-list2">&nbsp; &nbsp; &nbsp; Canned goods & soups</a>
+                    <a id="item-list3">&nbsp; &nbsp; &nbsp; Dabiry</a>
+                    <a id="item-promotion">Promotions</a>
+                    <a id="item-support">Support</a>
+                  </div>
+                <span onclick="openNav()"><i class="fa fa-align-justify" aria-hidden="true" ></i></span>
+              <div id="logo" style="flex: 3">
+                <img
+                  src="Images/logo-transparent.png"
+                  style="width: 16em;margin-top: 10px;"
+                  alt=""
+                />
+              </div>
+              <!--searchbar-->
+              <form style="flex: 3; padding: 0.5em">
+                <input type="search" name="search-1" id="search-1" value="" />
+              </form>
+              <div style="flex: 2">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <i class="fa fa-user-circle" aria-hidden="true"></i>
+              </div>
             </div>
-        </section>
+          </section>
 
 
         <div data-role="main">
@@ -205,6 +186,27 @@
     
         </div>
 
+
+        <section data-role="footer" data-theme="b"  style="float: left; width: 100%;  background-color: #383838; ">
+            <div class="footer-content">
+              <div style="flex:1;" class="contact-info">
+                <h2><b>Get in touch</b></h2>
+                <p><i class="fa fa-phone" aria-hidden="true"></i> 1-800-367-2884</p>
+                <span><i class="fa fa-envelope" aria-hidden="true"></i> info@marsmart.com</span>
+              </div>
+              <div style="flex:2; text-align: right;" class="social-media">
+                <h1>
+                  <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </h1>
+                <h2>
+                  <b>marsmart</b>
+                  <span style="font-size: smaller;"><i class="fa fa-copyright" aria-hidden="true"></i>
+                    all rights reserved</span>
+                </h2>
+              </div>
+            </div>
+          </section>
 
 
     </div>

@@ -1,0 +1,92 @@
+.ui-header {
+    padding: 11px 15px;
+    background-color: white !important;
+    border: none !important;
+}
+
+#hamburger {
+    width: 26px;
+    margin-top: 8px;
+    margin-left: 5px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 20;
+    top: 55px;
+    left: 0;
+    border-right: 1px solid #F1F1F1;
+    background-color: white;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    width: 270px;
+    font-size: 16px !important;
+    font-family: "Century Gothic";
+    color: #4B4B4B;
+    font-weight: 100;
+    border-left: none;
+    border-color: #f1f1f1 !important;
+    border-bottom: 1px solid #f1f1f1 !important;
+    text-align: left;
+    background-color: white !important;
+    padding: 8px 8px 8px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.item-list {
+    top: -30px;
+}
+
+.item-heading {
+    font-weight: 700 !important;
+    top: -30px;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    font-size: 36px !important;
+    /* margin-left: 50px; */
+    background-color: white;
+    border: none;
+    right: 5px;
+    text-align: right;
+    top: -25px;
+}
+
+
+
+#nav-content {
+    display: flex;
+    flex-direction: row;
+}
+#nav-content .fa {
+    font-size: x-large;
+    padding: 1em;
+}
+
+form{
+    margin-left: 22%;
+    flex: 5; padding: 0.5em;
+}
+
+@media only screen and (min-width: 834px) and (orientation: portrait) {
+
+    form{
+    margin-left: 12%;
+    flex:4;
+}
+ }
