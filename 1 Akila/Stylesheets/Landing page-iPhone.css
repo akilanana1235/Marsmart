@@ -436,13 +436,13 @@
 
 
 .share-title {
-    font-family: "Century Gothic";
+    font-family: 'Poppins', sans-serif;
     color: #0D0C0C;
     font-size: 18px;
     text-align: center;
     text-shadow: none;
-    text-transform: uppercase;
-    font-weight: bold;
+    
+    font-weight: SemiBold;
 }
 
 .share-subtitle {
@@ -454,7 +454,7 @@
 }
 
 .share-content {
-    padding: 15px 40px;
+    padding: 0px 40px;
 }
 
 #social-media-share {
@@ -463,11 +463,11 @@
 }
 
 #submit-mail2 {
-    background-color: #34AD48;
+    background-color: #15317A;
     display: inline-block;
-    border-radius: 50px;
+    border-radius: 2.67px;
     position: relative;
-    font-family: "Century Gothic";
+    font-family: Poppins;
     color: white;
     font-size: 13px;
     padding: 1em 1em;
