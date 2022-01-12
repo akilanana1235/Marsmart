@@ -6,7 +6,7 @@ var _currentPoiRatings; //contains currently open POI product's rating data
 xmlhttp.onreadystatechange = function () {
   if (this.readyState == 4 && this.status == 200) {
     var allProductsRatings = JSON.parse(this.responseText);//rating data of each product
-    setCurrentPoiRatings(allProductsRatings);
+    //setCurrentPoiRatings(allProductsRatings);
     _allProductsrating=allProductsRatings;
     console.log("_all",_allProductsrating);
     console.log('rate',calculateProductRating(1));

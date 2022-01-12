@@ -1,0 +1,20 @@
+[
+  {
+    "productId": 1,
+    "five_stars": 35,
+    "four_stars": 110,
+    "three_stars": 40,
+    "two_stars": 27,
+    "one_stars": 13,
+    "total":225
+  },
+  {
+    "productId": 2,
+    "five_stars": 39,
+    "four_stars": 120,
+    "three_stars": 23,
+    "two_stars": 18,
+    "one_stars": 13,
+    "total":213
+  }
+]

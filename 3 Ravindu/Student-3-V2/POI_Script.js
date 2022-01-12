@@ -1,4 +1,5 @@
-import { calculateRating,displayStars,displayBars} from "./Rating_Script.js";
+import { calculateRating,displayStars,displayBars,calculateProductRating} from "./Rating_Script.js";
+const POI_PRODUCT_ID = localStorage.getItem("poi-id");
 
 //fetching and display product data
 function loadAndDisplayProductData() {
@@ -10,7 +11,7 @@ function loadAndDisplayProductData() {
       let output2 = "";
 
       data.forEach((product) => {
-        if (product.id == 1) {
+        if (product.id == POI_PRODUCT_ID) {
           productInfo += 
             `<button class="ui-btn ui-btn-inline"><i class="fa fa-heart" aria-hidden="true"></i>Add to Wishlist</button>
             <button class="ui-btn ui-btn-inline"><i class="fa fa-share-alt"></i>Share</button>
@@ -19,13 +20,13 @@ function loadAndDisplayProductData() {
             
             <h4 class="mrgb-1">${product.category}
                 <!--showing the stock availability accoring to available stock quantity-->
-                <span id="stock-status">${(()=>{
+                ${(()=>{
                   if(product.stock_available>0){
-                    return 'In Stock';
+                    return '<span id="stock-status" style="background-color:green;">In Stock</span>';
                   }else{
-                    return 'Out of Stock';
+                    return '<span id="stock-status" style="color:red;">Out of Stock</span>';
                   }
-                })()}</span>
+                })()}
             </h4>
 
             <h4><b>Pack Size: ${product.size}</b></h4>
@@ -35,33 +36,15 @@ function loadAndDisplayProductData() {
                   let initialPrice=product.price+product.discount;
                   return "$"+initialPrice;
                 }else{
-                  return null;
+                  return "";
                 }
               })()}</s>
               <span class="product-price">$ ${product.price}</span>
             <p>
 
             <h4 class="mrgb-1">
-              ${(()=>{
-                let i=0;
-                let ratedStars="";
-                while(i<Math.round(product.ratings)){
-                  ratedStars+="<i class='fa fa-star checked' aria-hidden='true'></i>";
-                  i++;
-                }
-                return ratedStars;
-              })()}
-
-              ${(()=>{
-                let i=0;
-                let unratedStars="";
-                while(i<5-Math.round(product.ratings)){
-                  unratedStars+="<i class='fa fa-star unchecked' aria-hidden='true'></i>";
-                  i++;
-                }
-                return unratedStars;
-              })()}
-              ${product.ratings}
+              ${displayStars()}
+              <span class="product-rating">${calculateProductRating(POI_PRODUCT_ID)}<span>
             </h4>
 
             <h4>HIGHLIGHTS</h4>
@@ -86,7 +69,7 @@ function loadAndDispalyProductRatings(){
       let outputRatingBars="";
 
       data.forEach((r)=>{
-        if(r.productId==1){
+        if(r.productId==POI_PRODUCT_ID){
           outputRatingStars+=`
           <p id="ratingOutOfFive">${calculateRating(r)}<span> out of</span> 5</p>
           <p id="starsOutOfFive">${displayStars()}<span>${r.total} Reviews</span></p>
@@ -106,7 +89,57 @@ function loadAndDispalyProductRatings(){
     .catch((err) => console.log(err));
 }
 
+function loadAndDisplaySimilarProducts(){
+  fetch("Data/products.json")
+    .then((res) => res.json())
+    .then((data) => {
+      let outputSimilarProducts="";
+      data.forEach((product)=>{
+        if(product.id==POI_PRODUCT_ID){
+          outputSimilarProducts+=`
+            ${(()=>{
+              let innerOP="";
+              for(let i in product.similar_products ){
+                innerOP+=`
+                ${displayProductCard(product.similar_products[i])}
+                `
+              }
+              return innerOP;
+            })()}
+          `
+        }
+      })
+      document.getElementById("similar-products-container").innerHTML=outputSimilarProducts;
+    })
+    .catch((err) => console.log(err));
+}
+
+function displayProductCard(id){
+  console.log(id);
+  fetch("Data/products.json")
+    .then((res) => res.json())
+    .then((data) => {
+      let outputProductCard="";
+      data.forEach((product)=>{
+        if(product.id==id){
+          outputProductCard+=`
+            <div class="card">
+            <img src=${product.img1} style="width:12em" alt="">
+            <div>
+              <h5>${[product.name]}</h5>
+            </div>
+            </div>
+          `
+        }
+      })
+      //return outputProductCard;
+      return "hello"
+    })
+    .catch((err) => console.log(err));
+}
+
 $(document).ready(function () {
   loadAndDisplayProductData();
   loadAndDispalyProductRatings();
+  loadAndDisplaySimilarProducts();
 });

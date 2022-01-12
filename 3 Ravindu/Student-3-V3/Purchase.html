@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marsmart - Nesquick Cereal</title>
+    <title>Marsmart-Purcases</title>
     <!--JQuery Mobile Theme-->
     <link rel="stylesheet" href="assets/themes/cw-theme.css" />
     <link rel="stylesheet" href="assets/themes/jquery.mobile.icons.min.css" />
@@ -35,10 +35,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--External Style & script-->
     <link rel="stylesheet" href="Style.css" />
-    <link rel="stylesheet" href="POI-IPad-Port.css" />
-    <script type="module" src="POI_Script.js"></script>
+    <script type="module" src="Purchase_Script.js"></script>
+    <style>
+        .card{
+            display: flex;
+            flex-direction: row;
+            gap:.2em;
+            margin:1em 0em;
+            padding: .8em;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+        .card div,h5{
+            padding-top: 3em;
+            padding-right: 2em;
+        }
+        .card button{
+            margin: 3.5em 0em;
+        }
+    </style>
   </head>
-
   <body>
     <div data-role="page" data-theme="c">
       <section data-role="header" data-position="fixed">
@@ -63,84 +78,57 @@
       </section>
 
       <section role="main" class="ui-content">
-
-        <div class="card" id="product-hero">
-          <div id="product-content">
-            <article id="product-img-gallery">
-              <div id="gallery-main">
-                <img
-                  src="assets/images/nesquick.PNG"
-                  style="width: 22em"
-                  alt=""
-                />
-              </div>
-              <div id="gallery-subs">
-                <div>
-                  <img
-                    src="assets/images/nesquick-side.PNG"
-                    style="width: 1.5em; margin-right: 4em;"
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <img
-                    src="assets/images/nesquick-back.PNG"
-                    style="width: 5em"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </article>
-            <article id="product-info"><!--showing product's json data--></article>
-            
-          </div>
-
-          <div id="addToCart-area">
-            <div id="change-qty-ctrl">
-              <button class="ui-btn ui-btn-a ui-btn-inline"><span><i class="fa fa-plus" aria-hidden="true"></i></span></button>
-              <span id="addToCart-qty">0</span>
-              <button class="ui-btn ui-btn-a ui-btn-inline" style="margin: 0%;"><span><i class="fa fa-plus" aria-hidden="true"></i></span></button>
-            </div>  
-            <button class="ui-btn ui-btn-d ui-btn-inline" id="addToCart-click">Add to Cart</button> 
-          </div>
-        </div>
-
+        <h2 class="content-section-title">Purchase History</h2>
+        <!-- <a
+          href="#popupRate"
+          data-rel="popup"
+          data-position-to="window"
+          class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"
+          data-transition="pop"
+          >Sign in</a
+        >
+        <div
+          data-role="popup"
+          id="popupRate"
+          data-theme="a"
+          data-overlay-theme="b"
+          class="ui-corner-all"
+        >
+          <form>
+            <div style="padding: 10px 20px">
+              <h3>Ratings</h3>
+            </div>
+          </form>
+        </div> -->
+        <div id="purchase-container"></div>
       </section>
 
-      <section class="full-white-bg">
-        <h2 class="content-section-title">Customer Reviews and Ratings</h2>
-        <article id="ratings-container">
-          <div id="rating-numeric"></div>
-          <div id="rating-bars">
-          </div>
-        </article>
-      </section>
-
-      <section data-role="footer" data-theme="b">
+      <section data-role="footer" data-theme="b" style="bottom: 0px">
         <div class="footer-content">
-          <div style="flex:1;">
+          <div style="flex: 1">
             <h2><b>Get in touch</b></h2>
             <p><i class="fa fa-phone" aria-hidden="true"></i> 1-800-367-2884</p>
-            <p><i class="fa fa-envelope" aria-hidden="true"></i> info@marsmart.com</p>
+            <p>
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              info@marsmart.com
+            </p>
           </div>
-          <div style="flex:2; text-align: right;">
+          <div style="flex: 2; text-align: right">
             <h1>
               <i class="fa fa-facebook-square" aria-hidden="true"></i>
               <i class="fa fa-instagram" aria-hidden="true"></i>
             </h1>
             <h2>
               <b>marsmart</b>
-              <span style="font-size: smaller;"><i class="fa fa-copyright" aria-hidden="true"></i>
-                all rights reserved</span>
+              <span style="font-size: smaller"
+                ><i class="fa fa-copyright" aria-hidden="true"></i> all rights
+                reserved</span
+              >
             </h2>
           </div>
         </div>
       </section>
     </div>
-    <script>
-      $(document).ready(function () {
-        localStorage.setItem("poi-id", 1);
-      });
-    </script>
+    
   </body>
 </html>
