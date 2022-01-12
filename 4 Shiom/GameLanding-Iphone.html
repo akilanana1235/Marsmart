@@ -8,9 +8,14 @@
     
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="CSS/main-iPhone.css" />
+
+
+    <script type="text/javascript" src="Scripts/Menu.js"></script>
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +40,44 @@
 
 
         <div data-role="header">
-            <p>Nav</p>
+            <div data-role="navbar">
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        <div id="mySidenav" class="sidenav">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <a disabled="disabled" class="item-heading">Categories</a>
+                            <a id="item-list1">&nbsp; &nbsp; &nbsp; Bread & Bakery</a>
+                            <a id="item-list2">&nbsp; &nbsp; &nbsp; Canned goods & soups</a>
+                            <a id="item-list3">&nbsp; &nbsp; &nbsp; Dabiry</a>
+                            <a id="item-promotion">Promotions</a>
+                            <a id="item-support">Support</a>
+                        </div>
+                        <span onclick="openNav()"><img id="hamburger" src="Images/menu-button.png" /></span>
+                    </div>
+                    <div class="ui-block-b" onclick="window.location.href='Landing page-iPhone.html'">
+                        <img id="logo" src="Images/CWLOGO full.png" />
+                    </div>
+                    <div class="ui-block-c">
+                        <div class="header-right-wrapper">
+                            <img id="cart" src="Images/shopping-cart.png" />
+                            <!-- <img id="profile-image" src="Icons/profile-image.png"> -->
+                            <span class="dropdown">
+                                <a class="my-drop dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img id="profile-image" src="Images/profile-image.png" />
+                                </a>
+
+                                <div class="dropdown-menu-profile" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" id="dropdown-profile">My Profile</a>
+                                    <a class="dropdown-item" id="dropdown-fav"
+                                        onclick="window.location.href='Favourites.html'">My Favourites</a>
+                                    <a class="dropdown-item" id="dropdown-logout">Logout</a>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
