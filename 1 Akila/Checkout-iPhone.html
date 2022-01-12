@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Icons/flavicon.png" />
+    <title>Checkout | Marsmart</title>
+
+    <!-- jQuery mobile cdn -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="Stylesheets/Checkout-iPhone.css">
+    <link rel="stylesheet" type="text/css" href="Stylesheets/main-iPhone.css">
+
+    <!-- scripts -->
+    <script type="text/javascript" src="Scripts/Menu.js"></script>
+    <script type="text/javascript" src="Scripts/Product.js"></script>
+    <script type="text/javascript" src="Scripts/checkout-spreemart.js"></script>
+    <script type="text/javascript" src="Scripts/header-iphone.js"></script>
+    <script type="text/javascript" src="Scripts/checkout.js"></script>
+    <script src="Scripts/Menu.js"></script>
+
+
+    <!-- bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <!-- 3.4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <style>
+        html * {
+            font-family: 'Poppins', sans-serif !important;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <div data-role="page" id="Checkout-page">
+
+        <!-- header start -->
+        <div data-role="header">
+            <div data-role="navbar">
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        <div id="mySidenav" class="sidenav">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <a disabled="disabled" class="item-heading">Categories</a>
+                            <a id="item-list1">&nbsp; &nbsp; &nbsp; Bread & Bakery</a>
+                            <a id="item-list2">&nbsp; &nbsp; &nbsp; Canned goods & soups</a>
+                            <a id="item-list3">&nbsp; &nbsp; &nbsp; Dabiry</a>
+                            <a id="item-promotion">Promotions</a>
+                            <a id="item-support">Support</a>
+                        </div>
+                        <span onclick="openNav()"><img id="hamburger" src="Icons/menu-button.png"></span>
+                    </div>
+                    <div class="ui-block-b" onclick="window.location.href='Landing page-iPhone.html'">
+                        <img id="logo" src="Images/CWLOGO full.png">
+                    </div>
+                    <div class="ui-block-c">
+                        <div class="header-right-wrapper">
+                            <img id="cart" src="Icons/shopping-cart.png">
+                            <!-- <img id="profile-image" src="Icons/profile-image.png"> -->
+                            <span class="dropdown">
+                                <a class="my-drop dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img id="profile-image" src="Icons/profile-image.png">
+                                </a>
+
+                                <div class="dropdown-menu-profile" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" id="dropdown-profile">My Profile</a>
+                                    <a class="dropdown-item" id="dropdown-fav">My Favourites</a>
+                                    <a class="dropdown-item" id="dropdown-logout">Logout</a>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header end -->
+
+
+
+        <!-- content start -->
+        <div data-role="content">
+
+            <div class="breadcrumb-wrapper">
+                <!-- <div class="breadcrumb-text">Home > Checkout</div> -->
+                <span onclick="window.location.href='Landing page-iPhone.html'" style="color: #a1a1a1">Home ></span>
+                <span style="color: #ff2525">Checkout</span>
+            </div>
+            <br>
+            <div class="container" style="padding: 0px 0px 0px 0px !important;">
+                <!-- <div class="ui-grid-a checkout-grid"> -->
+                <div class="ui-grid-a">
+                    <div class="section-header">
+                        Recipient Details
+                    </div>
+                    <div class="card" style="filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));">
+                        <input type="checkbox" name="checkbox-mini-0" id="checkbox-select-all" data-mini="true" />
+                        <span class="same-text">Same as Personal details</span>
+                        <div class="text-field-wrapper">
+                            <label id="field-lbl" for="text-line-email">Email*</label>
+                            <!-- <input type="text" name="text-line-email" id="text-line" value=""> -->
+                            <div class="text-answer">savindujayasinghe@gmail.com</div>
+                        </div>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a title-block">
+                                <div class="text-field-wrapper">
+                                    <label id="field-lbl" for="text-line-email">Title*</label>
+                                    <!-- <input type="text" name="text-line-email" id="text-line" value=""> -->
+                                    <div class="text-answer">Mr.</div>
+                                </div>
+                            </div>
+                            <div class="ui-block-b name-block">
+                                <div class="text-field-wrapper">
+                                    <label id="field-lbl" for="text-line-email">First Name*</label>
+                                    <!-- <input type="text" name="text-line-email" id="text-line" value=""> -->
+                                    <div class="text-answer">Savindu</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-field-wrapper">
+                            <label id="field-lbl" for="text-line-email">Last Name*</label>
+                            <!-- <input type="text" name="text-line-email" id="text-line" value=""> -->
+                            <div class="text-answer">Jayasinghe</div>
+                        </div>
+                        <div class="text-field-wrapper">
+                            <label id="field-lbl" for="text-line-email">Phone Number*</label>
+                            <!-- <input type="text" name="text-line-email" id="text-line" value=""> -->
+                            <div class="text-answer">0778292738</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="ui-grid-a">
+                    <div class="section-header">
+                        DELIVERY DETAILS
+                    </div>
+                    <div class="card">
+                        <input type="checkbox" name="checkbox-mini-0" id="checkbox-select-all" data-mini="true" />
+                        <span class="same-text">Same as Personal address</span>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a title-block">
+                                <div class="text-field-wrapper">
+                                    <label id="field-lbl" for="text-line-email">House No*</label>
+                                    <input type="text" name="text-line-email" id="text-line" value="">
+                                </div>
+                            </div>
+                            <div class="ui-block-b name-block">
+                                <div class="text-field-wrapper">
+                                    <label id="field-lbl" for="text-line-email">Street Name*</label>
+                                    <input type="text" name="text-line-email" id="text-line" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-field-wrapper">
+                            <label id="field-lbl" for="text-line-email">City*</label>
+                            <input type="text" name="text-line-email" id="text-line" value="">
+                        </div>
+                        <img id="maps" src="Images/map.png">
+
+                    </div>
+                </div>
+
+                <div class="ui-grid-a">
+                    <div class="section-header">
+                        ORDER SUMMARY
+                    </div>
+                    <div class="card">
+                        <div class="ui-grid-b summary-head">
+                            <div class="ui-block-a">
+                                <div class="col-header">ITEM</div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="col-header">QTY</div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="col-header">TOTAL</div>
+                            </div>
+                        </div>
+                        <div class="product-price">
+
+                        </div>
+                        <!-- <div class="ui-grid-b summary-content">
+                    <div class="ui-block-a">
+                        <div class="col-content">Nutella 300g Jar</div>
+                    </div>
+                    <div class="ui-block-b">
+                        <div class="col-content">1</div>
+                    </div>
+                    <div class="ui-block-b">
+                        <div class="col-content">Rs. 300.00</div>
+                    </div>
+                </div>
+                <div class="ui-grid-b summary-content">
+                    <div class="ui-block-a">
+                        <div class="col-content">Oreo Packet</div>
+                    </div>
+                    <div class="ui-block-b">
+                        <div class="col-content">2</div>
+                    </div>
+                    <div class="ui-block-b">
+                        <div class="col-content">Rs. 450.00</div>
+                    </div>
+                </div> -->
+                        <div class="ui-grid-b summary-footer">
+                            <div class="ui-block-a">
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="col-footer">Sub Total</div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div id="sub-total" class="col-footer">Rs.750.00</div>
+                            </div>
+                        </div>
+                        <div class="ui-grid-b summary-footer">
+                            <div class="ui-block-a">
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="col-footer">Discount</div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="col-footer">Rs.0.00</div>
+                            </div>
+                        </div>
+                        <div class="ui-grid-b summary-footer">
+                            <div class="ui-block-a">
+                            </div>
+                            <div class="ui-block-b">
+                                <div class="col-footer-2">Net Total</div>
+                            </div>
+                            <div class="ui-block-b">
+                                <div id="net-total" class="col-footer-2">Rs.600.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-grid-a checkout-payment-grid">
+                    <div class="section-header">
+                        PAYMENT DETAILS
+                    </div>
+                    <div class="long-card">
+
+                        <div class="radio-wrapper">
+                            <label for="radio-choice-0" class="radio-label">Pay on delivery</label>
+                            <input type="radio" name="radio-choice-0" id="radio-choice-0" class="custom">
+                        </div>
+                        <div class="radio-wrapper-2">
+                             <label for="radio-choice-0b" class="radio-label">Pay online</label>
+                            <input type="radio" name="radio-choice-0" id="radio-choice-0b" class="custom">
+                        </div>
+
+                        <div class="checkbox">
+                            <input type="checkbox" name="checkbox-mini-0" id="checkbox-select-all" data-mini="true" />
+                            <span class="same-text-2">Same as Payment details</span>
+                        </div>
+
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <div class="text-field-wrapper">
+                                    <div class="ui-grid-a">
+                                        <div class="ui-block-a card-type-block-1">
+                                            <img id="card-type-img" src="Images/mastercard.png">
+                                        </div>
+                                        <div class="ui-block-b card-type-block-2">
+                                            <label id="field-lbl" for="text-line-email">Card Number*</label>
+                                            <!-- <input type="text" name="text-line-email" id="text-line" value=""> -->
+                                            <div class="text-answer">2109 2844 1046 3409</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="text-field-wrapper" style="margin-top: 26px;margin-left: 16px;">
+                                    <label id="field-lbl" for="text-line-email">Name on card*</label>
+                                    <!-- <input type="text" name="text-line-email" id="text-line" value=""> -->
+                                    <div class="text-answer">Savindu Jayasinghe</div>
+                                </div>
+
+                                <div class="ui-grid-a" style="margin: 15px 15px;">
+                                    <div class="ui-block-a">
+                                        <label id="field-lbl" for="text-line-email">Expiry*</label>
+                                        <!-- <input type="text" name="text-line-email" id="text-line" value=""> -->
+                                        <div class="text-answer">07/20</div>
+                                    </div>
+                                    <div class="ui-block-b">
+                                        <label id="field-lbl" for="text-line-email">Security code*</label>
+                                        <!-- <input type="text" name="text-line-email" id="text-line" value=""> -->
+                                        <div class="text-answer">***</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="ui-block-b" style="margin-top: 10px;">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ui-grid-a">
+                        <div class="text-field-wrapper" style="margin-top: 33px;">
+                            <input type="checkbox" name="checkbox-mini-0" id="checkbox-select-all-terms"
+                                data-mini="true" />
+                            <span class="terms-text">I have read and agreed to the Terms and Conditions</span>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="button-wrapper">
+                        <a href="#temporary" data-role="button" id="place-order">PLACE ORDER</a>
+                    </div>
+                </div>
+
+                <div data-role="popup" id="successpop">
+                    <div class="share-header" style="padding: 20px 20px 0px 20px;">
+                        <div class="share-title">
+                            Share this product with your friends
+                        </div>
+                        <div class="share-subtitle">
+                            Choose who you want to share this with
+                        </div>
+                    </div>
+                    <hr style="margin-top: 5px;border-top: 2px solid #eee;">
+                    <div class="share-content">
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a" style="width: 25% !important;">
+                                <img id="social-media-share" src="Icons/mail-red.png">
+                            </div>
+                            <div class="ui-block-b" style="width: 75% !important;">
+                                <input type="text" name="mail" id="mail-to" value="" />
+                                <div style="float: right;">
+                                    <a href="#temporary" data-role="button" id="submit-mail">SEND</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- content end -->
+
+
+
+
+
+
+
+        <!-- footer start -->
+        <div data-role="footer"
+            style="margin-top:10px; background-color: #383838 !important; padding:10px 10px 15px 15px !important; ">
+            <div data-role="navbar" style="">
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <div class="spreemart-title">Get In Touch</div>
+                        <div class="spreemart-copyright" style="font-style:normal;"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-telephone-fill" viewBox="0 0 14 14">
+                                <path fill-rule="evenodd"
+                                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                            </svg> +94 11 1234567</div>
+                        <div class="spreemart-copyright" style="font-style:normal;"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-envelope-fill" viewBox="0 0 14 14">
+                                <path
+                                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                            </svg> info@masmart.com</div>
+                    </div>
+                    <div class="ui-block-b" style="margin-left: -10px;">
+                        <div class="social-media-wrapper" style="margin-right: -8px;">
+                            <img id="social-media" src="Icons/facebook.png">
+                            <img id="social-media" src="Icons/instagram.png">
+
+                        </div>
+                        <div class="spreemart-copyright"
+                            style="text-align: right; margin-top: 16px; margin-right: -8px; font-style:normal;">
+                            Marsmart © All rights
+                            reserved
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer end -->
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>

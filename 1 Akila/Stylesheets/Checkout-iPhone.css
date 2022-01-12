@@ -16,11 +16,11 @@
 
 .section-header{
     font-family: "Century Gothic";
-    color: #D62828;
+    color: #15317A;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 16px;
     margin: 10px 10px;
-    letter-spacing: 3px;
+    
 }
 
 #Checkout-page{
@@ -409,11 +409,11 @@ button:focus {outline:0;}
     
     .section-header {
         font-family: "Century Gothic";
-        color: #D62828;
+        color: #15317A;
         font-weight: bold;
-        font-size: 22px;
+        font-size: 16px;
         margin: 10px 186px;
-        letter-spacing: 3px;
+        
     }
 
     .long-card {

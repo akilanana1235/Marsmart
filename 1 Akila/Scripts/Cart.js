@@ -23,7 +23,7 @@ $(document).ready(function() {
                     '<img id="nutella" src="' + Products[i].img_url + '">' +
                     '</div>' +
                     '<div class="ui-block-c right-wrapper">' +
-                    '<span class="producttitle">' + Products[i].title + '</span>' +
+                    '<span class="producttitle">' + Products[i].title + ' </span>' +
                     '<img id="share-2" src="Icons/delete.png">' +
                     '<br>' +
                     '<span class="price"> Rs.' + Products[i].price + '</span>' +

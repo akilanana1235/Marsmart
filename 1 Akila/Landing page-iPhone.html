@@ -42,15 +42,11 @@
     crossorigin="anonymous"></script>
 
 
-
-
-
-
-
-
-
-
-
+  <style>
+    html * {
+      font-family: 'Poppins', sans-serif !important;
+    }
+  </style>
 
 </head>
 
@@ -72,7 +68,7 @@
             </div>
             <span onclick="openNav()"><img id="hamburger" src="Icons/menu-button.png"></span>
           </div>
-          <div class="ui-block-b">
+          <div class="ui-block-b" onclick="window.location.href='Landing page-iPhone.html'">
             <img id="logo" src="Images/CWLOGO full.png">
           </div>
           <div class="ui-block-c">
@@ -430,7 +426,7 @@
                     <div class="ui-block-b"
                       style="font-size: 14px; font-weight: 700; font-family: Poppins; color: #FF2525; padding-top: 2px; margin-left: 14px; margin-right: -14px;">
                       10
-                      <img src="Icons/discount-tag.png" alt="">
+                      <img src="Icons/discount-tag.png" alt="" width="16px" height="16px">
                     </div>
                   </div>
 
@@ -489,7 +485,7 @@
                     <div class="ui-block-b"
                       style="font-size: 14px; font-weight: 700; font-family: Poppins; color: #FF2525; padding-top: 2px; margin-left: 14px; margin-right: -14px;">
                       5
-                      <img src="Icons/discount-tag.png" alt="">
+                      <img src="Icons/discount-tag.png" alt="" width="16px" height="16px">
                     </div>
                   </div>
 
@@ -621,17 +617,41 @@
               </svg> info@masmart.com</div>
           </div>
           <div class="ui-block-b">
-            <div class="social-media-wrapper">
+            <div class="social-media-wrapper" style="margin-right: -8px;">
               <img id="social-media" src="Icons/facebook.png">
               <img id="social-media" src="Icons/instagram.png">
 
             </div>
-            <div class="spreemart-copyright" style="text-align: right;">Marsmart © All rights reserved</div>
+            <div class="spreemart-copyright" style="text-align: right; margin-top: 16px;">Marsmart © All rights reserved
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- footer end -->
+
+    <!-- Add to cart pop up start -->
+
+    <div data-role="popup" id="addtocartPopup" style="left:15px !important;">
+      <div class="share-header" style="padding: 20px 20px 0px 20px;">
+        <div class="share-title">
+          Successfully added to cart!
+        </div>
+      </div>
+      <hr style="margin-top: 5px;border-top: 2px solid #eee;">
+      <div class="share-content text-center">
+        <div class="ui-grid-a">
+
+          <div class="text-center">
+            <a href="#temporary" data-role="button" id="submit-mail2">Continue Shopping</a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Add to cart pop up end -->
 
 
 

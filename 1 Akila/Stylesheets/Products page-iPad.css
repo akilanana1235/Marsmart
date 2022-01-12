@@ -582,11 +582,11 @@
 }
 
 #submit-mail2 {
-    background-color: #34AD48;
+    background-color: #15317A;
     display: inline-block;
-    border-radius: 50px;
+    border-radius: 2.67px;
     position: relative;
-    font-family: "Century Gothic";
+    font-family: Poppins;
     color: white;
     font-size: 13px;
     padding: 1em 1em;

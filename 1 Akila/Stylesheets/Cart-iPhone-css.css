@@ -1,8 +1,8 @@
 .header{
-  font-family: "Century Gothic";
-  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
   font-weight: bold;
-  color: #D62828;
+  color: #15317A;
 }
 #select-txt{
   padding-left: 8px;
@@ -155,33 +155,33 @@
 }
 
 #add-to-cart1{
-    background-color: #F77F00;
+    background-color: #FF2525;
       display: inline-block;
-      border-radius: 50px;
+      border-radius: 2.67px;
       width: 167px;
       font-family: "Century Gothic";
       color: white;
       font-size: 12px;
       height: 35px;
-      padding: 1em 1em;
+      padding-top: 10px;
       border: none !important;
       text-shadow: none !important;
       font-weight: bold;
       margin-left: 15px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
 }
 
 #BuyNow1{
-      background-color: #34AD48;
+      background-color: #15317A;
       display: inline-block;
-      border-radius: 50px;
+      border-radius: 2.67px;
       width: 96px;
-      font-family: "Century Gothic";
       color: white;
       font-size: 12px;
-      padding: 1em 1em;
       border: none !important;
       text-shadow: none !important;
-      font-weight: bold;
+      font-weight: 400;
       margin-left: 9px;
 }
 
@@ -199,7 +199,7 @@
   margin-top: 10px;
   margin-left: 20px;
   color: #A1A1A1;
-  font-family: "Century Gothic";
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
 }
 
@@ -232,10 +232,10 @@
 }
 
 .subtot3{
-  margin-top: 30px;
+  margin-top: 42px;
   margin-left: 20px;
   color: #0F0E0E;
-  font-family: "Century Gothic";
+  font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-size: 18px;
 }
@@ -301,7 +301,7 @@
   font-size: 18px;
   text-align: center;
   text-shadow: none;
-  text-transform: uppercase;
+
   font-weight: bold;
 }
 
@@ -323,32 +323,31 @@
 }
 
 #submit-mail2 {
-  background-color: #F77F00;
+  background-color: #FF2525;
   display: inline-block;
-  border-radius: 50px;
+  border-radius: 2.6px;
   position: relative;
-  font-family: "Century Gothic";
   color: white;
   width: 96px;
-  font-size: 13px;
-  padding: 1em 1em;
+  font-size: 12px;
   border: none !important;
   text-shadow: none !important;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 #add-to-cart2{
-  background-color: #34AD48;
+  background-color: #15317A;
   display: inline-block;
-  border-radius: 50px;
-  font-family: "Century Gothic";
+  border-radius: 2.67px;
+  font-family: 'Poppins', sans-serif;
   color: white;
   font-size: 12px;
-  padding: 1em 1em;
+  padding-top: 10px;
   border: none !important;
   text-shadow: none !important;
   font-weight: bold;
   margin-left: 9px;
+  width: 167px;
 }
 
 @media only screen
