@@ -150,9 +150,9 @@
 
 .same-text {
     font-family: "Century Gothic";
-    color: #D62828;
+    color: #FF2525;
     font-size: 14px;
-    margin-left: -40px;
+    margin-left: -80px;
 }
 
 .text-field-wrapper {
@@ -263,10 +263,10 @@ input[type=radio] {
 }
 
 #place-order {
-    width: 125px;
-    background-color: #34AD48;
+    width: 157px;
+    background-color: #15317A;
     display: inline-block;
-    border-radius: 50px;
+    border-radius: 2.67px;
     font-family: "Century Gothic";
     color: white;
     font-size: 13px;

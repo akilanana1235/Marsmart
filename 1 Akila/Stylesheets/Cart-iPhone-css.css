@@ -85,14 +85,14 @@
 
 .producttitle{
     font-family: "Century Gothic";
-    color: #f77f00;
+    color: black;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .price{
     font-family: "Century Gothic";
-    color: #070707;
+    color: #FF2525;
     font-weight: bold;
     font-size: 14px;
 }
@@ -106,22 +106,27 @@
     width: 15px;
 }
 
-#minus1{
-    height: 19.2px;
-    padding: 0.3em 0em;
-    border: 1px solid #CCCCCC;
-    border-radius: 0;
-    background-color: white;
-    margin-right: -2px;
+#minus{
+  width: 20px;
+  padding: 0px;
+  border: 1px solid #CCCCCC;
+  background-color: white;
+  background: #FFFFFF;
+  border: 0.508571px solid rgba(0, 0, 0, 0.24);
+  box-sizing: border-box;
+  border-radius: 7px;
 }
 
-#plus1{
-    height: 19.2px;
-    padding: 0.3em 0em;
-    border: 1px solid #CCCCCC;
-    border-radius: 0;
-    background-color: white;
-    margin-left: -2px;
+#plus{
+  width: 20px;
+  padding: 0px;
+  border: 1px solid #CCCCCC;
+  background-color: white;
+  background: #FFFFFF;
+  border: 0.508571px solid rgba(0, 0, 0, 0.24);
+  box-sizing: border-box;
+  border-radius: 7px;
+  margin-left: -2px;
 }
 
 .ui-input-text{
@@ -134,13 +139,17 @@
     text-align: right !important;
 }
 
-#quantity1{
-    border: 1px solid #CCCCCC;
-    border-radius: 0;
-    height: 31px;
-    margin-top: -1px;
-    font-size: 14px;
-    background-color: white;
+#quantity{
+  width: 20px;
+  border: 1px solid #CCCCCC;
+  border-radius: 0;
+  background-color: white;
+  text-align: center !important;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  padding: 0px !important;
+  min-height: 0em;
+  border: none;
 }
 
 .quantity1{
@@ -204,7 +213,7 @@
 }
 
 .subprice{
-  margin-left: 193px;
+  margin-left: 195px;
 }
 
 .subtot1{
@@ -216,19 +225,19 @@
 }
 
 .subprice1{
-  margin-left: 140px;
+  margin-left: 133px;
 }
 
 .subtot2{
   margin-top: 1px;
-  margin-left: 20px;
+  margin-left: 22px;
   color: #A1A1A1;
   font-family: "Century Gothic";
   font-size: 14px;
 }
 
 .subprice2{
-  margin-left: 136px;
+  margin-left: 134px;
 }
 
 .subtot3{

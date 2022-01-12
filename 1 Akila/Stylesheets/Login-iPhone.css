@@ -1,5 +1,5 @@
 #Login{
-    background-image:url("../Images/LoginBackground.png") ;
+    background-color: white !important;
 }
 
 #logo-icon {
@@ -37,9 +37,9 @@
 }
 
 #login-btn{
-    background-color: #D62828;
+    background-color: #15317A;
     display:inline-block;
-    border-radius: 50px;
+    border-radius: 2.67px;
     margin-top: 23px;
     margin-left: -15px;
     width: 128px;
@@ -54,8 +54,9 @@
 }   
 
 .sign-up-message{
-    margin-left: 73px;
-    margin-top: -9px;
+    margin-left: 62px;
+    margin-top: -15px;
+    margin-bottom: -5px;
     font-family: "Century Gothic";
     color: #A4A0A0; 
     font-size: 14px;

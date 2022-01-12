@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     let addtocartlist = localStorage.getItem("addtocartList");
 
@@ -8,104 +8,111 @@ $(document).ready(function() {
 
     document.getElementById('delete-txt').innerHTML = '(' + noOfItems + ')' + 'Items';
 
-    for (cartItem of AddToCartIDArray) { 
+    for (cartItem of AddToCartIDArray) {
         var cartProduct;
         console.log(cartItem);
         for (var i = 0; i < Products.length; i++) {
             if (Products[i].product_id === cartItem) {
-                const CartHTML = '<div class="ui-grid-b card">' +
+                const CartHTML = 
+                '<div class="ui-grid-b card">' +
                     '<div class="ui-block-a left-wrapper">' +
-                    '<div class=" ui-checkbox">' +
-                    '<input type="checkbox"  class="product-check" name="checkbox-mini-0" id="checkbox-select-all" data-mini="true">' +
-                    '</div>' +
+                        '<div class=" ui-checkbox">' +
+                             '<input type="checkbox" class="product-check" name="checkbox-mini-0" id="checkbox-select-all" data-mini="true">' + 
+                        '</div>' +
                     '</div>' +
                     '<div class="ui-block-b middle-wrapper">' +
-                    '<img id="nutella" src="' + Products[i].img_url + '">' +
+                        '<img id="nutella" src="' + Products[i].img_url + '">' +
                     '</div>' +
                     '<div class="ui-block-c right-wrapper">' +
-                    '<span class="producttitle">' + Products[i].title + ' </span>' +
-                    '<img id="share-2" src="Icons/delete.png">' +
-                    '<br>' +
-                    '<span class="price"> Rs.' + Products[i].price + '</span>' +
-                    '<span class="rating1">' +
-                    '<img id="rating-star1" src="Icons/rating star.png">' +
-                    '<img id="rating-star1" src="Icons/rating star.png">' +
-                    '<img id="rating-star1" src="Icons/rating star.png">' +
-                    '<img id="rating-star1" src="Icons/rating star.png">' +
-                    '<img id="rating-star1" src="Icons/rating star half-filled.png">' +
-                    '</span>' +
-                    '</div>' +
-                    '</div>'
-                document.getElementsByClassName('card-area')[0].innerHTML += CartHTML;
-                break;
+                        '<span class="producttitle">' + Products[i].title + '</span>' + 
+                        '<span class="price" style="float: right;">$' + Products[i].price + '</span>' +
+                        '<br>' +
+                            '<span style="font-size:12px;">' + Products[i].category + '</span>' + 
+                            '<span class="rating1">' +
+                                '<img id="rating-star1" src="Icons/rating star.png">' + 
+                                '<span style="font-size:12px;">' + Products[i].rating + '</span>' +
+                            '</span>' + 
+                            '<br>' +
+                                '<span style="font-size:12px;">' + Products[i].description + '</span>' +
+                                '<br>' +
+                                    '<span>' + 
+                                       '<img src="Images/Qty Button.png" style="margin-top:8px;" alt="">' +
+                                    '</span>' +
+
+                                '</div>' +
+
+
+                            '</div>' 
+                            document.getElementsByClassName('card-area')[0].innerHTML += CartHTML;
+                            break;
             }
         }
-        console.log(cartProduct);
+                            console.log(cartProduct);
     }
 
-    var subtotal = 0;
-    var NetTotal = 0;
+                            var subtotal = 0;
+                            var NetTotal = 0;
 
 
-    $('#delete-icon').click(function() {
-        localStorage.clear('addtocartList');
-        location.reload();
+                            $('#delete-icon').click(function() {
+                                localStorage.clear('addtocartList');
+                            location.reload();
     });
 
-    var checkedItemsList = [];
-    var checkedNameList=[];
+                            var checkedItemsList = [];
+                            var checkedNameList=[];
 
-    $(".product-check").change(function() {
+                            $(".product-check").change(function() {
 
         if (this.checked) {
             var itemprice = parseInt(($('.price').eq($('.product-check').index(this)).text()).split(".").pop());
-            var itemName=$('.producttitle').eq($('.product-check').index(this)).text()
-            subtotal += itemprice;
-            checkedItemsList.push(itemprice);
-            checkedNameList.push(itemName)
-            NetTotal = subtotal;
-            document.getElementsByClassName('subprice')[0].innerText = 'Rs.' + subtotal;
-            document.getElementsByClassName('subprice3')[0].innerHTML = 'Rs. ' + NetTotal;
+                            var itemName=$('.producttitle').eq($('.product-check').index(this)).text()
+                            subtotal += itemprice;
+                            checkedItemsList.push(itemprice);
+                            checkedNameList.push(itemName)
+                            NetTotal = subtotal;
+                            document.getElementsByClassName('subprice')[0].innerText = 'Rs.' + subtotal;
+                            document.getElementsByClassName('subprice3')[0].innerHTML = 'Rs. ' + NetTotal;
         }
 
-        if (!this.checked) {
+                            if (!this.checked) {
             var itemprice = parseInt(($('.price').eq($('.product-check').index(this)).text()).split(".").pop());
-            var itemName=$('.producttitle').eq($('.product-check').index(this)).text()
-            subtotal -= itemprice;
-            NetTotal = subtotal;
+                            var itemName=$('.producttitle').eq($('.product-check').index(this)).text()
+                            subtotal -= itemprice;
+                            NetTotal = subtotal;
 
-            for (var i = 0; i < checkedItemsList.length; i++) {
+                            for (var i = 0; i < checkedItemsList.length; i++) {
                 if (checkedItemsList[i] === itemprice) {
-                    checkedItemsList.splice(i, 1);
+                                checkedItemsList.splice(i, 1);
                 }
-                
-                if (checkedNameList[i] === itemName) {
-                    checkedNameList.splice(i, 1);
+
+                            if (checkedNameList[i] === itemName) {
+                                checkedNameList.splice(i, 1);
                 }
             }
-            
-            document.getElementsByClassName('subprice')[0].innerHTML = 'Rs. ' + subtotal;
-            document.getElementsByClassName('subprice3')[0].innerHTML = 'Rs. ' + NetTotal;
+
+                            document.getElementsByClassName('subprice')[0].innerHTML = 'Rs. ' + subtotal;
+                            document.getElementsByClassName('subprice3')[0].innerHTML = 'Rs. ' + NetTotal;
         }
     });
 
-    document.getElementById("BuyNow1").addEventListener("click", function() {
-        localStorage.setItem("PriceList", checkedItemsList);
-        localStorage.setItem("NameList", checkedNameList);
-        localStorage.setItem("NetTotal", NetTotal);
-        localStorage.setItem("Subtotal", subtotal);
+                            document.getElementById("BuyNow1").addEventListener("click", function() {
+                                localStorage.setItem("PriceList", checkedItemsList);
+                            localStorage.setItem("NameList", checkedNameList);
+                            localStorage.setItem("NetTotal", NetTotal);
+                            localStorage.setItem("Subtotal", subtotal);
 
-        var path = window.location.pathname;
-        var page = path.split("/").pop();
-        
+                            var path = window.location.pathname;
+                            var page = path.split("/").pop();
 
-        if (page === "Cart-ipad.html") {
-            
-            window.location.href = 'Checkout-iPad.html';    
+
+                            if (page === "Cart-ipad.html") {
+
+                                window.location.href = 'Checkout-iPad.html';    
         }
-        if (page === "Cart-iPhone.html") {
-           
-            window.location.href = 'Checkout-iPhone.html';
+                            if (page === "Cart-iPhone.html") {
+
+                                window.location.href = 'Checkout-iPhone.html';
         }
 
 
