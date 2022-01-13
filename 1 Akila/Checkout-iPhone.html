@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="Icons/flavicon.png" />
     <title>Checkout | Marsmart</title>
 
@@ -14,8 +14,8 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="Stylesheets/Checkout-iPhone.css">
-    <link rel="stylesheet" type="text/css" href="Stylesheets/main-iPhone.css">
+    <link rel="stylesheet" type="text/css" href="Stylesheets/Checkout-iPhone.css" />
+    <link rel="stylesheet" type="text/css" href="Stylesheets/main-iPhone.css" />
 
     <!-- scripts -->
     <script type="text/javascript" src="Scripts/Menu.js"></script>
@@ -25,7 +25,6 @@
     <script type="text/javascript" src="Scripts/checkout.js"></script>
     <script src="Scripts/Menu.js"></script>
 
-
     <!-- bootstrap  -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
@@ -34,32 +33,27 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
     <!-- 3.4 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
 
     <!-- jQuery library -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="Stylesheets/loader.css">
+    <link rel="stylesheet" href="Stylesheets/loader.css" />
     <style>
         html * {
-            font-family: 'Poppins', sans-serif !important;
+            font-family: "Poppins", sans-serif !important;
         }
     </style>
-
 </head>
 
-
 <body>
-
     <div class="loader_bg">
         <div class="loader"></div>
     </div>
 
     <div data-role="page" id="Checkout-page">
-
         <!-- header start -->
         <div data-role="header">
             <div data-role="navbar">
@@ -78,19 +72,19 @@
                             <a id="item-support">Loyalty Hunter</a>
                             <a id="item-support">Contact Us</a>
                         </div>
-                        <span onclick="openNav()"><img id="hamburger" src="Icons/menu-button.png"></span>
+                        <span onclick="openNav()"><img id="hamburger" src="Icons/menu-button.png" /></span>
                     </div>
                     <div class="ui-block-b" onclick="window.location.href='Landing page-iPhone.html'">
-                        <img id="logo" src="Images/CWLOGO full.png">
+                        <img id="logo" src="Images/CWLOGO full.png" />
                     </div>
                     <div class="ui-block-c">
                         <div class="header-right-wrapper">
-                            <img id="cart" src="Icons/shopping-cart.png">
+                            <img id="cart" src="Icons/shopping-cart.png" />
                             <!-- <img id="profile-image" src="Icons/profile-image.png"> -->
                             <span class="dropdown">
                                 <a class="my-drop dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img id="profile-image" src="Icons/profile-image.png">
+                                    <img id="profile-image" src="Icons/profile-image.png" />
                                 </a>
 
                                 <div class="dropdown-menu-profile" aria-labelledby="dropdownMenuLink">
@@ -106,109 +100,95 @@
         </div>
         <!-- header end -->
 
-
-
         <!-- content start -->
-        <div data-role="content" style="background-color: #F6F6F6 !important;">
-
+        <div data-role="content" style="background-color: #f6f6f6 !important">
             <div class="breadcrumb-wrapper">
                 <!-- <div class="breadcrumb-text">Home > Checkout</div> -->
                 <span onclick="window.location.href='Landing page-iPhone.html'" style="color: #a1a1a1">Home ></span>
                 <span style="color: #ff2525">Checkout</span>
             </div>
-            <br>
-            <div class="container" style="padding: 0px 0px 0px 0px !important;">
+            <br />
+            <div class="container" style="padding: 0px 0px 0px 0px !important">
                 <!-- <div class="ui-grid-a checkout-grid"> -->
                 <div class="ui-grid-a">
-                    <div class="section-header">
-                        Recipient Details
-                    </div>
-                    <div class="card" style="filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));">
+                    <div class="section-header">Recipient Details</div>
+                    <div class="card" style="filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161))">
                         <input type="checkbox" value="1" checked name="checkbox-mini-0" id="checkbox-select-all"
-                            data-mini="true" style="margin-left: -8px;" />
+                            data-mini="true" style="margin-left: -8px" />
                         <span class="same-text">Same as Personal details</span>
-                        <div class="text-field-wrapper" style="border-bottom: 1px solid #BDC4CC;">
+                        <div class="text-field-wrapper" style="border-bottom: 1px solid #bdc4cc">
                             <label id="field-lbl" for="text-line-email">Email <span
-                                    style="color:#FF2525;">*</span></label>
+                                    style="color: #ff2525">*</span></label>
                             <!-- <input type="text" name="text-line-email" id="text-line" value=""> -->
                             <div class="text-answer">akila.2018400@iit.ac.lk</div>
                         </div>
                         <div class="ui-grid-a">
                             <div class="ui-block-a title-block">
-                                <div class="text-field-wrapper" style="border-bottom: 1px solid #BDC4CC;">
+                                <div class="text-field-wrapper" style="border-bottom: 1px solid #bdc4cc">
                                     <label id="field-lbl" for="text-line-email">Title <span
-                                            style="color:#FF2525;">*</span></label>
+                                            style="color: #ff2525">*</span></label>
                                     <!-- <input type="text" name="text-line-email" id="text-line" value=""> -->
                                     <div class="text-answer">Mr.</div>
                                 </div>
                             </div>
                             <div class="ui-block-b name-block">
-                                <div class="text-field-wrapper" style="border-bottom: 1px solid #BDC4CC;">
+                                <div class="text-field-wrapper" style="border-bottom: 1px solid #bdc4cc">
                                     <label id="field-lbl" for="text-line-email">First Name <span
-                                            style="color:#FF2525;">*</span></label>
+                                            style="color: #ff2525">*</span></label>
                                     <!-- <input type="text" name="text-line-email" id="text-line" value=""> -->
                                     <div class="text-answer">Akila</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="text-field-wrapper" style="border-bottom: 1px solid #BDC4CC;">
+                        <div class="text-field-wrapper" style="border-bottom: 1px solid #bdc4cc">
                             <label id="field-lbl" for="text-line-email">Last Name <span
-                                    style="color:#FF2525;">*</span></label>
+                                    style="color: #ff2525">*</span></label>
                             <!-- <input type="text" name="text-line-email" id="text-line" value=""> -->
                             <div class="text-answer">Nanayakkara</div>
                         </div>
-                        <div class="text-field-wrapper" style="border-bottom: 1px solid #BDC4CC;">
+                        <div class="text-field-wrapper" style="border-bottom: 1px solid #bdc4cc">
                             <label id="field-lbl" for="text-line-email">Phone Number <span
-                                    style="color:#FF2525;">*</span></label>
+                                    style="color: #ff2525">*</span></label>
                             <!-- <input type="text" name="text-line-email" id="text-line" value=""> -->
                             <div class="text-answer">0767940118</div>
                         </div>
-
                     </div>
                 </div>
 
                 <div class="ui-grid-a">
-                    <div class="section-header">
-                        Delivery Details
-                    </div>
-                    <div class="card" style="    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));">
+                    <div class="section-header">Delivery Details</div>
+                    <div class="card" style="filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161))">
                         <input type="checkbox" name="checkbox-mini-0" id="checkbox-select-all"
-                            style="margin-left:-8px; color:#FF2525;" data-mini="true" />
+                            style="margin-left: -8px; color: #ff2525" data-mini="true" />
                         <span class="same-text">Same as Personal address</span>
                         <div class="ui-grid-a">
                             <div class="ui-block-a title-block">
                                 <div class="text-field-wrapper">
                                     <label id="field-lbl" for="text-line-email">House No <span
-                                            style="color:#FF2525;">*</span></label>
-                                    <input type="text" name="text-line-email" id="text-line" value="">
-
+                                            style="color: #ff2525">*</span></label>
+                                    <input type="text" name="text-line-email" id="text-line" value="" />
                                 </div>
                             </div>
                             <div class="ui-block-b name-block">
                                 <div class="text-field-wrapper">
                                     <label id="field-lbl" for="text-line-email">Street Name <span
-                                            style="color:#FF2525;">*</span></label>
-                                    <input type="text" name="text-line-email" id="text-line" value="">
-
+                                            style="color: #ff2525">*</span></label>
+                                    <input type="text" name="text-line-email" id="text-line" value="" />
                                 </div>
                             </div>
                         </div>
                         <div class="text-field-wrapper">
                             <label id="field-lbl" for="text-line-email">City <span
-                                    style="color:#FF2525;">*</span></label>
-                            <input type="text" name="text-line-email" id="text-line" value="">
-
+                                    style="color: #ff2525">*</span></label>
+                            <input type="text" name="text-line-email" id="text-line" value="" />
                         </div>
                         <!-- <img id="maps" src="Images/map.png"> -->
-
                     </div>
                 </div>
 
                 <!-- order summary -->
-                <div class="ui-grid-a" style="display: none;">
-                    <div class="section-header">
-                        ORDER SUMMARY
-                    </div>
+                <div class="ui-grid-a" style="display: none">
+                    <div class="section-header">ORDER SUMMARY</div>
                     <div class="card">
                         <div class="ui-grid-b summary-head">
                             <div class="ui-block-a">
@@ -221,9 +201,7 @@
                                 <div class="col-header">TOTAL</div>
                             </div>
                         </div>
-                        <div class="product-price">
-
-                        </div>
+                        <div class="product-price"></div>
                         <!-- <div class="ui-grid-b summary-content">
                     <div class="ui-block-a">
                         <div class="col-content">Nutella 300g Jar</div>
@@ -247,8 +225,7 @@
                     </div>
                 </div> -->
                         <div class="ui-grid-b summary-footer">
-                            <div class="ui-block-a">
-                            </div>
+                            <div class="ui-block-a"></div>
                             <div class="ui-block-b">
                                 <div class="col-footer">Sub Total</div>
                             </div>
@@ -257,8 +234,7 @@
                             </div>
                         </div>
                         <div class="ui-grid-b summary-footer">
-                            <div class="ui-block-a">
-                            </div>
+                            <div class="ui-block-a"></div>
                             <div class="ui-block-b">
                                 <div class="col-footer">Discount</div>
                             </div>
@@ -267,8 +243,7 @@
                             </div>
                         </div>
                         <div class="ui-grid-b summary-footer">
-                            <div class="ui-block-a">
-                            </div>
+                            <div class="ui-block-a"></div>
                             <div class="ui-block-b">
                                 <div class="col-footer-2">Net Total</div>
                             </div>
@@ -281,19 +256,18 @@
                 <!-- order summary end -->
 
                 <!-- payment details -->
-                <div class="ui-grid-a checkout-payment-grid" style="padding-right: 10px;">
-                    <div class="section-header" style="display: none;">
+                <div class="ui-grid-a checkout-payment-grid" style="padding-right: 10px">
+                    <div class="section-header" style="display: none">
                         PAYMENT DETAILS
                     </div>
-                    <div class="long-card" style="display: none;">
-
+                    <div class="long-card" style="display: none">
                         <div class="radio-wrapper">
                             <label for="radio-choice-0" class="radio-label">Pay on delivery</label>
-                            <input type="radio" name="radio-choice-0" id="radio-choice-0" class="custom">
+                            <input type="radio" name="radio-choice-0" id="radio-choice-0" class="custom" />
                         </div>
                         <div class="radio-wrapper-2">
                              <label for="radio-choice-0b" class="radio-label">Pay online</label>
-                            <input type="radio" name="radio-choice-0" id="radio-choice-0b" class="custom">
+                            <input type="radio" name="radio-choice-0" id="radio-choice-0b" class="custom" />
                         </div>
 
                         <div class="checkbox">
@@ -306,7 +280,7 @@
                                 <div class="text-field-wrapper">
                                     <div class="ui-grid-a">
                                         <div class="ui-block-a card-type-block-1">
-                                            <img id="card-type-img" src="Images/mastercard.png">
+                                            <img id="card-type-img" src="Images/mastercard.png" />
                                         </div>
                                         <div class="ui-block-b card-type-block-2">
                                             <label id="field-lbl" for="text-line-email">Card Number*</label>
@@ -316,13 +290,13 @@
                                     </div>
                                 </div>
 
-                                <div class="text-field-wrapper" style="margin-top: 26px;margin-left: 16px;">
+                                <div class="text-field-wrapper" style="margin-top: 26px; margin-left: 16px">
                                     <label id="field-lbl" for="text-line-email">Name on card*</label>
                                     <!-- <input type="text" name="text-line-email" id="text-line" value=""> -->
                                     <div class="text-answer">Savindu Jayasinghe</div>
                                 </div>
 
-                                <div class="ui-grid-a" style="margin: 15px 15px;">
+                                <div class="ui-grid-a" style="margin: 15px 15px">
                                     <div class="ui-block-a">
                                         <label id="field-lbl" for="text-line-email">Expiry*</label>
                                         <!-- <input type="text" name="text-line-email" id="text-line" value=""> -->
@@ -334,24 +308,21 @@
                                         <div class="text-answer">***</div>
                                     </div>
                                 </div>
-
                             </div>
-                            <div class="ui-block-b" style="margin-top: 10px;">
-
-                            </div>
+                            <div class="ui-block-b" style="margin-top: 10px"></div>
                         </div>
                     </div>
 
-                    <div class="ui-grid-a" style="display: none;">
-                        <div class="text-field-wrapper" style="margin-top: 33px;">
+                    <div class="ui-grid-a" style="display: none">
+                        <div class="text-field-wrapper" style="margin-top: 33px">
                             <input type="checkbox" name="checkbox-mini-0" id="checkbox-select-all-terms"
                                 data-mini="true" />
                             <span class="terms-text">I have read and agreed to the Terms and Conditions</span>
                         </div>
                     </div>
-                    <br>
+                    <br />
 
-                    <div class="button-wrapper" style="margin-top: -10px; margin-bottom: -20px;">
+                    <div class="button-wrapper" style="margin-top: -10px; margin-bottom: -20px">
                         <a href="www.google.com" data-role="button" id="place-order"
                             onclick="window.location.href='Checkout-iPhone2.html'">PLACE ORDER</a>
                     </div>
@@ -359,7 +330,7 @@
                 <!-- payment details end -->
 
                 <div data-role="popup" id="successpop">
-                    <div class="share-header" style="padding: 20px 20px 0px 20px;">
+                    <div class="share-header" style="padding: 20px 20px 0px 20px">
                         <div class="share-title">
                             Share this product with your friends
                         </div>
@@ -367,88 +338,78 @@
                             Choose who you want to share this with
                         </div>
                     </div>
-                    <hr style="margin-top: 5px;border-top: 2px solid #eee;">
+                    <hr style="margin-top: 5px; border-top: 2px solid #eee" />
                     <div class="share-content">
                         <div class="ui-grid-a">
-                            <div class="ui-block-a" style="width: 25% !important;">
-                                <img id="social-media-share" src="Icons/mail-red.png">
+                            <div class="ui-block-a" style="width: 25% !important">
+                                <img id="social-media-share" src="Icons/mail-red.png" />
                             </div>
-                            <div class="ui-block-b" style="width: 75% !important;">
+                            <div class="ui-block-b" style="width: 75% !important">
                                 <input type="text" name="mail" id="mail-to" value="" />
-                                <div style="float: right;">
+                                <div style="float: right">
                                     <a href="#temporary" data-role="button" id="submit-mail">SEND</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
             </div>
         </div>
         <!-- content end -->
 
-
-
-
-
-
-
         <!-- footer start -->
-        <div data-role="footer"
-            style="margin-top:10px; background-color: #383838 !important; padding:10px 10px 15px 15px !important; ">
+        <div data-role="footer" style="
+          margin-top: 10px;
+          background-color: #383838 !important;
+          padding: 10px 10px 15px 15px !important;
+        ">
             <div data-role="navbar" style="">
                 <div class="ui-grid-a">
                     <div class="ui-block-a">
                         <div class="spreemart-title">Get In Touch</div>
-                        <div class="spreemart-copyright" style="font-style:normal;"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        <div class="spreemart-copyright" style="font-style: normal">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-telephone-fill" viewBox="0 0 14 14">
                                 <path fill-rule="evenodd"
                                     d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                            </svg> +94 11 1234567</div>
-                        <div class="spreemart-copyright" style="font-style:normal;"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            </svg>
+                            +94 11 1234567
+                        </div>
+                        <div class="spreemart-copyright" style="font-style: normal">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-envelope-fill" viewBox="0 0 14 14">
                                 <path
                                     d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
-                            </svg> info@masmart.com</div>
-                    </div>
-                    <div class="ui-block-b" style="margin-left: -10px;">
-                        <div class="social-media-wrapper" style="margin-right: -8px;">
-                            <img id="social-media" src="Icons/facebook.png">
-                            <img id="social-media" src="Icons/instagram.png">
-
+                            </svg>
+                            info@masmart.com
                         </div>
-                        <div class="spreemart-copyright"
-                            style="text-align: right; margin-top: 16px; margin-right: -8px; font-style:normal;">
-                            Marsmart © All rights
-                            reserved
+                    </div>
+                    <div class="ui-block-b" style="margin-left: -10px">
+                        <div class="social-media-wrapper" style="margin-right: -8px">
+                            <img id="social-media" src="Icons/facebook.png" />
+                            <img id="social-media" src="Icons/instagram.png" />
+                        </div>
+                        <div class="spreemart-copyright" style="
+                  text-align: right;
+                  margin-top: 16px;
+                  margin-right: -8px;
+                  font-style: normal;
+                ">
+                            Marsmart © All rights reserved
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- footer end -->
-
-
-
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         setTimeout(function () {
-            $('.loader_bg').fadeToggle();
+            $(".loader_bg").fadeToggle();
         }, 750);
     </script>
-
-
 </body>
 
 </html>
