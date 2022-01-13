@@ -71,6 +71,7 @@ $(document).ready(function() {
     var subtotal = 0;
     var NetTotal = 0;
 
+    
 
     $('#delete-icon').click(function() {
         localStorage.clear('ProductCartList');
@@ -96,9 +97,9 @@ $(document).ready(function() {
             checkedItemsList.push(itemprice);
             checkedNameList.push(itemName)
             NetTotal = subtotal;
-            document.getElementById('subtotalprice').innerText = 'Rs.' + subtotal;
-            document.getElementById('priceAfterDiscount').innerText = 'Rs.' + subtotal;
-            document.getElementsByClassName('finalPrice')[0].innerHTML = 'Rs. ' + NetTotal;
+            document.getElementById('subtotalprice').innerText = '$' + subtotal;
+            document.getElementById('priceAfterDiscount').innerText = '$' + subtotal;
+            document.getElementsByClassName('finalPrice')[0].innerHTML = '$' + NetTotal;
         }
 
         if (!this.checked) {
@@ -117,19 +118,100 @@ $(document).ready(function() {
                 }
             }
             
-            document.getElementById('subtotalprice').innerText = 'Rs.' + subtotal;
-            document.getElementById('priceAfterDiscount').innerText = 'Rs.' + subtotal;
-            document.getElementsByClassName('finalPrice')[0].innerHTML = 'Rs. ' + NetTotal;
+            document.getElementById('subtotalprice').innerText = '$' + subtotal;
+            document.getElementById('priceAfterDiscount').innerText = '$' + subtotal;
+            document.getElementsByClassName('finalPrice')[0].innerHTML = '$' + NetTotal;
         }
 
 
         if(checkedItemsList.length>0){
             document.getElementById("loyaltyButton").style.setProperty('background-color', '#15317A', 'important');
+            document.getElementById("RedeemLoyaltyPopUp").style.visibility='hidden';
         }else{
             document.getElementById("loyaltyButton").style.setProperty('background-color', 'rgba(21, 49, 122, 0.7)', 'important');
+            document.getElementById("RedeemLoyaltyPopUp").style.visibility='visible';
         }
     
     });
+
+    $('#loyaltyButton').click(()=>{
+        if(checkedItemsList.length>0){
+            document.getElementById("RedeemLoyaltyPopUp").style.visibility='visible';
+            
+        }else{
+        
+            document.getElementById("RedeemLoyaltyPopUp").style.visibility='hidden';
+        }
+    });
+
+//Getting Loyalty Points
+
+    let userloyaltyPoints=localStorage.getItem('UserLoyaltyPoints');
+
+  if(userloyaltyPoints==null){
+      userloyaltyPoints=0;
+  }
+
+
+    document.getElementById("reducePointbox1").innerHTML=(userloyaltyPoints*20)/100;
+    document.getElementById("reducePointbox2").innerHTML=(userloyaltyPoints*25)/100;
+    document.getElementById("reducePointbox3").innerHTML=(userloyaltyPoints*45)/100;
+    
+
+  $('#reducePointbox1').click(()=>{
+      
+
+    if(userloyaltyPoints>5 && (NetTotal>userloyaltyPoints) ){
+
+        var toReduce = (userloyaltyPoints*20)/100;
+        document.getElementById('subtotalprice').innerText = '$' + subtotal;
+        document.getElementById('priceAfterDiscount').innerText = '$' + subtotal-toReduce;
+        document.getElementById('discountedPrice').innerHTML='$' + toReduce;
+        NetTotal=NetTotal-toReduce;
+        document.getElementsByClassName('finalPrice')[0].innerHTML = '$' + NetTotal;
+
+        userloyaltyPoints=userloyaltyPoints-toReduce;
+        localStorage.setItem("userloyaltyPoints",userloyaltyPoints);
+
+    }
+
+  });
+
+  $('#reducePointbox2').click(()=>{
+      
+
+    if(userloyaltyPoints>5 && (NetTotal>userloyaltyPoints) ){
+
+        var toReduce = (userloyaltyPoints*25)/100;
+        document.getElementById('subtotalprice').innerText = '$' + subtotal;
+        document.getElementById('priceAfterDiscount').innerText = '$' + subtotal-toReduce;
+        document.getElementById('discountedPrice').innerHTML='$' + toReduce;
+        NetTotal=NetTotal-toReduce;
+        document.getElementsByClassName('finalPrice')[0].innerHTML = '$' + NetTotal;
+
+        userloyaltyPoints=userloyaltyPoints-toReduce;
+        localStorage.setItem("userloyaltyPoints",userloyaltyPoints);
+
+    }
+  });
+
+
+  $('#reducePointbox3').click(()=>{
+      
+    if(userloyaltyPoints>5 && (NetTotal>userloyaltyPoints) ){
+
+        var toReduce = (userloyaltyPoints*45)/100;
+        document.getElementById('subtotalprice').innerText = '$' + subtotal;
+        document.getElementById('priceAfterDiscount').innerText = '$' + subtotal-toReduce;
+        document.getElementById('discountedPrice').innerHTML='$' + toReduce;
+        NetTotal=NetTotal-toReduce;
+        document.getElementsByClassName('finalPrice')[0].innerHTML = '$' + NetTotal;
+
+        userloyaltyPoints=userloyaltyPoints-toReduce;
+        localStorage.setItem("userloyaltyPoints",userloyaltyPoints);
+
+    }
+  });
 
     
    $(".checkOut").on('click',function(){

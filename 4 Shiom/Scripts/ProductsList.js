@@ -939,6 +939,13 @@
         
       });
 
+      $('#basketIcon').click(()=>{
+          if(true){
+            window.location.href ='CartPage-iPad.html';
+          }
+     
+      })
+
   }); //End of Document ready func
 
 

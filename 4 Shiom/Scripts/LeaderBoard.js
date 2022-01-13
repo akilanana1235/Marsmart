@@ -1,27 +1,28 @@
 var playerscore = 0;
 $(document).ready(function(){
 
+  let loyaltyPoints = localStorage.getItem('UserLoyaltyPoints');
     
-    if(!localStorage.getItem("playerscore")){
-        playerscore += 0;
-    }else{
-      playerscore += parseInt(localStorage.getItem("playerscore"));
-    }
+    // if(!localStorage.getItem("playerscore")){
+    //     playerscore += 0;
+    // }else{
+    //   playerscore += parseInt(localStorage.getItem("playerscore"));
+    // }
     
-     //getting Memmory game score
-    if(!localStorage.getItem("memoryGameScore")){
-      playerscore += 0;
-    }else{
-      playerscore += parseInt(localStorage.getItem("memoryGameScore"));
-    }
+    //  //getting Memmory game score
+    // if(!localStorage.getItem("memoryGameScore")){
+    //   playerscore += 0;
+    // }else{
+    //   playerscore += parseInt(localStorage.getItem("memoryGameScore"));
+    // }
 
-    if(!localStorage.getItem("spinGameScore")){
-      playerscore += 0;
-    }else{
-      playerscore += parseInt(localStorage.getItem("spinGameScore"));
-    }
+    // if(!localStorage.getItem("spinGameScore")){
+    //   playerscore += 0;
+    // }else{
+    //   playerscore += parseInt(localStorage.getItem("spinGameScore"));
+    // }
 
-    document.getElementById("loyaltyscore").innerHTML=Math.round(playerscore/10);
+    document.getElementById("loyaltyscore").innerHTML=loyaltyPoints;
 
 
 });

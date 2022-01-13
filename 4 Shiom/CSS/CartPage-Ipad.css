@@ -23,7 +23,7 @@
 font-style: normal;
 font-weight: bold;
 font-size: 37px;
-line-height: 55px;
+line-height: 100px;
 
 color: #15317A;
 }
@@ -35,7 +35,7 @@ color: #15317A;
     font-style: normal;
     font-weight: normal;
     font-size: 32px;
-    line-height: 20px;
+    line-height: 35px;
     color: #000000;
 }
 
@@ -52,13 +52,16 @@ color: #000000;
 }
 
 #checkboxSelectAll {
-    margin-top: -1px;
+    margin-top: 6px;
     padding-right: 61px;
     border: 2px solid #34AD48 !important;
 }
 
 #deleteicon {
-    margin-left: 50%;
+    margin-left: 65%;
+    width: 4%;
+    margin-top: -20px;
+
 
 }
 .customCehckBox{
@@ -377,6 +380,7 @@ color: #545454;
     float: left;
     /* background-color: greenyellow; */
     margin-top: 6px;
+    margin-top: 50px;
 }
 
 
@@ -645,6 +649,7 @@ margin-top: 20px;
         height: 550px;
         background: #FFFFFF;
         border-radius: 15px;
+        visibility: hidden;
     }
 
     .loyaltyPopUpHeader{

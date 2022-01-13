@@ -32,6 +32,10 @@ $(document).ready(function() {
 
     document.getElementById("playerscore").innerHTML=playerscore;
 
+   let userloyaltyPoints=Math.round(playerscore/10);
+
+   localStorage.setItem('UserLoyaltyPoints',userloyaltyPoints);
+
 
 //Changing the button back ground based on user click
     if(isClickedQuiz){

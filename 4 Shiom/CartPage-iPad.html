@@ -78,7 +78,7 @@
         <div  data-role="main">
 
              <div class="breadCrum">
-                <p>Home > <span style="color: #FF2525;">Game</span> </p>
+                <p>Home > <span style="color: #FF2525;">Cart</span> </p>
             </div>
 
             <div class="cartBody">
@@ -116,15 +116,15 @@
                       
 
                         <div class="subtotalHolder"><p>Subtotal
-                            <span class="subtotalprice" id="subtotalprice"> Rs. 0 </span></p> 
+                            <span class="subtotalprice" id="subtotalprice"> $ 0 </span></p> 
                         </div>
 
                         <div class="discountedAmount"><p>Discount Amount
-                            <span class="discountedPrice" id="discountedPrice"> Rs. 0 </span></p>
+                            <span class="discountedPrice" id="discountedPrice"> $ 0 </span></p>
                         </div>
 
                         <div class="discountTotal"> <P> Discounted Total
-                            <span class="priceAfterDiscount" id="priceAfterDiscount"> Rs. 0 </span></P>
+                            <span class="priceAfterDiscount" id="priceAfterDiscount"> $ 0 </span></P>
                         </div>
 
                         <div class="redeemLoyalty" id="loyaltyButton">
@@ -132,7 +132,7 @@
                         </div>
 
                         <div class="NetTotal"><p> Net Total
-                            <span class="finalPrice" id="finalPrice"> Rs. 0 </span></p>
+                            <span class="finalPrice" id="finalPrice"> $ 0 </span></p>
                         </div>
                    
                     </div>
@@ -186,11 +186,11 @@
 
             <div class="popUpFooter">
                 <div class="checkoutPopUpCancelButton" id="checkoutPopUpCancelButton">
-                    <a style="text-decoration: none;" ><p>Cancel</p></a> 
+                    <a style="text-decoration: none;" href="#cartpage" ><p>Cancel</p></a> 
                 </div>
     
                 <div class="understood" id="checkoutPopUpButton">
-                    <a style="text-decoration: none;" ><p id="buttonTextcheckout">understood</p></a> 
+                    <a style="text-decoration: none;"  href="#cartpage"><p id="buttonTextcheckout">understood</p></a> 
                 </div>
         
             </div>
@@ -210,7 +210,7 @@
 
             <div class="popUpFooter">
                 <div class="DeletePopUpCancelButton" id="DeletePopUpCancelButton">
-                    <a style="text-decoration: none;" ><p>No,Cancel</p></a> 
+                    <a style="text-decoration: none;" href="#cartpage" ><p>No,Cancel</p></a> 
                 </div>
     
                 <div class="DeletePopUpButton" id="DeletePopUpButton">
@@ -245,17 +245,17 @@
 
                 <div class="loyaltyBoxe1">
                     <div class="loyaltyBoxImg"><img src="Images/GameLogo.png" alt=""></div>
-                    <div class="loyaltyPointVal"><p>5</p></div>
+                    <div class="loyaltyPointVal"><p id="reducePointbox1">0</p></div>
                 </div>
 
                 <div class="loyaltyBoxe2">
                     <div class="loyaltyBoxImg"><img src="Images/GameLogo.png" alt=""></div>
-                    <div class="loyaltyPointVal"><p>5</p></div>
+                    <div class="loyaltyPointVal"><p id="reducePointbox2">0</p></div>
                 </div>
 
                 <div class="loyaltyBoxe3">
                     <div class="loyaltyBoxImg"><img src="Images/GameLogo.png" alt=""></div>
-                    <div class="loyaltyPointVal"><p>5</p></div>
+                    <div class="loyaltyPointVal"><p id="reducePointbox3">0</p></div>
                 </div>
 
             </div>
@@ -263,7 +263,7 @@
             <div class="loyaltypopUpFooter">
 
                 <div class="loyaltyNotInterested" id="loyaltyNotInterested">
-                    <a style="text-decoration: none;" ><p>Not Interested</p></a> 
+                    <a style="text-decoration: none;" href="#cartpage"  ><p>Not Interested</p></a> 
                 </div>        
             </div>
            
