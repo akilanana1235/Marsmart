@@ -54,6 +54,7 @@ export function calculateRating(obj) {
 }
 
 export function calculateProductRating(productId) {
+  console.log(productId);
   let avgRating;
   _allProductsrating.forEach((obj)=>{
     if(obj.productId==productId){
@@ -66,14 +67,14 @@ export function calculateProductRating(productId) {
         avgRating = obj.total == 0 ? 0 : totalStarsValue / obj.total;
     }
   })
-  
+  console.log(avgRating);
   return avgRating.toFixed(1);
 }
 
-export function displayStars() {
+export function displayStars(productId) {
   let i = 0;
   let j = 0;
-  const rating = Math.round(calculateRating(getCurrentPoiRatings()));
+  const rating = Math.round(calculateProductRating(productId));
   let ratedStars = "";
   while (i < rating) {
     ratedStars += "<i class='fa fa-star checked' aria-hidden='true'></i>";

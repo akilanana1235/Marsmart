@@ -58,11 +58,11 @@ function displayProductData() {
   <p>
 
   <h4 class="mrgb-1">
-    ${displayStars()}
+    ${displayStars(POI_PRODUCT_ID)}
     <span class="product-rating">${calculateProductRating(POI_PRODUCT_ID)}<span>
   </h4>
 
-  <h4>HIGHLIGHTS</h4>
+  <h4><b>HIGHLIGHTS</b></h4>
   <p id="description">${currentPoiProduct.description}</p>`;
 
   document.getElementById("product-info").innerHTML = productInfo;
@@ -81,7 +81,7 @@ function loadAndDispalyProductRatings() {
           <p id="ratingOutOfFive">${calculateRating(
             r
           )}<span> out of</span> 5</p>
-          <p id="starsOutOfFive">${displayStars()}<span>${
+          <p id="starsOutOfFive">${displayStars(POI_PRODUCT_ID)}<span>${
             r.total
           } Reviews</span></p>
           `;
@@ -128,26 +128,43 @@ function getProductCard(id) {
               <h5 class="product-card-name">${product.name}</h5>
               <h6>
                 <span>${product.category}</span>
-                <span style="padding-left:6.5em;"><i class='fa fa-star checked' aria-hidden='true'></i>${calculateProductRating(POI_PRODUCT_ID)}</span>
+                <span style="padding-left:6.5em;"><i class='fa fa-star checked' aria-hidden='true'></i>${calculateProductRating(parseInt(product.id))}</span>
               </h6>
             </div>
             <div style="text-align:center;">
               <p>${product.short_description}</p>
               <h4 style="color:red"><b>$${product.price}</b></h4>
             </div>
-            <div style="font-size:small;">
-              <button class="ui-btn ui-btn-a ui-btn-inline"><span><i class="fa fa-plus" aria-hidden="true"></i></span></button>
-              <span>0</span>
-              <button class="ui-btn ui-btn-a ui-btn-inline" style="margin: 0%;"><span><i class="fa fa-minus" aria-hidden="true"></i></span></button>
-            </div>  
-            <button class="ui-btn ui-btn-d ui-btn-inline">Add</button> 
-          
+            <button class="ui-btn ui-btn-d ui-btn-inline" style="flex:1;">Add to Cart</button>
             </div>
           `;
     }
   });
   console.log(outputProductCard);
   return outputProductCard;
+}
+
+function loadAndDispalyProductComments() {
+  fetch("Data/comments.json")
+    .then((res) => res.json())
+    .then((data) => {
+      let outputComments = "";
+
+      data.forEach((comment) => {
+        if (comment.productId == POI_PRODUCT_ID) {
+          let i=0;
+            outputComments += `
+            <div class="card">
+              <p>${displayStars(comment.productId)}<span class="commenter"> by ${comment.customer_name}</span></p>
+              <p><b>${comment.comment_date}</b><p>
+              <p>${comment.text}</p>
+            </div>
+            `;
+        }
+      });
+      document.getElementById("comments-container").innerHTML = outputComments;
+    })
+    .catch((err) => console.log(err));
 }
 
 $(document).ready(function () {
@@ -158,6 +175,7 @@ $(document).ready(function () {
       displayProductData();
       loadAndDispalyProductRatings();
       displaySimilarProducts()
+      loadAndDispalyProductComments()
     }
   };
 });
