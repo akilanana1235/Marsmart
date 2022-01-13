@@ -10,8 +10,8 @@ $(document).ready(function () {
     var path = window.location.pathname;
     var page = path.split("/").pop();
 
-    document.getElementById('net-total').innerHTML = 'Rs. ' + netTotal;
-    document.getElementById('sub-total').innerHTML = 'Rs. ' + netTotal;
+    document.getElementById('net-total').innerHTML = ' $ ' + netTotal;
+    document.getElementById('sub-total').innerHTML = ' $ ' + netTotal;
 
     for (var i = 0; i < priceListArray.length; i++) {
 
@@ -23,7 +23,7 @@ $(document).ready(function () {
             '<div class="col-content">1</div>' +
             '</div>' +
             '<div class="ui-block-b">' +
-            '<div class="col-content">Rs.' + priceListArray[i] + '</div>' +
+            '<div class="col-content">$' + priceListArray[i] + '</div>' +
             '</div>' +
             '</div>'
 
@@ -57,8 +57,8 @@ $(document).ready(function () {
 
         $('#place-order').on('click', function (e) {
             handler.open({
-                name: 'SpreeMart',
-                currency: 'LKR',
+                name: 'Marsmart',
+                currency: 'USD',
                 amount: netTotal * 100
                 // closed: () => { console.log("Hello") }
             });

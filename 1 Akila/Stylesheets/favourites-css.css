@@ -10,7 +10,7 @@ Product price font-size: 14px */
     margin: 20px 0px 10px 0px;
     border-radius: 10px;
     background-color: white;
-    height: 150px;
+    height: 155px;
 }
 
 .heart-wrapper{
@@ -54,16 +54,16 @@ Product price font-size: 14px */
 
 .producttitle{
     font-family: "Century Gothic";
-    color: #f77f00;
+    color: black;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .price{
     font-family: "Century Gothic";
     color: #070707;
-    font-weight: bold;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 11px;
 }
 
 .rating1{
@@ -77,21 +77,26 @@ Product price font-size: 14px */
 }
 
 #minus1{
-    height: 30.5px;
-    padding: 0.3em 0em;
+    width: 20px;
+    padding: 0px;
     border: 1px solid #CCCCCC;
-    border-radius: 0;
     background-color: white;
-    margin-right: -2px;
+    background: #FFFFFF;
+    border: 0.508571px solid rgba(0, 0, 0, 0.24);
+    box-sizing: border-box;
+    border-radius: 7px;
 }
 
 #plus1{
-    height: 30.5px;
-    padding: 0.3em 0em;
+    width: 20px;
+    padding: 0px;
     border: 1px solid #CCCCCC;
-    border-radius: 0;
     background-color: white;
-    margin-left: -2px;
+    background: #FFFFFF;
+    border: 0.508571px solid rgba(0, 0, 0, 0.24);
+    box-sizing: border-box;
+    border-radius: 7px;
+    margin-left: -8px;
 }
 
 .ui-input-text{
@@ -107,10 +112,14 @@ Product price font-size: 14px */
 #quantity1{
     border: 1px solid #CCCCCC;
     border-radius: 0;
-    height: 31px;
-    margin-top: -1px;
-    font-size: 14px;
     background-color: white;
+    text-align: center !important;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    padding: 0px !important;
+    min-height: 0em;
+    border: none;
+    margin-left: -8px;
 }
 
 .quantity1{
@@ -125,16 +134,21 @@ Product price font-size: 14px */
 }
 
 #add-to-cart{
-    background-color: #34AD48;
-    display: inline-block;
-    border-radius: 50px;
-    font-family: "Century Gothic";
+    background: #15317A;
+    display:inline-block;
+    width:68.3px;
+    font-family: Poppins;
     color: white;
-    font-size: 9px;
+    font-size: 8px;
+    height:24.04px;
     padding: 1em 1em;
     border: none !important;
     text-shadow: none !important;
     font-weight: bold;
+    font-style: normal;
+    font-weight: bold;
+    box-shadow: 0px 2.13814px 2.13814px rgba(0, 0, 0, 0.25);
+    border-radius: 2.67267px;
 }
 
 #BuyNow1{
@@ -186,7 +200,7 @@ Product price font-size: 14px */
   color: #D62828;
   font-weight: bold;
   font-size: 16px;
-  letter-spacing: 3px;
+ 
   padding: 8px;
 }
 
