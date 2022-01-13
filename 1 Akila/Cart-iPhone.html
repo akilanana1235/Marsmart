@@ -39,6 +39,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="Stylesheets/loader.css">
     <style>
         html * {
             font-family: "Poppins", sans-serif !important;
@@ -47,6 +48,9 @@
 </head>
 
 <body>
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
     <div data-role="page" id="Landing-page">
         <!-- header start -->
         <div data-role="header">
@@ -64,7 +68,7 @@
                         </div>
                         <span onclick="openNav()"><img id="hamburger" src="Icons/menu-button.png" /></span>
                     </div>
-                    <div class="ui-block-b" onclick="window.location.href='index.html'">
+                    <div class="ui-block-b" onclick="window.location.href='Landing page-iPhone.html'">
                         <img id="logo" src="Images/CWLOGO full.png" />
                     </div>
                     <div class="ui-block-c">
@@ -97,7 +101,7 @@
                 <div class="breadcrumb-text">
                     <!-- <a href="Landing page-iPhone.html" style="color: #A1A1A1;">Home</a> -->
 
-                    <span onclick="window.location.href='index.html'" style="color: #a1a1a1">Home ></span>
+                    <span onclick="window.location.href='Landing page-iPhone.html'" style="color: #a1a1a1">Home ></span>
                     <span style="color: #ff2525">Cart</span>
                 </div>
             </div>
@@ -116,7 +120,7 @@
                 </div>
             </div>
 
-            <div class="card-area">
+            <div class="card-area" style="    min-height: 310px;">
                 <!-- <div class="ui-grid-b card">
                 <div class="ui-block-a left-wrapper">
                   <input type="checkbox" name="checkbox-mini-0" id="checkbox-select-all" data-mini="true" />
@@ -205,7 +209,7 @@
         <!-- checkout button start -->
         <div>
             <a href="#temporary" data-role="button" id="add-to-cart1"
-                onclick="window.location.href='index.html'">Continue Shopping</a>
+                onclick="window.location.href='Landing page-iPhone.html'">Continue Shopping</a>
             <a href="#checkoutPopup" data-role="button" data-rel="popup" id="add-to-cart2">Checkout</a>
         </div>
         <!-- checkout button end -->
@@ -273,6 +277,14 @@
         </div>
         <!-- footer end -->
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function () {
+            $('.loader_bg').fadeToggle();
+        }, 750);
+    </script>
+
 </body>
 
 </html>

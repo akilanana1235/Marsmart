@@ -42,6 +42,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="Stylesheets/loader.css">
+
     <script>
         $(document).ready(function () {
 
@@ -63,6 +65,10 @@
 
 <body>
 
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
+
     <div data-role="page" id="Login">
 
         <!-- header start -->
@@ -81,7 +87,7 @@
                         </div>
                         <span onclick="openNav()"><img id="hamburger" src="Icons/menu-button.png"></span>
                     </div>
-                    <div class="ui-block-b" onclick="window.location.href='index.html'">
+                    <div class="ui-block-b" onclick="window.location.href='Landing page-iPhone.html'">
                         <img id="logo" src="Images/CWLOGO full.png">
                     </div>
                     <div class="ui-block-c">
@@ -146,7 +152,7 @@
                     <div class="ui-block-a">
                     </div>
                     <div class="ui-block-b">
-                        <a href="index.html" data-role="button" id="login-btn" rel="external">Log in</a>
+                        <a href="Landing page-iPhone.html" data-role="button" id="login-btn" rel="external">Log in</a>
                         <br>
                         <label id="or-text">-OR-</label>
                     </div>
@@ -233,7 +239,12 @@
 
 
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function () {
+            $('.loader_bg').fadeToggle();
+        }, 750);
+    </script>
 
 </body>
 

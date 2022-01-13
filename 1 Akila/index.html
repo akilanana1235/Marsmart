@@ -2,705 +2,95 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="Icons/flavicon.png" />
-  <title>Marsmart</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Icons/flavicon.png" />
+    <title>Marsmart</title>
 
-  <!-- jQuery mobile cdn -->
-  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!-- bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <!-- 3.4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="Stylesheets/loader.css">
 
-  <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="Stylesheets/Landing page-iPhone.css">
-  <link rel="stylesheet" type="text/css" href="Stylesheets/main-iPhone.css">
+    <style>
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+            overflow: hidden
+        }
 
-  <!-- scripts -->
-  <script type="text/javascript" src="Scripts/Product.js"></script>
-  <script type="text/javascript" src="Scripts/Landing.js"></script>
-  <script type="text/javascript" src="Scripts/Populate.js"></script>
-  <script type="text/javascript" src="Scripts/header-iphone.js"></script>
-  <script src="Scripts/Menu.js"></script>
+        html * {
+            font-family: 'Poppins', sans-serif !important;
+        }
 
-  <!-- bootstrap  -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-    crossorigin="anonymous"></script>
-  <!-- 3.4 -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        .button-main {
+            position: absolute;
+            width: 126.97px;
+            height: 41px;
+            left: 110px;
+            top: 482px;
+            border-radius: 2.67267px !important;
+            background: #15317A;
+            box-shadow: 0px 2.13814px 2.13814px rgba(0, 0, 0, 0.25);
+            padding-left: 14px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #FFFFFF;
 
 
-  <!-- jQuery library -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-    crossorigin="anonymous"></script>
+        }
+    </style>
 
-
-  <style>
-    html * {
-      font-family: 'Poppins', sans-serif !important;
-    }
-  </style>
 
 </head>
 
+
+
+
 <body>
-  <div data-role="page" id="Landing-page">
-    <!-- header start -->
-    <div data-role="header">
-      <div data-role="navbar">
-        <div class="ui-grid-b">
-          <div class="ui-block-a">
-            <div id="mySidenav" class="sidenav">
-              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-              <a disabled="disabled" class="item-heading">Categories</a>
-              <a id="item-list1">&nbsp; &nbsp; &nbsp; Bread & Bakery</a>
-              <a id="item-list2">&nbsp; &nbsp; &nbsp; Canned goods & soups</a>
-              <a id="item-list3">&nbsp; &nbsp; &nbsp; Dabiry</a>
-              <a id="item-promotion">Promotions</a>
-              <a id="item-support">Support</a>
-            </div>
-            <span onclick="openNav()"><img id="hamburger" src="Icons/menu-button.png"></span>
-          </div>
-          <div class="ui-block-b" onclick="window.location.href='index.html'">
-            <img id="logo" src="Images/CWLOGO full.png">
-          </div>
-          <div class="ui-block-c">
-            <div class="header-right-wrapper">
-              <img id="cart" src="Icons/shopping-cart.png">
-              <!-- <img id="profile-image" src="Icons/profile-image.png"> -->
-              <span class="dropdown">
-                <a class="my-drop dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
-                  <img id="profile-image" src="Icons/profile-image.png">
-                </a>
-
-                <div class="dropdown-menu-profile" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item" id="dropdown-profile">My Profile</a>
-                  <a class="dropdown-item" id="dropdown-fav">My Favourites</a>
-                  <a class="dropdown-item" id="dropdown-logout">Logout</a>
-                </div>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="loader_bg">
+        <div class="loader"></div>
     </div>
-    <!-- header end -->
 
-    <!-- content start -->
-    <div data-role="content">
-      <!-- Top carousel start -->
-
-
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators" style="margin-top: -10px;">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-          <div class="item active">
-            <img src="Images/groceries.jpg" id="first-slider" alt="Los Angeles">
-          </div>
-          <div class="item">
-            <img src="Images/infographic.png" id="first-slider" alt="Chicago">
-          </div>
-          <div class="item">
-            <img src="Images/slider-3.jpg" id="first-slider" alt="New York">
-          </div>
-          <div class="item">
-            <img src="Images/slider-3.jpg" id="first-slider" alt="New York">
-          </div>
+    <div class="container" style="height: 100vh; background-color:  #F6F6F6;">
+        <div>
+            <img src="/1 Akila/Images/CWLOGO full.png" alt="" style="width: 400px; margin-left: -42px;">
         </div>
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-          <span><img src="Icons/left-arrow-stroke.png" id="control-arrow"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-          <span><img src="Icons/right-arrow-stroke.png" id="control-arrow"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-      <!-- Top carousel start end -->
-
-      <div class="container">
-        <div class="ui-grid-a product-grid" style="padding-left: 2px;
-        margin-left: -3px;">
-          <div class="search-wrapper">
-            <input type="text" name="search" id="search" value="" />
-            <img id="search-icon" src="Icons/search.png" style="margin-top: -6px;">
-          </div>
+        <div>
+            <img src="Images/top-banner-image.png" alt="" style="margin-left: -16px;">
+        </div>
+        <div
+            style="text-align: center; font-weight: bold; color: black; font-size: 25px; margin-bottom: -12px; margin-top: 60px;">
+            Make Your Shopping
+        </div>
+        <div style="text-align: center; font-weight: bold; color: black; font-size: 40px;">
+            Easy With Us
+        </div>
+        <div>
+            <button class="button-main" onclick="window.location.href='Landing page-iPhone.html'">
+                Get Started
+            </button>
         </div>
 
-        <div class="section-header" style="margin-top: -25px !important;">
-          Top Sellers
+        <div>
+            <img src="Images/ezgif.com-gif-maker.png" style="width: 360px; margin-top: 108px; margin-left: -3px;"
+                alt="">
         </div>
-
-        <!-- 1st two products start -->
-        <div class="row" style="margin-left: -11px;">
-          <div class="col-12">
-            <div class="ui-grid-a">
-              <div class="ui-block-a">
-                <div class="card" style="height: 275px;">
-                  <div class="heart-wrapper" style="margin-bottom: -25px;">
-                    <img id="heart" class="heart-icon" src="Icons/unfilled-heart.png">
-                  </div>
-                  <div class="card-content">
-                    <img id="product-image" src="Images/biscuit-packet.png">
-                    <div class="product-title">BAD DAY COOKIES</div>
-                    <div hidden class="product-id">1</div>
-                    <div class="ui-grid-a">
-                      <div class="ui-block-a product-category-landing">
-                        Grocery
-                      </div>
-                      <div class="ui-block-b product-rating-landing">
-                        <img id="rating-star" src="Icons/rating star.png"> 4.1
-                      </div>
-                    </div>
-                    <div class="product-description-landing">
-                      Neque porro quisquam est qui dolore ipsum quia dolor sit amet.
-                    </div>
-                    <div class="price"> 4.50</div>
-                    <div class="rating">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star half-filled.png">
-                    </div>
-                    <div class="quantity">
-                      <fieldset class="ui-grid-a">
-                        <div class="ui-block-a" style="width: 15%;">
-                          <a href="#temporary" data-role="button" id="minus">-</a>
-                        </div>
-                        <div class="ui-block-b" style="width: 20%;">
-                          <input type="number" name="quantity" id="quantity" value="1" />
-                        </div>
-                        <div class="ui-block-c" style="width: 15%;">
-                          <a href="temporary.html" data-role="button" id="plus">+</a>
-                        </div>
-                        <div class="ui-block-d" style="width: 50%; margin-top: 4px;">
-
-                        </div>
-                      </fieldset>
-                    </div>
-
-
-
-                    <a href="#addtocartPopup" data-role="button" data-rel="popup" id="add-to-cart" style="
-                    bottom: 34px;
-    left: 38px;
-    margin-bottom: -10px;
-                ">ADD TO CART</a>
-
-
-
-
-                  </div>
-                </div>
-              </div>
-              <div class="ui-block-b">
-                <div class="card" style="height: 275px;">
-                  <div class="heart-wrapper" style="margin-bottom: -25px;">
-                    <img id="heart" class="heart-icon" src="Icons/unfilled-heart.png">
-                  </div>
-                  <div class="card-content">
-                    <img id="product-image" src="Images/biscuit-packet.png">
-                    <div class="product-title">BAD DAY COOKIES</div>
-                    <div hidden class="product-id">1</div>
-                    <div class="ui-grid-a">
-                      <div class="ui-block-a product-category-landing">
-                        Grocery
-                      </div>
-                      <div class="ui-block-b product-rating-landing">
-                        <img id="rating-star" src="Icons/rating star.png"> 4.3
-                      </div>
-                    </div>
-                    <div class="product-description-landing">
-                      Neque porro quisquam est qui dolore ipsum quia dolor sit amet.
-                    </div>
-                    <div class="price"> 2.40</div>
-                    <div class="rating">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star half-filled.png">
-                    </div>
-                    <div class="quantity">
-                      <fieldset class="ui-grid-a">
-                        <div class="ui-block-a" style="width: 15%;">
-                          <a href="#temporary" data-role="button" id="minus">-</a>
-                        </div>
-                        <div class="ui-block-b" style="width: 20%;">
-                          <input type="number" name="quantity" id="quantity" value="1" />
-                        </div>
-                        <div class="ui-block-c" style="width: 15%;">
-                          <a href="temporary.html" data-role="button" id="plus">+</a>
-                        </div>
-                        <div class="ui-block-d" style="width: 50%; margin-top: 4px;">
-
-                        </div>
-                      </fieldset>
-                    </div>
-
-
-
-                    <a href="#addtocartPopup" data-role="button" data-rel="popup" id="add-to-cart" style="
-                    bottom: 34px;
-    left: 38px;
-    margin-bottom: -10px;
-                ">ADD TO CART</a>
-
-
-
-
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
-          </div>
-        </div>
-        <!-- 1st two products end-->
-
-        <!-- 2nd two products start -->
-        <div class="row" style="margin-left: -11px;">
-          <div class="col-12">
-            <div class="ui-grid-a">
-              <div class="ui-block-a">
-
-                <div class="card" style="height: 275px;">
-                  <div class="heart-wrapper" style="margin-bottom: -25px;">
-                    <img id="heart" class="heart-icon" src="Icons/unfilled-heart.png">
-                  </div>
-                  <div class="card-content">
-                    <img id="product-image" src="Images/biscuit-packet.png">
-                    <div class="product-title">BAD DAY COOKIES</div>
-                    <div hidden class="product-id">1</div>
-                    <div class="ui-grid-a">
-                      <div class="ui-block-a product-category-landing">
-                        Grocery
-                      </div>
-                      <div class="ui-block-b product-rating-landing">
-                        <img id="rating-star" src="Icons/rating star.png"> 4.9
-                      </div>
-                    </div>
-                    <div class="product-description-landing">
-                      Neque porro quisquam est qui dolore ipsum quia dolor sit amet.
-                    </div>
-                    <div class="price"> 3.50</div>
-                    <div class="rating">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star half-filled.png">
-                    </div>
-                    <div class="quantity">
-                      <fieldset class="ui-grid-a">
-                        <div class="ui-block-a" style="width: 15%;">
-                          <a href="#temporary" data-role="button" id="minus">-</a>
-                        </div>
-                        <div class="ui-block-b" style="width: 20%;">
-                          <input type="number" name="quantity" id="quantity" value="1" />
-                        </div>
-                        <div class="ui-block-c" style="width: 15%;">
-                          <a href="temporary.html" data-role="button" id="plus">+</a>
-                        </div>
-                        <div class="ui-block-d" style="width: 50%; margin-top: 4px;">
-
-                        </div>
-                      </fieldset>
-                    </div>
-
-
-
-                    <a href="#addtocartPopup" data-role="button" data-rel="popup" id="add-to-cart" style="
-                    bottom: 34px;
-    left: 38px;
-    margin-bottom: -10px;
-                ">ADD TO CART</a>
-
-
-
-
-                  </div>
-                </div>
-
-
-
-              </div>
-
-              <div class="ui-block-b">
-
-                <div class="card" style="height: 275px;">
-                  <div class="heart-wrapper" style="margin-bottom: -25px;">
-                    <img id="heart" class="heart-icon" src="Icons/unfilled-heart.png">
-                  </div>
-                  <div class="card-content">
-                    <img id="product-image" src="Images/biscuit-packet.png">
-                    <div class="product-title">BAD DAY COOKIES</div>
-                    <div hidden class="product-id">1</div>
-                    <div class="ui-grid-a">
-                      <div class="ui-block-a product-category-landing">
-                        Dairy
-                      </div>
-                      <div class="ui-block-b product-rating-landing">
-                        <img id="rating-star" src="Icons/rating star.png"> 4.5
-                      </div>
-                    </div>
-                    <div class="product-description-landing">
-                      Neque porro quisquam est qui dolore ipsum quia dolor sit amet.
-                    </div>
-                    <div class="price"> 58.50</div>
-                    <div class="rating">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star half-filled.png">
-                    </div>
-                    <div class="quantity">
-                      <fieldset class="ui-grid-a">
-                        <div class="ui-block-a" style="width: 15%;">
-                          <a href="#temporary" data-role="button" id="minus">-</a>
-                        </div>
-                        <div class="ui-block-b" style="width: 20%;">
-                          <input type="number" name="quantity" id="quantity" value="1" />
-                        </div>
-                        <div class="ui-block-c" style="width: 15%;">
-                          <a href="temporary.html" data-role="button" id="plus">+</a>
-                        </div>
-                        <div class="ui-block-d" style="width: 50%; margin-top: 4px;">
-
-                        </div>
-                      </fieldset>
-                    </div>
-
-
-
-                    <a href="#addtocartPopup" data-role="button" data-rel="popup" id="add-to-cart" style="
-                    bottom: 34px;
-    left: 38px;
-    margin-bottom: -10px;
-                ">ADD TO CART</a>
-
-
-
-
-                  </div>
-                </div>
-
-
-
-              </div>
-
-
-            </div>
-          </div>
-        </div>
-        <!-- 2nd two products end -->
-
-        <!-- special promotion task start-->
-        <div class="section-header">
-          Special Promotions
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <img id="special-promotion" src="Images/Special promotion.png" style="margin-top: -30px;">
-          </div>
-        </div>
-        <!-- special promotion task end -->
-
-
-        <!-- shop by category task start-->
-        <div class="section-header">
-          Shop by category
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="ui-grid-a" style="margin-top: 12px; margin-left: 2px;">
-              <div class="ui-block-a">
-                <img src="Images/category-1.png" alt="category-1" style="width: 166px;">
-              </div>
-              <div class="ui-block-b">
-                <img src="Images/category-2.png" alt="category-1" style="width: 166px;">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="ui-grid-a" style="margin-top: 8px; margin-left: 2px;">
-              <div class="ui-block-a">
-                <img src="Images/category-3.png" alt="category-1" style="width: 166px;">
-              </div>
-              <div class="ui-block-b">
-                <img src="Images/category-4.png" alt="category-1" style="width: 166px;">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="ui-grid-a" style="margin-top: 8px; margin-left: 2px;">
-              <div class="ui-block-a">
-                <img src="Images/category-5.png" alt="category-1" style="width: 166px;">
-              </div>
-              <div class="ui-block-b">
-                <img src="Images/category-6.png" alt="category-1" style="width: 166px;">
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- shop by category task end -->
-
-
-        <div class="section-header" style="margin-top:25px; margin-bottom: -5px;">
-          Discounted Items
-        </div>
-        <div class="row" style="margin-left: -11px;">
-          <div class="col-12">
-            <div class="ui-grid-a">
-              <div class="ui-block-a">
-
-                <div class="card" style="height: 275px;">
-
-                  <div class="ui-grid-a">
-                    <div class="ui-block-a">
-                      <div class="heart-wrapper">
-                        <img id="heart" class="heart-icon" src="Icons/unfilled-heart.png">
-                      </div>
-                    </div>
-                    <div class="ui-block-b"
-                      style="font-size: 14px; font-weight: 700; font-family: Poppins; color: #FF2525; padding-top: 2px; margin-left: 14px; margin-right: -14px;">
-                      10
-                      <img src="Icons/discount-tag.png" alt="" width="16px" height="16px">
-                    </div>
-                  </div>
-
-
-
-
-                  <div class="card-content" style="margin-top:-25px;">
-                    <img id="product-image" src="Images/biscuit-packet.png">
-                    <div class="product-title">BAD DAY COOKIES</div>
-                    <div hidden class="product-id">1</div>
-                    <div class="ui-grid-a">
-                      <div class="ui-block-a product-category-landing">
-                        Grocery
-                      </div>
-                      <div class="ui-block-b product-rating-landing">
-                        <img id="rating-star" src="Icons/rating star.png"> 4.9
-                      </div>
-                    </div>
-                    <div class="product-description-landing">
-                      Neque porro quisquam est qui dolore ipsum quia dolor sit amet.
-                    </div>
-
-                    <div class="ui-grid-a">
-                      <div class="ui-block-a" style="margin-left: -10px;">
-                        <div style="text-align: right; text-decoration: line-through; margin-right: 3px;">4.5</div>
-                      </div>
-                      <div class="ui-block-b">
-                        <div class="price" style="text-align: left;">5.50</div>
-                      </div>
-                    </div>
-                    <div class="rating">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star half-filled.png">
-                    </div>
-                    <div class="quantity">
-                      <fieldset class="ui-grid-a">
-                        <div class="ui-block-a" style="width: 15%;">
-                          <a href="#temporary" data-role="button" id="minus">-</a>
-                        </div>
-                        <div class="ui-block-b" style="width: 20%;">
-                          <input type="number" name="quantity" id="quantity" value="1" />
-                        </div>
-                        <div class="ui-block-c" style="width: 15%;">
-                          <a href="temporary.html" data-role="button" id="plus">+</a>
-                        </div>
-                        <div class="ui-block-d" style="width: 50%; margin-top: 4px;">
-
-                        </div>
-                      </fieldset>
-                    </div>
-
-
-
-                    <a href="#addtocartPopup" data-role="button" data-rel="popup" id="add-to-cart" style="
-                    bottom: 34px;
-    left: 38px;
-    margin-bottom: -10px;
-                ">ADD TO CART</a>
-
-
-
-
-                  </div>
-                </div>
-
-
-
-              </div>
-
-              <div class="ui-block-b">
-
-                <div class="card" style="height: 275px;">
-
-                  <div class="ui-grid-a">
-                    <div class="ui-block-a">
-                      <div class="heart-wrapper">
-                        <img id="heart" class="heart-icon" src="Icons/unfilled-heart.png">
-                      </div>
-                    </div>
-                    <div class="ui-block-b"
-                      style="font-size: 14px; font-weight: 700; font-family: Poppins; color: #FF2525; padding-top: 2px; margin-left: 14px; margin-right: -14px;">
-                      5
-                      <img src="Icons/discount-tag.png" alt="" width="16px" height="16px">
-                    </div>
-                  </div>
-
-
-
-
-                  <div class="card-content" style="margin-top:-25px;">
-                    <img id="product-image" src="Images/biscuit-packet.png">
-                    <div class="product-title">BAD DAY COOKIES</div>
-                    <div hidden class="product-id">1</div>
-                    <div class="ui-grid-a">
-                      <div class="ui-block-a product-category-landing">
-                        Grocery
-                      </div>
-                      <div class="ui-block-b product-rating-landing">
-                        <img id="rating-star" src="Icons/rating star.png"> 4.3
-                      </div>
-                    </div>
-                    <div class="product-description-landing">
-                      Neque porro quisquam est qui dolore ipsum quia dolor sit amet.
-                    </div>
-
-                    <div class="ui-grid-a">
-                      <div class="ui-block-a" style="margin-left: -10px;">
-                        <div style="text-align: right; text-decoration: line-through; margin-right: 3px;">3.5</div>
-                      </div>
-                      <div class="ui-block-b">
-                        <div class="price" style="text-align: left;">2.4</div>
-                      </div>
-                    </div>
-                    <div class="rating">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star.png">
-                      <img id="rating-star" src="Icons/rating star half-filled.png">
-                    </div>
-                    <div class="quantity">
-                      <fieldset class="ui-grid-a">
-                        <div class="ui-block-a" style="width: 15%;">
-                          <a href="#temporary" data-role="button" id="minus">-</a>
-                        </div>
-                        <div class="ui-block-b" style="width: 20%;">
-                          <input type="number" name="quantity" id="quantity" value="1" />
-                        </div>
-                        <div class="ui-block-c" style="width: 15%;">
-                          <a href="temporary.html" data-role="button" id="plus">+</a>
-                        </div>
-                        <div class="ui-block-d" style="width: 50%; margin-top: 4px;">
-
-                        </div>
-                      </fieldset>
-                    </div>
-
-
-
-                    <a href="#addtocartPopup" data-role="button" data-rel="popup" id="add-to-cart" style="
-                    bottom: 34px;
-    left: 38px;
-    margin-bottom: -10px;
-                ">ADD TO CART</a>
-
-
-
-
-                  </div>
-                </div>
-
-
-
-              </div>
-
-
-            </div>
-          </div>
-        </div>
-
-
-
-        <div class="section-header" style="margin-bottom: 12px;">
-          Promotions
-        </div>
-
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators" style="margin-top:-10px">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="Images/Promotions.png" id="first-slider" alt="Los Angeles">
-            </div>
-            <div class="item">
-              <img src="Images/infographic.png" id="first-slider" alt="Chicago">
-            </div>
-            <div class="item">
-              <img src="Images/slider-3.jpg" id="first-slider" alt="New York">
-            </div>
-            <div class="item">
-              <img src="Images/slider-3.jpg" id="first-slider" alt="New York">
-            </div>
-          </div>
-          <!-- Left and right controls -->
-          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-            <span><img src="Icons/left-arrow-stroke.png" id="control-arrow"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-            <span><img src="Icons/right-arrow-stroke.png" id="control-arrow"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-        <!-- Top carousel start end -->
-
-
-
-      </div>
-
-
-
-
-
-
 
 
 
@@ -708,69 +98,12 @@
 
     </div>
 
-    <!-- content end -->
-
-
-
-    <!-- footer start -->
-    <div data-role="footer"
-      style="margin-top:10px; background-color: #383838 !important; padding:10px 10px 15px 15px !important;">
-      <div data-role="navbar" style="">
-        <div class="ui-grid-a">
-          <div class="ui-block-a">
-            <div class="spreemart-title">Get In Touch</div>
-            <div class="spreemart-copyright"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 14 14">
-                <path fill-rule="evenodd"
-                  d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-              </svg> +94 11 1234567</div>
-            <div class="spreemart-copyright"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 14 14">
-                <path
-                  d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
-              </svg> info@masmart.com</div>
-          </div>
-          <div class="ui-block-b">
-            <div class="social-media-wrapper" style="margin-right: -8px;">
-              <img id="social-media" src="Icons/facebook.png">
-              <img id="social-media" src="Icons/instagram.png">
-
-            </div>
-            <div class="spreemart-copyright" style="text-align: right; margin-top: 16px;">Marsmart © All rights reserved
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- footer end -->
-
-    <!-- Add to cart pop up start -->
-
-    <div data-role="popup" id="addtocartPopup" style="left:15px !important; padding-top: 10px; padding-bottom: 10px;">
-      <div class="share-header" style="padding: 20px 20px 0px 20px;">
-        <img src="Images/tick.png" alt="" style="margin-left:100px;">
-        <div class="share-title" style="padding-top:10px; padding-bottom:10px;">
-          Successfully added to cart!
-        </div>
-      </div>
-
-      <div class="share-content text-center">
-        <div class="ui-grid-a">
-
-          <div class="text-center">
-            <a href="#temporary" data-role="button" id="submit-mail2">Continue Shopping</a>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Add to cart pop up end -->
-
-
-
-  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function () {
+            $('.loader_bg').fadeToggle();
+        }, 1500);
+    </script>
 </body>
 
 </html>

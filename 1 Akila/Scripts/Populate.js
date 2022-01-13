@@ -35,7 +35,7 @@ function populateProductCard() {
     images[i].src = Products[i].img_url;
     document.getElementsByClassName("product-title")[i].innerHTML = Products[i].title;
     document.getElementsByClassName("product-id")[i].innerHTML = Products[i].product_id;
-    document.getElementsByClassName("price")[i].innerHTML = 'Rs. ' + Products[i].price;
+    document.getElementsByClassName("price")[i].innerHTML = '$' + Products[i].price;
   }
 }
 
