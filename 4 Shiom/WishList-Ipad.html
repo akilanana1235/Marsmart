@@ -1,0 +1,226 @@
+<DOCTYPE html>
+    <html>
+    
+    <head>
+        <title>CartPage-Ipad</title>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+            
+        
+            <link rel="stylesheet" type="text/css"  href="CSS/NavBar-Ipad.css">
+            <link rel="stylesheet" type="text/css"  href="CSS/Footer-Ipad.css">
+            <script src="https://use.fontawesome.com/bb16f85abc.js"></script>
+    
+    
+            <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+            <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+            <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+            <link rel="stylesheet" href="CSS/WishList-Ipad.css">
+            
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+          
+    
+
+        
+    
+          <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    
+            <script type="text/javascript" src="Scripts/Cart-Ipad.js"></script>
+            
+        <script type="text/javascript" src="Scripts/Products.js"></script>
+    
+    </head>
+    
+    <body>
+    
+        <div data-role="page" id="cartpage">
+    
+            <section data-role="header" data-position="fixed"  >
+                <div id="nav-content">
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a disabled="disabled" class="item-heading">Categories</a>
+                        <a id="item-list1">&nbsp; &nbsp; &nbsp; Bread & Bakery</a>
+                        <a id="item-list2">&nbsp; &nbsp; &nbsp; Canned goods & soups</a>
+                        <a id="item-list3">&nbsp; &nbsp; &nbsp; Dabiry</a>
+                        <a id="item-promotion">Promotions</a>
+                        <a id="item-support">Support</a>
+                      </div>
+                    <span onclick="openNav()"><i class="fa fa-align-justify" aria-hidden="true" ></i></span>
+                  <div id="logo" style="flex: 3">
+                    <img
+                      src="Images/logo-transparent.png"
+                      style="width: 16em;margin-top: 10px;"
+                      alt=""
+                    />
+                  </div>
+                  <!--searchbar-->
+                  <form style="flex: 3; padding: 0.5em" class="navSearch">
+                    <input type="search" name="search-1" id="search-1" value="" />
+                  </form>
+                  <div style="flex: 2">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </section>
+              <div class="breadCrum">
+                <p>Home > <span style="color: #FF2525;">Wish List</span> </p>
+            </div>
+    
+            <div  data-role="main" class="ui-content">
+    
+                 
+    
+                <div class="cartBody">
+    
+                    <div class="pageName"><p>YOUR FAVOURITES</p> 
+    
+                    </div>
+     
+                        <div class="ui-grid-a">
+                            
+                            <div class="ui-block-a">
+                                <input type="checkbox" name="checkboxSelectAll" class="customCehckBox" id="checkboxSelectAll" data-mini="true" />
+                                <span id="selectAlltxt">Select All</span>
+                            </div>
+    
+                            <div class="ui-block-b" >
+                                <a style="text-decoration: none;" href="#DeletePopUp" data-rel="popup" > <img id="deleteicon" src="Images/delete.png"></a>
+                                <span id="deletetxt"></span>
+                            </div>
+
+                            <div class="ui-block-c" style="width: 20%;">
+                                <a href="#sharepopup" data-rel="popup">
+                                    <img id="share-icon" src="Images/share.png">
+                                </a>
+                                <span id="share-txt">(0) Items</span>
+                            </div>
+                        </div>
+    
+                        </div>
+    
+                        <div class="productcardContainer">
+    
+                            
+    
+    
+                            
+                        </div>
+    
+    
+    
+                            
+                        
+    
+                        <div style="text-align: center; margin-top: 28px;">
+    
+                           
+                            <div class="checkOut" >
+                                <a style="text-decoration: none;" href="#CheckOutPopUp" data-rel="popup" > <p>Email the List</p></a> 
+                            </div>
+                        </div>
+    
+                </div>
+          
+    
+            
+            <section data-role="footer" data-theme="b"  style="float: left; width: 100%; margin-top: 100px;  background-color: #383838 !important;" >
+                <div class="footer-content">
+                  <div style="flex:1;" class="contact-info-new">
+                    <h2><b>Get in touch</b></h2>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i> 1-800-367-2884</p>
+                    <span><i class="fa fa-envelope" aria-hidden="true"></i> info@marsmart.com</span>
+                  </div>
+                  <div style="flex:2; text-align: right;" class="social-media-new">
+                    <h1>
+                      <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </h1>
+                    <h2>
+                      <b>marsmart</b>
+                      <span style="font-size: smaller;"><i class="fa fa-copyright" aria-hidden="true"></i>
+                        all rights reserved</span>
+                    </h2>
+                  </div>
+                
+              </section>
+    
+    
+            <div data-role="popup" id="CheckOutPopUp" class="popUpCheckOut">
+           
+                <i id="checkOutPopUpicon" class="fa fa-times-circle-o" aria-hidden="true"></i>
+                <i id="checkOutPopUpiconCaution" class="fa fa-exclamation-triangle"></i>
+                <div class="rules">
+                   <h2 id="popUpHeader"></h2>
+    
+                   <p id="popupContent"></p>
+    
+                </div>
+    
+                <div class="popUpFooter">
+                    <div class="checkoutPopUpCancelButton" id="checkoutPopUpCancelButton">
+                        <a style="text-decoration: none;" ><p>Cancel</p></a> 
+                    </div>
+        
+                    <div class="understood" id="checkoutPopUpButton">
+                        <a style="text-decoration: none;" ><p id="buttonTextcheckout">understood</p></a> 
+                    </div>
+            
+                </div>
+               
+            </div>
+    
+
+
+
+            <div data-role="popup" id="DeletePopUp" class="popUpDelete">
+           
+          
+                <i id="deleteCaution" class="fa fa-exclamation-triangle"></i>
+                <div class="rules">
+                   <h2 id="popUpHeader">Are you sure?</h2>
+    
+                   <p id="popupContent">Item will be removed permantly from cart</p>
+    
+                </div>
+    
+                <div class="popUpFooter">
+                    <div class="DeletePopUpCancelButton" id="DeletePopUpCancelButton">
+                        <a style="text-decoration: none;" ><p>No,Cancel</p></a> 
+                    </div>
+        
+                    <div class="DeletePopUpButton" id="DeletePopUpButton">
+                        <a style="text-decoration: none;" ><p id="buttonTextDelete">Yes, Remove it</p></a> 
+                    </div>
+            
+                </div>
+               
+            </div>
+    
+    
+            
+    
+    
+            </div>
+        
+        
+    
+    </body>
+    
+    </html>
