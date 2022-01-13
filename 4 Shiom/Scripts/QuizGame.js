@@ -4,7 +4,8 @@ const questions = [
         optionA: "10 days",
         optionB: "14 days",
         optionC: "7 days",
-        correctOption: "optionC"
+        correctOption: "optionC",
+        type:"General"
     },
 
     {
@@ -12,23 +13,26 @@ const questions = [
         optionA: "10 players",
         optionB: "11 players",
         optionC: "9 players",
-        correctOption: "optionB"
+        correctOption: "optionB",
+        type:"Sports"
     },
 
     {
         question: "Who was the first President of USA ?",
-        optionA: "Donald Trump",
-        optionB: "Barack Obama",
-        optionC: "Abraham Lincoln",
-        correctOption: "optionC"
+        optionA: "abraham lincoln",
+        optionB: "John Adams",
+        optionC: "George Washington",
+        correctOption: "optionC",
+        type:"History"
     },
 
     {
-        question: "30 days has ______ ?",
-        optionA: "January",
-        optionB: "December",
-        optionC: "June",
-        correctOption: "optionC"
+        question: "First Apple Product to Launch by Apple Inc?",
+        optionA: "Iphone",
+        optionB: "Ipod",
+        optionC: "Ipad",
+        correctOption: "optionB",
+        type:""
     },
 
     {
@@ -36,7 +40,8 @@ const questions = [
         optionA: "24 hours",
         optionB: "38 hours",
         optionC: "48 hours",
-        correctOption: "optionA"
+        correctOption: "optionA",
+        type:"General"
     }
 
 ];
@@ -70,6 +75,7 @@ function NextQuestion(index) {
     //document.getElementById("question-number").innerHTML = questionNumber
     //document.getElementById("player-score").innerHTML = playerScore
 
+    document.getElementById("qType").innerHTML = currentQuestion.type;
     document.getElementById("question").innerHTML = currentQuestion.question;
     document.getElementById("option1_label").innerHTML = currentQuestion.optionA;
     document.getElementById("option2_label").innerHTML = currentQuestion.optionB;
