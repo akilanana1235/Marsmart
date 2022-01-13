@@ -438,12 +438,13 @@ font-size: 28px;
     font-family: Poppins;
 font-style: normal;
 font-weight: bold;
-font-size: 21px;
+font-size: 25px;
 line-height: 31px;
 margin-left: 40%;
 color: rgba(255, 37, 37, 0.99);
 margin-top: 27px;
 }
+
 
 
 .product_rating{
@@ -454,7 +455,7 @@ margin-top: 27px;
 .product_rating span{
     color: gold;
     font-size: 18px;
-    margin-left: 58%;
+    margin-left: 40%;
     text-shadow: none
 }
 

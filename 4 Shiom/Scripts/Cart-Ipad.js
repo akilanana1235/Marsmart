@@ -52,7 +52,7 @@ $(document).ready(function() {
 
                                     </div>
                                     <div class="product_price">
-                                        <p id="productPrice"> <span id="beforeDiscounted">${Products[i].beforeDiscount}</span> <span id="price_product" class="price">${'$'+Products[i].price}</span></p>
+                                        <p id="productPrice">  <span id="price_product" class="price">${'$'+Products[i].price}</span></p>
                                  </div>
                                  <div class="product_rating">
                                     <p id="procustRating"> <span>&#9733;</span> ${Products[i].rating}</p>
@@ -146,7 +146,7 @@ $(document).ready(function() {
 
 //Getting Loyalty Points
 
-    let userloyaltyPoints=localStorage.getItem('UserLoyaltyPoints');
+    let userloyaltyPoints=parseInt(localStorage.getItem('UserLoyaltyPoints'));
 
   if(userloyaltyPoints==null){
       userloyaltyPoints=0;
@@ -158,57 +158,59 @@ $(document).ready(function() {
     document.getElementById("reducePointbox3").innerHTML=(userloyaltyPoints*45)/100;
     
 
-  $('#reducePointbox1').click(()=>{
+  $('.loyaltyBoxe1').click(()=>{
       
 
-    if(userloyaltyPoints>5 && (NetTotal>userloyaltyPoints) ){
+    var toReduce = (userloyaltyPoints*20)/100;
 
-        var toReduce = (userloyaltyPoints*20)/100;
+    if(userloyaltyPoints>5 && (NetTotal>toReduce) ){
         document.getElementById('subtotalprice').innerText = '$' + subtotal;
-        document.getElementById('priceAfterDiscount').innerText = '$' + subtotal-toReduce;
+        var discounted = subtotal-toReduce;
+        document.getElementById('priceAfterDiscount').innerText = '$' + discounted;
         document.getElementById('discountedPrice').innerHTML='$' + toReduce;
         NetTotal=NetTotal-toReduce;
         document.getElementsByClassName('finalPrice')[0].innerHTML = '$' + NetTotal;
 
         userloyaltyPoints=userloyaltyPoints-toReduce;
-        localStorage.setItem("userloyaltyPoints",userloyaltyPoints);
+        localStorage.setItem("UserLoyaltyPoints",userloyaltyPoints);
 
     }
 
   });
 
-  $('#reducePointbox2').click(()=>{
+  $('.loyaltyBoxe2').click(()=>{
       
-
-    if(userloyaltyPoints>5 && (NetTotal>userloyaltyPoints) ){
-
         var toReduce = (userloyaltyPoints*25)/100;
+
+        if(userloyaltyPoints>5 && (NetTotal>toReduce) ){
         document.getElementById('subtotalprice').innerText = '$' + subtotal;
-        document.getElementById('priceAfterDiscount').innerText = '$' + subtotal-toReduce;
+        var discounted = subtotal-toReduce;
+        document.getElementById('priceAfterDiscount').innerText = '$' + discounted;
         document.getElementById('discountedPrice').innerHTML='$' + toReduce;
         NetTotal=NetTotal-toReduce;
         document.getElementsByClassName('finalPrice')[0].innerHTML = '$' + NetTotal;
 
         userloyaltyPoints=userloyaltyPoints-toReduce;
-        localStorage.setItem("userloyaltyPoints",userloyaltyPoints);
+        localStorage.setItem("UserLoyaltyPoints",userloyaltyPoints);
 
     }
   });
 
 
-  $('#reducePointbox3').click(()=>{
-      
-    if(userloyaltyPoints>5 && (NetTotal>userloyaltyPoints) ){
+  $('.loyaltyBoxe3').click(()=>{
+    var toReduce = (userloyaltyPoints*45)/100;
+    if(userloyaltyPoints>5 && (NetTotal>toReduce) ){
 
-        var toReduce = (userloyaltyPoints*45)/100;
+       
         document.getElementById('subtotalprice').innerText = '$' + subtotal;
-        document.getElementById('priceAfterDiscount').innerText = '$' + subtotal-toReduce;
+        var discounted = subtotal-toReduce;
+        document.getElementById('priceAfterDiscount').innerText = '$' + discounted;
         document.getElementById('discountedPrice').innerHTML='$' + toReduce;
         NetTotal=NetTotal-toReduce;
         document.getElementsByClassName('finalPrice')[0].innerHTML = '$' + NetTotal;
 
         userloyaltyPoints=userloyaltyPoints-toReduce;
-        localStorage.setItem("userloyaltyPoints",userloyaltyPoints);
+        localStorage.setItem("UserLoyaltyPoints",userloyaltyPoints);
 
     }
   });
