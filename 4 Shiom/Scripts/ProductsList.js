@@ -962,7 +962,7 @@
                               <i id="${Products[i].product_id}" class="fa fa-heart-o"></i>
                             </div>
                             <div class="discounted">
-                               <img  id="discountTag" src="" alt="">
+                               <img  id="discountTag" src="${Products[i].discount_tag}" alt="">
                             </div>
                         </div>
                         <div class="cardImage">

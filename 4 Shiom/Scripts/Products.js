@@ -33,7 +33,7 @@ var Products =
     "rating": 4.9,
     "img_url": "Images/cheese.png",
     "beforeDiscount": 4.80,
-    "discount_tag":"Images/cheese.png",
+    "discount_tag":"Images/discount.png",
     "brand":"Chedder",
   },
   {

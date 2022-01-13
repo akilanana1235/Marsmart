@@ -383,7 +383,6 @@ color: #FFFFFF;
 
 .discounted{
     width: 60%;
-
     height: 35px;
     float: left;
 }
@@ -392,6 +391,12 @@ color: #FFFFFF;
     margin-left: 10%;
     margin-top: 10px;
 }
+
+#discountTag{
+    margin-left: 60%;
+    margin-top: 5px;
+}
+
 .cardImage{
     float: left;
     height: 142px;
@@ -490,6 +495,16 @@ margin-left: 5%;
 
 }
 
+#beforeDiscounted{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration-line: line-through;
+    color: #545454;
+}
+
 .product_price{
     width: 100%;
     float: left;
@@ -533,6 +548,7 @@ border: 0.508571px solid rgba(0, 0, 0, 0.24);
 box-sizing: border-box;
 border-radius: 7px;
     margin-left: 12%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 #minusButton{
@@ -540,6 +556,7 @@ border-radius: 7px;
     margin-left: 2%;
     background: #FFFFFF;
 border: 0.508571px solid rgba(0, 0, 0, 0.24);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));   
 box-sizing: border-box;
 border-radius: 7px;
 }
