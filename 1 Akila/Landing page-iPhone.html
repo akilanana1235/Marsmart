@@ -202,7 +202,7 @@
 
 
 
-                    <a href="#addtocartPopup" data-role="button" data-rel="popup" id="add-to-cart" style="
+                    <a href="#addToBasketPopUp"   data-role="button" data-rel="popup" id="add-to-cart" style="
                     bottom: 34px;
     left: 38px;
     margin-bottom: -10px;
@@ -261,7 +261,7 @@
 
 
 
-                    <a href="#addtocartPopup" data-role="button" data-rel="popup" id="add-to-cart" style="
+                    <a href="#addToBasketPopUp" data-role="button" data-rel="popup" id="add-to-cart" style="
                     bottom: 34px;
     left: 38px;
     margin-bottom: -10px;
@@ -332,7 +332,7 @@
 
 
 
-                    <a href="#addtocartPopup" data-role="button" data-rel="popup" id="add-to-cart" style="
+                    <a href="#addToBasketPopUp"  data-role="button" data-rel="popup" id="add-to-cart" style="
                     bottom: 34px;
     left: 38px;
     margin-bottom: -10px;
@@ -396,7 +396,7 @@
 
 
 
-                    <a href="#addtocartPopup" data-role="button" data-rel="popup" id="add-to-cart" style="
+                    <a href="#addToBasketPopUp"  data-role="button" data-rel="popup" id="add-to-cart" style="
                     bottom: 34px;
     left: 38px;
     margin-bottom: -10px;
@@ -549,7 +549,7 @@
 
 
 
-                    <a href="#addtocartPopup" data-role="button" data-rel="popup" id="add-to-cart" style="
+                    <a href="#addToBasketPopUp"  data-role="button" data-rel="popup" id="add-to-cart" style="
                     bottom: 34px;
     left: 38px;
     margin-bottom: -10px;
@@ -635,7 +635,7 @@
 
 
 
-                    <a href="#addtocartPopup" data-role="button" data-rel="popup" id="add-to-cart" style="
+                    <a href="#addToBasketPopUp"  data-role="button" data-rel="popup" id="add-to-cart" style="
                     bottom: 34px;
     left: 38px;
     margin-bottom: -10px;
@@ -751,25 +751,28 @@
 
     <!-- Add to cart pop up start -->
 
-    <div data-role="popup" id="addtocartPopup" style="left:15px !important; padding-top: 10px; padding-bottom: 10px;">
-      <div class="share-header" style="padding: 20px 20px 0px 20px;">
-        <img src="Images/tick.png" alt="" style="margin-left:100px;">
-        <div class="share-title" style="padding-top:10px; padding-bottom:10px;">
-          Successfully added to cart!
-        </div>
+    <div data-role="popup" id="addToBasketPopUp">
+       
+  
+      <img id="sucessIcon" src="Images/tick.png" alt="" >
+
+      <div class="popUpDescription">
+               <p>Successfully Added to Cart</p>
       </div>
 
-      <div class="share-content text-center">
-        <div class="ui-grid-a">
+      <div class="popUpFooter">
 
-          <div class="text-center">
-            <a href="#temporary" data-role="button" id="submit-mail2">Continue Shopping</a>
-
+          <div id="loyaltyNavigate" class="earnLoyalty">
+              <a style="text-decoration: none;" ><p>Earn Loyalty</p></a> 
           </div>
 
-        </div>
+          <div class="continueShopping">
+              <a style="text-decoration: none;" href="#Landing-page"><p>Continue Shopping</p></a> 
+          </div>
       </div>
-    </div>
+      
+
+  </div>
 
     <!-- Add to cart pop up end -->
 

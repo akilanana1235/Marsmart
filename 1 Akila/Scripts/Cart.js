@@ -54,7 +54,7 @@ $(document).ready(function () {
                             var NetTotal = 0;
 
 
-                            $('#delete-icon').click(function() {
+                            $('#DeletePopUpButton').click(function() {
                                 localStorage.clear('addtocartList');
                             location.reload();
     });
@@ -94,9 +94,79 @@ $(document).ready(function () {
                             document.getElementsByClassName('subprice')[0].innerHTML = '$' + subtotal;
                             document.getElementsByClassName('subprice3')[0].innerHTML = '$' + NetTotal;
         }
+
+
+        if(checkedItemsList.length>0){
+
+            $('.redeemLoyalty').css("background-color","#15317A")
+            
+
+            // document.getElementById("RedeemLoyaltyPopUp").style.visibility='hidden';
+        }else{
+            $('.redeemLoyalty').css('background-color', 'rgba(21, 49, 122, 0.7)')
+          
+            // document.getElementById("RedeemLoyaltyPopUp").style.visibility='visible';
+        }
+
+
     });
 
+
+    $(".checkOut").on('click',function(){
+
+        if(checkedItemsList.length==0){
+            document.getElementById("popUpHeader").innerHTML="Oops!";
+            document.getElementById("popupContent").innerHTML="Please select the item/s to buy in the cart";
+            document.getElementById("buttonTextcheckout").innerHTML="Select Item/s";
+            document.getElementById("checkoutPopUpButton").style.marginLeft="-18%";
+            document.getElementById("checkoutPopUpCancelButton").style.visibility="hidden";
+    
+          
+            document.getElementById("checkOutPopUpicon").style.marginTop="40px";
+            document.getElementById("checkOutPopUpicon").style.width="20%";
+            document.getElementById("checkOutPopUpicon").style.visibility="visible";
+    
+            document.getElementById("checkOutPopUpiconCaution").style.width="0%";
+            document.getElementById("checkOutPopUpiconCaution").style.marginTop="0px";
+            document.getElementById("checkOutPopUpiconCaution").style.visibility="hidden";
+    
+    
+        }else{
+    
+            document.getElementById("checkOutPopUpicon").style.width="0%";
+            document.getElementById("checkOutPopUpicon").style.marginTop="0px";
+            document.getElementById("checkOutPopUpicon").style.visibility="hidden";
+    
+            document.getElementById("checkOutPopUpiconCaution").style.visibility="visible";
+            document.getElementById("checkOutPopUpiconCaution").style.width="20%";
+            document.getElementById("checkOutPopUpiconCaution").style.marginTop="0px";
+
+            
+            document.getElementById("checkOutPopUpiconCaution").style.marginTop="0px";
+    
+            
+    
+    
+            document.getElementById("popUpHeader").innerHTML="";
+            document.getElementById("popupContent").innerHTML="Are you sure you want to proceed to <br> checkout?";
+            document.getElementById("buttonTextcheckout").innerHTML="Proceed";
+            document.getElementById("checkoutPopUpButton").style.marginLeft="5%";
+            document.getElementById("checkoutPopUpCancelButton").style.visibility="visible";
+            
+        }
+    
+       });
+
+
+
+
+
+
+
+
+
                             document.getElementById("BuyNow1").addEventListener("click", function() {
+
                                 localStorage.setItem("PriceList", checkedItemsList);
                             localStorage.setItem("NameList", checkedNameList);
                             localStorage.setItem("NetTotal", NetTotal);
@@ -118,5 +188,10 @@ $(document).ready(function () {
 
         
     });
+
+
+
+        
+
 
 });
