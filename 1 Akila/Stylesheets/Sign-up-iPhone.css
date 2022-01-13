@@ -10,6 +10,28 @@
     margin-left: -10px
 }
 
+
+#social-btn{
+    border-radius: 1px;
+    border-color: #DDDDDD;
+    width: 299px;
+    margin-left: -18px;
+    box-shadow: none;
+    padding: 10px;
+    font-family: "Century Gothic";
+    color: #000000; 
+    font-size: 14px;
+    font-weight: normal;
+    
+}
+
+.social-sign-message{
+    margin-left: 50px;  
+    opacity: 73%; 
+}
+
+
+
 .login-header {
     margin-top: -20px;
     font-family: "Century Gothic";
@@ -68,12 +90,12 @@
 
 .personal-details-heading {
     font-family: "Century Gothic";
-    color: #D62828;
+    color: #15317A;
     font-weight: bold;
     font-size: 16px;
     text-align: left;
-    margin-left: -19px;
-    margin-top: 6px;
+    margin-left: 0px;
+    margin-top: 0px;
 }
 
 .progress-line {
@@ -125,7 +147,7 @@
 }
 
 #text-line {
-    background-color: white;
+    background-color: #E7E7E9;
     border: none !important;
     box-shadow: none !important;
     outline: 0;
@@ -138,13 +160,14 @@
     font-size: 16px;
     font-family: "Century Gothic";
     position: relative;
+    margin-top: -12px;
 }
 
 #continue-btn,
 #submit-btn {
-    background-color: #D62828;
-    display: inline-block;
-    border-radius: 50px;
+    background-color: #15317A;
+    display:inline-block;
+    border-radius: 2.67px;
     margin-top: 23px;
     margin-left: -15px;
     width: 128px;
@@ -173,7 +196,7 @@
     color: #000000;
     font-size: 14px;
     font-weight: normal;
-    opacity: 50%;
+    
 }
 
 .fnameblock {

@@ -53,6 +53,8 @@
 
     </script>
 
+    <link rel="stylesheet" href="Stylesheets/loader.css">
+
     <style>
         html * {
             font-family: 'Poppins', sans-serif !important;
@@ -63,6 +65,10 @@
 
 
 <body>
+
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
 
     <div data-role="page" id="Login">
 
@@ -82,7 +88,7 @@
                         </div>
                         <span onclick="openNav()"><img id="hamburger" src="Icons/menu-button.png"></span>
                     </div>
-                    <div class="ui-block-b" onclick="window.location.href='index.html'">
+                    <div class="ui-block-b" onclick="window.location.href='Landing page-iPhone.html'">
                         <img id="logo" src="Images/CWLOGO full.png">
                     </div>
                     <div class="ui-block-c">
@@ -115,8 +121,8 @@
                 <div class="ui-block-a">
                 </div>
                 <div class="ui-block-b logo-block">
-                    <div><img id="logo-icon" src="Icons/LoginLogo.png"></div>
-                    <div class="login-header">SIGN UP</div>
+                    <div><img id="logo-icon" src="Images/sign-up-logo.png"></div>
+                    <div class="login-header" style="color: #FF2525;">SIGN UP</div>
                 </div>
                 <div class="ui-block-c">
                 </div>
@@ -124,41 +130,45 @@
             <br>
             <div class="sign-up-message">
                 Already have an account?
-                <a id="links" href=""> Login</a>
+                <a id="links" href="" onclick="window.location.href='Login-iPhone.html'" style="color: #FF2525;"> Log
+                    in</a>
             </div>
 
 
-            <div class="white-box">
+            <div class="white-box" style="background-color:#E7E7E9; height: 680px;">
+
                 <div class="signup-progress">
-                    <img id="progress-image" src="Icons/Steps.png">
-                    <div class="ui-grid-b">
-
-                        <!-- <div class="ui-block-a">
-                            <span class="circle current-circle">
-                                <label id="progress-number">1</label>
-                                 <img id="progress-line1"src="Icons/Line 7.png">
-                            </span>
-
-                           <div class="progress-line"></div> -->
-
-                        <!-- </div>
-                        <div class="ui-block-b">
-                            <span class="circle"></span>
-                        </div>
-                        <div class="ui-block-c">
-                            <span class="circle"></span>
-                        </div> -->
-                    </div>
-                </div>
-                <br>
-
-                <div class="personal-details-heading">PERSONAL DETAILS</div>
-                <br>
-                <form>
                     <div class="text-field-wrapper">
                         <label id="field-lbl" for="text-line-email">Email</label>
-                        <div><input type="text" name="text-line Email" id="text-line" value=""></div>
+                        <input type="text" name="text-line-email" id="text-line" style="background-color:#E7E7E9;"
+                            value="">
                     </div>
+                </div>
+                <div class="signup-progress">
+                    <div class="text-field-wrapper">
+                        <label id="field-lbl" for="text-line-email">Create Password</label>
+                        <input type="password" name="text-line-email" id="text-line" style="background-color:#E7E7E9;"
+                            value="">
+                    </div>
+                </div>
+                <div class="signup-progress">
+                    <div class="text-field-wrapper">
+                        <label id="field-lbl" for="text-line-email">Re-enter Password</label>
+                        <input type="password" name="text-line-email" id="text-line" style="background-color:#E7E7E9;"
+                            value="">
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="personal-details-heading">Personal Details</div>
+                <br>
+
+
+
+
+                <form>
+
                     <div class="ui-grid-a">
                         <div class="ui-block-a fnameblock">
                             <div class="text-field-wrapper">
@@ -175,21 +185,63 @@
                             </div>
                         </div>
                     </div>
-                    <div class="text-field-wrapper">
-                        <label id="field-lbl" for="text-line-dob">Date of Birth</label>
-                        <div><input type="date" name="text-line-dob" id="text-line" class="fname" value="">
-                        </div>
-                    </div>
+
                     <div class="text-field-wrapper">
                         <label id="field-lbl" for="text-line-num">Mobile number</label>
                         <div><input type="tel" name="text-line-num" id="text-line" class="fname" value="">
                         </div>
                     </div>
+                    <div class="text-field-wrapper">
+                        <label id="field-lbl" for="text-line-num">Address</label>
+
+                        <div>
+                            <input type="text" name="text-line-num" id="text-line" class="fname" value="">
+                        </div>
+                    </div>
 
                     <div class="continue-button">
-                        <a href="#SignUp2" data-transition="slide" data-role="button" id="continue-btn">Continue</a>
+                        <a href="#SignUp2" data-transition="slide" data-role="button" id="continue-btn"
+                            onclick="window.location.href='Login-iPhone.html'">Sign Up</a>
                     </div>
                 </form>
+                <br>
+                <label id="or-text" style="margin-top: -20px;
+                margin-bottom: 15px;
+                margin-left: -10px;">-OR-</label>
+
+                <div class="social-media-button">
+                    <a href="#temporary" data-role="button" id="social-btn">
+                        <div class="ui-block-a">
+                            <img src="Icons/Icon_Facebook.png">
+
+                        </div>
+                        <div class="ui-block-b social-sign-message">
+                            Sign in with Facebook
+
+                        </div>
+                        <div class="ui-block-c">
+                        </div>
+
+                    </a>
+                </div>
+
+
+                <div class="social-media-button">
+                    <a href="#temporary" data-role="button" id="social-btn">
+                        <div class="ui-block-a">
+                            <img src="Icons/icons8_Google_2.png ">
+
+                        </div>
+                        <div class="ui-block-b social-sign-message">
+                            Sign in with Google
+
+                        </div>
+                        <div class="ui-block-c">
+                        </div>
+
+                    </a>
+                </div>
+
             </div>
 
         </div>
@@ -236,7 +288,12 @@
 
 
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function () {
+            $('.loader_bg').fadeToggle();
+        }, 750);
+    </script>
 
 </body>
 

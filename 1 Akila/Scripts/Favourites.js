@@ -148,7 +148,7 @@ $(document).ready(function () {
         if (Products[i].product_id === EmailfavouriteID) {
           var Emaildata = {
             "from": {
-              "email": "spreemart1@gmail.com"
+              "email": "marsmartshop@gmail.com"
             },
             "personalizations": [
               {
@@ -163,7 +163,7 @@ $(document).ready(function () {
                   "Prod_Price": Products[i].price
                 }
               }],
-            "template_id": "d-04a9d735ed454201a08f2700b86a26b7"
+            "template_id": "d-22e07402a4034663b72c3bb4444974bc"
           }
           break;
         }
@@ -177,7 +177,7 @@ $(document).ready(function () {
           async: false,
           data: JSON.stringify(Emaildata),
           beforeSend: function (xhr) {
-            xhr.setRequestHeader('Authorization', "Bearer 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 ");
+            xhr.setRequestHeader('Authorization', "Bearer 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");
           },
           success: function () {
             alert('Email Successfully sent !');

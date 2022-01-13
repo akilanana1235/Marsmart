@@ -40,6 +40,8 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
 
+  <link rel="stylesheet" href="Stylesheets/loader.css">
+
   <style>
     html * {
       font-family: 'Poppins', sans-serif !important;
@@ -49,123 +51,291 @@
 
 </head>
 
-<div data-role="page" id="Favourites">
+<body>
+  <div class="loader_bg">
+    <div class="loader"></div>
+  </div>
 
-  <!-- header start -->
-  <div data-role="header">
-    <div data-role="navbar">
-      <div class="ui-grid-b">
-        <div class="ui-block-a">
-          <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a disabled="disabled" class="item-heading">Categories</a>
-            <a id="item-list1">&nbsp; &nbsp; &nbsp; Bread & Bakery</a>
-            <a id="item-list2">&nbsp; &nbsp; &nbsp; Canned goods & soups</a>
-            <a id="item-list3">&nbsp; &nbsp; &nbsp; Dabiry</a>
-            <a id="item-promotion">Promotions</a>
-            <a id="item-support">Support</a>
+  <div data-role="page" id="Favourites">
+
+    <!-- header start -->
+    <div data-role="header">
+      <div data-role="navbar">
+        <div class="ui-grid-b">
+          <div class="ui-block-a">
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a disabled="disabled" class="item-heading">Categories</a>
+              <a id="item-list1">&nbsp; &nbsp; &nbsp; Bread & Bakery</a>
+              <a id="item-list2">&nbsp; &nbsp; &nbsp; Canned goods & soups</a>
+              <a id="item-list3">&nbsp; &nbsp; &nbsp; Dabiry</a>
+              <a id="item-promotion">Promotions</a>
+              <a id="item-support">Support</a>
+            </div>
+            <span onclick="openNav()"><img id="hamburger" src="Icons/menu-button.png"></span>
           </div>
-          <span onclick="openNav()"><img id="hamburger" src="Icons/menu-button.png"></span>
+          <div class="ui-block-b" onclick="window.location.href='Landing page-iPhone.html'">
+            <img id="logo" src="Images/CWLOGO full.png">
+          </div>
+          <div class="ui-block-c">
+            <div class="header-right-wrapper">
+              <img id="cart" src="Icons/shopping-cart.png" onclick="window.location.href='Cart-iphone.html'">
+              <!-- <img id="profile-image" src="Icons/profile-image.png"> -->
+              <span class="dropdown">
+                <a class="my-drop dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <img id="profile-image" src="Icons/profile-image.png">
+                </a>
+
+                <div class="dropdown-menu-profile" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" id="dropdown-profile">My Profile</a>
+                  <a class="dropdown-item" id="dropdown-fav">My Favourites</a>
+                  <a class="dropdown-item" id="dropdown-logout">Logout</a>
+                </div>
+              </span>
+            </div>
+          </div>
         </div>
-        <div class="ui-block-b" onclick="window.location.href='index.html'">
-          <img id="logo" src="Images/CWLOGO full.png">
+      </div>
+    </div>
+    <!-- header end -->
+
+    <!-- content start -->
+    <div data-role="content">
+      <div class="breadcrumb-wrapper">
+        <span onclick="window.location.href='Landing page-iPhone.html'" style="color: #a1a1a1">Home ></span>
+        <span style="color: #ff2525">Favourites</span>
+      </div>
+      <br>
+      <div class="fav-heading">
+        Your Favourites
+      </div>
+
+      <div class="ui-grid-b icons">
+        <div class="ui-block-a" style="margin-top: -8px;">
+          <input type="checkbox" name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true" />
+          <span id="select-txt">Select All</span>
+        </div>
+        <div class="ui-block-b">
+          <img id="delete-icon" src="Icons/delete.png">
+          <span id="delete-txt">(0) Items</span>
         </div>
         <div class="ui-block-c">
-          <div class="header-right-wrapper">
-            <img id="cart" src="Icons/shopping-cart.png" onclick="window.location.href='Cart-iphone.html'">
-            <!-- <img id="profile-image" src="Icons/profile-image.png"> -->
-            <span class="dropdown">
-              <a class="my-drop dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <img id="profile-image" src="Icons/profile-image.png">
-              </a>
+          <a href="#sharepopup" data-rel="popup">
+            <img id="share-icon" src="Icons/share.png">
+          </a>
+          <span id="share-txt">(0) Items</span>
+        </div>
+      </div>
 
-              <div class="dropdown-menu-profile" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" id="dropdown-profile">My Profile</a>
-                <a class="dropdown-item" id="dropdown-fav">My Favourites</a>
-                <a class="dropdown-item" id="dropdown-logout">Logout</a>
+      <div class="card-area" style="min-height: 545px;">
+
+
+
+      </div>
+
+      <!-- <div class="ui-grid-b card">
+          <div class="ui-block-a left-wrapper">
+            <div class="heart-wrapper">
+              <img id="heart" src="Icons/heart.png">
+            </div>
+            <input type="checkbox" name="checkbox-mini-0" id="checkbox-select-all" data-mini="true" />
+          </div>
+          <div class="ui-block-b middle-wrapper">
+            <img id="nutella" src="Images/nutella.png">
+          </div>
+          <div class="ui-block-c right-wrapper">
+            <span class="producttitle"> NUTELLA BOTTLE 200G</span>
+            <img id="share-2" src="Icons/share.png">
+            <span class="price">Rs.800.00</span>
+            <span class="rating1">
+              <img id="rating-star1" src="Icons/rating star.png">
+              <img id="rating-star1" src="Icons/rating star.png">
+              <img id="rating-star1" src="Icons/rating star.png">
+              <img id="rating-star1" src="Icons/rating star.png">
+              <img id="rating-star1" src="Icons/rating star half-filled.png">
+            </span>
+            <div class="quantity1">
+              <fieldset class="ui-grid-b">
+                <div class="ui-block-a">
+                  <a href="#temporary" data-role="button" id="minus1">-</a>
+                </div>
+                <div class="ui-block-b">
+                  <input type="number" name="quantity" id="quantity1" value="1" />
+                </div>
+                <div class="ui-block-c">
+                  <a href="temporary.html" data-role="button" id="plus1">+</a>
+                </div>
+              </fieldset>
+            </div>
+            <a href="#temporary" data-role="button" id="add-to-cart1">ADD TO CART</a>
+            <a href="#temp" data-role="button" id="BuyNow1">BUY NOW</a>
+          </div>
+  
+        </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--
+        <div class="ui-grid-b card">
+          <div class="ui-block-a left-wrapper">
+            <div class="heart-wrapper">
+              <img id="heart" src="Icons/heart.png">
+            </div>
+            <input type="checkbox" name="checkbox-mini-0" id="checkbox-select-all" data-mini="true" />
+          </div>
+          <div class="ui-block-b middle-wrapper">
+            <img id="nutella" src="Images/nutella.png">
+          </div>
+          <div class="ui-block-c right-wrapper">
+            <span class="producttitle"> NUTELLA BOTTLE 200G</span>
+            <img id="share-2" src="Icons/share.png">
+            <span class="price">Rs.800.00</span>
+            <span class="rating1">
+              <img id="rating-star1" src="Icons/rating star.png">
+              <img id="rating-star1" src="Icons/rating star.png">
+              <img id="rating-star1" src="Icons/rating star.png">
+              <img id="rating-star1" src="Icons/rating star.png">
+              <img id="rating-star1" src="Icons/rating star half-filled.png">
+            </span>
+            <div class="quantity1">
+              <fieldset class="ui-grid-b">
+                <div class="ui-block-a">
+                  <a href="#temporary" data-role="button" id="minus1">-</a>
+                </div>
+                <div class="ui-block-b">
+                  <input type="number" name="quantity" id="quantity1" value="1" />
+                </div>
+                <div class="ui-block-c">
+                  <a href="temporary.html" data-role="button" id="plus1">+</a>
+                </div>
+              </fieldset>
+            </div>
+            <a href="#temporary" data-role="button" id="add-to-cart1">ADD TO CART</a>
+            <a href="#temp" data-role="button" id="BuyNow1">BUY NOW</a>
+          </div>
+  
+        </div>
+  
+        <div class="ui-grid-b card">
+          <div class="ui-block-a left-wrapper">
+            <div class="heart-wrapper">
+              <img id="heart" src="Icons/heart.png">
+            </div>
+            <input type="checkbox" name="checkbox-mini-0" id="checkbox-select-all" data-mini="true" />
+          </div>
+          <div class="ui-block-b middle-wrapper">
+            <img id="nutella" src="Images/nutella.png">
+          </div>
+          <div class="ui-block-c right-wrapper">
+            <span class="producttitle"> NUTELLA BOTTLE 200G</span>
+            <img id="share-2" src="Icons/share.png">
+            <span class="price">Rs.800.00</span>
+            <span class="rating1">
+              <img id="rating-star1" src="Icons/rating star.png">
+              <img id="rating-star1" src="Icons/rating star.png">
+              <img id="rating-star1" src="Icons/rating star.png">
+              <img id="rating-star1" src="Icons/rating star.png">
+              <img id="rating-star1" src="Icons/rating star half-filled.png">
+            </span>
+            <div class="quantity1">
+              <fieldset class="ui-grid-b">
+                <div class="ui-block-a">
+                  <a href="#temporary" data-role="button" id="minus1">-</a>
+                </div>
+                <div class="ui-block-b">
+                  <input type="number" name="quantity" id="quantity1" value="1" />
+                </div>
+                <div class="ui-block-c">
+                  <a href="temporary.html" data-role="button" id="plus1">+</a>
+                </div>
+              </fieldset>
+            </div>
+            <a href="#temporary" data-role="button" id="add-to-cart1">ADD TO CART</a>
+            <a href="#temp" data-role="button" id="BuyNow1">BUY NOW</a>
+          </div>
+  
+        </div>
+  
+        <div class="ui-grid-b card">
+          <div class="ui-block-a left-wrapper">
+            <div class="heart-wrapper">
+              <img id="heart" src="Icons/heart.png">
+            </div>
+            <input type="checkbox" name="checkbox-mini-0" id="checkbox-select-all" data-mini="true" />
+          </div>
+          <div class="ui-block-b middle-wrapper">
+            <img id="nutella" src="Images/nutella.png">
+          </div>
+          <div class="ui-block-c right-wrapper">
+            <span class="producttitle"> NUTELLA BOTTLE 200G</span>
+            <img id="share-2" src="Icons/share.png">
+            <span class="price">Rs.800.00</span>
+            <span class="rating1">
+              <img id="rating-star1" src="Icons/rating star.png">
+              <img id="rating-star1" src="Icons/rating star.png">
+              <img id="rating-star1" src="Icons/rating star.png">
+              <img id="rating-star1" src="Icons/rating star.png">
+              <img id="rating-star1" src="Icons/rating star half-filled.png">
+            </span>
+            <div class="quantity1">
+              <fieldset class="ui-grid-b">
+                <div class="ui-block-a">
+                  <a href="#temporary" data-role="button" id="minus1">-</a>
+                </div>
+                <div class="ui-block-b">
+                  <input type="number" name="quantity" id="quantity1" value="1" />
+                </div>
+                <div class="ui-block-c">
+                  <a href="temporary.html" data-role="button" id="plus1">+</a>
+                </div>
+              </fieldset>
+            </div>
+            <a href="#temporary" data-role="button" id="add-to-cart1">ADD TO CART</a>
+            <a href="#temp" data-role="button" id="BuyNow1">BUY NOW</a>
+          </div>
+  
+        </div> -->
+
+      <div data-role="popup" id="sharepopup">
+        <div class="share-header" style="padding: 20px 20px 0px 20px;">
+          <div class="share-title">
+            Share this product with your friends
+          </div>
+          <div class="share-subtitle">
+            Choose who you want to share this with
+          </div>
+        </div>
+        <hr style="margin-top: 5px;border-top: 2px solid #eee;">
+        <div class="share-content">
+          <div class="ui-grid-a">
+            <div class="ui-block-a" style="width: 25% !important;">
+              <img id="social-media-share" src="Icons/mail-red.png">
+            </div>
+            <div class="ui-block-b" style="width: 75% !important;">
+              <input type="text" name="mail" id="mail-to" value="" />
+              <div style="float: right;">
+                <a href="#temporary" data-role="button" id="submit-mail">SEND</a>
               </div>
-            </span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- header end -->
-
-  <!-- content start -->
-  <div data-role="content">
-    <div class="breadcrumb-wrapper">
-      <span onclick="window.location.href='index.html'" style="color: #a1a1a1">Home ></span>
-      <span style="color: #ff2525">Favourites</span>
-    </div>
-    <br>
-    <div class="fav-heading">
-      YOUR FAVOURITES
-    </div>
-
-    <div class="ui-grid-b icons">
-      <div class="ui-block-a" style="margin-top: -8px;">
-        <input type="checkbox" name="checkbox-mini-0" id="checkbox-mini-0" data-mini="true" />
-        <span id="select-txt">Select All</span>
-      </div>
-      <div class="ui-block-b">
-        <img id="delete-icon" src="Icons/delete.png">
-        <span id="delete-txt">(0) Items</span>
-      </div>
-      <div class="ui-block-c">
-        <a href="#sharepopup" data-rel="popup">
-          <img id="share-icon" src="Icons/share.png">
-        </a>
-        <span id="share-txt">(0) Items</span>
-      </div>
-    </div>
-
-    <div class="card-area">
-
-
-
-    </div>
-
-    <!-- <div class="ui-grid-b card">
-          <div class="ui-block-a left-wrapper">
-            <div class="heart-wrapper">
-              <img id="heart" src="Icons/heart.png">
-            </div>
-            <input type="checkbox" name="checkbox-mini-0" id="checkbox-select-all" data-mini="true" />
-          </div>
-          <div class="ui-block-b middle-wrapper">
-            <img id="nutella" src="Images/nutella.png">
-          </div>
-          <div class="ui-block-c right-wrapper">
-            <span class="producttitle"> NUTELLA BOTTLE 200G</span>
-            <img id="share-2" src="Icons/share.png">
-            <span class="price">Rs.800.00</span>
-            <span class="rating1">
-              <img id="rating-star1" src="Icons/rating star.png">
-              <img id="rating-star1" src="Icons/rating star.png">
-              <img id="rating-star1" src="Icons/rating star.png">
-              <img id="rating-star1" src="Icons/rating star.png">
-              <img id="rating-star1" src="Icons/rating star half-filled.png">
-            </span>
-            <div class="quantity1">
-              <fieldset class="ui-grid-b">
-                <div class="ui-block-a">
-                  <a href="#temporary" data-role="button" id="minus1">-</a>
-                </div>
-                <div class="ui-block-b">
-                  <input type="number" name="quantity" id="quantity1" value="1" />
-                </div>
-                <div class="ui-block-c">
-                  <a href="temporary.html" data-role="button" id="plus1">+</a>
-                </div>
-              </fieldset>
-            </div>
-            <a href="#temporary" data-role="button" id="add-to-cart1">ADD TO CART</a>
-            <a href="#temp" data-role="button" id="BuyNow1">BUY NOW</a>
-          </div>
-  
-        </div> -->
+    <!-- content end -->
 
 
 
@@ -173,215 +343,57 @@
 
 
 
-
-
-
-
-
-
-
-
-
-    <!--
-        <div class="ui-grid-b card">
-          <div class="ui-block-a left-wrapper">
-            <div class="heart-wrapper">
-              <img id="heart" src="Icons/heart.png">
-            </div>
-            <input type="checkbox" name="checkbox-mini-0" id="checkbox-select-all" data-mini="true" />
-          </div>
-          <div class="ui-block-b middle-wrapper">
-            <img id="nutella" src="Images/nutella.png">
-          </div>
-          <div class="ui-block-c right-wrapper">
-            <span class="producttitle"> NUTELLA BOTTLE 200G</span>
-            <img id="share-2" src="Icons/share.png">
-            <span class="price">Rs.800.00</span>
-            <span class="rating1">
-              <img id="rating-star1" src="Icons/rating star.png">
-              <img id="rating-star1" src="Icons/rating star.png">
-              <img id="rating-star1" src="Icons/rating star.png">
-              <img id="rating-star1" src="Icons/rating star.png">
-              <img id="rating-star1" src="Icons/rating star half-filled.png">
-            </span>
-            <div class="quantity1">
-              <fieldset class="ui-grid-b">
-                <div class="ui-block-a">
-                  <a href="#temporary" data-role="button" id="minus1">-</a>
-                </div>
-                <div class="ui-block-b">
-                  <input type="number" name="quantity" id="quantity1" value="1" />
-                </div>
-                <div class="ui-block-c">
-                  <a href="temporary.html" data-role="button" id="plus1">+</a>
-                </div>
-              </fieldset>
-            </div>
-            <a href="#temporary" data-role="button" id="add-to-cart1">ADD TO CART</a>
-            <a href="#temp" data-role="button" id="BuyNow1">BUY NOW</a>
-          </div>
-  
-        </div>
-  
-        <div class="ui-grid-b card">
-          <div class="ui-block-a left-wrapper">
-            <div class="heart-wrapper">
-              <img id="heart" src="Icons/heart.png">
-            </div>
-            <input type="checkbox" name="checkbox-mini-0" id="checkbox-select-all" data-mini="true" />
-          </div>
-          <div class="ui-block-b middle-wrapper">
-            <img id="nutella" src="Images/nutella.png">
-          </div>
-          <div class="ui-block-c right-wrapper">
-            <span class="producttitle"> NUTELLA BOTTLE 200G</span>
-            <img id="share-2" src="Icons/share.png">
-            <span class="price">Rs.800.00</span>
-            <span class="rating1">
-              <img id="rating-star1" src="Icons/rating star.png">
-              <img id="rating-star1" src="Icons/rating star.png">
-              <img id="rating-star1" src="Icons/rating star.png">
-              <img id="rating-star1" src="Icons/rating star.png">
-              <img id="rating-star1" src="Icons/rating star half-filled.png">
-            </span>
-            <div class="quantity1">
-              <fieldset class="ui-grid-b">
-                <div class="ui-block-a">
-                  <a href="#temporary" data-role="button" id="minus1">-</a>
-                </div>
-                <div class="ui-block-b">
-                  <input type="number" name="quantity" id="quantity1" value="1" />
-                </div>
-                <div class="ui-block-c">
-                  <a href="temporary.html" data-role="button" id="plus1">+</a>
-                </div>
-              </fieldset>
-            </div>
-            <a href="#temporary" data-role="button" id="add-to-cart1">ADD TO CART</a>
-            <a href="#temp" data-role="button" id="BuyNow1">BUY NOW</a>
-          </div>
-  
-        </div>
-  
-        <div class="ui-grid-b card">
-          <div class="ui-block-a left-wrapper">
-            <div class="heart-wrapper">
-              <img id="heart" src="Icons/heart.png">
-            </div>
-            <input type="checkbox" name="checkbox-mini-0" id="checkbox-select-all" data-mini="true" />
-          </div>
-          <div class="ui-block-b middle-wrapper">
-            <img id="nutella" src="Images/nutella.png">
-          </div>
-          <div class="ui-block-c right-wrapper">
-            <span class="producttitle"> NUTELLA BOTTLE 200G</span>
-            <img id="share-2" src="Icons/share.png">
-            <span class="price">Rs.800.00</span>
-            <span class="rating1">
-              <img id="rating-star1" src="Icons/rating star.png">
-              <img id="rating-star1" src="Icons/rating star.png">
-              <img id="rating-star1" src="Icons/rating star.png">
-              <img id="rating-star1" src="Icons/rating star.png">
-              <img id="rating-star1" src="Icons/rating star half-filled.png">
-            </span>
-            <div class="quantity1">
-              <fieldset class="ui-grid-b">
-                <div class="ui-block-a">
-                  <a href="#temporary" data-role="button" id="minus1">-</a>
-                </div>
-                <div class="ui-block-b">
-                  <input type="number" name="quantity" id="quantity1" value="1" />
-                </div>
-                <div class="ui-block-c">
-                  <a href="temporary.html" data-role="button" id="plus1">+</a>
-                </div>
-              </fieldset>
-            </div>
-            <a href="#temporary" data-role="button" id="add-to-cart1">ADD TO CART</a>
-            <a href="#temp" data-role="button" id="BuyNow1">BUY NOW</a>
-          </div>
-  
-        </div> -->
-
-    <div data-role="popup" id="sharepopup">
-      <div class="share-header" style="padding: 20px 20px 0px 20px;">
-        <div class="share-title">
-          Share this product with your friends
-        </div>
-        <div class="share-subtitle">
-          Choose who you want to share this with
-        </div>
-      </div>
-      <hr style="margin-top: 5px;border-top: 2px solid #eee;">
-      <div class="share-content">
+    <!-- footer start -->
+    <div data-role="footer"
+      style="margin-top:10px; background-color: #383838 !important; padding:10px 10px 15px 15px !important; ">
+      <div data-role="navbar" style="">
         <div class="ui-grid-a">
-          <div class="ui-block-a" style="width: 25% !important;">
-            <img id="social-media-share" src="Icons/mail-red.png">
+          <div class="ui-block-a">
+            <div class="spreemart-title">Get In Touch</div>
+            <div class="spreemart-copyright" style="font-style:normal;"><svg xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 14 14">
+                <path fill-rule="evenodd"
+                  d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+              </svg> +94 11 1234567</div>
+            <div class="spreemart-copyright" style="font-style:normal;"><svg xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 14 14">
+                <path
+                  d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+              </svg> info@masmart.com</div>
           </div>
-          <div class="ui-block-b" style="width: 75% !important;">
-            <input type="text" name="mail" id="mail-to" value="" />
-            <div style="float: right;">
-              <a href="#temporary" data-role="button" id="submit-mail">SEND</a>
+          <div class="ui-block-b" style="margin-left: -10px;">
+            <div class="social-media-wrapper" style="margin-right: -8px;">
+              <img id="social-media" src="Icons/facebook.png">
+              <img id="social-media" src="Icons/instagram.png">
+
+            </div>
+            <div class="spreemart-copyright"
+              style="text-align: right; margin-top: 16px; margin-right: -8px; font-style:normal;">
+              Marsmart © All rights
+              reserved
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- footer end -->
+
+
+
+
   </div>
-  <!-- content end -->
 
 
 
 
 
 
-
-  <!-- footer start -->
-  <div data-role="footer"
-    style="margin-top:10px; background-color: #383838 !important; padding:10px 10px 15px 15px !important; ">
-    <div data-role="navbar" style="">
-      <div class="ui-grid-a">
-        <div class="ui-block-a">
-          <div class="spreemart-title">Get In Touch</div>
-          <div class="spreemart-copyright" style="font-style:normal;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-              height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 14 14">
-              <path fill-rule="evenodd"
-                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-            </svg> +94 11 1234567</div>
-          <div class="spreemart-copyright" style="font-style:normal;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-              height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 14 14">
-              <path
-                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
-            </svg> info@masmart.com</div>
-        </div>
-        <div class="ui-block-b" style="margin-left: -10px;">
-          <div class="social-media-wrapper" style="margin-right: -8px;">
-            <img id="social-media" src="Icons/facebook.png">
-            <img id="social-media" src="Icons/instagram.png">
-
-          </div>
-          <div class="spreemart-copyright"
-            style="text-align: right; margin-top: 16px; margin-right: -8px; font-style:normal;">
-            Marsmart © All rights
-            reserved
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- footer end -->
-
-
-
-
-</div>
-
-
-
-
-<body>
-
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    setTimeout(function () {
+      $('.loader_bg').fadeToggle();
+    }, 750);
+  </script>
 
 
 

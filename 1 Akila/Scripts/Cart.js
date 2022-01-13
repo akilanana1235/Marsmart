@@ -71,8 +71,8 @@ $(document).ready(function () {
                             checkedItemsList.push(itemprice);
                             checkedNameList.push(itemName)
                             NetTotal = subtotal;
-                            document.getElementsByClassName('subprice')[0].innerText = 'Rs.' + subtotal;
-                            document.getElementsByClassName('subprice3')[0].innerHTML = 'Rs. ' + NetTotal;
+                            document.getElementsByClassName('subprice')[0].innerText = '$' + subtotal;
+                            document.getElementsByClassName('subprice3')[0].innerHTML = '$' + NetTotal;
         }
 
                             if (!this.checked) {
@@ -91,8 +91,8 @@ $(document).ready(function () {
                 }
             }
 
-                            document.getElementsByClassName('subprice')[0].innerHTML = 'Rs. ' + subtotal;
-                            document.getElementsByClassName('subprice3')[0].innerHTML = 'Rs. ' + NetTotal;
+                            document.getElementsByClassName('subprice')[0].innerHTML = '$' + subtotal;
+                            document.getElementsByClassName('subprice3')[0].innerHTML = '$' + NetTotal;
         }
     });
 
