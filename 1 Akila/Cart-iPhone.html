@@ -8,12 +8,9 @@
     <link rel="icon" type="image/x-icon" href="Icons/flavicon.png" />
     <title>Cart | Marsmart</title>
 
-    
-    <link
-    rel="stylesheet"
-    href="Icons/font-awesome-4.7.0/css/font-awesome.min.css"
-  />
-    
+
+    <link rel="stylesheet" href="Icons/font-awesome-4.7.0/css/font-awesome.min.css" />
+
     <!-- jQuery mobile cdn -->
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -121,7 +118,8 @@
                 </div>
 
                 <div class="ui-block-b">
-                    <a style="text-decoration: none;" href="#DeletePopUp" data-rel="popup" > <img id="delete-icon" src="Icons/delete.png" /></a>
+                    <a style="text-decoration: none;" href="#DeletePopUp" data-rel="popup"> <img id="delete-icon"
+                            src="Icons/delete.png" /></a>
                     <span id="delete-txt">(0) Items</span>
                 </div>
             </div>
@@ -200,8 +198,9 @@
                     <span class="subprice2">$0</span>
                 </div>
                 <div style="float: right; margin-right: 10px">
-                    <a href="#" data-role="button" data-rel="popup" class="redeemLoyalty"  id="add-to-cart2"
-                        style="font-size: 10px; width: 105px; padding-top: 5px; background-color: rgba(21, 49, 122, 0.7);">Redeem Loyalty</a>
+                    <a href="#" data-role="button" data-rel="popup" class="redeemLoyalty" id="add-to-cart2"
+                        style="font-size: 10px; width: 105px; padding-top: 5px; background-color: rgba(21, 49, 122, 0.7);">Redeem
+                        Loyalty</a>
                 </div>
 
                 <div class="subtot3">
@@ -216,11 +215,12 @@
         <div>
             <a href="#temporary" data-role="button" id="add-to-cart1"
                 onclick="window.location.href='Landing page-iPhone.html'">Continue Shopping</a>
-            <a href="#CheckOutPopUp" data-rel="popup" data-role="button" data-rel="popup" id="add-to-cart2" class="checkOut">Checkout</a>
+            <a href="#CheckOutPopUp" data-rel="popup" data-role="button" data-rel="popup" id="add-to-cart2"
+                class="checkOut">Checkout</a>
         </div>
         <!-- checkout button end -->
 
-        
+
 
         <!-- footer start -->
         <div data-role="footer" style="
@@ -266,65 +266,74 @@
 
         <!-- Popup start -->
 
-     
-        
+
+
         <div data-role="popup" id="CheckOutPopUp" class="popUpCheckOut">
-       
+
             <!-- <i id="checkOutPopUpicon" class="fa fa-times-circle-o" aria-hidden="true"></i>
             <i id="checkOutPopUpiconCaution" class="fa fa-exclamation-triangle"></i> -->
             <img src="Icons/oops-icon.png" id="checkOutPopUpicon" alt="">
             <img src="Icons/yello-caution.png" id="checkOutPopUpiconCaution" alt="">
 
             <div class="rules">
-               <h2 id="popUpHeader"></h2>
+                <h2 id="popUpHeader"></h2>
 
-               <p id="popupContent"></p>
+                <p id="popupContent"></p>
 
             </div>
 
             <div class="popUpFooter">
                 <div class="checkoutPopUpCancelButton" id="checkoutPopUpCancelButton">
-                    <a style="text-decoration: none;" href="#cartpage" ><p>Cancel</p></a> 
+                    <a style="text-decoration: none;" href="#cartpage">
+                        <p>Cancel</p>
+                    </a>
                 </div>
-    
+
                 <div class="understood" id="checkoutPopUpButton">
-                    <a style="text-decoration: none;"  href="#cartpage"><p id="buttonTextcheckout">understood</p></a> 
+                    <a style="text-decoration: none;" href="#cartpage">
+                        <p id="buttonTextcheckout" onclick="window.location.href='Checkout-iPhone.html'">understood
+                        </p>
+                    </a>
                 </div>
-        
+
             </div>
-           
+
         </div>
 
         <div data-role="popup" id="DeletePopUp" class="popUpDelete">
-       
-      
-          
-         <img src="Icons/yello-caution.png" id="deleteCaution" />    
-        
-            <div class="rules">
-               <h2 id="popUpHeaderDelete">Are you sure?</h2>
 
-               <p id="popupContentDelete">Item will be removed permantly from cart</p>
+
+
+            <img src="Icons/yello-caution.png" id="deleteCaution" />
+
+            <div class="rules">
+                <h2 id="popUpHeaderDelete">Are you sure?</h2>
+
+                <p id="popupContentDelete">Item will be removed permantly from cart</p>
 
             </div>
 
             <div class="popUpFooter">
                 <div class="DeletePopUpCancelButton" id="DeletePopUpCancelButton">
-                    <a style="text-decoration: none;" href="#cartpage" ><p>No,Cancel</p></a> 
+                    <a style="text-decoration: none;" href="#cartpage">
+                        <p>No,Cancel</p>
+                    </a>
                 </div>
-    
+
                 <div class="DeletePopUpButton" id="DeletePopUpButton">
-                    <a style="text-decoration: none;" ><p id="buttonTextDelete">Yes, Remove it</p></a> 
+                    <a style="text-decoration: none;">
+                        <p id="buttonTextDelete">Yes, Remove it</p>
+                    </a>
                 </div>
-        
+
             </div>
-           
+
         </div>
 
 
         <div data-role="popup" id="RedeemLoyaltyPopUp" class="RedeemLoyaltyPopUp">
-       
-      
+
+
             <div class="loyaltyPopUpHeader">
 
                 <div class="loyaltyIconPop">
@@ -336,7 +345,7 @@
             </div>
 
             <div class="loyaltyContent">
-              
+
                 <p>How Much Loyalty Points Would You Like to Redeem?</p>
 
             </div>
@@ -345,17 +354,23 @@
 
                 <div class="loyaltyBoxe1">
                     <div class="loyaltyBoxImg"><img src="Images/GameLogo.png" alt=""></div>
-                    <div class="loyaltyPointVal"><p id="reducePointbox1">0</p></div>
+                    <div class="loyaltyPointVal">
+                        <p id="reducePointbox1">0</p>
+                    </div>
                 </div>
 
                 <div class="loyaltyBoxe2">
                     <div class="loyaltyBoxImg"><img src="Images/GameLogo.png" alt=""></div>
-                    <div class="loyaltyPointVal"><p id="reducePointbox2">0</p></div>
+                    <div class="loyaltyPointVal">
+                        <p id="reducePointbox2">0</p>
+                    </div>
                 </div>
 
                 <div class="loyaltyBoxe3">
                     <div class="loyaltyBoxImg"><img src="Images/GameLogo.png" alt=""></div>
-                    <div class="loyaltyPointVal"><p id="reducePointbox3">0</p></div>
+                    <div class="loyaltyPointVal">
+                        <p id="reducePointbox3">0</p>
+                    </div>
                 </div>
 
             </div>
@@ -363,14 +378,16 @@
             <div class="loyaltypopUpFooter">
 
                 <div class="loyaltyNotInterested" id="loyaltyNotInterested">
-                    <a style="text-decoration: none;" href="#cartpage"  ><p>Not Interested</p></a> 
-                </div>        
+                    <a style="text-decoration: none;" href="#cartpage">
+                        <p>Not Interested</p>
+                    </a>
+                </div>
             </div>
-           
+
         </div>
 
 
-   <!-- Popup end -->
+        <!-- Popup end -->
 
 
     </div>
