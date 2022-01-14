@@ -17,13 +17,18 @@ function loadAndDisplayPurcasedProducts(){
                 <h5>qty:${p.qty}</h5>
                 <h5 style="color:red"><b>$${p.price}</b></h5>
                 <button class="ui-btn ui-btn-inline"><i class="fa fa-comments" aria-hidden="true"></i>Comment</button>
-                <button class="ui-btn ui-btn-inline"><i class="fa fa-star"></i>Rate</button>
+                <button class="ui-btn ui-btn-inline" onclick="showReviewScreen()"><i class="fa fa-star"></i>Rate</button>
             </div>
           `;
       });
       document.getElementById("purchase-container").innerHTML = outputPurchasedProducts;
     })
     .catch((err) => console.log(err));
+}
+
+function showReviewScreen(){
+  console.log("show",product);
+  //document.getElementsByClassName("card").style.display="none";
 }
 
 $(document).ready(function () {
