@@ -28,7 +28,7 @@ function getCurrentPoiProduct() {
 
 function displayProductData() {
   let currentPoiProduct = getCurrentPoiProduct();
-  let productInfo = `<button class="ui-btn ui-btn-inline"><i class="fa fa-heart" aria-hidden="true"></i>Add to Wishlist</button>
+  let productInfo = `<button class="ui-btn ui-btn-inline" onclick="handleClick()"><i class="fa fa-heart" aria-hidden="true"></i>Add to Wishlist</button>
   <button class="ui-btn ui-btn-inline"><i class="fa fa-share-alt"></i>Share</button>
 
   <h1 id="product-name">${currentPoiProduct.name}</h1>
@@ -166,6 +166,7 @@ function loadAndDispalyProductComments() {
     })
     .catch((err) => console.log(err));
 }
+
 
 $(document).ready(function () {
   xmlhttp.onload = function () {
