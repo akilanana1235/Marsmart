@@ -312,38 +312,30 @@
                         </div>
                     </div>
                     <br />
-
+                    <!-- <a href="#addToBasketPopUp" data-role="button"  id="add-to-cart"
+                    style="bottom: 34px; left: 38px; margin-bottom: -10px">ADD TO CART</a> -->
                     <div class="button-wrapper" style="margin-top: -10px; margin-bottom: -20px">
-                        <a href="#temporary" data-role="button" id="place-order" style="margin-right: 95px">Place
+                        <a href="#addToBasketPopUp" data-role="button" data-rel="popup" id="place-order" style="margin-right: 95px">Place
                             Order</a>
                     </div>
                 </div>
                 <!-- payment details end -->
 
-                <div data-role="popup" id="successpop">
-                    <div class="share-header" style="padding: 20px 20px 0px 20px">
-                        <div class="share-title">
-                            Share this product with your friends
-                        </div>
-                        <div class="share-subtitle">
-                            Choose who you want to share this with
-                        </div>
+                <div data-role="popup" id="addToBasketPopUp">
+                    <img id="sucessIcon" src="Images/tick.png" alt="" />
+              
+                    <div class="popUpDescription">
+                      <p>Payment Successful</p>
                     </div>
-                    <hr style="margin-top: 5px; border-top: 2px solid #eee" />
-                    <div class="share-content">
-                        <div class="ui-grid-a">
-                            <div class="ui-block-a" style="width: 25% !important">
-                                <img id="social-media-share" src="Icons/mail-red.png" />
-                            </div>
-                            <div class="ui-block-b" style="width: 75% !important">
-                                <input type="text" name="mail" id="mail-to" value="" />
-                                <div style="float: right">
-                                    <a href="#temporary" data-role="button" id="submit-mail">SEND</a>
-                                </div>
-                            </div>
-                        </div>
+              
+                    <div class="popUpFooter">
+                      <div class="continueShopping">
+                        <a style="text-decoration: none" href="#Landing-page">
+                          <p>Continue Shopping</p>
+                        </a>
+                      </div>
                     </div>
-                </div>
+                  </div>
             </div>
         </div>
         <!-- content end -->
