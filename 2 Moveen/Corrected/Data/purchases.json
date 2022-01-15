@@ -1,0 +1,18 @@
+[
+  {
+    "productId": 4,
+    "name": "Nestle Cerelac",
+    "purchased_date": "20th Dec 2021",
+    "qty": 2,
+    "price": 7.5,
+    "img": "assets/images/nesquick.PNG"
+  },
+  {
+    "productId": 2,
+    "name": "Vanilla Almond Milk",
+    "purchased_date": "20th Dec 2021",
+    "qty": 1,
+    "price": 5.5,
+    "img": "assets/images/nesquick.PNG"
+  }
+]

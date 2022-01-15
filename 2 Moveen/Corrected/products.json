@@ -1,0 +1,18 @@
+[
+    {
+      "id": 1,
+      "name": "Nestlé Nesquik Cereal Breakfast",
+      "category": "Grocery",
+      "price": 3.75,
+      "discount": 0.5,
+      "ratings": 3.8,
+      "size": "375g",
+      "description": "Give a healthy start to kid's day with Nestlé' Nesquik Duo Breakfast Cereal. With the nutrition of wheat the cereal gives them a boost to start their day. It combines the great taste of cocoa cereal balls and flavored white chocolate",
+      "img1": "assets/images/nesquick.PNG",
+      "img2": "assets/images/nesquick-side.PNG",
+      "img3": "assets/images/nesquick-back.PNG",
+      "stock_available": 4
+    }
+   
+  ]
+  
