@@ -3,7 +3,7 @@
   $(document).ready(function () {
 
     let visibile = false;
-    localStorage.setItem('UserLoyaltyPoints',0)
+    // localStorage.setItem('UserLoyaltyPoints',0)
 
    document.getElementById("numItemsList").innerHTML=Products.length+" Results";
 
@@ -30,10 +30,8 @@
   
 
     $('#BrandFilter').on('change', function () {
-
         const container = document.getElementById('product_List');
         container.innerHTML='';
-
         var outputFilter = '';
         var $this = $(this),
         filterVal   = $this.val();
@@ -41,11 +39,9 @@
         for (var i = 0; i < Products.length; i++) {
 
             if(filterVal==Products[i].brand){
-
                 outputFilter += `
                 <div class="card">
                             <div class="cardheader">
-        
                                 <div class="cardHeart">
                                     <div class="addToWishL">
                                       <i id="${Products[i].product_id}" class="fa fa-heart-o"></i>
@@ -57,34 +53,27 @@
                                 <div class="cardImage">
                                     <img id="product-image" class="card-img-top" src="${Products[i].img_url}" alt="Card image cap">
                                 </div>
-        
                             </div>
-                           
                             <div class="card-body">
-        
                                 <div class="product_title">
                                     <h5 id="productTitle" class="card-title">${Products[i].title}</h5>
                                 </div>
-        
                                 <div class="product_sub_info">
-        
                                     <div class="product_type">
                                      <p id="product_cat">${Products[i].category}</p>
                                     </div>
-        
                                     <div class="product_rating">
                                     <p id="procustRating"> <span>&#9733;</span> ${Products[i].rating}</p>
                                     </div>
-        
                                 </div>
-        
                                 <div class="product_description">
                                     <p id="productDescription" class="card-text">${Products[i].description}</p>
                                 </div>
         
                                 <div class="product_price">
                                        
-                                       <p id="productPrice"> <span id="beforeDiscounted">${Products[i].beforeDiscount}</span> <span id="price_product"> ${'$'+Products[i].price}</span></p>
+                                       <p id="productPrice"> <span id="beforeDiscounted">${Products[i].beforeDiscount}</span> 
+                                       <span id="price_product"> ${'$'+Products[i].price}</span></p>
                                 </div>
         
                                 <div class="product_footer">
