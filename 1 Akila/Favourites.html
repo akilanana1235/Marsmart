@@ -115,7 +115,9 @@
           <span id="select-txt">Select All</span>
         </div>
         <div class="ui-block-b">
+          <a href="#DeletePopUp" data-rel="popup">
           <img id="delete-icon" src="Icons/delete.png" />
+          </a>
           <span id="delete-txt">(0) Items</span>
         </div>
         <div class="ui-block-c">
@@ -125,8 +127,10 @@
           <span id="share-txt">(0) Items</span>
         </div>
       </div>
-
+      <a href="#addToBasketPopUp" data-rel="popup" id="sucessEmail" style='display:none;' ></a>
       <div class="card-area" style="min-height: 545px"></div>
+
+
 
       <!-- <div class="ui-grid-b card">
           <div class="ui-block-a left-wrapper">
@@ -289,30 +293,112 @@
   
         </div> -->
 
-      <div data-role="popup" id="sharepopup">
-        <div class="share-header" style="padding: 20px 20px 0px 20px">
-          <div class="share-title">Share this product with your friends</div>
-          <div class="share-subtitle">
-            Choose who you want to share this with
+
+
+        <div data-role="popup" id="DeletePopUp" class="popUpDelete">
+          <img src="Icons/yello-caution.png" id="deleteCaution" />
+
+          <div class="rules">
+              <h2 id="popUpHeaderDelete">Are you sure?</h2>
+
+              <p id="popupContentDelete">
+                  Item will be removed from the favourite list
+              </p>
           </div>
-        </div>
-        <hr style="margin-top: 5px; border-top: 2px solid #eee" />
-        <div class="share-content">
-          <div class="ui-grid-a">
-            <div class="ui-block-a" style="width: 25% !important">
-              <img id="social-media-share" src="Icons/mail-red.png" />
-            </div>
-            <div class="ui-block-b" style="width: 75% !important">
-              <input type="text" name="mail" id="mail-to" value="" />
-              <div style="float: right">
-                <a href="#temporary" data-role="button" id="submit-mail">SEND</a>
+
+          <div class="popUpFooter">
+              <div class="DeletePopUpCancelButton" id="DeletePopUpCancelButton">
+                  <a style="text-decoration: none" href="#cartpage">
+                      <p>No,Cancel</p>
+                  </a>
               </div>
+
+              <div class="DeletePopUpButton" id="DeletePopUpButton">
+                  <a style="text-decoration: none">
+                      <p id="buttonTextDelete">Yes, Remove it</p>
+                  </a>
+              </div>
+          </div>
+      </div>
+
+      
+
+      
+
+
+
+
+    </div>
+    <!-- content end -->
+    <div data-role="popup" id="DeletePopUp" class="popUpDelete">
+      <img src="Icons/yello-caution.png" id="deleteCaution" />
+
+      <div class="rules">
+          <h2 id="popUpHeaderDelete">Are you sure?</h2>
+
+          <p id="popupContentDelete">
+              Item will be removed from the favourite list
+          </p>
+      </div>
+
+      <div class="popUpFooter">
+          <div class="DeletePopUpCancelButton" id="DeletePopUpCancelButton">
+              <a style="text-decoration: none" href="#cartpage">
+                  <p>No,Cancel</p>
+              </a>
+          </div>
+
+          <div class="DeletePopUpButton" id="DeletePopUpButton">
+              <a style="text-decoration: none">
+                  <p id="buttonTextDelete">Yes, Remove it</p>
+              </a>
+          </div>
+      </div>
+  </div>
+
+    <div data-role="popup" id="addToBasketPopUp">
+      <img id="sucessIcon" src="Images/tick.png" alt="" />
+
+      <div class="popUpDescription">
+        <p>Successfully Added to Cart</p>
+      </div>
+
+      <div class="popUpFooter">
+        <div class="continueShopping">
+          <a style="text-decoration: none" href="#Landing-page">
+            <p>Continue Shopping</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div data-role="popup" id="sharepopup">
+      <div class="share-header" style="padding: 20px 20px 0px 20px">
+        <img id="sharepop-icon-pop" src="Icons/share.png" /><div class="sharepop-title">Share this product/s </div>
+        <div class="shareprop-subtitle">
+          Enter email of the person chosen who you want to share this with
+        </div>
+      </div>
+
+      <div class="share-content">
+        <div class="ui-grid-a">
+          <div class="ui-block-a" style="width: 25% !important">
+            <img id="shareIcon" src="Icons/mail-red.png" />
+          </div>
+          <div class="ui-block-b" style="width: 75% !important">
+            <input type="text" name="mail" id="mail-to" value="" />
+            <div>
+              <div class="EmailPopUpButton" id="EmailPopUpButton">
+                <a>
+                    <p>Email</p>
+                </a>
+            </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- content end -->
 
     <!-- footer start -->
     <div data-role="footer" style="
