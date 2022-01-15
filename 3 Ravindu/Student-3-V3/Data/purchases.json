@@ -1,11 +1,11 @@
 [
   {
     "productId": 4,
-    "name": "Nestle Cerelac",
+    "name": "Smucker Grape Jam",
     "purchased_date": "20th Dec 2021",
     "qty": 2,
     "price": 7.5,
-    "img": "assets/images/nesquick.PNG"
+    "img": "assets/images/grape-jam-1.png"
   },
   {
     "productId": 2,
@@ -13,6 +13,6 @@
     "purchased_date": "20th Dec 2021",
     "qty": 1,
     "price": 5.5,
-    "img": "assets/images/nesquick.PNG"
+    "img": "assets/images/almond-milk-1.png"
   }
 ]

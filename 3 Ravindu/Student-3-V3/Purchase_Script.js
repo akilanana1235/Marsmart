@@ -36,7 +36,7 @@ function loadAndDisplayPurcasedProducts() {
               <img src=${p.img} style="width:7em" alt="">
               <p><b>${p.name}</b><p>
               <p>Purchased on:<b>${p.purchased_date}</b></p>
-              <h5>qty:${p.qty}</h5>
+              <p>qty:${p.qty}</p>
               <h5 style="color:red"><b>$${p.price}</b></h5>
             </div>
             <article id="ratings-container">
