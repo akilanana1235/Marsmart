@@ -1,18 +1,18 @@
 [
   {
-    "productId": 4,
-    "name": "Nestle Cerelac",
+    "productId": 5,
+    "name": "Black Label",
     "purchased_date": "20th Dec 2021",
     "qty": 2,
     "price": 7.5,
-    "img": "assets/images/nesquick.PNG"
+    "img": "assets/images/Black.PNG"
   },
   {
-    "productId": 2,
-    "name": "Vanilla Almond Milk",
+    "productId": 1,
+    "name": "Absolute Vodka",
     "purchased_date": "20th Dec 2021",
     "qty": 1,
     "price": 5.5,
-    "img": "assets/images/nesquick.PNG"
+    "img": "assets/images/Absolute.jpg"
   }
 ]
