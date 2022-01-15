@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    let productCartList = localStorage.getItem("ProductCartList");
+    let productCartList = localStorage.getItem("addtocartList");
 
     const CartProductIDArray = productCartList.split(",");
 
@@ -74,7 +74,7 @@ $(document).ready(function() {
     
 
     $('#delete-icon').click(function() {
-        localStorage.clear('ProductCartList');
+        localStorage.clear('addtocartList');
         location.reload();
     });
 

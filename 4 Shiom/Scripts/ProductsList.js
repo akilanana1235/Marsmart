@@ -3,10 +3,29 @@
   $(document).ready(function () {
 
     let visibile = false;
+    localStorage.setItem('UserLoyaltyPoints',0)
 
    document.getElementById("numItemsList").innerHTML=Products.length+" Results";
 
+
     populateProductCard();
+    var addButtons = document.querySelectorAll("[id='add-to-cart']");
+
+    for (addBtn of addButtons) {
+        addBtn.addEventListener("click", function () {
+            const addtoCartID = $(this).prevAll(".product-id").text();
+            let addtocartlist = localStorage.getItem("addtocartList");
+            let newAddtocart = '';
+            if (!addtocartlist) {
+                newAddtocart = `${addtoCartID}`;
+            } else {
+                newAddtocart = `${addtocartlist},${addtoCartID}`;
+            }
+
+            localStorage.setItem("addtocartList", newAddtocart);
+
+        });
+    }
 
   
 
@@ -933,6 +952,10 @@
         
     });
 
+
+    
+
+
     $('.earnLoyalty').click(() => {
 
           window.location.href = 'GameLanding-Ipad.html';
@@ -982,6 +1005,7 @@
 
                         <div class="product_title">
                             <h5 id="productTitle" class="card-title">${Products[i].title}</h5>
+                            
                         </div>
 
                         <div class="product_sub_info">
@@ -1016,7 +1040,8 @@
 
                             <div class="addToCartContainer">
                             <a style="text-decoration: none;" href="#addToBasketPopUp"  data-rel="popup" >
-                                <div class="continue">
+                            <div hidden class="product-id">${Products[i].product_id}</div>
+                                <div class="continue" id="add-to-cart">
                                    <p>Add to cart</p>
                                    </div></a>
                             </div>  
