@@ -3,10 +3,29 @@
   $(document).ready(function () {
 
     let visibile = false;
+    localStorage.setItem('UserLoyaltyPoints',0)
 
    document.getElementById("numItemsList").innerHTML=Products.length+" Results";
 
+
     populateProductCard();
+    var addButtons = document.querySelectorAll("[id='add-to-cart']");
+
+    for (addBtn of addButtons) {
+        addBtn.addEventListener("click", function () {
+            const addtoCartID = $(this).prevAll(".product-id").text();
+            let addtocartlist = localStorage.getItem("addtocartList");
+            let newAddtocart = '';
+            if (!addtocartlist) {
+                newAddtocart = `${addtoCartID}`;
+            } else {
+                newAddtocart = `${addtocartlist},${addtoCartID}`;
+            }
+
+            localStorage.setItem("addtocartList", newAddtocart);
+
+        });
+    }
 
   
 
@@ -184,71 +203,6 @@
 
             if(filterVal=='Best'){
 
-                outputFilter += `
-                <div class="card">
-                            <div class="cardheader">
-        
-                                <div class="cardHeart">
-                                    <div class="addToWishL">
-                                      <i id="${Products[i].product_id}" class="fa fa-heart-o"></i>
-                                    </div>
-                                    <div class="discounted">
-                                       <img  id="discountTag" src="" alt="">
-                                    </div>
-                                </div>
-                                <div class="cardImage">
-                                    <img id="product-image" class="card-img-top" src="${Products[i].img_url}" alt="Card image cap">
-                                </div>
-        
-                            </div>
-                           
-                            <div class="card-body">
-        
-                                <div class="product_title">
-                                    <h5 id="productTitle" class="card-title">${Products[i].title}</h5>
-                                </div>
-        
-                                <div class="product_sub_info">
-        
-                                    <div class="product_type">
-                                     <p id="product_cat">${Products[i].category}</p>
-                                    </div>
-        
-                                    <div class="product_rating">
-                                    <p id="procustRating"> <span>&#9733;</span> ${Products[i].rating}</p>
-                                    </div>
-        
-                                </div>
-        
-                                <div class="product_description">
-                                    <p id="productDescription" class="card-text">${Products[i].description}</p>
-                                </div>
-        
-                                <div class="product_price">
-                                       
-                                       <p id="productPrice"> <span id="beforeDiscounted">${Products[i].beforeDiscount}</span> <span id="price_product"> ${'$'+Products[i].price}</span></p>
-                                </div>
-        
-                                <div class="product_footer">
-        
-                                    <div class="QuanitityContainer">
-        
-                                        <button type="button" id="plusButton" class="btn btn-secondary">+</button>
-                                        <span id="quantity">1</span>
-                                       <button type="button" id="minusButton" class="btn btn-secondary">-</button>
-                                    </div>
-        
-                                    <div class="addToCartContainer">
-                                    <a style="text-decoration: none;" href="#addToBasketPopUp"  data-rel="popup" >
-                                        <div class="continue">
-                                           <p>Add to cart</p>
-                                           </div></a>
-                                    </div>  
-                                </div>                    
-        
-                            </div>
-                        </div>
-              `;
             }
             
             else if(filterVal=='popularity'){
@@ -272,14 +226,14 @@
 
                         <div class="cardHeart">
                             <div class="addToWishL">
-                              <i id="${Products[i].product_id}" class="fa fa-heart-o"></i>
+                              <i id="${tempProductHolder[i].product_id}" class="fa fa-heart-o"></i>
                             </div>
                             <div class="discounted">
                                <img  id="discountTag" src="" alt="">
                             </div>
                         </div>
                         <div class="cardImage">
-                            <img id="product-image" class="card-img-top" src="${Products[i].img_url}" alt="Card image cap">
+                            <img id="product-image" class="card-img-top" src="${tempProductHolder[i].img_url}" alt="Card image cap">
                         </div>
 
                     </div>
@@ -287,28 +241,28 @@
                     <div class="card-body">
 
                         <div class="product_title">
-                            <h5 id="productTitle" class="card-title">${Products[i].title}</h5>
+                            <h5 id="productTitle" class="card-title">${tempProductHolder[i].title}</h5>
                         </div>
 
                         <div class="product_sub_info">
 
                             <div class="product_type">
-                             <p id="product_cat">${Products[i].category}</p>
+                             <p id="product_cat">${tempProductHolder[i].category}</p>
                             </div>
 
                             <div class="product_rating">
-                            <p id="procustRating"> <span>&#9733;</span> ${Products[i].rating}</p>
+                            <p id="procustRating"> <span>&#9733;</span> ${tempProductHolder[i].rating}</p>
                             </div>
 
                         </div>
 
                         <div class="product_description">
-                            <p id="productDescription" class="card-text">${Products[i].description}</p>
+                            <p id="productDescription" class="card-text">${tempProductHolder[i].description}</p>
                         </div>
 
                         <div class="product_price">
                                
-                               <p id="productPrice"> <span id="beforeDiscounted">${Products[i].beforeDiscount}</span> <span id="price_product"> ${'$'+Products[i].price}</span></p>
+                               <p id="productPrice"> <span id="beforeDiscounted">${tempProductHolder[i].beforeDiscount}</span> <span id="price_product"> ${'$'+Products[i].price}</span></p>
                         </div>
 
                         <div class="product_footer">
@@ -359,14 +313,14 @@
             
                                     <div class="cardHeart">
                                         <div class="addToWishL">
-                                          <i id="${Products[i].product_id}" class="fa fa-heart-o"></i>
+                                          <i id="${tempProductHolder[i].product_id}" class="fa fa-heart-o"></i>
                                         </div>
                                         <div class="discounted">
                                            <img  id="discountTag" src="" alt="">
                                         </div>
                                     </div>
                                     <div class="cardImage">
-                                        <img id="product-image" class="card-img-top" src="${Products[i].img_url}" alt="Card image cap">
+                                        <img id="product-image" class="card-img-top" src="${tempProductHolder[i].img_url}" alt="Card image cap">
                                     </div>
             
                                 </div>
@@ -374,28 +328,28 @@
                                 <div class="card-body">
             
                                     <div class="product_title">
-                                        <h5 id="productTitle" class="card-title">${Products[i].title}</h5>
+                                        <h5 id="productTitle" class="card-title">${tempProductHolder[i].title}</h5>
                                     </div>
             
                                     <div class="product_sub_info">
             
                                         <div class="product_type">
-                                         <p id="product_cat">${Products[i].category}</p>
+                                         <p id="product_cat">${tempProductHolder[i].category}</p>
                                         </div>
             
                                         <div class="product_rating">
-                                        <p id="procustRating"> <span>&#9733;</span> ${Products[i].rating}</p>
+                                        <p id="procustRating"> <span>&#9733;</span> ${tempProductHolder[i].rating}</p>
                                         </div>
             
                                     </div>
             
                                     <div class="product_description">
-                                        <p id="productDescription" class="card-text">${Products[i].description}</p>
+                                        <p id="productDescription" class="card-text">${tempProductHolder[i].description}</p>
                                     </div>
             
                                     <div class="product_price">
                                            
-                                           <p id="productPrice"> <span id="beforeDiscounted">${Products[i].beforeDiscount}</span> <span id="price_product"> ${'$'+Products[i].price}</span></p>
+                                           <p id="productPrice"> <span id="beforeDiscounted">${tempProductHolder[i].beforeDiscount}</span> <span id="price_product"> ${'$'+tempProductHolder[i].price}</span></p>
                                     </div>
             
                                     <div class="product_footer">
@@ -933,6 +887,10 @@
         
     });
 
+
+    
+
+
     $('.earnLoyalty').click(() => {
 
           window.location.href = 'GameLanding-Ipad.html';
@@ -982,6 +940,7 @@
 
                         <div class="product_title">
                             <h5 id="productTitle" class="card-title">${Products[i].title}</h5>
+                            
                         </div>
 
                         <div class="product_sub_info">
@@ -1016,7 +975,8 @@
 
                             <div class="addToCartContainer">
                             <a style="text-decoration: none;" href="#addToBasketPopUp"  data-rel="popup" >
-                                <div class="continue">
+                            <div hidden class="product-id">${Products[i].product_id}</div>
+                                <div class="continue" id="add-to-cart">
                                    <p>Add to cart</p>
                                    </div></a>
                             </div>  

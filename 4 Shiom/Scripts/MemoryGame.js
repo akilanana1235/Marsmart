@@ -58,7 +58,7 @@ function memoryFlipTile(tile, val) {
 				if (tiles_flipped == memory_array.length) {
 
 					isGameOver = true;
-					let mgScore = tiles_flipped*50;
+					let mgScore = tiles_flipped*5;
 					localStorage.setItem("memoryGameScore",mgScore);
 					document.getElementById("continue_Button").style.setProperty('background-color', '#15317A', 'important');
 				
@@ -102,7 +102,7 @@ function memoryFlipTile(tile, val) {
 	document.getElementById("continue_Button").style.setProperty('background-color', '#15317A', 'important');
 	
 
-	let mgScore = tiles_flipped*50;
+	let mgScore = tiles_flipped*5;
 	localStorage.setItem("memoryGameScore",mgScore);
 
 	document.getElementById("popUpLogo").style.marginLeft ="37%";

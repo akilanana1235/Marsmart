@@ -91,7 +91,31 @@ margin-top: 50px;
 
 .option_label{
     margin-top: 5px;
+    margin-left: -50% !important;
 }
+
+
+#question1Incorrect{
+    visibility: hidden;
+}
+#question1correct{
+    visibility: hidden;  
+}
+
+#question2Incorrect{
+    visibility: hidden;
+}
+#question2correct{
+    visibility: hidden;  
+}
+
+#question3Incorrect{
+    visibility: hidden;
+}
+#question3correct{
+    visibility: hidden;  
+}
+
 
 
 .quiz_footer{

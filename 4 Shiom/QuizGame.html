@@ -127,13 +127,30 @@
                                     <fieldset data-role="controlgroup"  data-type="vertical" data-iconpos="none">
                                          
                                         <input type="radio" name="option_quiz" id="option_quiz1" value="optionA" onclick="checkForAnswer()" >
-                                        <label id="answer1" for="option_quiz1"> <p class="option_label" id="option1_label"></p> </label>
+                                        <label id="answer1" for="option_quiz1"> 
+                                            <span style="float: left; margin-top: 4px;">
+                                                <i  class="fa fa-times-circle-o" style="font-size: 25px;" id="question1Incorrect" aria-hidden="true" ></i>
+                                                    <i class="fa fa-check" id="question1correct"  style="font-size: 25px;" aria-hidden="true"></i>
+                                                </span>
+                                            <span style="float: left; margin-left: 30%;"> <p class="option_label" id="option1_label"></p> </span>
+                                            
+                                            </label>
 
                                         <input type="radio" name="option_quiz" id="option_quiz2" value="optionB" onclick="checkForAnswer()">
-                                        <label id="answer2" for="option_quiz2"><p class="option_label" id="option2_label"></p></label>
+                                        <label id="answer2" for="option_quiz2">
+                                              <span style="float: left;margin-top: 4px;">
+                                                <i class="fa fa-times-circle-o" style="font-size: 25px;" id="question2Incorrect" aria-hidden="true" ></i>
+                                                <i class="fa fa-check" aria-hidden="true" style="font-size: 25px;"  id="question2correct"></i>
+                                            </span>
+                                          <span style="float: left; margin-left: 30%;" >  <p class="option_label" id="option2_label"></p></label></span>
 
                                         <input type="radio" name="option_quiz" id="option_quiz3" value="optionC" onclick="checkForAnswer()">
-                                        <label id="answer3" for="option_quiz3"><p class="option_label" id="option3_label"></p></label>
+                                        <label id="answer3" for="option_quiz3"> 
+                                            <span style="float: left;margin-top: 4px;">
+                                                <i class="fa fa-times-circle-o" style="font-size: 25px;" id="question3Incorrect" aria-hidden="true" ></i>
+                                                <i class="fa fa-check" aria-hidden="true"  style="font-size: 25px;" id="question3correct"></i>
+                                            </span>
+                                           <span  style="float: left; margin-left: 30%;" ><p class="option_label" id="option3_label"></p></label></span> 
 
                                      </fieldset>
 

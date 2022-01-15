@@ -186,18 +186,18 @@
             <div class="ui-grid-b card" style="filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161))">
                 <div class="subtot">
                     Subtotal
-                    <span class="subprice">$0 </span>
+                    <span id="subprice" class="subprice">$0 </span>
                 </div>
                 <div class="subtot1">
                     Discount Amount
-                    <span class="subprice1"> $0 </span>
+                    <span id="subprice1" class="subprice1"> $0 </span>
                 </div>
                 <div class="subtot2">
                     Discounted Total
-                    <span class="subprice2">$0</span>
+                    <span id="subprice2" class="subprice2">$0</span>
                 </div>
                 <div style="float: right; margin-right: 10px">
-                    <a href="#" data-role="button" data-rel="popup" class="redeemLoyalty" id="add-to-cart2" style="
+                    <a href="#RedeemLoyaltyPopUp" data-role="button" data-rel="popup" class="redeemLoyalty" id="add-to-cart2" style="
                 font-size: 10px;
                 width: 105px;
                 padding-top: 5px;
@@ -207,7 +207,7 @@
 
                 <div class="subtot3">
                     Net Total
-                    <span class="subprice3"> $0 </span>
+                    <span id="subprice3" class="subprice3"> $0 </span>
                 </div>
             </div>
         </div>
@@ -286,7 +286,7 @@
 
                 <div class="understood" id="checkoutPopUpButton">
                     <a style="text-decoration: none" href="#cartpage">
-                        <p id="buttonTextcheckout" onclick="window.location.href='Checkout-iPhone.html'">
+                        <p id="buttonTextcheckout" >
                             understood
                         </p>
                     </a>

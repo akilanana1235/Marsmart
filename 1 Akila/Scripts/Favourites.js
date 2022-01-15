@@ -104,7 +104,7 @@ $(document).ready(function () {
         '</div>' +
         '</fieldset>' +
         '</div>' +
-        '<a href="#temporary" style="bottom: 36px; left: 120px;" data-role="button" id="add-to-cart" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">Add to cart' + '</a>' +
+        '<a href="#addToBasketPopUp" data-rel="popup" style="bottom: 36px; left: 120px;" data-role="button" id="add-to-cart" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">Add to cart' + '</a>' +
 
        
         '</div>' +
@@ -135,9 +135,8 @@ $(document).ready(function () {
     location.reload();
 
   });
-
-  $('#submit-mail').click(function () {
-
+  
+  $('#EmailPopUpButton').click(function () {
     var emailToSend = $('#mail-to').val();
 
     console.log(FavouriteIDList.length);
@@ -185,8 +184,16 @@ $(document).ready(function () {
         });
     }
 
+    
+
   });
 
+
+  $("#DeletePopUpButton").click(()=>{
+
+    localStorage.clear('FavouritesList');
+        location.reload();
+  })
 
 });
 

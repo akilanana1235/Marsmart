@@ -39,14 +39,18 @@ $(document).ready(function () {
             token: function (token) {
                 if (token.id) {
 
-                    if (page === "Checkout-iPad.html" ) {
-            
-                        window.location.href = 'Payment-successful-iPad.html';    
+                    var loyaltyPoints = (netTotal*10)/100;
+                    var existingLoyatyPoints = localStorage.getItem('UserLoyaltyPoints');
+                    if(existingLoyatyPoints!=null){
+                        existingLoyatyPoints+=loyaltyPoints;
+                    }else{
+                        existingLoyatyPoints = loyaltyPoints;
                     }
-                    if (page === "Checkout-iPhone.html") {
-                       
-                        window.location.href = 'Payment-successful-iPhone.html';
-                    }
+
+                    
+                    document.getElementById("addToBasketPopUp").style.visibility="visible";
+                    localStorage.setItem('UserLoyaltyPoints',existingLoyatyPoints);
+                   
                 }
                 // $(document).on("pagecreate", "#Checkout-page", function () {
                 //     //setTimeout(function () { $("#p").popup("close"); }, 5000);
@@ -56,6 +60,7 @@ $(document).ready(function () {
         });
 
         $('#place-order').on('click', function (e) {
+            document.getElementById("addToBasketPopUp").style.visibility="hidden";
             handler.open({
                 name: 'Marsmart',
                 currency: 'USD',
@@ -68,5 +73,10 @@ $(document).ready(function () {
             });
         });
     });
+
+$('.continueShopping').click(()=>{
+    window.location.href="Landing page-iPhone.html";
+})
+
 
 });

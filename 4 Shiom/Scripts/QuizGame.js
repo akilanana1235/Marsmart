@@ -114,7 +114,22 @@ function checkForAnswer() {
         if (option.checked === true && option.value === currentQuestionAnswer) {
             console.log(document.getElementById(correctOption).style);
 
+
             document.getElementById(correctOption).style.setProperty('background-color', '#21EA35', 'important');
+
+            if(correctOption == 'answer1'){
+                document.getElementById("question1Incorrect").style.visibility='hidden';
+                document.getElementById("question1correct").style.visibility='visible';
+   
+               }else if(correctOption=='answer2'){
+                document.getElementById("question2Incorrect").style.visibility='hidden';
+                   document.getElementById("question2correct").style.visibility='visible';
+               }else{
+                document.getElementById("question3Incorrect").style.visibility='hidden';
+                   document.getElementById("question3correct").style.visibility='visible';
+               }
+
+
             console.log(document.getElementById(correctOption));
             console.log(document.getElementById(correctOption).style.backgroundColor);
             playerScore++; //adding to player's score
@@ -125,6 +140,32 @@ function checkForAnswer() {
 
         else if (option.checked && option.value !== currentQuestionAnswer) {
             const wrongLabelId = option.labels[0].id;
+
+            if(wrongLabelId == 'answer1'){
+                document.getElementById("question1correct").style.visibility='hidden';
+             document.getElementById("question1Incorrect").style.visibility='visible';
+             
+
+            }else if(wrongLabelId=='answer2'){
+                document.getElementById("question2correct").style.visibility='hidden';
+                document.getElementById("question2Incorrect").style.visibility='visible';
+            }else{
+                document.getElementById("question2correct").style.visibility='hidden';
+                document.getElementById("question3Incorrect").style.visibility='visible';
+            }
+
+            if(correctOption == 'answer1'){
+                document.getElementById("question1Incorrect").style.visibility='hidden';
+                document.getElementById("question1correct").style.visibility='visible';
+   
+               }else if(correctOption=='answer2'){
+                document.getElementById("question2Incorrect").style.visibility='hidden';
+                   document.getElementById("question2correct").style.visibility='visible';
+               }else{
+                document.getElementById("question3Incorrect").style.visibility='hidden';
+                   document.getElementById("question3correct").style.visibility='visible';
+               }
+
             document.getElementById(wrongLabelId).style.setProperty('background-color', '#F93535', 'important');
             document.getElementById(correctOption).style.setProperty('background-color', '#21EA35', 'important');
             wrongAttempt++; 
@@ -170,6 +211,23 @@ function unCheckRadioButtons() {
 function resetOptionBackground() {
     const options = document.getElementsByName("option_quiz");
     options.forEach((option) => {
+
+        const wrongLabelId = option.labels[0].id;
+
+            if(wrongLabelId == 'answer1'){
+                document.getElementById("question1correct").style.visibility='hidden';
+             document.getElementById("question1Incorrect").style.visibility='hidden';
+             
+
+            }else if(wrongLabelId=='answer2'){
+                document.getElementById("question2correct").style.visibility='hidden';
+                document.getElementById("question2Incorrect").style.visibility='hidden';
+            }else{
+                document.getElementById("question3correct").style.visibility='hidden';
+                document.getElementById("question3Incorrect").style.visibility='hidden';
+            }
+
+
         document.getElementById(option.labels[0].id).style.setProperty('background-color', '#FFFFFF', 'important');
         document.getElementById(option.labels[0].id).style.setProperty('background-color', '#FFFFFF', 'important');
         document.getElementById("nextQuiz").style.setProperty('background-color', 'rgba(21, 49, 122, 0.7)', 'important');

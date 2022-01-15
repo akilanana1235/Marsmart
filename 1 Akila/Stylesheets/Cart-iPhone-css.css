@@ -559,38 +559,38 @@ margin-top: 10px;
 
 
   #RedeemLoyaltyPopUp{
-      width: 600px;
-      margin-left: -44%;
+    width: 360px;
+      margin-left: 0%;
       margin-top: 50px;
-      height: 550px;
+      height: 300px;
       background: #FFFFFF;
       border-radius: 15px;
-      visibility: hidden;
+      /* visibility: hidden; */
   }
 
   .loyaltyPopUpHeader{
       width: 100%;
       float: left;
-      margin-top: 50px;
+      margin-top: 0px;
   }
   .loyaltyIconPop{
       width:40%;
       float: left;
-
+      
   }
 
   .loyaltyIconPopUp{
-      width: 40%;
-      height: 80px;
-      margin-left: 40%;
-      margin-top: 50px;
+      width: 20%;
+      height: 40px;
+      margin-left: 28%;
+      margin-top: 20px;
+      
   }
 
   .loyaltyHeadText{
       width: 60%;
       float: left;
-
-      height: 129px;
+      height: 60px;
 
   }
 
@@ -598,11 +598,11 @@ margin-top: 10px;
       font-family: Poppins;
 font-style: normal;
 font-weight: 600;
-font-size: 24px;
+font-size: 20px;
 line-height: 36px;
-margin-top: 70px;
+margin-top: 22px;
 color: #000000;
-margin-left: -10%;
+margin-left: -25%;
   }
 
   .loyaltyContent{
@@ -614,11 +614,11 @@ margin-left: -10%;
       font-family: Poppins;
 font-style: normal;
 font-weight: 600;
-font-size: 18px;
+font-size: 16px;
 line-height: 27px;
 align-items: center;
 text-align: center;
-margin-top: 50px;
+margin-top: 30px;
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 color: #000000;
 
@@ -627,13 +627,13 @@ color: #000000;
 .loyaltyBoxesContainer{
   width: 100%;
   float: left;
-  margin-top: 40px;
+  margin-top: 20px;
 }   
 
 .loyaltyBoxe1{
   background: #8FF7A7;
   border-radius: 15px;
-  height: 60px;
+  height: 40px;
   width: 20%;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));   
   float: left;
@@ -657,8 +657,9 @@ color: #000000;
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
-  font-size: 30px;
-  line-height: 45px;
+  font-size: 16px;
+  line-height: 25px;
+  margin-left: 10%;
   margin-top: 10px;
   color: #3C2727;
 }
@@ -666,7 +667,7 @@ color: #000000;
 .loyaltyBoxe2{
   background: #F5F78F;
 border-radius: 15px;
-  height: 60px;
+  height: 40px;
   width: 20%;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   float: left;
@@ -676,7 +677,7 @@ border-radius: 15px;
 .loyaltyBoxe3{
   background: #8F99F7;
   border-radius: 15px;
-  height: 60px;
+  height: 40px;
   width: 20%;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   float: left;
@@ -697,14 +698,14 @@ box-sizing: border-box;
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 border-radius: 7px;
 margin-left: 34%;
-margin-top: 60px;
+margin-top: 35px;
 }
 
 .loyaltyNotInterested p{
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 27px;
   align-items: center;
   text-align: center;
