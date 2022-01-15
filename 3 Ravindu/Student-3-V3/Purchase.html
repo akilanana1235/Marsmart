@@ -40,7 +40,10 @@
     <script type="module" src="Purchase_Script.js"></script>
     
     <style>
-        .card{
+        #main-conatiner{
+          min-height: 78vh;
+        }
+        .purchase-item{
             display: flex;
             flex-direction: row;
             gap:.2em;
@@ -48,12 +51,45 @@
             padding: .8em;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         }
-        .card div,h5{
+        .purchase-item div,h5{
             padding-top: 3em;
             padding-right: 2em;
         }
-        .card button{
+        .purchase-item button{
             margin: 3.5em 0em;
+        }
+        .purchase-rating-box{
+          display: none;
+          padding: 0.2em 1em;
+        }
+        #purchase-rating-item{
+          margin: 1em 1em 0.5em 1em;
+          border-bottom: 5px solid navy;
+          display: flex;
+          flex-direction: row;
+          gap: 1em;
+        }
+        #purchase-rating-item p{
+          padding-top: 3.3em;
+          text-align: center;
+          font-size: large;
+        }
+        #rating-area{
+          text-align: center;
+          background: rgba(120, 150, 255, 0.19);
+          padding: 2em;
+          margin-bottom: 2em;
+          font-weight: bold;
+        }
+        .rating-stars{
+          font-size: xx-large;
+          margin-right: 1em;
+        }
+        .unrated{
+          color: rgba(247, 174, 37, 0.308);
+        }
+        .unrated:hover{
+          color: gold;
         }
     </style>
   </head>
@@ -80,32 +116,13 @@
         </div>
       </section>
 
-      <section role="main" class="ui-content">
+      <section role="main" class="ui-content" id="main-conatiner">
         <h2 class="content-section-title">Purchase History</h2>
-        <!-- <a
-          href="#popupRate"
-          data-rel="popup"
-          data-position-to="window"
-          class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"
-          data-transition="pop"
-          >Sign in</a
-        >
-        <div
-          data-role="popup"
-          id="popupRate"
-          data-theme="a"
-          data-overlay-theme="b"
-          class="ui-corner-all"
-        >
-          <form>
-            <div style="padding: 10px 20px">
-              <h3>Ratings</h3>
-            </div>
-          </form>
-        </div> -->
         
         <div id="purchase-container"></div>
-        <div id="add"></div>
+        <div id="review-area">
+          
+        </div>
       </section>
 
       <section data-role="footer" data-theme="b" style="bottom: 0px">
@@ -134,6 +151,36 @@
         </div>
       </section>
     </div>
-    
+    <script>
+      function showRatingScreen(productId){
+        document.getElementById("purchase-container").style.display="none";
+        document.getElementById(`rate-product-${productId}`).style.display="block";
+      }
+
+      function handleStarRating(starCount){
+        let changed_h=`<b>You have given <span style="font-size:1.2em">${starCount} stars</span> out of 
+          <span style="font-size:1.2em">5</span> for this product</b>`;
+        let changed_p="This will help other customers buy quality products. Thank You!";
+        document.getElementById("rating-area-h").innerHTML=changed_h;
+        document.getElementById("rating-area-p").innerHTML=changed_p;
+
+        let stars=document.getElementsByClassName("rating-stars");
+        let i=0;
+        while(i<starCount){
+          stars[i].innerHTML="<i class='fa fa-star checked' aria-hidden='true'></i>";
+          i++;
+        }
+        document.getElementById("initial-rate").innerHTML=calculateNewRating(starCount);
+        document.getElementById("total-reviews").innerHTML=parseInt(document.getElementById("total-reviews").innerHTML)+1;
+        //calculateNewRating(starCount);
+      }
+
+      function calculateNewRating(rate){
+        let totalReviews=parseInt(document.getElementById("total-reviews").innerHTML);
+        let initialRate=parseFloat(document.getElementById("initial-rate").innerHTML);
+        let newRate=((initialRate*totalReviews)+rate)/(totalReviews+1);
+        return newRate.toFixed(1);
+      }
+    </script>
   </body>
 </html>

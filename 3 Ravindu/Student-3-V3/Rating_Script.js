@@ -28,12 +28,12 @@ function setCurrentPoiRatings(data) {
   _currentPoiRatings = currentPoiRating;
 }
 
-function getCurrentPoiRatings() {
+export function getCurrentPoiRatings(productId) {
   let currentPoiRating;
   const POI_PRODUCT_ID = localStorage.getItem("poi-id"); //currently open POI's product-Id
 
   _allProductsrating.forEach((r) => {
-    if (r.productId == POI_PRODUCT_ID) {
+    if (r.productId == productId) {
       currentPoiRating = r;
     }
   });

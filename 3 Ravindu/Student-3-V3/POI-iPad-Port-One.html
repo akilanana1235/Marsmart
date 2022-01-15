@@ -69,7 +69,8 @@
             <article id="product-img-gallery">
               <div id="gallery-main">
                 <img
-                  src="assets/images/nesquick.PNG"
+                  id="gallery-main-img"
+                  src="assets/images/nesquick.png"
                   style="width: 22em"
                   alt=""
                 />
@@ -77,16 +78,26 @@
               <div id="gallery-subs">
                 <div>
                   <img
-                    src="assets/images/nesquick-side.PNG"
-                    style="width: 1.5em; margin-right: 4em;"
+                    class="gallery-sub-img"
+                    src="assets/images/nesquick.PNG"
                     alt=""
+                    onclick="changeGalleryMainImg(0)"
                   />
                 </div>
                 <div>
                   <img
-                    src="assets/images/nesquick-back.PNG"
-                    style="width: 5em"
+                    class="gallery-sub-img"
+                    src="assets/images/nesquick-side.PNG"
                     alt=""
+                    onclick="changeGalleryMainImg(1)"
+                  />
+                </div>
+                <div>
+                  <img
+                    class="gallery-sub-img"
+                    src="assets/images/nesquick-back.PNG"
+                    alt=""
+                    onclick="changeGalleryMainImg(2)"
                   />
                 </div>
               </div>
@@ -148,6 +159,15 @@
       $(document).ready(function () {
         localStorage.setItem("poi-id", 1);
       });
+
+      function changeGalleryMainImg(i){
+        subImages=document.getElementsByClassName("gallery-sub-img");
+        document.getElementById("gallery-main-img").src=subImages[i].src;
+      }
+
+      function handleClick(){
+        console.log("clicked me")
+      }
     </script>
   </body>
 </html>

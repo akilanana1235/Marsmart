@@ -18,8 +18,10 @@
   flex-direction: row;
   flex-basis: auto;
 }
-#gallery-subs img {
+.gallery-sub-img {
   border: 2px solid gray;
+  width: 5em;
+  margin-right: 1em;
 }
 #product-info {
   flex: 1;
