@@ -2,7 +2,7 @@ var memory_array = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F'];
 var memory_values = [];
 var memory_tile_ids = [];
 var tiles_flipped = 0;
-let time = 120;
+let time = 10;
 let isGameOver = false;
 
 
@@ -50,7 +50,7 @@ function memoryFlipTile(tile, val) {
 			if (memory_values[0] == memory_values[1]) {
 
 				tiles_flipped += 2;
-				document.getElementById("gScore").innerHTML=tiles_flipped*50;
+				document.getElementById("gScore").innerHTML=tiles_flipped*5;
 				
 				memory_values = [];
 				memory_tile_ids = [];
@@ -67,7 +67,7 @@ function memoryFlipTile(tile, val) {
 					document.getElementById("popUpHeader").innerHTML ="Congratulations!";
 					document.getElementById("popUpHeader").style.color ="#24BE4F";
 					document.getElementById("popUpHeader").style.marginLeft ="29%";
-					document.getElementById("popupContent").innerHTML = "You have managed to get all matches and earned a score of 100";
+					document.getElementById("popupContent").innerHTML = "You have managed to get all matches and earned a score of 60";
 					document.getElementById("popupContent").style.marginLeft = "2%";
 					document.getElementById("memoryGameSuccess").style.visibility="visible";
 				
@@ -109,7 +109,7 @@ function memoryFlipTile(tile, val) {
 	document.getElementById("popUpHeader").innerHTML ="Times Up!";
 	document.getElementById("popUpHeader").style.color ="#BE2424";
 	document.getElementById("popUpHeader").style.marginLeft ="32%";
-	document.getElementById("popupContent").innerHTML = "You have managed to get a score of "+tiles_flipped*50;
+	document.getElementById("popupContent").innerHTML = "You have managed to get a score of "+tiles_flipped*5;
 	document.getElementById("popupContent").style.marginLeft = "18%";
 	document.getElementById("memoryGameSuccess").style.visibility="visible";
 	//alert("Times Up!! ")
