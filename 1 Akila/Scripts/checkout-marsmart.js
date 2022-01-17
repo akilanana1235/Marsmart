@@ -39,17 +39,13 @@ $(document).ready(function () {
             token: function (token) {
                 if (token.id) {
 
-                    var loyaltyPoints = (netTotal*10)/100;
-                    var existingLoyatyPoints = localStorage.getItem('UserLoyaltyPoints');
-                    if(existingLoyatyPoints!=null){
-                        existingLoyatyPoints+=loyaltyPoints;
-                    }else{
-                        existingLoyatyPoints = loyaltyPoints;
-                    }
-
+                    var loyaltyPoints = parseInt((netTotal*10)/100);
                     
+                    
+
+                    localStorage.setItem('LoyaltyPointsFromBuying',loyaltyPoints);
                     document.getElementById("addToBasketPopUp").style.visibility="visible";
-                    localStorage.setItem('UserLoyaltyPoints',existingLoyatyPoints);
+                    
                    
                 }
                 // $(document).on("pagecreate", "#Checkout-page", function () {
