@@ -28,11 +28,10 @@ function getCurrentPoiProduct() {
 
 function displayProductData() {
   let currentPoiProduct = getCurrentPoiProduct();
-  let productInfo = `<button class="ui-btn ui-btn-inline" onclick="handleClick()"><i class="fa fa-heart" aria-hidden="true"></i>Add to Wishlist</button>
+  let productInfo = `
+  <button class="ui-btn ui-btn-inline" onclick="handleClick()"><i class="fa fa-heart" aria-hidden="true"></i>Add to Wishlist</button>
   <button class="ui-btn ui-btn-inline"><i class="fa fa-share-alt"></i>Share</button>
-
   <h1 id="product-name">${currentPoiProduct.name}</h1>
-  
   <h4 class="mrgb-1">${currentPoiProduct.category}
       <!--showing the stock availability accoring to available stock quantity-->
       ${(() => {
@@ -43,7 +42,6 @@ function displayProductData() {
         }
       })()}
   </h4>
-
   <h4><b>Pack Size: ${currentPoiProduct.size}</b></h4>
   <p >
     <s class="product-price-wo-discount">${(() => {
@@ -56,12 +54,10 @@ function displayProductData() {
     })()}</s>
     <span class="product-price">$ ${currentPoiProduct.price}</span>
   <p>
-
   <h4 class="mrgb-1">
     ${displayStars(POI_PRODUCT_ID)}
     <span class="product-rating">${calculateProductRating(POI_PRODUCT_ID)}<span>
   </h4>
-
   <h4><b>HIGHLIGHTS</b></h4>
   <p id="description">${currentPoiProduct.description}</p>`;
 
@@ -128,7 +124,9 @@ function getProductCard(id) {
               <h5 class="product-card-name">${product.name}</h5>
               <h6>
                 <span>${product.category}</span>
-                <span style="padding-left:6.5em;"><i class='fa fa-star checked' aria-hidden='true'></i>${calculateProductRating(parseInt(product.id))}</span>
+                <span style="padding-left:6.5em;"><i class='fa fa-star checked' aria-hidden='true'></i>${calculateProductRating(
+                  parseInt(product.id)
+                )}</span>
               </h6>
             </div>
             <div style="text-align:center;">
@@ -152,10 +150,12 @@ function loadAndDispalyProductComments() {
 
       data.forEach((comment) => {
         if (comment.productId == POI_PRODUCT_ID) {
-          let i=0;
-            outputComments += `
+          let i = 0;
+          outputComments += `
             <div class="card">
-              <p>${displayStars(comment.productId)}<span class="commenter"> by ${comment.customer_name}</span></p>
+              <p>${displayStars(
+                comment.productId
+              )}<span class="commenter"> by ${comment.customer_name}</span></p>
               <p><b>${comment.comment_date}</b><p>
               <p>${comment.text}</p>
             </div>
@@ -167,7 +167,6 @@ function loadAndDispalyProductComments() {
     .catch((err) => console.log(err));
 }
 
-
 $(document).ready(function () {
   xmlhttp.onload = function () {
     if (this.readyState == 4 && this.status == 200) {
@@ -175,8 +174,8 @@ $(document).ready(function () {
       _allProducts = allProducts;
       displayProductData();
       loadAndDispalyProductRatings();
-      displaySimilarProducts()
-      loadAndDispalyProductComments()
+      displaySimilarProducts();
+      loadAndDispalyProductComments();
     }
   };
 });
