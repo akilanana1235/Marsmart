@@ -1,0 +1,30 @@
+[
+    {
+      "productId": 1,
+      "customer_name": "Mary Jane",
+      "comment_date": "20th Dec 2021",
+      "rate": 5,
+      "text":"Labore sint proident dolor laborum dolor commodo ea eu aliqua consectetur et. Mollit duis anim ullamco in minim sunt cupidatat est esse."
+    },
+    {
+        "productId": 1,
+        "customer_name": "Peter Parker",
+        "comment_date": "21th Dec 2021",
+        "rate": 4,
+        "text":"Labore sint proident dolor laborum dolor commodo ea eu aliqua consectetur et. Mollit duis anim ullamco in minim sunt cupidatat est esse."
+    },
+    {
+        "productId": 2,
+        "customer_name": "Mary Jane",
+        "comment_date": "20th Dec 2021",
+        "rate": 2,
+        "text":"Labore sint proident dolor laborum dolor commodo ea eu aliqua consectetur et. Mollit duis anim ullamco in minim sunt cupidatat est esse."
+      },
+      {
+          "productId": 1,
+          "customer_name": "Lewis Hamilton",
+          "comment_date": "21th Dec 2021",
+          "rate": 5,
+          "text":"Labore sint proident dolor laborum dolor commodo ea eu aliqua consectetur et. Mollit duis anim ullamco in minim sunt cupidatat est esse."
+      }
+  ]

@@ -34,6 +34,16 @@ $(document).ready(function() {
 
    let userloyaltyPoints=Math.round(playerscore/10);
 
+   var existingLoyatyPoints = parseInt(localStorage.getItem('LoyaltyPointsFromBuying'));
+
+            if(existingLoyatyPoints){
+              userloyaltyPoints+=existingLoyatyPoints;
+            }
+      
+          
+
+            localStorage.setItem('LoyaltyPointsFromBuying',0);
+
    localStorage.setItem('UserLoyaltyPoints',userloyaltyPoints);
 
 

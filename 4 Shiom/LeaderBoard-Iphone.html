@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Leader Board</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+       
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
+        <link rel="stylesheet" type="text/css" href="CSS/main-iPhone.css" />
+        <script src="https://use.fontawesome.com/bb16f85abc.js"></script>
+    
+        <script type="text/javascript" src="Scripts/Menu.js"></script>
+
+        
+        <link rel="stylesheet" href="CSS/LeaderBoard-Iphone.css">
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  
+    
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+        <script src="Scripts/LeaderBoard.js"></script>
+
+        <script>
+          $(document).ready(function () {
+
+              $("#loyalty-hunter").click(()=>{
+                window.location.href = 'GameLanding-Iphone.html';
+              })
+
+              $("#item-list3").click(()=>{
+               window.location.href = 'Products-ListPage-Ipad.html';
+               })
+
+          });
+        </script>
+
+
+    </head>
+
+    <body>
+
+        <div data-role="page">
+
+            <div data-role="header">
+                <div data-role="navbar">
+                    <div class="ui-grid-b">
+                        <div class="ui-block-a">
+                            <div id="mySidenav" class="sidenav">
+                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                <a disabled="disabled" class="item-heading">Categories</a>
+                    <a id="item-list1">&nbsp; &nbsp; &nbsp; Bread & Bakery</a>
+                    <a id="item-list3">&nbsp; &nbsp; &nbsp; Dairy</a>
+                    <a id="item-list3">&nbsp; &nbsp; &nbsp; Grocery</a>
+                    <a id="item-list3">&nbsp; &nbsp; &nbsp; Health & Beauty</a>
+                    <a id="item-list3">&nbsp; &nbsp; &nbsp; Meats & Seafood</a>
+                    <a id="item-list3">&nbsp; &nbsp; &nbsp; Spirits & Wines</a>
+                    <a id="item-promotion" style="font-weight: bold">About Us</a>
+                    <a id="loyalty-hunter" style="font-weight: bold">Loyalty Hunter</a>
+                    <a id="item-support" style="font-weight: bold">Contact Us</a>
+                            </div>
+                            <span onclick="openNav()"><img id="hamburger" src="Images/menu-button.png" /></span>
+                        </div>
+                        <div class="ui-block-b" onclick="window.location.href='Landing page-iPhone.html'">
+                            <img id="logo" src="Images/CWLOGO full.png" />
+                        </div>
+                        <div class="ui-block-c">
+                            <div class="header-right-wrapper">
+                                <img id="cart" src="Images/shopping-cart.png" />
+                                <!-- <img id="profile-image" src="Icons/profile-image.png"> -->
+                                <span class="dropdown">
+                                    <a class="my-drop dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img id="profile-image" src="Images/profile-image.png" />
+                                    </a>
+    
+                                    <div class="dropdown-menu-profile" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item" id="dropdown-profile">My Profile</a>
+                                        <a class="dropdown-item" id="dropdown-fav"
+                                            onclick="window.location.href='Favourites.html'">My Favourites</a>
+                                        <a class="dropdown-item" id="dropdown-logout">Logout</a>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div role="main" >
+                
+                <div class="boardBody">
+
+                    <div class="breadCrum">
+                        <p>Home > <span style="color: #FF2525;">Loyalty Board</span> </p>
+                    </div>
+
+                    <div class="boardContainer">
+                        <div class="board">
+
+                            <div class="boardHeader">
+                                <div class="leaderLogo">
+                                    <img src="Images/leaderLogo.png"  alt=""> 
+                                    <p>LEADERBOARD</p>
+                                </div>
+                                <div class="loyaltyMe">
+
+                                    <div style="float: left;width: 100%;height: 40px;">
+                                        <p id="pLoyaltyLabel">My Loyalty points</p>
+                                    </div>
+
+                                    <div style="float: left;width: 100%;height: 67px;">
+                                    
+                                        <img src="Images/GameLogo.png" id="loyaltScoreLogo">
+                                        <p id="loyaltyscore"></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boardscoreBody">
+
+                                <div class="scoreCard">
+                                    <div class="position">
+                                        <p>1</p>
+                                    </div>
+                                    <div class="playerName">
+                                        <p>Edinson Cavani</p>
+                                    </div>
+                                    <div class="playerLoytaltyScore">
+                                        <div class="scoreHolder">
+                                            <img src="Images/GameLogo.png" alt="">
+                                            <p>150</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="scoreCard2">
+                                    <div class="position">
+                                        <p>2</p>
+                                    </div>
+                                    <div class="playerName">
+                                        <p>Bruno Fernandez</p>
+                                    </div>
+                                    <div class="playerLoytaltyScore">
+                                        <div class="scoreHolder">
+                                            <img src="Images/GameLogo.png" alt="">
+                                            <p>140</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="scoreCard3">
+                                    <div class="position">
+                                        <p>3</p>
+                                    </div>
+                                    <div class="playerName">
+                                        <p>Paul Pogba</p>
+                                    </div>
+                                    <div class="playerLoytaltyScore">
+                                        <div class="scoreHolder">
+                                            <img src="Images/GameLogo.png" alt="">
+                                            <p>120</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="scoreCard4">
+                                    <div class="position">
+                                        <p>4</p>
+                                    </div>
+                                    <div class="playerName">
+                                        <p>Cristiano Ronaldo</p>
+                                    </div>
+                                    <div class="playerLoytaltyScore">
+                                        <div class="scoreHolder">
+                                            <img src="Images/GameLogo.png" alt="">
+                                            <p>120</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="scoreCard5">
+                                    <div class="position">
+                                        <p>5</p>
+                                    </div>
+                                    <div class="playerName">
+                                        <p>Jadon Sanchoo</p>
+                                    </div>
+                                    <div class="playerLoytaltyScore">
+                                        <div class="scoreHolder">
+                                            <img src="Images/GameLogo.png" alt="">
+                                            <p>105</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="paginationContainer">
+                        <div class="pagination">
+                            <div class="page-disabled">
+                              <div class="ic-carat-left"><i class="fa fa-angle-left"></i></div>
+                            </div>
+                            <div class="page-active">
+                              <div class="numpoppins-bold-blue-14px">
+                                <span class="poppins-bold-blue-14px">1</span>
+                              </div>
+                            </div>
+                            <div class="page-non-active">
+                              <div class="num-1poppins-bold-charade-14px">
+                                <span class="poppins-bold-charade-14px">2</span>
+                              </div>
+                            </div>
+                            <div class="page-non-active">
+                              <div class="num-2poppins-bold-charade-14px">
+                                <span class="poppins-bold-charade-14px">...</span>
+                              </div>
+                            </div>
+                            <div class="page-non-active">
+                              <div class="num-3poppins-bold-charade-14px">
+                                <span class="poppins-bold-charade-14px">9</span>
+                              </div>
+                            </div>
+                            <div class="page-non-active">
+                              <div class="num-4poppins-bold-charade-14px">
+                                <span class="poppins-bold-charade-14px">10</span>
+                              </div>
+                            </div>
+                            <div class="page-disabled-end">
+                              <div class="ic-carat-right"><i class="fa fa-angle-right"></i></div>
+                            </div>
+                          </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+   
+
+              <div data-role="footer" style="
+              margin-top: 10px;
+              background-color: #383838 !important;
+              padding: 10px 10px 15px 15px !important;
+              float: left; width: 100%; margin-top: 40px;  background-color: #383838;">
+                <div data-role="navbar">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <div class="spreemart-title">Get In Touch</div>
+                            <div class="spreemart-copyright">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-telephone-fill" viewBox="0 0 14 14">
+                                    <path fill-rule="evenodd"
+                                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                </svg>
+                                +94 11 1234567
+                            </div>
+                            <div class="spreemart-copyright">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-envelope-fill" viewBox="0 0 14 14">
+                                    <path
+                                        d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                                </svg>
+                                info@masmart.com
+                            </div>
+                        </div>
+                        <div class="ui-block-b">
+                            <div class="social-media-wrapper" style="margin-right: 0px">
+                                <i class="fa fa-facebook-square" style="color: white;" aria-hidden="true"></i>
+                                <i class="fa fa-instagram" style="color: white;" aria-hidden="true"></i>
+                            </div>
+                            <div class="spreemart-copyright" style="text-align: right; margin-top: 16px">
+                                Marsmart © All rights reserved
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+        
+    </body>
+
+
+</html>

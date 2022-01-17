@@ -25,6 +25,22 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 
         <script src="Scripts/LeaderBoard.js"></script>
+
+        <script>
+          $(document).ready(function () {
+
+              $("#loyalty-hunter").click(()=>{
+                window.location.href = 'GameLanding-Ipad.html';
+              })
+
+              $("#item-list3").click(()=>{
+               window.location.href = 'Products-ListPage-Ipad.html';
+               })
+
+          });
+        </script>
+
+
     </head>
 
     <body>
@@ -35,12 +51,16 @@
                 <div id="nav-content">
                     <div id="mySidenav" class="sidenav">
                         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                        <a disabled="disabled" class="item-heading">Categories</a>
+                        <a  class="item-heading">Categories</a>
                         <a id="item-list1">&nbsp; &nbsp; &nbsp; Bread & Bakery</a>
-                        <a id="item-list2">&nbsp; &nbsp; &nbsp; Canned goods & soups</a>
-                        <a id="item-list3">&nbsp; &nbsp; &nbsp; Dabiry</a>
-                        <a id="item-promotion">Promotions</a>
-                        <a id="item-support">Support</a>
+                        <a id="item-list3">&nbsp; &nbsp; &nbsp; Dairy</a>
+                        <a id="item-list3">&nbsp; &nbsp; &nbsp; Grocery</a>
+                        <a id="item-list3">&nbsp; &nbsp; &nbsp; Health & Beauty</a>
+                        <a id="item-list3">&nbsp; &nbsp; &nbsp; Meats & Seafood</a>
+                        <a id="item-list3">&nbsp; &nbsp; &nbsp; Spirits & Wines</a>
+                        <a id="item-promotion" style="font-weight: bold">About Us</a>
+                        <a id="loyalty-hunter" style="font-weight: bold">Loyalty Hunter</a>
+                        <a id="item-support" style="font-weight: bold">Contact Us</a>
                       </div>
                     <span onclick="openNav()"><i class="fa fa-align-justify" aria-hidden="true" ></i></span>
                   <div id="logo" style="flex: 3">
@@ -66,7 +86,7 @@
                 <div class="boardBody">
 
                     <div class="breadCrum">
-                        <p>Home > <span style="color: #FF2525;">Game</span> </p>
+                        <p>Home > <span style="color: #FF2525;">Loyalty Board</span> </p>
                     </div>
 
                     <div class="boardContainer">

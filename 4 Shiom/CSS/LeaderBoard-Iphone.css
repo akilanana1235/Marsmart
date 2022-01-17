@@ -1,0 +1,333 @@
+.gamebody{
+    background-color: #F6F6F6;
+    
+}
+.breadCrum{
+
+    width: 100%;
+    background-color: #DADADA;
+    height: 40px;  
+}
+
+.breadCrum p{
+
+    margin-left: 5%; padding: 10px 10px 0px 0px;font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.boardContainer{
+    width: 100%;
+}
+.board{   
+width: 90%;
+height: 640px;
+margin-left: 5%;
+margin-top: 40px;
+background: rgba(234, 239, 255, 0.38);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+
+}
+
+.boardHeader{
+
+    background: #E5EBFF;
+border-radius: 15px 15px 0px 0px;
+width: 100%;
+height: 100.89px;
+
+}
+
+.leaderLogo{
+width: 45%;
+height: 100px;
+    float: left;
+  
+    
+}
+.leaderLogo img{
+    width: 20%;
+    height: 40px;
+    margin-top: 25px;
+    margin-left: 5%;
+    float: left;
+}
+
+.leaderLogo p{
+    margin-top: 40px;
+    float: left;
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 14px;
+color: #000000;
+}
+
+.loyaltyMe{
+    width: 40%;
+height: 60px;
+float: left;
+background: #8FF7A7;
+border-radius: 15px;
+margin-top: 19px;
+margin-left: 10%;
+}
+
+#pLoyaltyLabel{
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    margin-left: 5%;
+    margin-top: 10px;
+    color: #000000;
+}
+
+#loyaltyscore{
+
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 0px;
+margin-top: 5px;
+color: #3C2727;
+
+}
+
+#loyaltScoreLogo{
+  width: 28%;height: 40px; margin-left: 24%;float: left; margin-top: -20px;
+}
+
+.boardscoreBody{
+width: 100%;
+height: 668.11px;
+}
+
+.scoreCard{
+
+width: 85%;
+height: 60px;
+background: #FFFFFF;
+border-radius: 10px;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+margin-top: 40px;
+margin-left: 7.5%;
+}
+
+.scoreCard2{
+
+    width: 85%;
+height: 60px;
+    background: #C4CDD5;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-top: 40px;
+    margin-left: 7.5%;
+}
+.scoreCard3{
+
+    width: 85%;
+    height: 60px;
+        background: #FFFFFF;
+        border-radius: 10px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        margin-top: 40px;
+        margin-left: 7.5%;
+}    
+
+.scoreCard4{
+
+    width: 85%;
+    height: 60px;
+            background: #C4CDD5;
+            border-radius: 10px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            margin-top: 40px;
+            margin-left: 7.5%;
+}        
+
+
+.scoreCard5{
+
+    width: 85%;
+height: 60px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-top: 40px;
+    margin-left: 7.5%;
+}
+
+.position{
+float: left;
+width: 10%;
+height: 95px;
+}
+
+.position p{
+
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+color: #000000;
+margin-top: 20px;
+margin-left:45%;
+}
+
+.playerName{
+    float: left;
+    width: 65%;
+    height: 95px;   
+}
+
+.playerName p{
+
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+margin-top: 20px;
+color: #000000;
+}
+
+.playerLoytaltyScore{
+
+    float: left;
+    width: 25%;
+    height: 55px;  
+}
+
+.scoreHolder{
+
+    width: 85%;
+height: 45px;
+margin-top: 8px;
+background: #F5F78F;
+border-radius: 10px;
+
+}
+
+.scoreHolder img{
+
+    width: 40%;
+    height: 40px;
+    float: left;
+    margin-left: 7%;
+    margin-top: 4px;
+}
+.scoreHolder p{
+float: left;
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+margin-top: 15px;
+color: #3C2727;
+}
+
+/* ---- Pagination --------*/
+.paginationContainer{
+  width: 100%;
+  float: left;
+  height: 60px;
+}
+
+.pagination {
+    height: 41px;
+    position: relative;
+    width: 55%;
+    margin-left: 40%;
+    margin-top: 25px;
+    
+
+  }
+  
+  .page-disabled {
+    background-color:  #919eab;
+    border-radius: 4px;
+    height: 32px;
+    left: 0;
+    opacity: 0.5;
+    overflow: hidden;
+    top: 4px;
+    width: 32px;
+
+  }
+  
+  .ic-carat-left {
+
+    color: #000;  
+    text-align: center;
+    width: 24px;
+    margin-top: 2px;
+    margin-left: 10%;
+    font-size: 20px;
+  }
+  
+  .page-active {
+    background-color: white;
+    border: 1px solid blue;
+    border-radius: 4px;
+    height: 32px;
+    left: 40px;
+    overflow: hidden;
+    top: 4px;
+    width: 32px;
+    text-align: center  ;
+    margin-left: 3%;
+  }
+  
+  .page-non-active{
+    background-color: white;
+    border: 1px solid rgb(183, 183, 187);
+    border-radius: 4px;
+    height: 32px;
+    left: 40px;
+    overflow: hidden;
+    top: 4px;
+    width: 32px;
+    text-align: center ;
+    margin-left: 3%;
+  }
+
+  .page-disabled-end{
+    background-color:  #919eab;
+    border-radius: 4px;
+    height: 32px;
+    left: 0;
+    opacity: 0.5;
+    overflow: hidden;
+    top: 4px;
+    width: 32px;
+    margin-left: 3%;
+  }
+
+  .ic-carat-right{
+    color: #000;  
+    text-align: center;
+    width: 24px;
+    margin-top: 2px;
+    margin-left: 10%;
+    font-size: 20px;
+  }
+
+  @import url("https://fonts.googleapis.com/css?family=Poppins:400,700,500,600|Roboto:400,700");
+
+
+
+  
