@@ -172,6 +172,7 @@
     </div>
     <script>
       $(document).ready(function () {
+        localStorage.removeItem("poi-id");
         localStorage.setItem("poi-id", 1);
       });
 
@@ -188,6 +189,11 @@
           currentQty-=1;
         }
         document.getElementById("addToCart-qty").innerHTML=currentQty<0?0:currentQty;
+      }
+
+      function handleAddToFav(){
+        document.getElementById("addToFav-btn").style.display="none";
+        document.getElementById("fav-icon").style.display="inline";
       }
     </script>
   </body>

@@ -108,3 +108,9 @@ margin-left: 0.5em;
   color: #23C016;
   font-size: 5em;
 }
+#fav-icon{
+  color: red;
+  font-size: 1.5em;
+  margin-right: 0.5em;
+  display: none;
+}

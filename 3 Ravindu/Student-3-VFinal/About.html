@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marsmart-About Us</title>
+    <!--JQuery Mobile Theme-->
+    <link rel="stylesheet" href="assets/themes/cw-theme.css" />
+    <link rel="stylesheet" href="assets/themes/jquery.mobile.icons.min.css" />
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <!--Icons-->
+    <link
+      rel="stylesheet"
+      href="assets/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!--JQuery Mobile-->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--External Style & script-->
+    <link rel="stylesheet" href="./CSS/Style.css" />
+    <link rel="stylesheet" href="./CSS/About.css" />
+    <script src="./Scripts/Nav.js"></script>
+  </head>
+  <body>
+    <div data-role="page" data-theme="c">
+
+      <section data-role="header" data-position="fixed">
+        <div id="nav-content">
+          <!-- Hamburger menu -->
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a disabled="disabled" class="item-heading">Categories</a>
+            <a id="item-list1">&nbsp; &nbsp; &nbsp; Bread & Bakery</a>
+            <a id="item-list2">&nbsp; &nbsp; &nbsp; Dairy</a>
+            <a id="item-list3">&nbsp; &nbsp; &nbsp; Grocery</a>
+            <a id="item-list4">&nbsp; &nbsp; &nbsp; Health and Beauty</a>
+            <a id="item-list5">&nbsp; &nbsp; &nbsp; Meats and Seafood</a>
+            <a id="item-list6">&nbsp; &nbsp; &nbsp; Spirits and Wines</a>
+            <a id="item-heading" onclick="window.location.href='About.html'"> About Us</a>
+            <a id="item-heading" onclick="window.location.href='Purchase.html'"> Purchase History</a>
+            <a id="item-heading"> Loyalty Hunter</a>
+            <a id="item-heading"> Contact Us</a>
+          </div>
+          <i class="fa fa-align-justify" aria-hidden="true" style="flex: 1" onclick="openNav()"></i>
+          <div id="logo" style="flex: 3">
+            <img
+              src="assets/images/logo-transparent.png"
+              style="width: 14em"
+              alt=""
+            />
+          </div>
+          <!--searchbar-->
+          <form style="flex: 3; padding: 0.5em">
+            <input type="search" name="search-1" id="search-1" value="" />
+          </form>
+          <div style="flex: 2">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+          </div>
+        </div>
+      </section>
+      <div class="breadCrum">
+        <p>Home > <span style="color: #FF2525;">About</span> </p>
+      </div>
+
+      <section role="main" class="ui-content">
+        <h1 id="title">About Us</h1>
+        <!-- Short youtube video related online grocery store -->
+        <iframe
+          width="100%"
+          height="400em"
+          src="https://www.youtube.com/embed/-PrJkth82NA"
+        ></iframe>
+        <p id="about-description">
+          Marsmart has offered the best in fresh food since 2002—we can proudly
+          say that we pioneered online grocery shopping. Get the best in-season
+          picks, local goods, chef-prepared meals, and your favorite brands
+          delivered to your home or office. From our state-of-the art facility
+          in the Bronx, we provide grocery delivery to the greater New York
+          City, Philadelphia, and Washington, DC metropolitan areas, with
+          seasonal service to eastern Long Island and the Jersey Shore.
+        </p>
+      </section>
+
+      <section class="full-white-bg">
+        <h2 class="content-section-title">Our Mission</h2>
+        <section id="about-mission">
+          <img src="assets/images/headshot1.png" alt="" />
+          <div id="mission-statement">
+            <h3>Andrew Jacobs</h3>
+            <h5>Founder & CEO</h5>
+            <p>“Our mission is to send best products to customers doorstep”</p>
+          </div>
+        </section>
+      </section>
+      <section>
+        <div id="locations-headline">
+          <img
+            src="assets/images/location-vector.png"
+            alt=""
+            class="vector-section-title"
+          />
+          <h2 class="content-section-title">5 outlets all over USA</h2>
+        </div>
+        <div><!-- Map of United states -->
+          <img
+            src="assets/images/usa-map-loc1.png"
+            usemap="#image-map"
+            id="usa-locations-map"
+          />
+
+          <map name="image-map">
+            <area
+              alt="CAL"
+              title="CAL"
+              coords="46,141,44"
+              shape="circle"
+              onclick="changeLoction('CAL')"
+            />
+            <area
+              alt="TX"
+              title="TX"
+              coords="251,240,40"
+              shape="circle"
+              onclick="changeLoction('TX')"
+            />
+            <area
+              alt="KS"
+              title="KS"
+              coords="214,143,48"
+              shape="circle"
+              onclick="changeLoction('KS')"
+            />
+            <area
+              alt="NY"
+              title="NY"
+              coords="401,160,48"
+              shape="circle"
+              onclick="changeLoction('NY')"
+            />
+            <area
+              alt="FL"
+              title="FL"
+              coords="393,240,49"
+              shape="circle"
+              onclick="changeLoction('FL')"
+            />
+          </map>
+        </div>
+        <article id="outlet-details">
+          <div id="outlet-tx">
+            <div class="outlet-map-and-content">
+              <div class="card location-details">
+                <h3>Dallas, Texas</h3>
+                <p>
+                  1213 E Trinity Mills Rd,<br />
+                  Carrollton, TX 75006,
+                </p>
+                <p>Tel: +1 972-466-2228</p>
+                <p>Open from 08.30am to 10.00pm</p>
+              </div>
+              <!-- Google map of respective outlet's location -->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13356.99815219063!2d-117.3473247!3d33.1813236!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x72f9400b86b00c0!2sWalmart%20Supercenter!5e0!3m2!1sen!2slk!4v1641779075593!5m2!1sen!2slk"
+                width="400"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </article>
+        <div style="display: none">
+          <div id="outlet-cal">
+            <div class="outlet-map-and-content">
+              <div class="card location-details">
+                <h3>Burbank, California</h3>
+                <p>
+                  1301 N Victory Pl, Burbank,<br />
+                  Carrollton, CA 91502
+                </p>
+                <p>Tel: +1 972-466-2228</p>
+                <p>Open from 08.30am to 10.00pm</p>
+              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13201.45749835845!2d-118.325191!3d34.1881654!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xced1d828c60bcf0!2sWalmart%20Supercenter!5e0!3m2!1sen!2slk!4v1641799027083!5m2!1sen!2slk"
+                width="400"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+          <div id="outlet-ks">
+            <div class="outlet-map-and-content">
+              <div class="card location-details">
+                <h3>Topeka,Kansas</h3>
+                <p>
+                  1213 E Trinity Mills Rd,<br />
+                  Carrollton, TX 75006,<br />
+                  United States
+                </p>
+                <p>Tel: +1 972-466-2228</p>
+                <p>Open from 08.30am to 10.00pm</p>
+              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13356.99815219063!2d-117.3473247!3d33.1813236!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x72f9400b86b00c0!2sWalmart%20Supercenter!5e0!3m2!1sen!2slk!4v1641779075593!5m2!1sen!2slk"
+                width="400"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+          <div id="outlet-ny">
+            <div class="outlet-map-and-content">
+              <div class="card location-details">
+                <h3>Manhatten,New York</h3>
+                <p>
+                  1213 E Trinity Mills Rd,<br />
+                  Carrollton, TX 75006,<br />
+                  United States
+                </p>
+                <p>Tel: +1 972-466-2228</p>
+                <p>Open from 08.30am to 10.00pm</p>
+              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13356.99815219063!2d-117.3473247!3d33.1813236!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x72f9400b86b00c0!2sWalmart%20Supercenter!5e0!3m2!1sen!2slk!4v1641779075593!5m2!1sen!2slk"
+                width="400"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+          <div id="outlet-fl">
+            <div class="outlet-map-and-content">
+              <div class="card location-details">
+                <h3>Miami, Florida</h3>
+                <p>
+                  1213 E Trinity Mills Rd,<br />
+                  Carrollton, TX 75006,<br />
+                  United States
+                </p>
+                <p>Tel: +1 972-466-2228</p>
+                <p>Open from 08.30am to 10.00pm</p>
+              </div>
+              
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13356.99815219063!2d-117.3473247!3d33.1813236!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x72f9400b86b00c0!2sWalmart%20Supercenter!5e0!3m2!1sen!2slk!4v1641779075593!5m2!1sen!2slk"
+                width="400"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="start-shopping-cta">
+        <h2><b>We make your shopping experience unbelievably easy</b></h2>
+        <h4>Ready for shopping?</h4>
+        <div style="padding: 0.2em 10em">
+          <button class="ui-btn ui-btn-e" id="addToCart-click">
+            Get Started Now
+          </button>
+        </div>
+      </section>
+      <!-- footer -->
+      <section data-role="footer" data-theme="b">
+        <div class="footer-content">
+          <div style="flex: 1">
+            <h2><b>Get in touch</b></h2>
+            <p><i class="fa fa-phone" aria-hidden="true"></i> 1-800-367-2884</p>
+            <p>
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              info@marsmart.com
+            </p>
+          </div>
+          <div style="flex: 2; text-align: right">
+            <h1>
+              <i class="fa fa-facebook-square" aria-hidden="true"></i>
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </h1>
+            <h2>
+              <b>marsmart</b>
+              <span style="font-size: smaller"
+                ><i class="fa fa-copyright" aria-hidden="true"></i> all rights
+                reserved</span
+              >
+            </h2>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      // changing the oultlet map and details according to the location clicked on image map
+      function changeLoction(loc) {
+        let map = document.getElementById("usa-locations-map");
+        let output = document.getElementById("outlet-details");
+
+        switch (loc) {
+          case "TX":
+            output.innerHTML = document.getElementById("outlet-tx").innerHTML;
+            map.src = "assets/images/usa-map-loc1.png";
+            break;
+          case "CAL":
+            output.innerHTML = document.getElementById("outlet-cal").innerHTML;
+            map.src = "assets/images/usa-map-loc2.png";
+            break;
+          case "KS":
+            output.innerHTML = document.getElementById("outlet-ks").innerHTML;
+            map.src = "assets/images/usa-map-loc3.png";
+            break;
+          case "NY":
+            output.innerHTML = document.getElementById("outlet-ny").innerHTML;
+            map.src = "assets/images/usa-map-loc4.png";
+            break;
+          case "FL":
+            output.innerHTML = document.getElementById("outlet-fl").innerHTML;
+            map.src = "assets/images/usa-map-loc5.png";
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

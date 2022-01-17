@@ -29,7 +29,8 @@ function getCurrentPoiProduct() {
 function displayProductData() {
   let currentPoiProduct = getCurrentPoiProduct();
   let productInfo = `
-  <button class="ui-btn ui-btn-inline" onclick="handleClick()"><i class="fa fa-heart" aria-hidden="true"></i>Add to Wishlist</button>
+  <button class="ui-btn ui-btn-inline" onclick="handleAddToFav()" id="addToFav-btn"><i class="fa fa-heart" aria-hidden="true"></i>Add to Wishlist</button>
+  <i class="fa fa-heart" aria-hidden="true" id="fav-icon"></i>
   <button class="ui-btn ui-btn-inline"><i class="fa fa-share-alt"></i>Share</button>
   <h1 id="product-name">${currentPoiProduct.name}</h1>
   <h4 class="mrgb-1">${currentPoiProduct.category}
@@ -121,7 +122,7 @@ function getProductCard(id) {
             <div class="card" style="flex:1">
             <img src=${product.img1} style="width:13em" alt="">
             <div>
-              <h5 class="product-card-name">${product.name}</h5>
+              <h5 class="product-card-name"><a href="POI-IPad-Port-${product.id}.html" target="_blank">${product.name}</a></h5>
               <h6>
                 <span>${product.category}</span>
                 <span style="padding-left:6.5em;"><i class='fa fa-star checked' aria-hidden='true'></i>${calculateProductRating(
