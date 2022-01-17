@@ -891,6 +891,20 @@
             window.location.href ='CartPage-iPad.html';
           }
      
+      });
+
+      $('.cardImage').children().on('click',function(){
+
+      var imageURL = $(this).attr('src');
+
+      for (var i = 0; i < Products.length; i++) {
+
+        if(Products[i].img_url==imageURL){
+            localStorage.setItem("poi-id",Products[i].product_id);
+            window.location.href = 'POI-Ipad-land/POI-iPad-Landscape.html';
+        }
+
+      }
       })
 
   }); //End of Document ready func
