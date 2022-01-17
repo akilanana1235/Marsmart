@@ -16,18 +16,24 @@ xmlhttp.send();
 //returns details of currently opened POI's product
 function getCurrentPoiProduct() {
   let currentPoiProduct;
-
+  console.log(POI_PRODUCT_ID)
   _allProducts.forEach((product) => {
     if (product.id == POI_PRODUCT_ID) {
       currentPoiProduct = product;
     }
   });
 
+  
+  console.log(currentPoiProduct)
   return currentPoiProduct;
 }
 
 function displayProductData() {
   let currentPoiProduct = getCurrentPoiProduct();
+  document.getElementById("gallery-main-img").src=currentPoiProduct.img1;
+  document.getElementById("subImage1").src=currentPoiProduct.img2;
+  document.getElementById("subImage2").src=currentPoiProduct.img3;
+  document.getElementById("subImage3").src=currentPoiProduct.img1;
   let productInfo = `<button class="ui-btn ui-btn-inline" onclick="handleClick()"><i class="fa fa-heart" aria-hidden="true"></i>Add to Wishlist</button>
   <button class="ui-btn ui-btn-inline"><i class="fa fa-share-alt"></i>Share</button>
 
