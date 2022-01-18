@@ -64,55 +64,55 @@ $(document).ready(function () {
         console.log(Products[i]);
 
         const CartHTML = '<div class="ui-grid-b card">' +
-        '<div class="ui-block-a left-wrapper">' +
-        '<div class="heart-wrapper">' +
-        '<img id="heart" class="heart-icon" src="Icons/heart.png">' +
-        '</div>' +
-        '<div class=" ui-checkbox"><input type="checkbox" name="checkbox-mini-0" id="checkbox-select-all" data-mini="true">' +
-        '</div>' +
-        '</div>' +
-        '<div class="ui-block-b middle-wrapper">' +
-        '<img id="nutella" src="' + Products[i].img_url + '">' +
-        '</div>' +
-        '<div class="ui-block-c right-wrapper">' +
-        '<span class="producttitle">' + Products[i].title + '</span>' +
-        '<div hidden class="product-id">' + Products[i].product_id + '</div>' +
-      
-        '<span class="price" style="float:right; margin-top:2px; font-size:12px; color:#FF2525; font-weight:700;"> $' + Products[i].price + '</span>' +
-        '<br>' +
-        '<span>' + Products[i].category + '</span>' +
-        '<span class="rating1">' +
-        '<img id="rating-star1" src="Icons/rating star.png">' + Products[i].rating + 
-        '</span>' +
-        '<br>' +
-        '<span style="font-size:12px;">' +
-        Products[i].description +
-        '</span>' + 
-       
+          '<div class="ui-block-a left-wrapper">' +
+          '<div class="heart-wrapper">' +
+          '<img id="heart" class="heart-icon" src="Icons/heart.png">' +
+          '</div>' +
+          '<div class=" ui-checkbox"><input type="checkbox" name="checkbox-mini-0" id="checkbox-select-all" data-mini="true">' +
+          '</div>' +
+          '</div>' +
+          '<div class="ui-block-b middle-wrapper">' +
+          '<img id="nutella" src="' + Products[i].img_url + '">' +
+          '</div>' +
+          '<div class="ui-block-c right-wrapper">' +
+          '<span class="producttitle">' + Products[i].title + '</span>' +
+          '<div hidden class="product-id">' + Products[i].product_id + '</div>' +
+
+          '<span class="price" style="float:right; margin-top:2px; font-size:12px; color:#FF2525; font-weight:700;"> $' + Products[i].price + '</span>' +
+          '<br>' +
+          '<span>' + Products[i].category + '</span>' +
+          '<span class="rating1">' +
+          '<img id="rating-star1" src="Icons/rating star.png">' + Products[i].rating +
+          '</span>' +
+          '<br>' +
+          '<span style="font-size:12px;">' +
+          Products[i].description +
+          '</span>' +
 
 
-        '<div class="quantity1">' +
-        '<fieldset class="ui-grid-b">' +
-        '<div class="ui-block-a">' +
-        '<a href="#temporary" data-role="button" id="minus1" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">-' + '</a>' +
-        '</div>' +
-        '<div class="ui-block-b">' +
-        '<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">' + '<input type="number" name="quantity" id="quantity1" value="1">' + '</div>' +
-        '</div>' +
-        '<div class="ui-block-c">' +
-        '<a href="temporary.html" data-role="button" id="plus1" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">+' + '</a>' +
-        '</div>' +
-        '</fieldset>' +
-        '</div>' +
-        '<a href="#addToBasketPopUp" data-rel="popup" style="bottom: 36px; left: 120px;" data-role="button" id="add-to-cart" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">Add to cart' + '</a>' +
 
-       
-        '</div>' +
-        '</div>'
+          '<div class="quantity1">' +
+          '<fieldset class="ui-grid-b">' +
+          '<div class="ui-block-a">' +
+          '<a href="#temporary" data-role="button" id="minus1" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">-' + '</a>' +
+          '</div>' +
+          '<div class="ui-block-b">' +
+          '<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">' + '<input type="number" name="quantity" id="quantity1" value="1">' + '</div>' +
+          '</div>' +
+          '<div class="ui-block-c">' +
+          '<a href="temporary.html" data-role="button" id="plus1" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">+' + '</a>' +
+          '</div>' +
+          '</fieldset>' +
+          '</div>' +
+          '<a href="#addToBasketPopUp" data-rel="popup" style="bottom: 36px; left: 120px;" data-role="button" id="add-to-cart" class="ui-link ui-btn ui-shadow ui-corner-all" role="button">Add to cart' + '</a>' +
 
 
-      
-          document.getElementsByClassName('card-area')[0].innerHTML += CartHTML;
+          '</div>' +
+          '</div>'
+
+
+
+        document.getElementsByClassName('card-area')[0].innerHTML += CartHTML;
         break;
       }
 
@@ -135,65 +135,61 @@ $(document).ready(function () {
     location.reload();
 
   });
-  
-  $('#EmailPopUpButton').click(function () {
+
+  $('#sharepopup').click(function () {
     var emailToSend = $('#mail-to').val();
 
     console.log(FavouriteIDList.length);
 
-    for (EmailfavouriteID of FavouriteIDList) {
 
-      for (var i = 0; i < Products.length; i++) {
-        if (Products[i].product_id === EmailfavouriteID) {
-          var Emaildata = {
-            "from": {
-              "email": "marsmartshop@gmail.com"
-            },
-            "personalizations": [
-              {
-                "to": [
-                  {
-                    "email": emailToSend
-                  }
-                ],
-                "dynamic_template_data": {
-                  "Prod_title": Products[i].title,
-                  "prod_img": ProductImgLinks[i].link,
-                  "Prod_Price": Products[i].price
-                }
-              }],
-            "template_id": "d-22e07402a4034663b72c3bb4444974bc"
-          }
-          break;
+
+
+
+
+    var emailProductNames = [];
+    var productName = $('.producttitle').text().split(/(?=[A-Z])/);
+
+    emailProductNames.push(productName);
+
+    localStorage.setItem('FavoriteProducts', emailProductNames);
+
+    var EmailItemList = localStorage.getItem("FavoriteProducts");
+
+
+    $('#EmailPopUpButton').click(function () {
+
+      var emailToSend = $('#mail-to').val();
+      var data = {
+        service_id: 'service_enrwg2k',
+        template_id: 'template_xj3h6js',
+        user_id: 'user_WpvegYgBZvYJ9bfV2YnmZ',
+        template_params: {
+          to_name: emailToSend,
+          from_name: 'Marsmart',
+          message_html: '<b>' + EmailItemList + '</b>'
         }
-      }
+      };
+      $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+        type: 'POST',
+        data: JSON.stringify(data),
+        contentType: 'application/json'
+      }).done(function () {
+        alert('Your mail is sent!');
+      }).fail(function (error) {
+        alert('Oops... ' + JSON.stringify(error));
+      });
 
-      $.ajax
-        ({
-          type: "POST",
-          url: "https://api.sendgrid.com/v3/mail/send",
-          contentType: "application/json; charset=utf-8",
-          async: false,
-          data: JSON.stringify(Emaildata),
-          beforeSend: function (xhr) {
-            xhr.setRequestHeader('Authorization', "Bearer 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");
-          },
-          success: function () {
-            alert('Email Successfully sent !');
-          }
-        });
-    }
+    });
 
-    
-
+  
   });
 
 
-  $("#DeletePopUpButton").click(()=>{
+$("#DeletePopUpButton").click(() => {
 
-    localStorage.clear('FavouritesList');
-        location.reload();
-  })
+  localStorage.clear('FavouritesList');
+  location.reload();
+})
 
 });
 
