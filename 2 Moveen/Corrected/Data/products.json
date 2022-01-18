@@ -63,7 +63,7 @@
     "img2": "assets/images/Jack_side.jpg",
     "img3": "assets/images/Jack_back.jpg",
     "stock_available": 4,
-    "similar_products":[1,2,5]
+    "similar_products":[2,4,5]
   },
   {
     "id": 5,
@@ -79,6 +79,6 @@
     "img2": "assets/images/Black-side.jpg",
     "img3": "assets/images/Black-back.jpg",
     "stock_available": 4,
-    "similar_products":[1.2,4]
+    "similar_products":[2,4,5]
   }
 ]
