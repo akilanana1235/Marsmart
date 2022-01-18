@@ -9,7 +9,7 @@ function handleSubmit() {
         newComment = `${currentComment},${comment}`;
     }
 
-    localStorage.clear("comment", newComment);
+    localStorage.setItem("comment", newComment);
 
     const commentArray = newComment.split(",");
     const commentHTML = commentArray.map((cmt) => {
