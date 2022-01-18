@@ -36,13 +36,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <!--External Style & script-->
+    <link rel="icon" type="image/x-icon" href="Icons/flavicon.png" />
     <link rel="stylesheet" type="text/css" href="Stylesheets/NavBar.css">
     <script type="text/javascript" src="Scripts/header-iphone.js"></script>
     <link rel="stylesheet" href="Style.css" />
-    <script type="text/javascript" src="Menu.js"></script>
-    <script src="Menu.js"></script>
+    <script type="text/javascript" src="Scripts/Menu.js"></script>
     <script type="module" src="POI_Script.js"></script>
-    <script type="module" src="Purchase_Script.js"></script>
+    <script type="module" src="Scripts/Purchase_Script.js"></script>
+    <link rel="stylesheet" type="text/css" href="Stylesheets/Footer.css">
     <style>
         .card{
             display: flex;
@@ -62,86 +63,67 @@
     </style>
   </head>
   <body>
-    <div data-role="page" data-theme="c">
-        <div data-role="header">
-          <div data-role="navbar">
-              <div class="ui-grid-b">
-                  <div class="ui-block-a">
-                      <div id="mySidenav" class="sidenav">
-                          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                          <a disabled="disabled" class="item-heading">Categories</a>
-                          <a id="item-list1">&nbsp; &nbsp; &nbsp; Bread & Bakery</a>
-                          <a id="item-list2">&nbsp; &nbsp; &nbsp; Dairy</a>
-                          <a id="item-list3">&nbsp; &nbsp; &nbsp; Grocery</a>
-                          <a id="item-list4">&nbsp; &nbsp; &nbsp; Health and Beauty</a>
-                          <a id="item-list5">&nbsp; &nbsp; &nbsp; Meats and Seafood</a>
-                          <a id="item-list6">&nbsp; &nbsp; &nbsp; Spirits and Wines</a>
-                          <a id="item-heading"> About Us</a>
-                          <a id="item-heading"> Loyalty Hunter</a>
-                          <a id="item-heading"> Contact Us</a>
-                         
-                      </div>
-                      <span onclick="openNav()"><img id="hamburger" src="Icons/Hamburger.jpeg"></span>
-                  </div>
-                  <div class="ui-block-b">
-                      <img id="logo" src="assets/images/logo-transparent.png">
-                  </div>
-                  <div class="ui-block-c">
-                      <div class="header-right-wrapper">
-                          <img id="cart" src="Icons/cart.jpeg">
-                          <!-- <img id="profile-image" src="Icons/profile-image.png"> -->
-                          <span class="dropdown">
-                              <a class="my-drop dropdown-toggle" href="#" role="button"
-                                  id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                  aria-expanded="false">
-                                 <img id="profile-image" src="Icons/user.jpeg">
-                              <div class="dropdown-menu-profile" aria-labelledby="dropdownMenuLink">
-                                  <a class="dropdown-item" id="dropdown-profile" >My Profile</a>
-                                  <a class="dropdown-item" id="dropdown-fav" >My Favourites</a>
-                                  <a class="dropdown-item" id="dropdown-fav" >Loyalty</a>
-                                  <a class="dropdown-item" id="dropdown-logout" >Logout</a>
-                              </div>
-                          </a>
-                             
-                          </span>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
+      <!-- Left Nav Bar -->
+      <div data-role="header">
+        <div data-role="navbar">
+            <div class="ui-grid-b">
+                <div class="ui-block-a">
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a disabled="disabled" class="item-heading">Categories</a>
+                        <a id="item-list1">&nbsp; &nbsp; &nbsp; Bread & Bakery</a>
+                        <a id="item-list2">&nbsp; &nbsp; &nbsp; Dairy</a>
+                        <a id="item-list3">&nbsp; &nbsp; &nbsp; Grocery</a>
+                        <a id="item-list4">&nbsp; &nbsp; &nbsp; Health and Beauty</a>
+                        <a id="item-list5">&nbsp; &nbsp; &nbsp; Meats and Seafood</a>
+                        <a id="item-list6">&nbsp; &nbsp; &nbsp; Spirits and Wines</a>
+                        <a id="item-heading" onclick="window.location.href='About.html'"> About Us</a>
+                        <a id="item-heading"> Loyalty Hunter</a>
+                        <a id="item-heading"> Contact Us</a>
+                       
+                    </div>
+                    <span onclick="openNav()"><img id="hamburger" src="Icons/Hamburger.jpeg"></span>
+                </div>
+                <div class="ui-block-b">
+                    <img id="logo" src="assets/images/logo-transparent.png">
+                </div>
+                <div class="ui-block-c">
+                    <div class="header-right-wrapper">
+                        <img id="cart" src="Icons/cart.jpeg" onclick="window.location.href='Cart.html'">
+                        <!-- Right Nav Bar -->
+                        <span class="dropdown">
+                            <a class="my-drop dropdown-toggle" href="#" role="button"
+                                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                               <img id="profile-image" src="Icons/user.jpeg">
+                            <div class="dropdown-menu-profile" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" id="dropdown-profile" >My Profile</a>
+                                <a class="dropdown-item" id="dropdown-fav" onclick="window.location.href='Purchase.html'" >Purchase</a>
+                                <a class="dropdown-item" id="dropdown-fav" >My Favourites</a>
+                                <a class="dropdown-item" id="dropdown-fav" >Loyalty</a>
+                                <a class="dropdown-item" id="dropdown-logout" >Logout</a>
+                            </div>
+                        </a>
+                           
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
   
       
-      <div class="col-md-1 col-2 d-flex justify-content-center align-items-center">
-        <svg width="19" height="25" viewBox="0 0 19 30" fill="none"
-            xmlns="http://www.w3.org/2000/svg" onclick="history.back();">
-            <path d="M15.8521 29.4999V29.4998L15.8461 29.4999C15.4986 29.5008 15.1579 29.4401 14.85 29.3248C14.5423 29.2096 14.2804 29.0449 14.0792 28.8493C14.079 28.8491 14.0788 28.8489 14.0786 28.8487L0.967624 15.9941L0.967643 15.9941L0.963878 15.9905C0.650299 15.6894 0.5 15.3343 0.5 14.9906C0.5 14.6472 0.649923 14.2926 0.962699 13.9918C0.963091 13.9914 0.963484 13.991 0.963877 13.9906L14.5353 1.13706L14.5357 1.13662C14.9016 0.789171 15.4498 0.552772 16.0686 0.507748C16.6868 0.462759 17.2905 0.61538 17.745 0.913564L18.0187 0.496429L17.745 0.913565C18.198 1.21074 18.4458 1.61149 18.4919 2.00639C18.5375 2.39703 18.3896 2.81035 18.0283 3.15365C18.0282 3.15379 18.0281 3.15392 18.0279 3.15406L5.89347 14.6381L5.51625 14.9951L5.88733 15.3585L17.6152 26.8431L17.6151 26.8432L17.6211 26.8489C17.8827 27.0967 18.0334 27.383 18.0789 27.6683C18.1242 27.9519 18.0677 28.2455 17.9025 28.5196C17.7357 28.7963 17.461 29.0466 17.0949 29.2269C16.7289 29.407 16.2972 29.504 15.8521 29.4999Z"
-                fill="Black" />
-        </svg>
-    </div>
+     <!-- Back Button -->
+     <div class="col-md-1 col-2 d-flex justify-content-center align-items-center">
+      <svg width="19" height="25" viewBox="0 0 19 30" fill="none"
+          xmlns="http://www.w3.org/2000/svg" onclick="history.back();" >
+          <path d="M15.8521 29.4999V29.4998L15.8461 29.4999C15.4986 29.5008 15.1579 29.4401 14.85 29.3248C14.5423 29.2096 14.2804 29.0449 14.0792 28.8493C14.079 28.8491 14.0788 28.8489 14.0786 28.8487L0.967624 15.9941L0.967643 15.9941L0.963878 15.9905C0.650299 15.6894 0.5 15.3343 0.5 14.9906C0.5 14.6472 0.649923 14.2926 0.962699 13.9918C0.963091 13.9914 0.963484 13.991 0.963877 13.9906L14.5353 1.13706L14.5357 1.13662C14.9016 0.789171 15.4498 0.552772 16.0686 0.507748C16.6868 0.462759 17.2905 0.61538 17.745 0.913564L18.0187 0.496429L17.745 0.913565C18.198 1.21074 18.4458 1.61149 18.4919 2.00639C18.5375 2.39703 18.3896 2.81035 18.0283 3.15365C18.0282 3.15379 18.0281 3.15392 18.0279 3.15406L5.89347 14.6381L5.51625 14.9951L5.88733 15.3585L17.6152 26.8431L17.6151 26.8432L17.6211 26.8489C17.8827 27.0967 18.0334 27.383 18.0789 27.6683C18.1242 27.9519 18.0677 28.2455 17.9025 28.5196C17.7357 28.7963 17.461 29.0466 17.0949 29.2269C16.7289 29.407 16.2972 29.504 15.8521 29.4999Z"
+              fill="Black" />
+      </svg>
+  </div>
 
       <section role="main" class="ui-content">
         <h2 class="content-section-title">Purchase History</h2>
-        <!-- <a
-          href="#popupRate"
-          data-rel="popup"
-          data-position-to="window"
-          class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"
-          data-transition="pop"
-          >Sign in</a
-        >
-        <div
-          data-role="popup"
-          id="popupRate"
-          data-theme="a"
-          data-overlay-theme="b"
-          class="ui-corner-all"
-        >
-          <form>
-            <div style="padding: 10px 20px">
-              <h3>Ratings</h3>
-            </div>
-          </form>
-        </div> -->
         <div id="purchase-container"></div>
       </section>
 
