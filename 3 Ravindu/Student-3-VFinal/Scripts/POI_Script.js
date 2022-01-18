@@ -5,7 +5,7 @@ import {
 } from "./Rating_Script.js";
 
 const POI_PRODUCT_ID = localStorage.getItem("poi-id"); //id of currently opened POI's product
-var _allProducts;//contains the list of all products in the store with their respective details
+var _allProducts; //contains the list of all products in the store with their respective details
 
 var xmlhttp = new XMLHttpRequest();
 var url = "Data/products.json";
@@ -67,6 +67,48 @@ function displayProductData() {
   document.getElementById("product-info").innerHTML = productInfo;
 }
 
+function displayProductImages() {
+  let currentPoiProduct = getCurrentPoiProduct();
+  let productImgs = `
+  <div id="gallery-main">
+  <img
+    id="gallery-main-img"
+    src=${currentPoiProduct.img1}
+    style="width: 22em"
+    alt=""
+  />
+  </div>
+  <div id="gallery-subs">
+    <div>
+      <img
+        class="gallery-sub-img"
+        src=${currentPoiProduct.img1}
+        alt=""
+        onclick="changeGalleryMainImg(0)"
+      />
+    </div>
+    <div>
+      <img
+        class="gallery-sub-img"
+        src=${currentPoiProduct.img2}
+        alt=""
+        onclick="changeGalleryMainImg(1)"
+      />
+    </div>
+    <div>
+      <img
+        class="gallery-sub-img"
+        src=${currentPoiProduct.img3}
+        alt=""
+        onclick="changeGalleryMainImg(2)"
+      />
+    </div>
+  </div>
+  `;
+
+  document.getElementById("product-img-gallery").innerHTML = productImgs;
+}
+
 function loadAndDispalyProductRatings() {
   fetch("Data/ratings.json")
     .then((res) => res.json())
@@ -77,7 +119,9 @@ function loadAndDispalyProductRatings() {
       data.forEach((r) => {
         if (r.productId == POI_PRODUCT_ID) {
           outputRatingStars += `
-          <p id="ratingOutOfFive">${calculateProductRating(POI_PRODUCT_ID)}<span> out of</span> 5</p>
+          <p id="ratingOutOfFive">${calculateProductRating(
+            POI_PRODUCT_ID
+          )}<span> out of</span> 5</p>
           <p id="starsOutOfFive">${displayStars(POI_PRODUCT_ID)}<span>${
             r.total
           } Reviews</span></p>
@@ -123,7 +167,11 @@ function getProductCard(id) {
             <div class="card" style="flex:1">
             <img src=${product.img1} style="width:13em" alt="">
             <div>
-              <h5 class="product-card-name"><a href="POI-IPad-Port-${product.id}.html" target="_blank" style="color:black;">${product.name}</a></h5>
+              <h5 class="product-card-name"><a href="POI-IPad-Port-${
+                product.id
+              }.html" target="_blank" style="color:black;">${
+        product.name
+      }</a></h5>
               <h6>
                 <span>${product.category}</span>
                 <span style="padding-left:6.5em;"><i class='fa fa-star checked' aria-hidden='true'></i>${calculateProductRating(
@@ -174,6 +222,7 @@ $(document).ready(function () {
       var allProducts = JSON.parse(this.responseText);
       _allProducts = allProducts;
       displayProductData();
+      displayProductImages();
       loadAndDispalyProductRatings();
       displaySimilarProducts();
       loadAndDispalyProductComments();
