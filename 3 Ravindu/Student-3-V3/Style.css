@@ -96,3 +96,21 @@ margin-bottom: 0.2em;
 #starsOutOfFive>span{
 margin-left: 0.5em;
 }
+.feedback-popup{
+  width: 564px;
+  padding: 3em 2em;
+  height: auto;
+  background: #FFFFFF;
+  border-radius: 15px;
+  text-align: center;
+}
+.fa-check-circle{
+  color: #23C016;
+  font-size: 5em;
+}
+#fav-icon{
+  color: red;
+  font-size: 1.5em;
+  margin-right: 0.5em;
+  display: none;
+}

@@ -41,7 +41,6 @@ export function getCurrentPoiRatings(productId) {
   return currentPoiRating;
 }
 
-//REMEMBER:should add similar products products.json
 export function calculateRating(obj) {
   let totalStarsValue =
     obj.five_stars * 5 +
@@ -101,6 +100,3 @@ export function displayBars(row, barStars, totalStars) {
   return output;
 }
 
-export function getEachProductRating(){
-  var product 
-}

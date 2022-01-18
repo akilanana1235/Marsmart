@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marsmart - Nesquick Cereal</title>
+    <!--JQuery Mobile Theme-->
+    <link rel="stylesheet" href="assets/themes/cw-theme.css" />
+    <link rel="stylesheet" href="assets/themes/jquery.mobile.icons.min.css" />
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <!--Icons-->
+    <link
+      rel="stylesheet"
+      href="assets/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!--JQuery Mobile-->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--External Style & script-->
+    <link rel="stylesheet" href="Style.css" />
+    <link rel="stylesheet" href="POI-IPad-Port.css" />
+    <script type="module" src="POI_Script.js"></script>
+  </head>
+
+  <body>
+    <div data-role="page" data-theme="c">
+      <section data-role="header" data-position="fixed">
+        <div id="nav-content">
+          <i class="fa fa-align-justify" aria-hidden="true" style="flex: 1"></i>
+          <div id="logo" style="flex: 3">
+            <img
+              src="assets/images/logo-transparent.png"
+              style="width: 14em"
+              alt=""
+            />
+          </div>
+          <!--searchbar-->
+          <form style="flex: 3; padding: 0.5em">
+            <input type="search" name="search-1" id="search-1" value="" />
+          </form>
+          <div style="flex: 2">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+          </div>
+        </div>
+      </section>
+      <div class="breadCrum">
+        <p>Home > <span style="color: #FF2525;">Product</span> </p>
+      </div>
+
+      <section role="main" class="ui-content">
+
+        <div class="card" id="product-hero">
+          <div id="product-content">
+            <article id="product-img-gallery">
+              <div id="gallery-main">
+                <img
+                  id="gallery-main-img"
+                  src="assets/images/nesquick.png"
+                  style="width: 22em"
+                  alt=""
+                />
+              </div>
+              <div id="gallery-subs">
+                <div>
+                  <img
+                    class="gallery-sub-img"
+                    src="assets/images/nesquick.PNG"
+                    alt=""
+                    onclick="changeGalleryMainImg(0)"
+                  />
+                </div>
+                <div>
+                  <img
+                    class="gallery-sub-img"
+                    src="assets/images/nesquick-side.PNG"
+                    alt=""
+                    onclick="changeGalleryMainImg(1)"
+                  />
+                </div>
+                <div>
+                  <img
+                    class="gallery-sub-img"
+                    src="assets/images/nesquick-back.PNG"
+                    alt=""
+                    onclick="changeGalleryMainImg(2)"
+                  />
+                </div>
+              </div>
+            </article>
+            <article id="product-info"><!--showing product's json data--></article>
+            
+          </div>
+
+          <div id="addToCart-area">
+            <div id="change-qty-ctrl">
+              <button class="ui-btn ui-btn-a ui-btn-inline"><span><i class="fa fa-plus" aria-hidden="true"></i></span></button>
+              <span id="addToCart-qty">0</span>
+              <button class="ui-btn ui-btn-a ui-btn-inline" style="margin: 0%;"><span><i class="fa fa-minus" aria-hidden="true"></i></span></button>
+            </div>  
+            <button class="ui-btn ui-btn-d ui-btn-inline" id="addToCart-click">Add to Cart</button> 
+          </div>
+        </div>
+
+      </section>
+
+      <section class="full-white-bg">
+        <h2 class="content-section-title">Customer Reviews and Ratings</h2>
+        <article id="ratings-container">
+          <div id="rating-numeric"></div>
+          <div id="rating-bars"></div>
+        </article>
+        <h4><b>Comments</b></h4>
+        <article id="comments-container">
+        <!--Showing top comments of current POI-->     
+        </article>
+        <h2 class="content-section-title">Similar Products</h2>
+        <section id="similar-products-container">
+        <!--Showing similar products of current POI-->     
+        </section>
+      </section>
+
+      <section data-role="footer" data-theme="b">
+        <div class="footer-content">
+          <div style="flex:1;">
+            <h2><b>Get in touch</b></h2>
+            <p><i class="fa fa-phone" aria-hidden="true"></i> 1-800-367-2884</p>
+            <p><i class="fa fa-envelope" aria-hidden="true"></i> info@marsmart.com</p>
+          </div>
+          <div style="flex:2; text-align: right;">
+            <h1>
+              <i class="fa fa-facebook-square" aria-hidden="true"></i>
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </h1>
+            <h2>
+              <b>marsmart</b>
+              <span style="font-size: smaller;"><i class="fa fa-copyright" aria-hidden="true"></i>
+                all rights reserved</span>
+            </h2>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      $(document).ready(function () {
+        localStorage.setItem("poi-id", 1);
+      });
+
+      function changeGalleryMainImg(i){
+        subImages=document.getElementsByClassName("gallery-sub-img");
+        document.getElementById("gallery-main-img").src=subImages[i].src;
+      }
+
+      function handleClick(){
+        console.log("clicked me")
+      }
+    </script>
+  </body>
+</html>
