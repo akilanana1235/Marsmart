@@ -123,7 +123,7 @@ function getProductCard(id) {
     if (product.id == id) {
       outputProductCard += `
             <div class="card" style="flex:1">
-            <img src=${product.img1} style="width:13em" alt="">
+            <img src=${product.img1} style="width:13em"  alt="">
             <div>
               <h5 class="product-card-name">${product.name}</h5>
               <h6>
