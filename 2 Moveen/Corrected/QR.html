@@ -13,11 +13,12 @@
     <link rel="stylesheet" type="text/css" href="Stylesheets/NavBar.css">
     <script type="text/javascript" src="Scripts/header-iphone.js"></script>
     <script src="Menu.js"></script>
-    <link rel="stylesheet" href="Style.css" />
+    <link rel="stylesheet" href="Stylesheets/Style.css" />
     <script type="module" src="POI_Script.js"></script>
     <link rel="stylesheet" href="POI-IPad-Port.css" />
     <script src="CommentSection.js"></script>
-    <script src="html5-qrcode.min.js"></script>
+    <script src="Scripts/html5-qrcode.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="Icons/flavicon.png" />
 <style>
   .result{
     background-color: rgb(0, 0, 0);
@@ -26,7 +27,14 @@
   }
   .row{
     display:flex;
+
   }
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 </style>
 
     
@@ -42,7 +50,8 @@
 
 </head>
 <body>
-    <div data-role="header">
+      <!-- Left Nav Bar -->
+      <div data-role="header">
         <div data-role="navbar">
             <div class="ui-grid-b">
                 <div class="ui-block-a">
@@ -55,7 +64,7 @@
                         <a id="item-list4">&nbsp; &nbsp; &nbsp; Health and Beauty</a>
                         <a id="item-list5">&nbsp; &nbsp; &nbsp; Meats and Seafood</a>
                         <a id="item-list6">&nbsp; &nbsp; &nbsp; Spirits and Wines</a>
-                        <a id="item-heading"> About Us</a>
+                        <a id="item-heading" onclick="window.location.href='About.html'"> About Us</a>
                         <a id="item-heading"> Loyalty Hunter</a>
                         <a id="item-heading"> Contact Us</a>
                        
@@ -67,8 +76,8 @@
                 </div>
                 <div class="ui-block-c">
                     <div class="header-right-wrapper">
-                        <img id="cart" src="Icons/cart.jpeg">
-                        <!-- <img id="profile-image" src="Icons/profile-image.png"> -->
+                        <img id="cart" src="Icons/cart.jpeg" onclick="window.location.href='Cart.html'">
+                        <!-- Right Nav Bar -->
                         <span class="dropdown">
                             <a class="my-drop dropdown-toggle" href="#" role="button"
                                 id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
@@ -88,7 +97,7 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 
     <div class="col-md-1 col-2 d-flex justify-content-center align-items-center">
         <svg width="19" height="25" viewBox="0 0 19 30" fill="none"
@@ -98,18 +107,27 @@
         </svg>
     </div>
 
-    <section style="padding-top: 3em; padding-bottom: 3em; padding-left: 2em;"> 
-        <h3>Share Product QR code and Get a 5% Off </h3>
+    <section style="padding-top: 3em; padding-bottom: 3em; padding-left: 2em; "> 
+        <h3 style="text-align: center; padding-bottom: 1em;">Share Product QR code and Get a 5% Off </h3>
         <div class="row">
         <div class="col">
-          <div style="width:500px;" id="reader"></div>
+          <div style="width:500px;"id="reader"></div>
         </div>
-        <div class="col" style="padding:30px;">
-          <h4>SCAN RESULT</h4>
+        <div class="col" style="padding:3em;">
+          <h4 style="padding-bottom: 2em;">SCAN RESULT</h4>
           <div id="result">Result Here</div>
         </div>
       </div>
       </section>
+      <!-- QR code -->
+      <section style="align-content: center;">
+        <h3 style="padding-bottom: 3em;text-align: center;">Share this QR code With your Friend And Earn 100 Loyalty Points</h3>
+        <div class="center">
+        <img src="Images/QR Image.png" style="width: 25em; height: 30em; padding-bottom:10px" class="center" alt="">
+        </div>
+      </section>
+
+     
 
     <section data-role="footer" data-theme="b">
         <div class="footer-content">
