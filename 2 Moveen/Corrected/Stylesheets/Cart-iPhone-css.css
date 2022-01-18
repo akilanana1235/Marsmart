@@ -1,0 +1,760 @@
+.header{
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #15317A;
+}
+#select-txt{
+  padding-left: 8px;
+  margin-left: 36px;
+  font-family: "Century Gothic";
+  font-size: 14px;
+}
+
+#delete-txt{
+  padding: 6px;
+  margin-left: 0px;
+  font-family: "Century Gothic";
+  font-size: 14px;
+
+}
+
+#checkbox-mini-0{
+  margin-top: -2px;
+  padding-right: 61px;
+}
+
+#delete-icon{
+  margin-top: 0px;
+  margin-left: 76px;
+}
+
+#checkbox-select-all{
+  margin-top: 30px;
+}
+
+.left-wrapper{
+  width: 40px !important;
+}
+
+.card{
+    margin: 20px 0px 10px 0px;
+    border-radius: 10px;
+    background-color: white;
+    height: 150px;
+}
+
+.heart-wrapper{
+    text-align: left;
+    padding: 2px 0 0 10px;
+}
+
+#heart{
+    width: 20px;
+    margin-top: 5px;
+}
+
+#check{
+    margin-left: -139px;
+    padding-bottom: 58px;
+}
+
+.card-content{
+    padding: 5px 20px 5px 20px;
+}
+
+#product-image{
+    width: 100px;
+}
+
+#nutella{
+    margin-left: -30px;
+    margin-left: -15px;
+    width: 115px;
+}
+
+.middle-wrapper{
+    width: 100px !important;
+}
+
+.right-wrapper{
+    width: 205px !important;
+    margin-left: -15px;
+    padding: 10px 0 10px 15px;
+}
+
+.producttitle{
+    font-family: "Century Gothic";
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.price{
+    font-family: "Century Gothic";
+    color: #FF2525;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.rating1{
+    /* margin-left: 30px; */
+    float:right;
+}
+
+#rating-star1{
+    width: 15px;
+}
+
+#minus{
+  width: 20px;
+  padding: 0px;
+  border: 1px solid #CCCCCC;
+  background-color: white;
+  background: #FFFFFF;
+  border: 0.508571px solid rgba(0, 0, 0, 0.24);
+  box-sizing: border-box;
+  border-radius: 7px;
+}
+
+#plus{
+  width: 20px;
+  padding: 0px;
+  border: 1px solid #CCCCCC;
+  background-color: white;
+  background: #FFFFFF;
+  border: 0.508571px solid rgba(0, 0, 0, 0.24);
+  box-sizing: border-box;
+  border-radius: 7px;
+  margin-left: -2px;
+}
+
+.ui-input-text{
+    border-width: 0 !important;
+    border-style: none;
+    margin: 0.58em 0;
+}
+
+.ui-input-text input{
+    text-align: right !important;
+}
+
+#quantity{
+  width: 20px;
+  border: 1px solid #CCCCCC;
+  border-radius: 0;
+  background-color: white;
+  text-align: center !important;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  padding: 0px !important;
+  min-height: 0em;
+  border: none;
+}
+
+.quantity1{
+    width: 100px;
+    margin-left: -5px;
+    /* text-align: center; */
+    /* display: inline; */
+}
+
+.add-to-cart{
+    text-align: center;
+}
+
+#add-to-cart1{
+    background-color: #FF2525;
+      display: inline-block;
+      border-radius: 2.67px;
+      width: 167px;
+      font-family: "Century Gothic";
+      color: white;
+      font-size: 12px;
+      height: 35px;
+      padding-top: 10px;
+      border: none !important;
+      text-shadow: none !important;
+      font-weight: bold;
+      margin-left: 15px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+}
+
+#BuyNow1{
+      background-color: #15317A;
+      display: inline-block;
+      border-radius: 2.67px;
+      width: 96px;
+      color: white;
+      font-size: 12px;
+      border: none !important;
+      text-shadow: none !important;
+      font-weight: 400;
+      margin-left: 9px;
+}
+
+#share-icon{
+  margin-top: 9px;
+}
+
+.hr1{
+
+  border-top: 1px solid #A1A1A1;
+
+  }
+
+.subtot{
+  margin-top: 10px;
+  margin-left: 20px;
+  color: #A1A1A1;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.subprice{
+  margin-left: 195px;
+}
+
+.subtot1{
+  margin-top: 1px;
+  margin-left: 20px;
+  color: #A1A1A1;
+  font-family: "Century Gothic";
+  font-size: 14px;
+}
+
+.subprice1{
+  margin-left: 133px;
+}
+
+.subtot2{
+  margin-top: 1px;
+  margin-left: 22px;
+  color: #A1A1A1;
+  font-family: "Century Gothic";
+  font-size: 14px;
+}
+
+.subprice2{
+  margin-left: 134px;
+}
+
+.subtot3{
+  margin-top: 42px;
+  margin-left: 20px;
+  color: #0F0E0E;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.subprice3{
+  margin-left: 158px;
+  color: #D62828;
+}
+.open>.dropdown-menu-profile {
+    display: block;
+    position: fixed;
+}
+
+.dropdown-menu-profile {
+    display: none;
+    right: 40px;
+    width: 150px;
+    height: 137px;
+    z-index: 1000000000000000000000;
+    background: white;
+    margin-top: 10px;
+}
+
+.dropdown-item {
+    border-bottom: 1px solid gray;
+    border-width: 0;
+    padding: 8px 18px;
+    background-color: white !important;
+    width: 150px;
+    font-family: "Century Gothic";
+    font-weight: 100 !important;
+    color: #4B4B4B !important;
+    font-size: 16px !important;
+    text-align: left;
+}
+
+.my-drop {
+    background-color: white !important;
+    border-width: 0;
+    padding: 0 0em;
+    margin: 0em 0;
+    -webkit-box-shadow: none !important;
+}
+
+
+.ui-popup-container {    
+  top: 320px !important;
+
+  left: 16px !important;
+}
+
+#sharepopup {
+  width: 500px;
+  height: 225px;
+  background-color: white;
+  border-color: white;
+}
+
+
+.share-title {
+  font-family: "Century Gothic";
+  color: #0D0C0C;
+  font-size: 18px;
+  text-align: center;
+  text-shadow: none;
+
+  font-weight: bold;
+}
+
+.share-subtitle {
+  font-family: "Century Gothic";
+  color: #A1A1A1;
+  font-size: 15px;
+  text-align: center;
+  text-shadow: none;
+}
+
+.share-content {
+  padding: 15px 40px;
+}
+
+#social-media-share {
+  margin-right: 25px;
+  width: 60px;
+}
+
+#submit-mail2 {
+  background-color: #FF2525;
+  display: inline-block;
+  border-radius: 2.6px;
+  position: relative;
+  color: white;
+  width: 96px;
+  font-size: 12px;
+  border: none !important;
+  text-shadow: none !important;
+  font-weight: 400;
+}
+
+#add-to-cart2{
+  background-color: #15317A;
+  display: inline-block;
+  border-radius: 2.67px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-size: 12px;
+  padding-top: 10px;
+  border: none !important;
+  text-shadow: none !important;
+  font-weight: bold;
+  margin-left: 9px;
+  width: 167px;
+}
+
+
+
+#CheckOutPopUp{
+  width: 344px;
+    margin-left: 0%;
+    margin-top: 0px;
+    height: 300px;
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+
+#checkOutPopUpicon{
+  width: 20%;
+  color: #D62828;
+  margin-left: 40%;
+  margin-top: 0px;
+
+}
+
+#checkOutPopUpiconCaution{
+  /* font-size: 120px; */
+  width: 20%;
+  color: #FDC82C;
+  margin-top: -10px;
+  margin-left: 40%;
+  /* margin-top: 60px; */
+  visibility: hidden;
+}
+
+
+#popUpHeader{
+  font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 0px;
+margin-top: 20px;
+align-items: center;
+text-align: center;
+
+}
+
+#popupContent{
+  font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 27px;
+align-items: center;
+text-align: center;
+color: #000000;
+
+margin-top: 20px;
+
+}
+
+.understood{
+  float: left;
+  width: 40%;
+  height: 50px;
+  margin-left: -18%;
+  margin-top: 24px;
+  background: #15317A;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2.67px;
+  margin-top: 20px;
+  }
+  
+  .understood p{
+  
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  margin-top: 16px;
+  color: #FFFFFF;
+  
+  }
+
+  .checkoutPopUpCancelButton{
+      float: left;
+  width: 40%;
+  height: 50px;
+  margin-left: 8%;
+  margin-top: 24px;
+  background: #FF2525;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2.67px;
+  margin-top: 20px;
+  visibility: hidden;
+  }
+
+  .checkoutPopUpCancelButton p{
+         
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1  6px;
+  text-align: center;
+  margin-top: 16px;
+  color: #FFFFFF;
+  }
+
+  .popUpFooter{
+      width: 100%;
+  }
+
+
+
+  #DeletePopUp{
+    width: 344px;
+    margin-left: 0%;
+    margin-top: -250px;
+    height: 300px;
+    background: #FFFFFF;
+    border-radius: 15px;
+  }
+
+  #deleteCaution{
+width: 20%;
+  color: #FDC82C;
+  margin-left: 40%;
+  margin-top: 40px;
+  }
+
+  #popUpHeaderDelete{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    align-items: center;
+    text-align: center;
+
+  }
+  #popupContentDelete{
+
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 27px;
+align-items: center;
+text-align: center;
+color: #000000;
+
+margin-top: 10px;
+  }
+
+  #DeletePopUpCancelButton{
+      float: left;
+      width: 40%;
+      height: 50px;
+      margin-left: 8%;
+      margin-top: 24px;
+      background: #FF2525;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 2.67px;
+      margin-top: 10px;
+  }
+
+  #DeletePopUpCancelButton p{
+      font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  margin-top: 16px;
+  color: #FFFFFF;
+  }
+
+  #DeletePopUpButton{
+      float: left;
+      width: 40%;
+      height: 50px;
+      margin-left: 5%;
+      margin-top: 24px;
+      background: #15317A;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 2.67px;
+      margin-top: 10px;
+  }
+
+  #DeletePopUpButton p{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 16px;
+      text-align: center;
+      margin-top: 16px;
+      color: #FFFFFF;
+  }
+
+
+  #RedeemLoyaltyPopUp{
+    width: 360px;
+      margin-left: 0%;
+      margin-top: 50px;
+      height: 300px;
+      background: #FFFFFF;
+      border-radius: 15px;
+      /* visibility: hidden; */
+  }
+
+  .loyaltyPopUpHeader{
+      width: 100%;
+      float: left;
+      margin-top: 0px;
+  }
+  .loyaltyIconPop{
+      width:40%;
+      float: left;
+      
+  }
+
+  .loyaltyIconPopUp{
+      width: 20%;
+      height: 40px;
+      margin-left: 28%;
+      margin-top: 20px;
+      
+  }
+
+  .loyaltyHeadText{
+      width: 60%;
+      float: left;
+      height: 60px;
+
+  }
+
+  .loyaltyHeadText p{
+      font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 36px;
+margin-top: 22px;
+color: #000000;
+margin-left: -25%;
+  }
+
+  .loyaltyContent{
+      width: 100%;
+      float: left;
+  }
+
+  .loyaltyContent p{
+      font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 27px;
+align-items: center;
+text-align: center;
+margin-top: 30px;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+color: #000000;
+
+  }
+
+.loyaltyBoxesContainer{
+  width: 100%;
+  float: left;
+  margin-top: 20px;
+}   
+
+.loyaltyBoxe1{
+  background: #8FF7A7;
+  border-radius: 15px;
+  height: 40px;
+  width: 20%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));   
+  float: left;
+  margin-left: 14%;
+}
+
+.loyaltyBoxImg{
+   width: 50%;
+   float: left;
+}
+.loyaltyBoxImg img{
+   width: 100%;
+   margin-left: 18%;
+}
+.loyaltyPointVal{
+  width: 50%;
+  float: left;
+}
+
+.loyaltyPointVal p {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  margin-left: 10%;
+  margin-top: 10px;
+  color: #3C2727;
+}
+
+.loyaltyBoxe2{
+  background: #F5F78F;
+border-radius: 15px;
+  height: 40px;
+  width: 20%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  float: left;
+  margin-left: 6%;
+}
+
+.loyaltyBoxe3{
+  background: #8F99F7;
+  border-radius: 15px;
+  height: 40px;
+  width: 20%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  float: left;
+  margin-left: 6%;
+}
+
+
+.loyaltypopUpFooter{
+   width: 100%;
+   float: left;
+}
+
+.loyaltyNotInterested{
+  width: 29%;
+height: 34px;
+border: 1px solid rgba(120, 150, 255, 0.94);
+box-sizing: border-box;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 7px;
+margin-left: 34%;
+margin-top: 35px;
+}
+
+.loyaltyNotInterested p{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 27px;
+  align-items: center;
+  text-align: center;
+  margin-top: 2px;
+  color: #15317A;
+}
+
+
+
+
+
+
+@media only screen
+    and (device-width : 375px)
+    and (device-height : 812px)
+    and (-webkit-device-pixel-ratio : 3)
+    and (orientation : portrait)
+    {
+
+    }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+
+    #add-to-cart1 {
+      background-color: #F77F00;
+      display: inline-block;
+      border-radius: 50px;
+      width: 167px;
+      font-family: "Century Gothic";
+      color: white;
+      font-size: 12px;
+      height: 35px;
+      padding: 1em 1em;
+      border: none !important;
+      text-shadow: none !important;
+      font-weight: bold;
+      margin-left: 315px;
+  }
+
+  .card {
+    margin-left: 100px;
+    margin-top: 30px;
+    border-radius: 10px;
+    background-color: white;
+    height: 150px;
+    width: 535px;
+}
+}
+#share-2{
+  width: 14px;
+  /* margin-left: 25px; */
+  float: right;
+}
