@@ -1,92 +1,109 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>Marsmart - POI</title>
-
-   
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--Icons-->
-    <link
-    rel="stylesheet"
-    href="assets/font-awesome-4.7.0/css/font-awesome.min.css"
-  />
-   <link rel="stylesheet" href="assets/themes/cw-theme.css" />
-   <link rel="stylesheet" href="assets/themes/jquery.mobile.icons.min.css" />
-   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-   <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-   <script type="text/javascript" src="Menu.js"></script>
-   <link rel="stylesheet" type="text/css" href="Stylesheets/NavBar.css">
-   <script type="text/javascript" src="Scripts/header-iphone.js"></script>
-   <script src="Menu.js"></script>
-   <link rel="stylesheet" href="Style.css" />
-   <script type="module" src="POI_Script.js"></script>
-   <link rel="stylesheet" href="POI-IPad-Port.css" />
-   <script src="CommentSection.js"></script>
-   <script src="POI_Script.js"></script>
-   
-
-   <!-- Latest compiled and minified CSS -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-
-   <!-- jQuery library -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-   <!-- Latest compiled JavaScript -->
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-</head>
+  <head>
+    <style>
+      .Seemore {
+        padding-left: em;
+        display: inline;
+        size: 10px;
+      }
+      .Seemore1 {
+        padding-left: 6em;
+        display: inline;
+      }
+      .Seemore2 {
+        padding-left: 8.5em;
+        display: inline;
+      }
+    </style>
+  
+      <title>Marsmart - POI</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+       <!--Icons-->
+        <link
+       rel="stylesheet"
+       href="assets/font-awesome-4.7.0/css/font-awesome.min.css"
+     /> 
+  
+      <link rel="stylesheet" href="assets/themes/cw-theme.css" />
+      <link rel="stylesheet" href="assets/themes/jquery.mobile.icons.min.css" />
+      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+      <script type="text/javascript" src="Scripts/Menu.js"></script>
+      <link rel="stylesheet" type="text/css" href="Stylesheets/NavBar.css">
+      <link rel="stylesheet" type="text/css" href="Stylesheets/Footer.css">
+      <script type="text/javascript" src="Scripts/header-iphone.js"></script>
+      <link rel="stylesheet" href="Stylesheets/Style.css" />
+      <script type="module" src="POI_Script.js"></script>
+      <link rel="stylesheet" href="Stylesheets/POI.css" />
+      <script src="Scripts/CommentSection.js"></script>
+      <link rel="icon" type="image/x-icon" href="Icons/flavicon.png" />
+  
+  
+      
+  
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+  </head>
 <body>
  <!-- Left Nav Bar -->
-   <div data-role="header">
-       <div data-role="navbar">
-           <div class="ui-grid-b">
-               <div class="ui-block-a">
-                   <div id="mySidenav" class="sidenav">
-                       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                       <a disabled="disabled" class="item-heading">Categories</a>
-                       <a id="item-list1">&nbsp; &nbsp; &nbsp; Bread & Bakery</a>
-                       <a id="item-list2">&nbsp; &nbsp; &nbsp; Dairy</a>
-                       <a id="item-list3">&nbsp; &nbsp; &nbsp; Grocery</a>
-                       <a id="item-list4">&nbsp; &nbsp; &nbsp; Health and Beauty</a>
-                       <a id="item-list5">&nbsp; &nbsp; &nbsp; Meats and Seafood</a>
-                       <a id="item-list6">&nbsp; &nbsp; &nbsp; Spirits and Wines</a>
-                       <a id="item-heading" onclick="window.location.href='About.html'"> About Us</a>
-                       <a id="item-heading"> Loyalty Hunter</a>
-                       <a id="item-heading"> Contact Us</a>
-                      
-                   </div>
-                   <span onclick="openNav()"><img id="hamburger" src="Icons/Hamburger.jpeg"></span>
-               </div>
-               <div class="ui-block-b">
-                   <img id="logo" src="assets/images/logo-transparent.png">
-               </div>
-               <div class="ui-block-c">
-                   <div class="header-right-wrapper">
-                       <img id="cart" src="Icons/cart.jpeg">
-                       <!-- Right Nav Bar -->
-                       <span class="dropdown">
-                           <a class="my-drop dropdown-toggle" href="#" role="button"
-                               id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                               aria-expanded="false">
-                              <img id="profile-image" src="Icons/user.jpeg">
-                           <div class="dropdown-menu-profile" aria-labelledby="dropdownMenuLink">
-                               <a class="dropdown-item" id="dropdown-profile" >My Profile</a>
-                               <a class="dropdown-item" id="dropdown-fav" onclick="window.location.href='Purchase.html'" >Purchase</a>
-                               <a class="dropdown-item" id="dropdown-fav" >My Favourites</a>
-                               <a class="dropdown-item" id="dropdown-fav" >Loyalty</a>
-                               <a class="dropdown-item" id="dropdown-logout" >Logout</a>
-                           </div>
-                       </a>
-                          
-                       </span>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </div>
+    <!-- Left Nav Bar -->
+    <div data-role="header">
+      <div data-role="navbar">
+          <div class="ui-grid-b">
+              <div class="ui-block-a">
+                  <div id="mySidenav" class="sidenav">
+                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                      <a disabled="disabled" class="item-heading">Categories</a>
+                      <a id="item-list1">&nbsp; &nbsp; &nbsp; Bread & Bakery</a>
+                      <a id="item-list2">&nbsp; &nbsp; &nbsp; Dairy</a>
+                      <a id="item-list3">&nbsp; &nbsp; &nbsp; Grocery</a>
+                      <a id="item-list4">&nbsp; &nbsp; &nbsp; Health and Beauty</a>
+                      <a id="item-list5">&nbsp; &nbsp; &nbsp; Meats and Seafood</a>
+                      <a id="item-list6">&nbsp; &nbsp; &nbsp; Spirits and Wines</a>
+                      <a id="item-heading" onclick="window.location.href='About.html'"> About Us</a>
+                      <a id="item-heading"> Loyalty Hunter</a>
+                      <a id="item-heading"> Contact Us</a>
+                     
+                  </div>
+                  <span onclick="openNav()"><img id="hamburger" src="Icons/Hamburger.jpeg"></span>
+              </div>
+              <div class="ui-block-b">
+                  <img id="logo" src="assets/images/logo-transparent.png">
+              </div>
+              <div class="ui-block-c">
+                  <div class="header-right-wrapper">
+                      <img id="cart" src="Icons/cart.jpeg" onclick="window.location.href='Cart.html'">
+                      <!-- Right Nav Bar -->
+                      <span class="dropdown">
+                          <a class="my-drop dropdown-toggle" href="#" role="button"
+                              id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                              aria-expanded="false">
+                             <img id="profile-image" src="Icons/user.jpeg">
+                          <div class="dropdown-menu-profile" aria-labelledby="dropdownMenuLink">
+                              <a class="dropdown-item" id="dropdown-profile" >My Profile</a>
+                              <a class="dropdown-item" id="dropdown-fav" onclick="window.location.href='Purchase.html'" >Purchase</a>
+                              <a class="dropdown-item" id="dropdown-fav" >My Favourites</a>
+                              <a class="dropdown-item" id="dropdown-fav" >Loyalty</a>
+                              <a class="dropdown-item" id="dropdown-logout" >Logout</a>
+                          </div>
+                      </a>
+                         
+                      </span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 <!-- Back Button -->
    <div class="col-md-1 col-2 d-flex justify-content-center align-items-center">
      <svg width="19" height="25" viewBox="0 0 19 30" fill="none"
@@ -117,18 +134,18 @@
 
             </div>
         </div>
-        <!-- POI Button Area -->
-        <div id="addToCart-area">
-            <div id="change-qty-ctrl">
-              <button class="ui-btn ui-btn-a ui-btn-inline"><span><i class="fa fa-plus" aria-hidden="true"></i></span></button>
-              <span id="addToCart-qty">0</span>
-              <button class="ui-btn ui-btn-a ui-btn-inline" style="margin: 0%;"><span><i class="fa fa-plus" aria-hidden="true"></i></span></button>
-            </div>  
-            <button class="ui-btn ui-btn-d ui-btn-inline" id="addToCart-click">Add to Cart</button> 
-            <button class="ui-btn ui-btn-d ui-btn-inline" onclick="window.location.href='QR.html'">Get Promotion By QR</button> 
-          </div>
-        </div>
-    </section>
+       <!-- POI Button Area -->
+       <div id="addToCart-area">
+        <div id="change-qty-ctrl">
+          <button class="ui-btn ui-btn-a ui-btn-inline" style="font-size: 0px;"><span><i class="fa fa-minus" aria-hidden="true"></i></span></button>
+          <span id="addToCart-qty" style="font-size: 20px;">0</span>
+          <button class="ui-btn ui-btn-a ui-btn-inline" style="margin: 0px; font-size: 0px;"><span><i class="fa fa-plus" aria-hidden="true"></i></span></button>
+        </div>  
+        <button class="ui-btn ui-btn-d ui-btn-inline" id="addToCart-click">Add to Cart</button> 
+        <button class="ui-btn ui-btn-d ui-btn-inline" onclick="window.location.href='QR.html'">Get Promotion By QR</button> 
+      </div>
+    </div>
+</section>
 <!-- Customer Review Area -->
     <section class="full-white-bg">
         <h2 class="content-section-title">Customer Reviews and Ratings</h2>
@@ -165,11 +182,15 @@
         <section id="similar-products-container">
             
         </section>
-        <button class="ui-btn ui-btn-inline" style="padding-left: 1cm; background-color: white" onclick="window.location.href='NavBarnew.html'">See More</button> 
-        <button class="ui-btn ui-btn-inline" style="padding-left: 4.5cm; background-color: white"onclick="window.location.href='POI1.html'">See More</button> 
-        <button class="ui-btn ui-btn-inline" style="padding-left: 4.5cm; background-color: white" onclick="window.location.href='POI3.html'">See More</button> 
-
-
+        <div class="Seemore">
+          <button class="ui-btn ui-btn-inline" style=" background-color: white; width:10em;" onclick="window.location.href='POI1.html'" >See More</button> 
+          </div>
+          <div class="Seemore1">
+          <button class="ui-btn ui-btn-inline" style=" background-color: white; "onclick="window.location.href='POI1.html'">See More</button> 
+        </div>
+          <div class="Seemore2">
+          <button class="ui-btn ui-btn-inline" style=" background-color: white;" onclick="window.location.href='POI1.html'">See More</button> 
+        </div>
         
     </section>
 <!-- Footer -->
