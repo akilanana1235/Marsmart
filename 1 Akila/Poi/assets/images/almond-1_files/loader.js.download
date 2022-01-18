@@ -1,0 +1,576 @@
+;(function(){
+    var 
+      _flixLoader = {
+        mappingTable:{
+          'data-flix-distributor' : {'inpage':'','button':'d','value':null,'hotspot':'d'},
+          'data-flix-language' : {'inpage':'','button':'l','value':null,'hotspot':'l'},
+          'data-flix-mpn' : {'inpage':'mpn','button':'mpn','value':null,'hotspot':'mpn'},
+          'data-flix-ean' : {'inpage':'ean','button':'ean','value':null,'hotspot':'ean'},
+          'data-flix-url' : {'inpage':'url','button':'url','value':null, 'hotspot':'url'},
+          'data-flix-sku' : {'inpage':null,'button':'sku','value':null, 'hotspot':'sku'},
+          'data-flix-button' : {'inpage':null,'button':'dom','value':null, 'hotspot':null},
+          'data-flix-inpage' : {'inpage':null,'button':null,'value':null, 'hotspot':null},
+          'data-flix-button-image' : {'inpage':null,'button':'img','value':null, 'hotspot':null},
+          'data-flix-energylabel' : {'inpage':'energylabel','button':'energylabel','value':null, 'hotspot':null},
+          'data-flix-embed' : {'inpage':null,'button':'embed','value':null, 'hotspot':null},
+          'data-flix-brand' : {'inpage':'brand','button':'brand','value':null, 'hotspot':'brand'},
+          'data-flix-fallback-language' : {'inpage':'fl','button':'fl','value':null, 'hotspot':'fl'},
+          'data-flix-price' : {'inpage':null,'button':'p','value':null, 'hotspot':'p'},
+          'data-flix-hotspot': {'inpage': null, 'button': null, 'value': null, 'hotspot':'hotspot'},
+          'data-flix-autoload': {'inpage': null, 'button': null, 'value': null, 'hotspot':null},
+          'data-flix-mobilesite' : {'inpage':'ms','button':'ms','value':null, 'hotspot':null},
+          'data-flix-rec' : {'inpage':null,'button':null,'value':null, 'hotspot':null,'model':{"alternative":"m3","crossell":"m5","upsell":"m6"}}
+        },
+        instance:null,
+    ab: {"d":{"75":"1","78":"1","174":"1","178":"1","179":"1","184":"1","219":"1","228":"1","353":"1","620":"1","664":"1","859":"1","1324":"1","1764":"1","2300":"1","2754":"1","3922":"1","3924":"1","3926":"1","3986":"1","4124":"1","4274":"1","4344":"1","4870":"1","5293":"1","5375":"1","5759":"1","5779":"1","5780":"1","5828":"1","5849":"1","5886":"1","5950":"1","6050":"1","6130":"1","6452":"1","6453":"1","6509":"1","7137":"1","7434":"1","7435":"1","8636":"1","11100":"1","11395":"1","12699":"1","12718":"1","12726":"1","12782":"1","13055":"1","13101":"1","13326":"1","13870":"1","13991":"1","14139":"1","14364":"1","14481":"1","14585":"1","15301":"1","15325":"1","15627":"1","16129":"1","16130":"1","16342":"1","17381":"1","17409":"1","17416":"1","17760":"1"},"d_hotspot":{"795":"1","2190":"1","15274":"1","5759":"1","4124":"1","6465":"1"},"button":{"mpn":{},"ean":{}},"inpage":{"mpn":{"lego_60304":"1","17816551":"1","k1024163":"1","17817327":"1","lego_60289":"1","60287":"1","60282":"1","60292":"1","60290":"1","6327969":"1","k1024164":"1","undefined":"1","9002":"1","60277":"1","nh.qbzsa.001":"1","90nr05x1-m05120":"1","fx516pm-hn023t":"1","9s7-16r512-079":"1","fx516pr-hn033t":"1","90nr05x1-m02760":"1","fx516pm-hn024t":"1","9s716r512079":"1","90nr0724-m01260":"1","90nr05x3-m04260":"1","tuf516pr-ds76":"1","tuf516pmaz066":"1","nh.qbjaa.001":"1","nh.qameb.009":"1","nx.a34sa.004":"1","2h8u4pa":"1","13-ba1001ca":"1","rnx9305c01aus":"1","rnx9310c07aus":"1","82bh0002us":"1","ux325ea-es71-ca":"1","82bh002-8lm":"1","sf314-59-769r":"1","82bh003lsp":"1","3v272pa":"1","82bh009wcf":"1","14z90p-g.aa78b":"1","prestige 14 evo a11m-042ca":"1","nx.a5uaa.002":"1","2t0l7pa":"1","82bh001eau":"1","17z90p-k.aab8u1":"1","rni7300c03au":"1","82ev000hau":"1","ux363ea-hp132t":"1","82bh001gau":"1","13m-bd0033dx":"1","2h9n6pa":"1","ux371ea-hl259t":"1","16z90p-g.ad79b":"1","nx.a4kaa.001":"1","2t0m0pa":"1","16z90pkaas8u1":"1","nx.a5uaa.003":"1","sf514-55ta-74ec":"1","ux393ea-hk003t":"1","5bt-00012":"1","ux393ea-xb77t":"1","13-ba1076nr":"1","82bg001mau":"1","17z90p-g.aa79b":"1","16z90p-g.aa76b":"1","1104730392":"1","c1425418":"1","821242":"1","76389":"1","868765":"1","6332715":"1","lego_76191":"1","6332679":"1","6332701":"1","857708":"1","855718":"1","857729":"1","6288909":"1","lego_76389":"1","71360":"1","c1431009":"1","71738":"1","6328590":"1","76382":"1","ga00439-au":"1","0842776109637":"1","ga01586-au":"1","ga00781-au":"1","9eh01aa":"1","2601614":"1","xt2129-1":"1","xt2128-1":"1","xt2135-1":"1","xt2095-1":"1","xt2081-1":"1","31044696|31044697|motog30b|motog30p|xt2129-1":"1","5001110508|5001110509|motorola_167770|motorola_167771|motorola_31042432|motorola_31042433|xt2073-2":"1","xt2083-1":"1","xt2125-4":"1","pakl0003mx|pakl0005mx|pakl0009mx|xt2087-1":"1","xt-2133-1":"1","pals0000mx|pals0001mx|pals0008mx|pals0009mx|pals0012mx|pals0013mx|pals0014mx|pals0015mx|pals0025mx|p":"1","xt2087-1":"1","pam80012mx|pam80015mx|pam80016mx|pam80043mx|pam80044mx|pam80054mx|pam80055mx|xt2125-1|xt2125-4":"1","xt-2129-1":"1","fcs100x":"1","oled65c15la.api":"1","hw-t420/zf":"1","hw-a450":"1","za5t0302se":"1","za4g0035se":"1","mz-77q1t0bw":"1","fcs100n":"1","90lmgg301q022e1c-":"1","oled55c15la.api":"1","za5t0231se":"1","bunssdintcablata":"1","b30jf4e00":"1","32phs6605/12":"1","lg8806091154590":"1","7515020032":"1","eoc5h40x":"1","mz-v8p500bw":"1","vg248qe":"1","nz64n7777gk/e1":"1","za5v0280se":"1","hw-a450/zf":"1","929002240401":"1","929002468811":"1","929001975801":"1","929002269101":"1","929001180642":"1","929002398602":"1","915005872101":"1","915005913501":"1","929002216806":"1","929003017102":"1","929002994901":"1","929002489804":"1","929002289102":"1","929001953310":"1","929002289002":"1","915005761501":"1","7820330p7":"1","1745930p7":"1","915005641701":"1","929001260761":"1","1743530p7":"1","929002375901":"1","929002334904":"1","14755467":"1","xe350xba-k02it":"1","14655847":"1","17-by4062cl":"1","15-dw3058cl":"1","15-er0056cl":"1","17-by4059cl":"1","55020342":"1","i3501_i7t121tsmw10hs_521":"1","82h8003rau":"1","90nb0sg1-m17090":"1","90nb0tw1-m01070":"1","s533ea-sb71":"1","3s8u1ea":"1","3500-4814":"1","nx.a0mef.00m":"1","82ev000kau":"1","4a4s9pa":"1","55020340":"1","82fe00dxlm":"1","90nb0se4-m04640":"1","4a4s8pa":"1","90nb0ty1-m18730":"1","3s8s2ea":"1","a517-52-70k8":"1","82h8004fau":"1","3s8s1ea":"1","3500-4876":"1","90nb0sl2-m06930":"1","53011pwa":"1","90nb0sg1-m17100":"1","82h9003jrk":"1","2f9k1pa":"1","82h90094ru":"1","3500-4890":"1","90nx0441-m08210":"1","3500-5019":"1","nx.a27er.007":"1","1516527460":"1","2f9k5pa":"1","82h7004prk":"1","5410-0519":"1","491g6pa":"1","53011qqc":"1","82fg00velm":"1","9s7-155266-832":"1","53011tap":"1","90nb0sm1-m13100":"1","3500-4937":"1","2w8y3ea":"1","ux482eg-ka093t":"1","90nb0s01-m02310":"1","ux425ea-sh74":"1","a515-56t-55fb":"1","82hs0006us":"1","55020344":"1","i3501_i581t2562gsm10hs_521":"1","tp470ea-ec036t":"1","2h8u3pa":"1","82h10021au":"1","2746-21ct":"1","2745-21":"1","2746-20":"1","2745-20":"1","2962-20":"1","2540-20":"1","302b-21l":"1","2846-20":"1","2830-21hd":"1","3632-21":"1","2732-21hd":"1","2136-21":"1","2522-21xc":"1","2825-21ps":"1","2144-20":"1","2733-21":"1","48-11-1812":"1","0970-20":"1","2115-21":"1","2723-20":"1","48-22-8428":"1","2950-20":"1","48-22-8432":"1","2540-21":"1","2131-20":"1","2136-20":"1","2551-20":"1","303b-21xl":"1","2830-20":"1","2836-20":"1"},"ean":{"5702016889741":"1","5702016889772":"1","5702016911527":"1","5702016912197":"1","5702016912111":"1","5702016889727":"1","5702016911510":"1","5702016911558":"1","5702016912012":"1","5702016911541":"1","5702016911534":"1","4710886359548":"1","4711081156642":"1","4711081159230":"1","4711081065883":"1","4719072810016":"1","4711081064978":"1","4711081039198":"1","4711081178187":"1","4711081117926":"1","4710886474883":"1","3619999351504":"1","4711081151043":"1","4711081223795":"1","3619999390008":"1","3619999345282":"1","4710886388449":"1","4710886202011":"1","0195161480102":"1","0195348123648":"1","8806091345233":"1","0195235648520":"1","8806092616141":"1","0195161816796":"1","0195161880148":"1","0195235783030":"1","4718017923088":"1","0195161880155":"1","0195161481802":"1","4711081052609":"1","8806092282902":"1","8806091376183":"1","0195161816826":"1","4718017933407":"1","0889842729962":"1","8806091208781":"1","8806091359919":"1","5702016369878":"1","5702016616460":"1","5702016554205":"1","5702016617207":"1","5702016618334":"1","5702016469110":"1","5702016368260":"1","5702016913194":"1","5702016916102":"1","5702016912593":"1","5702016913583":"1","5702016618396":"1","5702016913576":"1","5702016912456":"1","5702016618792":"1","5702016889697":"1","5702016914498":"1","5702016890815":"1","5702016889239":"1","5702016912043":"1","5702016618426":"1","0842776106254":"1","0842776109637":"1","0193575006482":"1","0193575000947":"1","0193424632213":"1","0195908224396":"1","0194441901696":"1","0195908025689":"1","0195161213793":"1","0840023214387":"1","0840023212628":"1","0840023213151":"1","0840023208140":"1","0840023215513":"1","0840023215445":"1","0840023205057":"1","0840023204678":"1","0840023207839":"1","0840023211249":"1","0840023216572":"1","8016361932012":"1","8806091155115":"1","8806090330179":"1","8806092081703":"1","0194552945435":"1","0193386048367":"1","8806090396038":"1","8016361905030":"1","4716659325178":"1","8806091155795":"1","0194552945374":"1","6930265305487":"1","8718863023563":"1","8806091154590":"1","5944008922979":"1","7332543662357":"1","7332543731060":"1","8806090602542":"1","8806090295539":"1","3619999075776":"1","8801643204228":"1","0194552945404":"1","8718699689285":"1","8719514291515":"1","8718699625474":"1","8718696129555":"1","8718699703424":"1","8719514342620":"1","8719514274617":"1","8718696174579":"1","8718696175170":"1","8718699701352":"1","8719514318021":"1","8719514339965":"1","8719514328280":"1","8718699709853":"1","8719514340121":"1","8718699709839":"1","8718696171530":"1","8718696170731":"1","8718696174333":"1","8718696168721":"1","8718696511800":"1","8718696743171":"1","8718696170533":"1","8718696586297":"1","8718699770983":"1","8719514343320":"1","0195122853587":"1","0195122850593":"1","0195042496796":"1","4711081260950":"1","0196068963477":"1","0194632577853":"1","0194632577877":"1","4710886584032":"1","4710886567301":"1","0196188113189":"1","4710180877618":"1","4718017300575":"1","4711081261056":"1","4710886563600":"1","4711081053866":"1","4710180507508":"1","4710180904550":"1","4710886678823":"1","4710180934441":"1","4711081181163":"1","8806090711350":"1","4718017618281":"1","0195908063841":"1","4710180904567":"1","4710886548850":"1","4711081154600":"1","4711081165774":"1","4711081006909":"1","4711081286936":"1","0196068119973":"1","0196068337216":"1","7892509117128":"1","8806092282056":"1","0196068258863":"1","5397184534014":"1","0195477561571":"1","4711081158516":"1","0196068119942":"1","0195891728291":"1","0195477550278":"1","0196068964498":"1","0195161880131":"1","4711081452799":"1","4711081261339":"1","4710886677536":"1","0195235798782":"1","0196068465476":"1","7892509117111":"1","0196068465469":"1","4710886609971":"1","5397184614310":"1","5397184614433":"1","4710886436201":"1","0196068119959":"1","0195477561830":"1","5397184640616":"1","0195477955912":"1","0889842796063":"1","0195161407314":"1","0196068138820":"1","4711081045861":"1","6941487231614":"1","0195161407222":"1","0196068320812":"1","0195477335721":"1","4710886508427":"1","0195713015837":"1","0889842795165":"1","5397184640586":"1","5397184614464":"1","4710886508434":"1","4718017996556":"1","0196068963606":"1","4711081167228":"1","4711081053798":"1","7892509118415":"1","4711081397403":"1","4718017923064":"1","0195161480096":"1","0195477581111":"1"}},"hotspot":{"mpn":{"ga01586-no":"1","ga00781-es":"1","ga03164-gb":"1","ga01420-no":"1","ga02900-gb":"1","ga01420-es":"1","ga01586-es":"1","7128128":"1","kd802112":"1","rh6751":"1","7142760":"1","ow210130":"1","6115125":"1","cf9540":"1","ce901100":"1","rr7455":"1","7278978":"1","cf9620":"1","ry7777wh":"1","cv5830":"1","5758482":"1","ow2101":"1","7458502":"1","6721048":"1","7464780":"1","gc712d":"1","rr7675wh":"1","gc722d16":"1","7408850":"1","rh9490wo":"1","gc241d12":"1"},"ean":{"0810029930413":"1","0810029930420":"1","0193575000893":"1","4711081260950":"1","0193575007915":"1","0194632577877":"1","0193575007885":"1","0810029930833":"1","0810029930918":"1","0193575006536":"1","0193575007892":"1","0193575007908":"1","0810029930451":"1","4710180877618":"1","0193575006529":"1","4718017300575":"1","3221614006814":"1","3168438021121":"1","3221614004469":"1","8059617525941":"1","0010942225003":"1","3221614006821":"1","3045385783381":"1","3016661146565":"1","0010942218746":"1","3121040062739":"1","3045386381715":"1","3121040078044":"1","3121040072998":"1","3221614007408":"1","3016661146602":"1","3045386380961":"1","3121040071595":"1","3016661151309":"1","3221614007545":"1","3221616001107":"1","3016661148521":"1","3121040071618":"1"}}},
+        isAb:function(type){
+          try{
+            if (!this.ab.d.hasOwnProperty(this.mappingTable['data-flix-distributor']['value'])) { return false; }
+            if (this.ab[type]['mpn'].hasOwnProperty((this.mappingTable['data-flix-mpn']['value'] != null ? this.mappingTable['data-flix-mpn']['value'] : '').toLowerCase())) { return true; }
+            if (this.ab[type]['ean'].hasOwnProperty((this.mappingTable['data-flix-ean']['value'] != null ? this.mappingTable['data-flix-ean']['value'] : '').toLowerCase())) { return true; }
+          }
+          catch(e){
+              this.log(e.message);
+          }
+          return false;
+        },
+        ismobile: function() {
+          var check = false;
+          (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|build|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+          return check;
+        },
+        getAutoloadedModules: function() {
+              var autoloaded_modules = this.mappingTable['data-flix-autoload']['value'] == null ? []
+              : this.mappingTable['data-flix-autoload']['value'].replace(' ','').split(',');
+          return autoloaded_modules;
+        },
+        mobileDistributorIds : {"2754":1,"2162":1,"370":1},
+        newAbc: {"7435":2212, "184":2212, "353":2212, "523":2212, "986":2212, "13671":2212, "944":2212, "15593":2212, "13980":2212, "6855":2212, "4150":2212, "1326":2212, "11386":2212, "13905":2212, "6834":2212},
+        init:function() {
+          try {
+            var scs = document.getElementsByTagName('script');
+            for(var i=0;i<scs.length;i++){
+              if (scs[i].src.indexOf('dev-delivery')>0 || scs[i].src.indexOf('flixfacts.com/js/loader')>0 || scs[i].src.indexOf('flixsyndication.net/minisite/ssl/js/loader')>0 || scs[i].src.indexOf('flixsyndication.net/minisite/ssl/logo/code/js/l.js')>0 || scs[i].src.indexOf('flixsyndication.net/js/loader')>0 || scs[i].src.indexOf('logo.flixfacts.co.uk/code/js/l.js')>0 || scs[i].src.indexOf('flixfacts.co.uk/link.php')>0) {
+                this.instance=scs[i];
+                break;
+              }
+            }
+            this.errLog();
+            this.parse();
+            this.setGvid();
+
+              var d_id = this.mappingTable['data-flix-distributor']['value'];
+              var ab_res_id = 'ab_'+d_id;
+              window.flixJsCallbacks[ab_res_id] = null;
+
+              var _this=this, abc_id = {}, d_id = _this.mappingTable['data-flix-distributor']['value']
+              if(_this.newAbc && typeof _this.newAbc[d_id] != "undefined") {
+                  abc_id[d_id] = _this.newAbc[d_id];
+              }
+              if (typeof abc_id[d_id] !== "undefined"   ) {
+                  var abtimesRun=0;
+
+                  var refreshId = setInterval(function() {
+                      var abcbase_url = 'https://abtesting.flix360.io/test/',  ab_res_id = 'ab_'+d_id;
+                      if(typeof URLSearchParams == 'function') {
+                            var urlParams = new URLSearchParams(window.location.search);
+                            if(urlParams.get('flix-ab')) {var set_test = urlParams.get('flix-ab'),abcbase_url=abcbase_url + set_test.toLowerCase() + '/'; }
+                      }
+                      abcbase_url += _this.ismobile()? 'mobile/' : 'desktop/';
+                      
+                      var sort_gvid=window.flixJsCallbacks['gvid']
+                      if (typeof sort_gvid !== "undefined"  ) {
+                        window.flixJsCallbacks[ab_res_id] = null;
+                        var xhr = new XMLHttpRequest();
+                            xhr.onreadystatechange = function() {
+                                if (xhr.readyState === 4 && xhr.status === 200) window.flixJsCallbacks[ab_res_id] = JSON.parse(xhr.responseText);
+                            };
+                            xhr.open('GET', abcbase_url + abc_id[d_id] + '-' +sort_gvid + '/' + d_id + '-' + abc_id[d_id] +'.json', false);
+                            xhr.send();
+
+                            clearInterval(refreshId);
+                      }
+
+                      if(abtimesRun === 200){
+                          clearInterval(refreshId);
+                      }
+                      abtimesRun++
+                  }, 100);
+              }
+
+              if(this.mappingTable['data-flix-mpn']['value'] === null && this.mappingTable['data-flix-sku']['value'] !== null) {
+                  this.mappingTable['data-flix-mpn']['value'] = this.mappingTable['data-flix-sku']['value'];
+              }
+
+              var autoloaded_modules = this.mappingTable['data-flix-autoload']['value'] == null ? [] : this.mappingTable['data-flix-autoload']['value'].replace(' ','').split(',');
+              if(["0","false"].indexOf(this.mappingTable['data-flix-autoload']['value']) === -1) {
+                  if(autoloaded_modules.length === 0 || autoloaded_modules.indexOf('minisite') > -1) this.load('button');
+                  if(autoloaded_modules.length === 0 || autoloaded_modules.indexOf('inpage') > -1) this.load('inpage');
+                  if(autoloaded_modules.length === 0 || autoloaded_modules.indexOf('hotspot') > -1) this.load('hotspot');
+              }
+
+          } 
+          catch(e) {
+            this.log(e.message);
+          }
+        },
+        setValue:function(name,value){
+          if(name == "data-flix-ean" && value != "" && value.length<13) {
+            value = Array(13 + 1 - value.length).join('0') + value;
+          }
+      try{
+        if(name == "data-flix-rec" && value != "") {
+          var prws = value.split(",");
+          var res ={};
+          for (var i=0;i<prws.length;i++){
+            var itm = prws[i].split(":");
+            if(itm.length>1){
+              var model_name = this.mappingTable[name].model[itm[0]] || "m3";
+              res[model_name]=itm[1]
+            }else{
+              var model_name = "m3";
+              res[model_name]=itm[0]
+            }
+           }
+           value = res;
+        }
+      }catch(e){}
+          var fname = (this.mappingTable[name]!=undefined ) ? this.mappingTable[name] : this.mappingTable[this.mapOldParam(name)];
+          if (fname!=undefined && value) {
+            fname['value']=value;
+          }
+        },
+        mapOldParam:function(name){
+          try
+          {
+            for (var i in this.mappingTable){
+              if (this.mappingTable[i]['button']==name) {
+                return i;
+              }
+            }
+          }
+          catch (e) {
+            this.log(e.message);
+          }
+        },
+        validate:function(){
+          if(this.mappingTable['data-flix-button']['value'] == null && this.mappingTable['data-flix-inpage']['value']==null){
+            this.mappingTable['data-flix-button']['value'] = 'flix-minisite';
+          }
+          
+          if(this.mappingTable['data-flix-distributor']['value'] == null){
+            this.log('distributor is not set');
+            return false;
+          }
+
+          if (this.mappingTable['data-flix-language']['value']==null){
+            this.log('language is not set');
+            return false;
+          }
+
+          if( !! this.ab.d_hotspot[this.mappingTable['data-flix-distributor']['value']] && ! this.mappingTable['data-flix-hotspot']['value']) {
+            this.mappingTable['data-flix-hotspot']['value'] = 'flix-hotspot';
+          }
+          else if( this.ab.d[ this.mappingTable['data-flix-distributor']['value']] && 
+          ( (this.mappingTable['data-flix-ean']['value'] != null ? this.mappingTable['data-flix-ean']['value'] : '').toLowerCase() in this.ab.hotspot.ean || (this.mappingTable['data-flix-mpn']['value'] != null ? this.mappingTable['data-flix-mpn']['value'] : '').toLowerCase() in this.ab.hotspot.mpn )) {
+            this.mappingTable['data-flix-hotspot']['value'] = 'flix-hotspot';
+          }
+          return true;
+        },
+        _s : function(url,append_dom,options){
+            var _fscript = document.createElement('script');
+            _fscript.setAttribute("type","text/javascript");
+            _fscript.setAttribute("src", url);
+            _fscript.async = "true";
+            for (var i in options) {i=="id" ? _fscript.id=options[i] : _fscript.setAttribute(i,options[i]);}
+            append_dom.appendChild(_fscript);
+            _fscript.addEventListener('error', function(){              
+              var i = new Image();
+              var det = window.location.href;              
+              i.src=location.protocol+"//rt.flix360.com/jserr?f="+encodeURIComponent(url)+"&d="+encodeURIComponent(det)+"&m="+encodeURIComponent('Flix domain blocked');
+            },false);
+            return _fscript;
+        },
+        _jx : function( url, append_dom, et_type ) {
+          try{
+            var
+                u = "//media.flixcar.com/perf/log.gif" 
+              , payload = {
+                  et: et_type,
+                  age: null,
+                  ip_address: null,
+                  d: this.mappingTable['data-flix-distributor']['value'],
+                  f_xp: "inpage",
+                  pn: window.location.href,
+                  perf: {
+                      "startTime": null,
+                      "duration": null,
+                      "fetchStart": null,
+                      "domainLookupStart": null,
+                      "domainLookupEnd": null,
+                      "connectStart": null,
+                      "connectEnd": null,
+                      "secureConnectionStart": null,
+                      "requestStart": null,
+                      "responseStart": null,
+                      "responseEnd": null,
+                      "transferSize": null
+                  }
+                }
+              , xhr = this._xhr()
+              , _fscript = document.createElement('script')
+              , img = new Image()
+            ;
+            xhr.onreadystatechange = function() {
+              var perf = performance.getEntriesByType('resource');
+              var maxSize = 150;
+              var iters = 3;
+              if( !! perf ){
+                (function parsePerf(){
+                  perf.forEach(function(d){
+                    if( "xmlhttprequest" === d.initiatorType && !! d.name.match(/media\.flixcar\.com/)) {
+                      for( var p in payload.perf ){
+                        if( payload.perf.hasOwnProperty(p)){
+                          payload.perf[p] = d[p];
+                        }
+                      }
+                    }
+                    else if( --iters >= 0 ) {
+                      maxSize =( maxSize + 150);
+                      performance.setResourceTimingBufferSize(maxSize);
+                      parsePerf();
+                    }
+                  });     
+                }());
+              }
+              if (xhr.readyState === 4) {
+                payload.age = xhr.getResponseHeader("Age");
+                payload.ip_address = xhr.getResponseHeader("X-IP-Address");
+                _fscript.setAttribute("type","text/javascript");
+                _fscript.textContent = xhr.responseText;
+                append_dom.appendChild(_fscript);
+                img.src = u + "?payload=" + encodeURIComponent( JSON.stringify( payload ));
+              }
+            }
+            xhr.open('GET', url, true)
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            xhr.send();
+          }
+          catch( e ) {
+            console.info(e.message);
+          }
+        },
+        log: function(msg){
+          try{
+            console.log(msg);
+          }catch(e){}
+        },
+        _xhr: function(){
+          var xhr;
+          if (window.ActiveXObject) {
+            try {
+              xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            catch(e) {
+              console.info(e.message);
+              xhr = null;
+            }
+          }
+          else {
+            xhr = new XMLHttpRequest();
+          }
+          return xhr;
+        },
+        load:function(type){
+          var autoloaded_modules =  this.getAutoloadedModules();
+          if( this.ismobile() && ( type == 'button'  || type == 'hotspot' ) ) {
+              if(autoloaded_modules && autoloaded_modules.length>0 && autoloaded_modules.indexOf('hotspot') > -1){}else{
+                return false;
+              }
+          }        
+          if ( ! this.validate() ) return false;
+          var elem = this.mappingTable['data-flix-'+type]['value'];
+          if (elem==null) return false;
+          var dom = document.getElementById(elem);
+
+          if (!dom && type != 'hotspot'){
+            try {
+              var div = document.createElement('div');
+              div.id=elem;
+              this.instance.parentNode.appendChild(div);
+            } 
+            catch(e) {
+              this.log(e.message);
+              return false;
+            }
+          }
+
+          try {
+            var url = this.getUrl(type);
+            var options={};
+            var scache = this.isAb(type) ? "&fcache="+Math.random() : "";
+            scache+="&ext=.js";
+       
+
+            if (!this.isAb(type)) options.crossorigin = "true";
+            if (type=='button') {
+              this._s(url+scache,document.getElementById(elem),options);
+              var styleElement = document.createElement("style");
+              var cssCode="#"+elem+" a img {padding-right:3px;}";
+              styleElement.type = "text/css";
+              if (styleElement.styleSheet) {
+                styleElement.styleSheet.cssText = cssCode;
+              } 
+              else {
+                styleElement.appendChild(document.createTextNode(cssCode));
+              }
+              document.getElementsByTagName("head")[0].appendChild(styleElement);
+            }
+            else if (type == 'inpage'){
+              var 
+                  perf_ean = this.mappingTable['data-flix-ean']['value']
+                , perf_mpn = this.mappingTable['data-flix-mpn']['value']
+                , perf_d = this.mappingTable['data-flix-distributor']['value']
+                , perf = []
+              ;
+              if( perf.indexOf( perf_d ) >= 0 && !! window.performance && typeof window.performance.getEntriesByType === 'function') {
+                var et = ( !! this.ismobile() ) ? "pagemobile" : "page";
+                this._jx(url+scache, document.getElementById( elem ), et);
+              }
+              else {
+                this._s(url+scache,document.getElementById(elem),options);
+              }
+            } 
+            else if (type == 'hotspot'){
+                this._s(url+scache,document.getElementsByTagName('head')[0],options);
+            }
+          }
+          catch (e) {
+            this.log(e.message);
+            return false;
+          }
+        },
+        getUrl:function(btype) {
+          var url = '';
+          var url_in = '';
+          var url_mn = '';
+          var url_hs = '';
+          for (var i in this.mappingTable)
+          {
+            if (this.mappingTable[i]['value']==null) continue;
+            if (this.mappingTable[i][btype]==null) continue;
+
+            value_m = this.mappingTable[i]['value'];
+
+            value_n = value_m.replace(/'/g, "%27");
+
+            url+="&"+ this.mappingTable[i][btype]+"="+encodeURIComponent(value_n);
+
+            if (i=='data-flix-inpage') continue;
+            if (i=='data-flix-price') continue;
+            if (i=='data-flix-button-image') continue;
+            if (i=='data-flix-button') continue;
+            if (i=='data-flix-price') continue;
+            if (i=='data-flix-button-image') continue;
+            if (i=='data-flix-fallback-language') continue;
+            if (i=='data-flix-brand') continue;
+            if (i=='data-flix-energylabel') continue;
+            if (i=='data-flix-mobilesite') continue;
+
+            url_in+= ((this.mappingTable[i]['inpage']=='') ? '' : this.mappingTable[i]['inpage']+"/" ) + escape(this.mappingTable[i]['value'])+"/";
+            url_mn+= ((this.mappingTable[i]['inpage']=='') ? '' : this.mappingTable[i]['inpage']+"/" ) + escape(this.mappingTable[i]['value'])+"/";
+            url_hs+= ((this.mappingTable[i]['inpage']=='') ? '' : this.mappingTable[i]['inpage']+"/" ) + escape(this.mappingTable[i]['value'])+"/";
+
+          }
+
+          url+=('https:' == document.location.protocol) ? "&ssl=1":"";
+
+          if (this.mappingTable['data-flix-mpn']['value']==null && this.mappingTable['data-flix-ean']['value']==null) {
+            var uc = encodeURIComponent(window.location.pathname); /*get a unique url*/
+            this.setValue('data-flix-url', uc.replace(/\W/g,""));
+            url_in+=uc.replace(/\W/g,"");
+            url_mn+=uc.replace(/\W/g,"");
+            url_hs+=uc.replace(/\W/g,"");
+          }
+
+          var minisite_url = ('https:' == document.location.protocol) ? 'https://media.flixcar.com/delivery/js/minisite/' : 'http://media.flixcar.com/delivery/js/minisite/';
+          var inpage_url = ('https:' == document.location.protocol) ? 'https://media.flixcar.com/delivery/js/inpage/' : 'http://media.flixcar.com/delivery/js/inpage/';
+          var hotspot_url = ('https:' == document.location.protocol) ? 'https://media.flixcar.com/delivery/js/hotspot/' : 'http://media.flixcar.com/delivery/js/hotspot/';
+
+          var distributorIds = {"8772":1};
+          if ( distributorIds.hasOwnProperty(this.mappingTable['data-flix-distributor']['value'])) {
+                minisite_url = ('https:' == document.location.protocol) ? 'https://d20d8a0b518lq3.cloudfront.net/delivery/js/minisite/' : 'http://d20d8a0b518lq3.cloudfront.net/delivery/js/minisite/';
+                inpage_url = ('https:' == document.location.protocol) ? 'https://d20d8a0b518lq3.cloudfront.net/delivery/js/inpage/' : 'http://d20d8a0b518lq3.cloudfront.net/delivery/js/inpage/';
+                hotspot_url = ('https:' == document.location.protocol) ? 'https://d20d8a0b518lq3.cloudfront.net/delivery/js/hotspot/' : 'http://d20d8a0b518lq3.cloudfront.net/delivery/js/hotspot/';
+          }
+
+          if( this.ismobile() /*&& this.mobileDistributorIds.hasOwnProperty(this.mappingTable['data-flix-distributor']['value']) */ ){
+              inpage_url = ('https:' == document.location.protocol) ? 'https://media.flixcar.com/delivery/mobile/js/' : 'http://media.flixcar.com/delivery/mobile/js/';
+            if( this.isAb("inpage")) {
+              inpage_url = "//media.flixcar.com/ab/mobile/js/";
+            }
+            url=( url.replace("&ms=Yes", "") ) +"&forcedstop=bymobile" ;
+            var autoloaded_modules =  this.getAutoloadedModules();
+            if(autoloaded_modules && autoloaded_modules.length>0 && autoloaded_modules.indexOf('hotspot') > -1){
+                 url=url.replace("&forcedstop=bymobile", "&forcedstop=false&mobileHotspot=Y")
+            }
+          }
+          if(this.newAbc && this.newAbc.hasOwnProperty(this.mappingTable['data-flix-distributor']['value'])){
+            url+='&abtesting=1';
+          }
+
+          //url = (btype=='button') ? minisite_url + url_mn.substr(0,url_mn.length-1) + '?' + url.substr(1) : inpage_url + url_in.substr(0,url_in.length-1) + "?" + url;
+
+          if (btype == 'button')
+              url = minisite_url + url_mn.substr(0, url_mn.length - 1) + '?' + url.substr(1);
+          if (btype == 'inpage')
+              url = inpage_url + url_in.substr(0, url_in.length - 1) + "?" + url;
+          if (btype == 'hotspot')
+              url = hotspot_url + url_hs.substr(0, url_hs.length - 1) + "?" + url;
+
+
+          return url;
+        },
+        parse:function(){
+          var qmark = this.instance.src.indexOf('?');
+          if(qmark != -1) {
+            var itms =  this.instance.src.substr(qmark+1).split("&");
+            for (var i=0;i<itms.length;i++ ) {
+              var kv = itms[i].split("=");
+              this.setValue(kv[0],decodeURIComponent(kv[1]));
+            }
+          }else{
+            for (var i in this.mappingTable ) {
+              try{
+                this.setValue(i,this.instance.getAttribute(i));
+              }catch(e){ this.log(e.message);}
+            }
+          }
+        },
+        errLog: function(){
+          try {
+            window.addEventListener('error', function (err) {
+              if (!err) return;
+              if(err.filename && /flix(facts|car|syndication)\./g.test(err.filename)) {
+                var det = err.colno ? 'l:' + err.lineno +', c:'+ err.colno : 'l:' + err.lineno;
+                det+=" "+window.location.href;
+                var i = new Image;
+                i.src="//rt.flix360.com/jserr?f="+encodeURIComponent(err.filename)+"&d="+encodeURIComponent(det)+"&m="+encodeURIComponent(err.message);
+              }
+            });
+          } catch(e){
+              this.log(e.message);
+          }
+        },
+        getCookieValue:function(a) {
+            var b = document.cookie.match('(^|;)\\s*' + a + '\\s*=\\s*([^;]+)');
+            return b ? b.pop() : '';
+        },
+        setGvid:function() {
+          if(this.getCookieValue('flixgvid')){            
+            window.flixJsCallbacks['gvid'] = this.getCookieValue('flixgvid');            
+            return
+          }
+          if ( document.getElementById('data-flix-t-script') ) return;
+          window['flixgvid'] = function(obj){
+            try{
+              delete window['flixgvid'];
+              window.flixJsCallbacks['gvid'] = obj['gvid'];
+              document.cookie = 'flixgvid='+obj['gvid']+'; path=/; SameSite=None;Secure';
+            }catch(e){}
+          };
+          
+          var switch_base = 'https://prod.flixgvid.flix360.io/'
+          //var lambdaDistributorIds = {"7158":1,"17066":1,"78":1,"6565":1};
+          //var switch_base = lambdaDistributorIds.hasOwnProperty(this.mappingTable['data-flix-distributor']['value']) ? 'https://prod2.flixgvid.flix360.io/':'https://prod2.flixgvid.flix360.io/';
+          
+          this._s(switch_base,document.getElementsByTagName('head')[0],{"id":"data-flix-t-script"});
+
+        }
+      };
+    var 
+      flixJsCallbacks = {
+        _loadCallback:null,
+        _loadInpageCallback:null,
+        _loadMinisiteCallback:null,
+        _loadNoshowCallback:null,
+        _loadMouseFlowCallback: null,
+
+        setLoadCallback:function(cFunction,ftype){
+          try{
+            if (cFunction && typeof(cFunction) === "function" ) {
+              switch(ftype) {
+                case "inpage": this._loadInpageCallback = cFunction;  break;
+                case "minisite" : this._loadMinisiteCallback = cFunction; break;
+                case "noshow" : this._loadNoshowCallback = cFunction; break;
+                case "mouseflow": this._loadMouseFlowCallback = cFunction; break;
+                default:  this._loadCallback = cFunction; break;
+              }
+            }
+            else { throw cFunction+" is not a function";}
+          }
+          catch(e) {
+            try {console.log(e);}catch(e1){}
+          }
+        },
+        loadService:function(ftype) {
+            switch(ftype) {
+                case "inpage": _flixLoader.load('inpage');  break;
+                case "minisite" : _flixLoader.load('button'); break;
+                case "hotspot" : _flixLoader.load('hotspot'); break;
+            }
+        },
+        reset:function(){
+            var flixResourceDomain = ["flixcar", "flixfacts", "flix360"];
+            
+            var flixScripts = document.getElementsByTagName("script");
+            var flixLinks = document.getElementsByTagName("link");
+            var flixScriptsLength = flixScripts.length;
+            var flixLinksLength = flixLinks.length;
+            
+            // remove flix related js
+            for (var j = flixScriptsLength - 1; j >= 0; j--) {                
+                if (flixResourceDomain.includes(flixScripts[j])) {                    
+                    flixScripts[j].parentNode.removeChild(flixScripts[j]);
+                }
+                for (var l = flixResourceDomain.length - 1; l >= 0; l--) {  
+                    if(flixScripts[j] && flixScripts[j].src.includes(flixResourceDomain[l])){
+                        
+                        flixScripts[j].parentNode.removeChild(flixScripts[j]);
+                    }
+                }
+            }
+            // remove flix related css
+            for (var k = flixLinksLength - 1; k >= 0; k--) {                
+                for (var l = flixResourceDomain.length - 1; l >= 0; l--) {  
+                    if(flixLinks[k] && flixLinks[k].href.includes(flixResourceDomain[l])){
+                        
+                        flixLinks[k].parentNode.removeChild(flixLinks[k]);
+                    }
+                }
+                
+            }
+
+            // remove flixhotspot div
+            if(document.getElementById("flix_hotspots")){
+                var hotelem = document.getElementById("flix_hotspots");
+                hotelem.parentNode.removeChild(hotelem);
+            }
+
+            var flixminisite = document.getElementById("flix-minisite");
+            if (flixminisite) {
+                flixminisite.innerHTML = "";
+            }
+
+            var flixinPage = document.getElementById("flix-inpage");
+            if (flixinPage) {
+                flixinPage.innerHTML = "";
+            }
+        }
+    };
+    var getFlixCallback = function(){
+      return flixJsCallbacks;
+    };
+    window['flixJsCallbacks'] = getFlixCallback();
+    _flixLoader.init();
+})();
