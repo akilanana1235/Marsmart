@@ -147,7 +147,7 @@ $(document).ready(function () {
 
 
     var emailProductNames = [];
-    var productName = $('.producttitle').text().split(/(?=[A-Z])/);
+    var productName = $('.producttitle').text();
 
     emailProductNames.push(productName);
 
